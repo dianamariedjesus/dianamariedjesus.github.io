@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/90.6.7045.46';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'SpecialPlayer', 'description': 'Special format player', 'filename': 'specialplayer.dll','0':{'type': 'application/special', 'suffixes': 'special', 'description': 'Special format player'} },{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} },{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana de Jesus - UX/UI Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">diana<br>de jesus</span>
+            </div>
+            <nav class="nav">
+                <a href="#work" class="nav-link">I miei lavori</a>
+                <a href="#about" class="nav-link">Chi sono</a>
+                <a href="#contact" class="nav-link contact-btn">Contattami</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="greeting">Ciao! Sono</p>
+                        <h1 class="hero-name">Diana</h1>
+                        <p class="hero-description">
+                            Una Junior UX/UI Designer appassionata di accessibilità e semplicità:<br>
+                            <em>perché una buona esperienza si nota solo quando manca.</em>
+                        </p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="diana-profile.jpg" alt="Diana de Jesus" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="work">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h2>I miei lavori</h2>
+                    <a href="#" class="view-all">Vedi tutti →</a>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="acumen-ui.jpg" alt="Acumen Academy User Interface">
+                        </div>
+                        <div class="card-content">
+                            <h3>Acumen Academy | User Interface</h3>
+                            <p>Sviluppo di un prototipo che simuli l'interazione tra l'interfaccia grafica e l'utente per una scuola online per imprenditori sociali, sia per dispositivi Desktop che Mobile.</p>
+                            <div class="tags">
+                                <span class="tag">Prototyping</span>
+                                <span class="tag">Mobile & Desktop UI</span>
+                                <span class="tag">Visual Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="acumen-wireframe.jpg" alt="Acumen Academy Wireframing">
+                        </div>
+                        <div class="card-content">
+                            <h3>Acumen Academy | Wireframing</h3>
+                            <p>Progettazione delle "scheletro" del sito di una scuola online per imprenditori sociali, ottimizzata sia per dispositivi Desktop che Mobile.</p>
+                            <div class="tags">
+                                <span class="tag">Wireframing</span>
+                                <span class="tag">Mid-Fidelity</span>
+                                <span class="tag">Design System</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="acumen-accessibility.jpg" alt="Acumen Academy Accessibility Analysis">
+                        </div>
+                        <div class="card-content">
+                            <h3>Acumen Academy | Accessibility Analysis</h3>
+                            <p>Analisi dell'accessibilità del sito di una scuola online per imprenditori sociali, con focus sui bisogni delle persone con disabilità nell'esperienza utente.</p>
+                            <div class="tags">
+                                <span class="tag">Accessibility Web</span>
+                                <span class="tag">Inclusive Design</span>
+                                <span class="tag">Progettazione Inclusiva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <h2>Facciamo due chiacchiere?</h2>
+                        <p>Hai voglia di parlare di Design, condividere idee o semplicemente scambiare due parole?</p>
+                        <p>Mi piace confrontarmi e imparare da percorsi diversi perché credo che ogni scambio porti qualcosa di nuovo.</p>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Scrivi il tuo nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Indirizzo email</label>
+                            <input type="email" id="email" name="email" placeholder="Scrivi il tuo indirizzo email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Raccontami tutto!" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Invia messaggio</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Diana de Jesus</p>
+                <p>Grazie per aver visitato il mio portfolio! ❤️</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <img src="linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="github-icon.svg" alt="GitHub">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="dribbble-icon.svg" alt="Dribbble">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
