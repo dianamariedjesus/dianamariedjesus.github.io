@@ -578,6 +578,9 @@ body {
   .navbar-expand-md .navbar-collapse {
     display: none !important;
   }
+  .language-dropdown-wrapper {
+    display: none !important;
+  }
   /* This rule ensures your custom hamburger menu is visible instead */
   .navbar-expand-md .hamburger-menu {
     display: block !important;
