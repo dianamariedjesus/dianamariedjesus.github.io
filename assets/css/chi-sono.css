@@ -836,7 +836,7 @@ html, body {
 
   .hero-subtitle .meta-item {
     display: flex !important;
-    align-items: flex-start !important; /* icon at top of multiline text */
+    align-items: center !important; /* icon vertically centered relative to multiline text */
     gap: 8px !important;
   }
 

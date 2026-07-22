@@ -816,7 +816,7 @@ html, body {
 
   .meta-item {
     display: flex !important;
-    align-items: flex-start !important; // icon aligns to top of multiline text
+    align-items: center !important; // icon vertically centered relative to multiline text
     gap: 8px !important;
   }
 
