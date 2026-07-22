@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Diana de Jesus | Contatti</title>
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/contatti.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-white">
+  <div class="container-fluid mobile-nav-container">
+    <!-- Diana Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+    </a>
+
+    <!-- Desktop Navigation Links (Centered) -->
+    <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+      <a href="index.html#lavori" class="nav-link custom-nav-link">I miei lavori</a>
+      <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+      <a href="contatti.html" class="nav-link custom-nav-link active">Contattami</a>
+    </div>
+
+    <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
+    <div class="language-dropdown-wrapper d-none d-md-block">
+      <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+      <label for="lang-menu-toggle" class="lang-selector">
+        <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">IT</span>
+        <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </label>
+      <div class="lang-dropdown-menu">
+        <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
+        <a href="#" class="lang-item"><strong>EN</strong> <span>English</span></a>
+      </div>
+    </div>
+
+    <!-- Hidden Checkbox for Mobile Menu Toggle -->
+    <input type="checkbox" id="mobile-menu-toggle" class="d-md-none" />
+
+    <!-- Hamburger & Close Icons (Visible on Mobile/Tablet) -->
+    <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </label>
+
+    <!-- Overlay Menu for Mobile -->
+    <div class="mobile-overlay-menu d-md-none">
+      <div class="mobile-nav-links">
+        <a href="index.html#lavori" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link active">Contattami</a>
+      </div>
+      <div class="mobile-lang-selector">
+        <button type="button" class="mobile-lang-btn active">
+          <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+        </button>
+        <button type="button" class="mobile-lang-btn">
+          <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Background Dimmer for Overlay -->
+    <div id="overlay-dimmer" class="d-md-none"></div>
+  </div>
+</nav>
+
+<!-- Main Section -->
+<section class="contact-section">
+  <div class="contact-info">
+    <div class="title-container">
+      <h1 class="title">Facciamo due chiacchiere?</h1>
+      <img src="assets/img/contatti/chat-icon.png" alt="Icona fumetto chat" class="contact-chat-icon">
+    </div>
+    <p class="paragraph">
+      Se anche tu credi che il design debba creare qualcosa che funzioni davvero per tutti, <strong>connettiamoci</strong>.
+    </p>
+  </div>
+
+  <form class="contact-form">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="name" placeholder="Scrivi il tuo nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Indirizzo email</label>
+      <input type="email" id="email" name="email" placeholder="Scrivi il tuo indirizzo email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" placeholder="Raccontami tutto!" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">Invia messaggio</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="footer-container">
+    <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+    <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
+    <div class="footer-socials">
+      <!-- LinkedIn Link -->
+      <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+      </a>
+      <!-- GitHub Link -->
+      <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+      </a>
+      <!-- start2impact Link -->
+      <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- EmailJS SDK Integration -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ── EmailJS Initialisation ──
+    // IMPORTANTE: Sostituisci 'YOUR_PUBLIC_KEY' con la tua Public Key reale del pannello EmailJS
+    emailjs.init({
+      publicKey: '7PY84ehlIzi_UUo99',
+    });
+
+    const contactForm = document.querySelector('.contact-form');
+    const submitBtn = document.querySelector('.submit-button');
+
+    if (contactForm && submitBtn) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Validazione HTML5 con messaggi 'required' nativi del browser
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        // Feedback visivo (disabilita bottone e cambia testo)
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Invio in corso...';
+        submitBtn.disabled = true;
+
+        // Estrai i valori dei campi ed invia tutti i possibili alias (name, nome, from_name)
+        const nomeVal = document.getElementById('nome').value.trim();
+        const emailVal = document.getElementById('email').value.trim();
+        const messaggioVal = document.getElementById('messaggio').value.trim();
+
+        const templateParams = {
+          name: nomeVal,
+          nome: nomeVal,
+          from_name: nomeVal,
+          user_name: nomeVal,
+          email: emailVal,
+          to_email: emailVal,
+          user_email: emailVal,
+          messaggio: messaggioVal,
+          message: messaggioVal
+        };
+
+        // Invio tramite EmailJS
+        emailjs.send('service_61lj91q', 'template_htyemlj', templateParams)
+          .then(() => {
+            alert('Messaggio inviato con successo! Grazie per avermi contattato.');
+            contactForm.reset();
+          })
+          .catch((error) => {
+            console.error('Errore EmailJS:', error);
+            alert('Si è verificato un errore durante l\'invio del messaggio. Riprova più tardi.');
+          })
+          .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          });
+      });
+    }
+
+    // ── Navigation Indicator Logic ──
+    const worksLink = document.querySelector('.custom-nav-link[href="index.html#lavori"]');
+    if (!worksLink) return;
+
+    let isClickScrolling = false;
+    let clickScrollTimeout;
+
+    // Handle click on the "I miei lavori" link
+    worksLink.addEventListener("click", (e) => {
+      // Only apply active state logic if we are already on index.html
+      const isHomepage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+      if (isHomepage && window.innerWidth >= 1026) {
+        e.preventDefault();
+        
+        // Remove active class from all other nav links
+        document.querySelectorAll('.custom-nav-link').forEach(link => {
+          link.classList.remove('active');
+        });
+        
+        // Set the active class on "I miei lavori"
+        worksLink.classList.add('active');
+
+        // Prevent scroll handler from instantly removing the active class during smooth scroll transition
+        isClickScrolling = true;
+        clearTimeout(clickScrollTimeout);
+        clickScrollTimeout = setTimeout(() => {
+          isClickScrolling = false;
+        }, 1000);
+
+        // Smooth scroll to works section
+        const worksSection = document.getElementById('lavori');
+        if (worksSection) {
+          worksSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Handle page load with #lavori hash (for redirection from other pages)
+    if (window.location.hash === '#lavori' && window.innerWidth >= 1026) {
+      worksLink.classList.add('active');
+    }
+
+    // Handle scroll to remove active class when the user scrolls away
+    window.addEventListener("scroll", () => {
+      if (!isClickScrolling && worksLink.classList.contains('active')) {
+        worksLink.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

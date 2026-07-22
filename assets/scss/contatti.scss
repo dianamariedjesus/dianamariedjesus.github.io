@@ -1,0 +1,812 @@
+@import 'variables';
+
+html, body {
+  overflow-x: clip;
+  width: 100%;
+}
+
+// Set up navbar-brand logo
+.navbar-logo-img {
+  width: 77.59px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
+
+// Custom Nav Link Styles
+.custom-nav-link {
+  font-family: $font-sans;
+  font-size: 16px;
+  font-weight: 400; // Poppins Regular
+  color: $primary-purple !important;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease;
+  display: inline-block;
+
+  &:hover {
+    background-color: #f7f3fa;
+    color: $primary-purple !important;
+    font-weight: 400;
+  }
+
+  &:active {
+    background-color: #efe8f5;
+    color: $primary-purple !important;
+    font-weight: 600; /* SemiBold */
+  }
+
+  &.active {
+    color: $active-orange !important;
+    font-weight: 600; /* SemiBold */
+    background-color: transparent;
+  }
+}
+
+// Center container for nav links
+.nav-links-center {
+  margin: 0 auto;
+  gap: 8px;
+}
+
+/* Navbar - Sticky with custom drop shadow */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0px 31px 80.3px -26px rgba(90, 24, 154, 0.12); // Visible, premium purple-tinted shadow
+  border: none;
+  transition: box-shadow 0.3s ease;
+  margin: 0; // Full width navbar
+  width: 100%;
+  height: 64px; // Esattamente 64px
+  padding: 0; // Outer navbar has padding 0, container controls 60px padding
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar .container-fluid {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 0 60px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+// Hide the pure-CSS mobile menu checkbox toggle
+#mobile-menu-toggle {
+  display: none !important;
+}
+
+// Language Dropdown wrapper
+.language-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+
+  .lang-toggle-checkbox {
+    display: none;
+  }
+
+  .lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: $primary-purple;
+    font-family: $font-sans;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    user-select: none;
+
+    .icon-globe, .icon-chevron {
+      stroke: currentColor;
+    }
+
+    .icon-chevron {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: $active-orange;
+    }
+  }
+
+  // Active Dropdown state (when checkbox is checked)
+  .lang-toggle-checkbox:checked + .lang-selector {
+    background-color: #efe8f5;
+    color: $primary-purple;
+
+    .icon-chevron {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Dropdown menu content
+  .lang-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    box-shadow: 0px 16px 74px -30px rgba(0, 0, 0, 0.4);
+    padding: 8px;
+    z-index: 1010;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 160px;
+
+    .lang-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: $primary-purple;
+      font-family: $font-sans;
+      font-size: 16px;
+      transition: background-color 0.2s ease, font-weight 0.2s ease;
+
+      strong {
+        font-weight: 700;
+      }
+
+      span {
+        font-weight: 400;
+      }
+
+      &:hover {
+        background-color: #f7f3fa;
+        color: $primary-purple;
+      }
+
+      &:active {
+        background-color: #efe8f5;
+        color: $primary-purple;
+        font-weight: 700;
+      }
+
+      &.active {
+        background-color: transparent;
+        color: $primary-purple;
+      }
+    }
+  }
+
+  .lang-toggle-checkbox:checked ~ .lang-dropdown-menu {
+    display: flex;
+  }
+}
+
+/* --- Global Body Styles --- */
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  font-family: $font-sans;
+  min-height: 100vh;
+  display: block;
+}
+
+/* --- Contact Section Layout --- */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; // Align top of title on the left with top of form on the right
+  max-width: 1440px;
+  width: 100%;
+  margin: 207px auto 183px auto; // 207px Navbar-Section, 183px Section-Footer
+  padding: 0 60px; // Page side margins: 60px
+  box-sizing: border-box;
+  gap: 105px; // 105px gap between left column and form column
+}
+
+.contact-info {
+  flex: 1 1 45%;
+  max-width: 567px; // Left column max-width set to 567px as requested
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  flex: 1 1 50%;
+  max-width: 640px;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; // Spacing between form-groups: 24px
+  align-items: stretch;
+}
+
+/* --- Left Column Text & Icon Styles --- */
+.title-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18.73px; // Exact 18.73px gap to paragraph matching Figma badge
+}
+
+.title {
+  font-family: $font-sans; // Poppins ExtraBold
+  font-size: 48px; // Poppins ExtraBold 48px
+  font-weight: 800; // ExtraBold
+  line-height: 120%; // 120% line-height (57.6px)
+  color: #262626;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 352px; // Exact 352px width for 1440px viewport
+  height: 116px; // Exact 116px height for 1440px viewport
+  flex-shrink: 0;
+}
+
+.contact-chat-icon {
+  width: 75.2px;
+  height: 64.43px;
+  opacity: 0.6;
+  transform: rotate(-9.84deg); // Rotation -9.84deg counter-clockwise
+  flex-shrink: 0;
+  display: block;
+  margin-left: 34.5px; // Exact 34.5px gap to icon matching Figma badge
+  margin-top: 20.94px; // Exact 20.94px top offset matching Figma red badge
+}
+
+.paragraph {
+  font-family: $font-sans;
+  font-weight: 400; // Poppins Regular
+  font-size: 18px;
+  line-height: 143%;
+  letter-spacing: 0.04em; // 4% letter spacing
+  color: $dark-text;
+  margin: 0;
+
+  strong {
+    font-weight: 600; // Poppins SemiBold
+  }
+}
+
+/* --- Form Groups & Label Styling --- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    font-family: $font-sans;
+    font-weight: 600; // Poppins SemiBold
+    font-size: 18px;
+    color: #262626;
+    margin-bottom: 12px; // 12px space under label
+  }
+}
+
+/* --- Form Fields (Input & Textarea) Styling --- */
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: transparent;
+  border: 1px solid #A29F9F;
+  border-radius: 12px; // 12px corner radius
+  padding: 8px 16px; // 8px vertical, 16px horizontal
+  width: 100%;
+  box-sizing: border-box;
+  color: #262626;
+  font-family: $font-sans;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  transition: border 0.2s ease, border-color 0.2s ease;
+
+  &::placeholder {
+    font-family: $font-sans;
+    font-weight: 500; // Poppins Medium
+    font-size: 16px;
+    color: rgba(38, 38, 38, 0.5); // 262626 with 50% opacity
+    opacity: 1;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid #686868; // Stroke weight 1px and color #686868 when clicked/focused
+    padding: 8px 16px; // 8px vertical, 16px horizontal
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 37px; // Single-line fields height 37px
+}
+
+textarea {
+  height: 99px; // Textarea message box height 99px
+  resize: vertical;
+}
+
+/* --- Submit Button Styling --- */
+.submit-button {
+  background-color: rgba(255, 69, 42, 0.8); // FF452A 80% opacity
+  color: #FFFFFF;
+  font-family: $font-sans;
+  font-weight: 400; // Poppins Regular
+  font-size: 16px;
+  padding: 12px 32px;
+  border: 1px solid rgba(255, 69, 42, 0.8); // 1px stroke bordo matching default
+  border-radius: 24px; // Pill shape (corner radius 24px)
+  cursor: pointer;
+  align-self: center; // Centered inside the form
+  transition: all 0.2s ease-in-out;
+  margin-top: 24px;
+  display: inline-block;
+
+  &:hover {
+    background-color: rgba(255, 69, 42, 0.1); // FF452A 10% opacity
+    color: $active-orange;
+    border: 1px solid rgba(255, 69, 42, 0.5); // border 1px solid FF452A 50% opacity
+  }
+
+  &:active {
+    background-color: rgba(181, 23, 158, 0.8); // B5179E 80% opacity
+    color: #FFFFFF;
+    border: 1px solid rgba(181, 23, 158, 0.8); // border 1px B5179E 80% opacity
+  }
+}
+
+/* --- Footer Section Styling --- */
+.footer-section {
+  background: $footer-bg;
+  width: 100%;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px !important;
+  box-sizing: border-box;
+}
+
+.footer-copyright {
+  font-family: $font-sans;
+  font-size: 16px;
+  font-weight: 400; // Poppins Regular
+  color: $dark-text;
+  white-space: nowrap;
+}
+
+.footer-message {
+  font-family: $font-sans;
+  font-size: 16px;
+  font-weight: 600; // Poppins SemiBold
+  color: $dark-text;
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS MEDIA QUERIES
+   ========================================================================== */
+
+/* --- All Desktop & Tablet viewports (>= 768px) --- */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0 !important;
+    margin: 0;
+    height: 64px !important;
+  }
+
+  .navbar .container-fluid {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 60px !important; // Exactly 60px side margin starting from 768px!
+  }
+
+  .footer-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 60px !important; // Exactly 60px side margin starting from 768px!
+}
+
+/* --- Small Desktop viewports (1026px - 1280px) --- */
+@media (min-width: 1026px) and (max-width: 1280px) {
+  .contact-section {
+    margin: 160px auto 140px auto;
+    padding: 0 50px !important;
+    gap: clamp(48px, 6vw, 105px);
+  }
+
+  .title-container {
+    gap: clamp(16px, 2vw, 34.5px);
+    margin-bottom: 18.73px;
+  }
+
+  .title {
+    font-size: clamp(38px, 3.2vw, 48px);
+    line-height: 120%;
+    width: clamp(280px, 26vw, 352px);
+    height: auto;
+  }
+
+  .contact-chat-icon {
+    width: clamp(56px, 5vw, 75.2px);
+    height: clamp(48px, 4.3vw, 64.43px);
+    opacity: 0.6;
+    transform: rotate(-9.84deg);
+    margin-left: 0; // Handled by title-container gap
+    margin-top: clamp(8px, 1.2vw, 20.94px);
+    flex-shrink: 0;
+  }
+}
+
+/* --- Tablet viewports (768px - 1025px) --- */
+@media (min-width: 768px) and (max-width: 1025px) {
+  .custom-nav-link {
+    font-size: 16px;
+  }
+
+  .contact-section {
+    margin: 128px auto 112px auto; // 128px Navbar-Section, 112px Section-Footer
+    padding: 0 40px !important; // 40px side margin on tablet
+    gap: clamp(24px, 4vw, 48px);
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    flex: 1 1 45%;
+    max-width: 567px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-form {
+    flex: 1 1 50%;
+    max-width: 640px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .title {
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 120%;
+    width: auto;
+    height: auto;
+    max-width: clamp(200px, 28vw, 352px);
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .contact-chat-icon {
+    width: clamp(45px, 5vw, 75.2px);
+    height: clamp(38px, 4.3vw, 64.43px);
+    opacity: 0.6;
+    transform: rotate(-9.84deg);
+    margin-left: clamp(8px, 1.5vw, 34.5px);
+    margin-top: clamp(4px, 1vw, 20.94px);
+    flex-shrink: 0;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .footer-container {
+    padding: 24px 40px !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .footer-message {
+    font-size: 15px;
+    padding: 0 12px;
+  }
+
+  .footer-socials {
+    gap: 16px;
+  }
+}
+
+/* --- Mobile viewports (< 768px) --- */
+@media (max-width: 767px) {
+  .navbar {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 56px !important;
+    z-index: 2000 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0px 31px 80.3px -26px rgba(90, 24, 154, 0.12) !important;
+    display: flex !important;
+    align-items: center !important;
+    border: none !important;
+  }
+
+  .navbar .container-fluid,
+  .navbar .mobile-nav-container {
+    padding: 0 16px !important;
+    height: 56px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .navbar-brand {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .navbar-brand img {
+    width: 68.97px !important;
+    height: 32px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  // Hamburger settings
+  .hamburger-menu-label {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    user-select: none;
+  }
+
+  .hamburger-icon, .close-icon {
+    width: 24px !important;
+    height: 24px !important;
+    position: absolute;
+    stroke: $primary-purple;
+    transition: stroke 0.2s ease, opacity 150ms ease-in-out;
+  }
+
+  .hamburger-menu-label:hover .hamburger-icon,
+  .hamburger-menu-label:hover .close-icon {
+    stroke: $hover-pink !important;
+  }
+
+  .hamburger-menu-label:active .hamburger-icon,
+  .hamburger-menu-label:active .close-icon {
+    stroke: $active-orange !important;
+  }
+
+  .close-icon {
+    opacity: 0;
+  }
+
+  #mobile-menu-toggle:checked ~ .hamburger-menu-label .hamburger-icon {
+    opacity: 0;
+    display: none;
+  }
+  #mobile-menu-toggle:checked ~ .hamburger-menu-label .close-icon {
+    opacity: 1;
+    display: block;
+  }
+
+  .mobile-overlay-menu {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 272px !important;
+    background-color: white;
+    padding: 24px 16px !important;
+    transform: translateY(-200%);
+    transition: transform 300ms ease-in-out;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+
+    .custom-nav-link {
+      font-family: $font-sans;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      color: $primary-purple !important;
+      padding: 8px 16px !important;
+      background: transparent;
+      border-radius: 12px;
+      display: block;
+      width: 100%; // Fill container!
+      box-sizing: border-box;
+      transition: background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease;
+
+      &:hover {
+        background-color: #f7f3fa !important; // Fill container hover background
+        color: $primary-purple !important;
+        font-weight: 400 !important;
+      }
+
+      &:active {
+        background-color: #efe8f5 !important; // Fill container pressed background
+        font-weight: 600 !important;
+        color: $primary-purple !important;
+      }
+    }
+  }
+
+  #mobile-menu-toggle:checked ~ .mobile-overlay-menu {
+    transform: translateY(0);
+  }
+
+  #overlay-dimmer {
+    display: block !important;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 56px);
+    background: rgba(0, 0, 0, 0.25) !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    z-index: 4;
+    visibility: hidden !important;
+  }
+
+  #mobile-menu-toggle:checked ~ #overlay-dimmer {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    margin: 88px auto 144px auto !important; // Spazio Navbar ➔ Icona: 88px, Spazio Bottone ➔ Footer: 144px
+    padding: 0 16px !important;
+    gap: 0;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 31px !important; // Spazio Titolo ➔ Paragrafo: 31px
+  }
+
+  .title {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    font-size: 32px !important;
+    line-height: 120% !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .contact-chat-icon {
+    width: 53.52px !important;
+    height: 45.85px !important;
+    opacity: 0.6 !important;
+    transform: rotate(-9.84deg) !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important; // Spazio Icona ➔ Titolo: 20px
+    order: -1 !important; // Centered above title!
+    display: block !important;
+  }
+
+  .paragraph {
+    font-size: 16px !important;
+    text-align: center !important;
+    margin-bottom: 59px !important; // Spazio Paragrafo ➔ Form: 59px
+  }
+
+  textarea {
+    height: 72px; // Mobile textarea height 72px
+  }
+
+  .submit-button {
+    align-self: center; // Center button on mobile viewports
+  }
+
+  // Footer Mobile styles
+  .footer-container {
+    flex-direction: column;
+    padding: 16px !important;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    order: 2;
+    font-size: 14px;
+  }
+
+  .footer-message {
+    order: 1;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .footer-socials {
+    order: 3;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .footer-social-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
