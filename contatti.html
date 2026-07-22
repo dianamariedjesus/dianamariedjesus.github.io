@@ -26,13 +26,13 @@
 <nav class="navbar navbar-expand-md bg-white">
   <div class="container-fluid mobile-nav-container">
     <!-- Diana Logo -->
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="./">
       <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
     </a>
 
     <!-- Desktop Navigation Links (Centered) -->
     <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
-      <a href="index.html#lavori" class="nav-link custom-nav-link">I miei lavori</a>
+      <a href="./#lavori" class="nav-link custom-nav-link">I miei lavori</a>
       <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
       <a href="contatti.html" class="nav-link custom-nav-link active">Contattami</a>
     </div>
@@ -76,7 +76,7 @@
     <!-- Overlay Menu for Mobile -->
     <div class="mobile-overlay-menu d-md-none">
       <div class="mobile-nav-links">
-        <a href="index.html#lavori" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">I miei lavori</a>
+        <a href="./#lavori" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">I miei lavori</a>
         <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
         <a href="contatti.html" class="nav-link custom-nav-link active">Contattami</a>
       </div>
@@ -214,7 +214,7 @@
     }
 
     // ── Navigation Indicator Logic ──
-    const worksLink = document.querySelector('.custom-nav-link[href="index.html#lavori"]');
+    const worksLink = document.querySelector('.custom-nav-link[href="./#lavori"]');
     if (!worksLink) return;
 
     let isClickScrolling = false;
