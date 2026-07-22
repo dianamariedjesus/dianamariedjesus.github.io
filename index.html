@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <title>Diana de Jesus | Portfolio</title>
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-white">
+  <div class="container-fluid mobile-nav-container">
+    <!-- Diana Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+    </a>
+
+    <!-- Desktop Navigation Links (Centered) -->
+    <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+      <a href="#lavori" class="nav-link custom-nav-link">I miei lavori</a>
+      <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+      <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+    </div>
+
+    <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
+    <div class="language-dropdown-wrapper d-none d-md-block">
+      <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+      <label for="lang-menu-toggle" class="lang-selector">
+        <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">IT</span>
+        <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </label>
+      <div class="lang-dropdown-menu">
+        <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
+        <a href="#" class="lang-item"><strong>EN</strong> <span>English</span></a>
+      </div>
+    </div>
+
+    <!-- Hidden Checkbox for Mobile Menu Toggle -->
+    <input type="checkbox" id="mobile-menu-toggle" class="d-md-none" />
+
+    <!-- Hamburger & Close Icons (Visible on Mobile/Tablet) -->
+    <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </label>
+
+    <!-- Overlay Menu for Mobile -->
+    <div class="mobile-overlay-menu d-md-none">
+      <div class="mobile-nav-links">
+        <a href="#lavori" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+      <div class="mobile-lang-selector">
+        <button type="button" class="mobile-lang-btn active">
+          <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+        </button>
+        <button type="button" class="mobile-lang-btn">
+          <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Background Dimmer for Overlay -->
+    <div id="overlay-dimmer" class="d-md-none"></div>
+  </div>
+</nav>
+
+  <!-- HERO SECTION -->
+  <header class="container hero-section">
+    <div class="hero-content">
+      <!-- Title Row -->
+      <div class="hero-title-container">
+        <img src="assets/img/homepage/hero/icona-thumbs-down.svg" class="hero-deco hero-deco-thumbs" alt="" />
+        <h1 class="hero-title">Basta esperienze frustranti.</h1>
+        <img src="assets/img/homepage/hero/icona-scribble.svg" class="hero-deco hero-deco-scribble" alt="" />
+        <img src="assets/img/homepage/hero/icona-sad-face.svg" class="hero-deco hero-deco-sad" alt="" />
+      </div>
+      
+      <!-- Subtitle & Badges Row -->
+      <div class="hero-subtitle-row">
+        <p class="hero-subtitle">Progetto soluzioni digitali</p>
+        <div class="hero-badges">
+          <span class="hero-badge">
+            <img src="assets/img/homepage/hero/icona-accessibilita.svg" class="badge-icon" alt="" />
+            accessibili
+          </span>
+          <span class="hero-badge">
+            <img src="assets/img/homepage/hero/icona-stella.svg" class="badge-icon" alt="" />
+            intuitive
+          </span>
+          <span class="hero-badge">
+            <img src="assets/img/homepage/hero/icona-cuore.svg" class="badge-icon" alt="" />
+            orientate alle persone
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="chi-sono" class="about-section container">
+    <div class="about-container">
+      <!-- Left Column: Profile Avatar -->
+      <div class="about-avatar-col">
+        <div class="avatar-frame">
+          <img src="assets/img/chi-sono/foto-profilo/io.png" alt="Diana de Jesus profile avatar" class="avatar-img" style="width: 286px; height: 286px; object-fit: cover;" />
+        </div>
+      </div>
+ 
+      <!-- Right Column: Text Content -->
+      <div class="about-content-col">
+        <span class="about-label">CHI SONO</span>
+        
+        <div class="about-text-paragraphs">
+          <p class="about-text">
+            Mi chiamo Diana e sono una Junior UX/UI Designer.
+          </p>
+          <p class="about-text">
+            Il mio obiettivo &egrave; creare <strong>esperienze accessibili per persone vere</strong>, risolvendo problemi reali.
+          </p>
+          <p class="about-text">
+            La mia filosofia &egrave; semplice: <strong>prima l'empatia, poi l'estetica</strong>. Credo che il design inclusivo non sia un "optional", ma una responsabilit&agrave;.
+          </p>
+        </div>
+ 
+        <!-- CTA Button with inline SVG arrow -->
+        <a href="chi-sono.html" class="cta-button">
+          Scopri di pi&ugrave; su di me
+          <svg class="cta-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask_cta_arrow" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <rect width="24" height="24" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask_cta_arrow)">
+              <path d="M14.5924 19L13.3979 17.7532L17.7264 13.3623H4V11.6377H17.7264L13.3979 7.24683L14.5924 6L21 12.5L14.5924 19Z" fill="currentColor"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- WORKS SECTION -->
+  <section id="lavori" class="works-section container">
+    <h2 class="works-title">I MIEI LAVORI</h2>
+    <div class="works-grid">
+      <!-- Card 1: Acumen Academy -->
+      <div class="work-card">
+        <div class="work-image-frame">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - User Interface.png" alt="Acumen Academy Redesign completo copertina" class="work-image">
+        </div>
+        <h3 class="work-title"><span class="work-client">Acumen Academy</span> | Redesign completo</h3>
+        <p class="work-description">
+          Riprogettazione del sito web per una scuola di imprenditori sociali. Processo end-to-end: Discovery, Wireframe, UI Design e User Test.
+        </p>
+      </div>
+
+      <!-- Card 2: IncluDO Brand Identity -->
+      <div class="work-card">
+        <div class="work-image-frame">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png" alt="IncluDO Logo & Brand Identity copertina" class="work-image">
+        </div>
+        <h3 class="work-title"><span class="work-client">IncluDO</span> | Logo &amp; Brand Identity</h3>
+        <p class="work-description">
+          Ideazione di un'identità per un'ente di formazione per migranti e persone svantaggiate.
+        </p>
+      </div>
+
+      <!-- Card 3: IncluDO Copywriting -->
+      <div class="work-card">
+        <div class="work-image-frame">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png" alt="IncluDO Copywriting Blog Post copertina" class="work-image">
+        </div>
+        <h3 class="work-title"><span class="work-client">IncluDO</span> | Copywriting Blog Post</h3>
+        <p class="work-description">
+          Scrittura di un articolo web ad alto impatto emotivo per un'azienda contro le disuguaglianze.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="footer-container">
+    <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+    <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
+    <div class="footer-socials">
+      <!-- LinkedIn Link -->
+      <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+      </a>
+      <!-- GitHub Link -->
+      <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+      </a>
+      <!-- start2impact Link -->
+      <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Navigation Indicator JavaScript Logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const worksLink = document.querySelector('.custom-nav-link[href="#lavori"]');
+    if (!worksLink) return;
+
+    let isClickScrolling = false;
+    let clickScrollTimeout;
+
+    // Handle click on the "I miei lavori" link
+    worksLink.addEventListener("click", () => {
+      // Only apply this desktop active indicator logic on viewports width >= 1026px
+      if (window.innerWidth >= 1026) {
+        // Remove active class from all other nav links
+        document.querySelectorAll('.custom-nav-link').forEach(link => {
+          link.classList.remove('active');
+        });
+        
+        // Set the active class on "I miei lavori"
+        worksLink.classList.add('active');
+
+        // Prevent scroll handler from instantly removing the active class during smooth scroll transition
+        isClickScrolling = true;
+        clearTimeout(clickScrollTimeout);
+        clickScrollTimeout = setTimeout(() => {
+          isClickScrolling = false;
+        }, 1000); // 1000ms duration covers the smooth scrolling transition
+      }
+    });
+
+    // Handle page load with #lavori hash (for redirection from other pages)
+    if (window.location.hash === '#lavori' && window.innerWidth >= 1026) {
+      worksLink.classList.add('active');
+    }
+
+    // Handle scroll to remove active class when the user scrolls away
+    window.addEventListener("scroll", () => {
+      if (!isClickScrolling && worksLink.classList.contains('active')) {
+        worksLink.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

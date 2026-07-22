@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Diana de Jesus | Chi sono</title>
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/chi-sono.css">
+
+</head>
+<body>
+
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-expand-md bg-white">
+    <div class="container-fluid">
+      <!-- Diana Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+      </a>
+
+
+      <!-- Desktop Nav links -->
+
+      <div class="d-none d-md-flex nav-links-center">
+        <a href="index.html#lavori" class="nav-link custom-nav-link">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link active">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+
+      <!-- Language Dropdown -->
+      <div class="language-dropdown-wrapper ms-auto ms-md-0 me-3 me-md-0">
+        <input type="checkbox" id="lang-toggle" class="lang-toggle-checkbox">
+        <label for="lang-toggle" class="lang-selector">
+          <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <span class="lang-text">IT</span>
+          <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </label>
+        <div class="lang-dropdown-menu">
+          <a href="#" class="lang-option active">IT</a>
+          <a href="#" class="lang-option">EN</a>
+        </div>
+      </div>
+
+      <!-- Hidden Checkbox for Mobile Menu Toggle -->
+      <input type="checkbox" id="mobile-menu-toggle" class="d-md-none">
+
+      <!-- Hamburger & Close Icons (Visible on Mobile) -->
+      <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none" aria-label="Toggle navigation">
+        <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </label>
+
+      <!-- Mobile Dropdown Menu -->
+
+      <div class="mobile-overlay-menu d-md-none">
+        <div class="mobile-nav-links">
+          <a href="index.html#lavori" class="custom-nav-link">I miei lavori</a>
+          <a href="chi-sono.html" class="custom-nav-link active">Chi sono</a>
+          <a href="contatti.html" class="custom-nav-link">Contattami</a>
+        </div>
+        <div class="mobile-lang-selector">
+          <button type="button" class="mobile-lang-btn active">
+            <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+          </button>
+          <button type="button" class="mobile-lang-btn">
+            <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+          </button>
+        </div>
+      </div>
+      <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none"></label>
+    </div>
+  </nav>
+
+  <!-- Hero Header Section -->
+  <section class="chi-sono-hero">
+    <div class="hero-title-wrapper">
+      <h1 class="hero-title">
+        <img src="assets/img/chi-sono/hero/Happy.svg" alt="Happy icon" class="hero-icon-happy">
+        <span>Ciao! Sono Diana.</span>
+        <img src="assets/img/chi-sono/hero/Wave.svg" alt="Wave icon" class="hero-icon-wave">
+      </h1>
+      <div class="hero-subtitle">
+        <span class="meta-item">
+          <img src="assets/img/chi-sono/hero/Location.svg" alt="Location icon" class="meta-icon">
+          Lucca, IT
+        </span>
+        <span class="meta-item">
+          <img src="assets/img/chi-sono/hero/Education.svg" alt="Education icon" class="meta-icon">
+          UX/UI Design e Agenti AI &bull; Start2Impact University
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="chi-sono-bio-section">
+    <div class="bio-container">
+      <div class="bio-photo-wrapper">
+        <img src="assets/img/chi-sono/foto-profilo/DSC06202[1].jpg" alt="Foto profilo Diana de Jesus" class="bio-photo">
+      </div>
+      <div class="bio-text-wrapper">
+        <p class="bio-paragraph">
+          Fin da bambina ho sempre amato creare con le mani, dal disegno ai progetti fai-da-te, spinta dalla <strong>curiosità di capire come funzionassero le cose</strong>. Crescendo, ho trasferito questa creatività nel mondo digitale, scoprendo lo <strong>UX/UI Design</strong>, il ponte perfetto tra la mia passione per la progettazione visiva e il desiderio di risolvere problemi quotidiani. <em><strong>Invece di rassegnarmi a tecnologie frustranti o progettate male</strong></em>, ho capito che <strong class="text-highlight">potevo essere io a progettarle meglio.</strong>
+        </p>
+        <p class="bio-paragraph">
+          Su Start2Impact ho trasformato questa passione in competenze concrete: dalla <strong>ricerca con gli utenti</strong> alla <strong>strutturazione dei flussi</strong>, con un <strong>forte focus sull'usabilità e sull'accessibilità</strong>. Questo percorso mi ha aperto gli occhi su <em><strong>temi che oggi porto nel cuore e in ogni progetto</strong></em>: <strong class="text-highlight">l'inclusione, la sostenibilità, l'impatto sociale dei prodotti digitali.</strong>
+        </p>
+        <p class="bio-paragraph">
+          Oggi il mio <strong class="text-highlight">obiettivo</strong> è <strong>progettare soluzioni digitali</strong> che <strong>rendano la tecnologia più semplice, accessibile e, umana</strong>. Affronto il mio percorso come una continua scoperta, con la curiosità di imparare ogni giorno e la determinazione di migliorare, un progetto alla volta.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Esperienze & Competenze Section -->
+  <section class="chi-sono-details-section">
+    <div class="details-container">
+
+      <!-- Left Column: Esperienze & Formazione -->
+      <div class="details-left-column">
+
+        <!-- Esperienze Block -->
+        <div class="experiences-block">
+          <h2 class="sub-section-title">ESPERIENZE</h2>
+          <ul class="experiences-list">
+            <li class="experience-item">
+              <p class="item-title-line">Addetta alla ristorazione @ <span class="company-name">McDonald's</span></p>
+              <p class="item-details-line">Lucca, Italia | 09/2024–09/2025</p>
+            </li>
+            <li class="experience-item">
+              <p class="item-title-line">Addetta alle vendite @ <span class="company-name">Primark</span></p>
+              <p class="item-details-line">Bologna, Italia | 08/2022 - 12/2022</p>
+            </li>
+            <li class="experience-item">
+              <p class="item-title-line">Operatore Amministrativo-Segretariale @ <span class="company-name">Università degli Studi di Ferrara</span></p>
+              <p class="item-details-line">Ferrara, Italia | 09/2021 - 03/2022 | <em class="detail-note">Tirocinio extracurricolare</em></p>
+            </li>
+            <li class="experience-item">
+              <p class="item-title-line">Consulente Business Development @ <span class="company-name">Vision Factory</span></p>
+              <p class="item-details-line">Barcellona, Spagna (da remoto) | 12/2020 - 02/2021 | <em class="detail-note">Tirocinio curricolare</em></p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formazione Block -->
+        <div class="education-block">
+          <h2 class="sub-section-title">FORMAZIONE</h2>
+          <ul class="education-list">
+            <li class="education-item">
+              <p class="item-title-line">Master UX/UI Design @ <span class="company-name">start2impact University</span></p>
+              <p class="item-details-line">Online (da remoto)</p>
+            </li>
+            <li class="education-item">
+              <p class="item-title-line">LT in Scienze Economiche e Gestione Aziendale @ <span class="company-name">Università degli Studi di Ferrara</span></p>
+              <p class="item-details-line">Ferrara, Italia</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CV Button -->
+        <div class="cv-button-wrapper">
+          <a href="assets/file-pdf/CV_DianaDeJesus.pdf" target="_blank" rel="noopener noreferrer" class="cv-btn">
+            Clicca qui per vedere il mio CV
+            <svg class="arrow-icon ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Competenze & Tools -->
+      <div class="details-right-column">
+
+        <!-- Competenze Block -->
+        <div class="skills-block">
+          <h2 class="sub-section-title">COMPETENZE</h2>
+          <ul class="skills-list">
+            <li>Usability Testing</li>
+            <li>Design Systems</li>
+            <li>User Flow Mapping</li>
+            <li>Low, Mid & High-Fidelity Wireframes</li>
+            <li>Responsive Web Design</li>
+            <li>User Research</li>
+            <li>Prototipazione su Figma</li>
+            <li>Linee guida WCAG</li>
+            <li>UX Writing</li>
+            <li>Information Architecture</li>
+            <li>Quantitative & Qualitative Analysis</li>
+            <li>Design Handoff</li>
+            <li>Competitor Analysis</li>
+            <li>HTML5 Semantico</li>
+            <li>CSS3 / Sass Layout (Flexbox & Grid)</li>
+          </ul>
+        </div>
+
+        <!-- Tools Block -->
+        <div class="tools-block">
+          <h2 class="sub-section-title">TOOLS</h2>
+          <ul class="tools-list">
+            <li><span class="tool-name">Figma</span> <span class="tool-desc">(UI/UX Design, Prototyping & Design Systems)</span></li>
+            <li><span class="tool-name">Adobe Creative Cloud</span> <span class="tool-desc">(Photoshop, Illustrator, InDesign)</span></li>
+            <li><span class="tool-name">VS Code</span> <span class="tool-desc">(Sviluppo Front-end & Sass)</span></li>
+            <li><span class="tool-name">GitHub</span> <span class="tool-desc">(Version Control & Hosting)</span></li>
+            <li><span class="tool-name">Stark / A11y</span> <span class="tool-desc">(Accessibilità & Color Contrast Checker)</span></li>
+            <li><span class="tool-name">UXArmy</span> <span class="tool-desc">(User Testing & Heatmaps)</span></li>
+            <li><span class="tool-name">Google Antigravity</span> <span class="tool-desc">(Code Management & Workflow)</span></li>
+            <li><span class="tool-name">Generative AI Tools</span> <span class="tool-desc">(Gemini Pro, ChatGPT, Claude)</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+      <span class="footer-message">Grazie per aver visitato il mio portfolio! <span class="heart-icon">&#10084;&#65039;</span></span>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+        </a>
+        <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+        </a>
+        <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Active Navigation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const activeLink = document.querySelector(".custom-nav-link.active");
+      if (activeLink) {
+        window.addEventListener("scroll", function() {
+          if (window.innerWidth >= 768) {
+            if (window.scrollY > 50) {
+              activeLink.classList.remove("active");
+            } else {
+              activeLink.classList.add("active");
+            }
+          } else {
+            activeLink.classList.remove("active");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
