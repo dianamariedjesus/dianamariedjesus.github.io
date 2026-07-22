@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Diana de Jesus | Curriculum Vitae</title>
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/chi-sono.css">
+
+  <style>
+    /* CV Page Specific Styles */
+    .cv-page-wrapper {
+      background-color: #F8F5FA;
+      padding: 40px 16px 80px 16px;
+      min-height: 80vh;
+    }
+
+    .cv-action-bar {
+      max-width: 960px;
+      margin: 0 auto 24px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .cv-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #5A189A;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .cv-back-btn:hover {
+      color: #FF452A;
+    }
+
+    .cv-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #5A189A;
+      color: #FFFFFF !important;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(90, 24, 154, 0.15);
+    }
+
+    .cv-download-btn:hover {
+      background-color: #7B2CBF;
+      transform: translateY(-2px);
+    }
+
+    .cv-card {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(90, 24, 154, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cv-header-banner {
+      background: linear-gradient(135deg, #5A189A 0%, #3C096C 100%);
+      color: #FFFFFF;
+      padding: 40px 32px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .cv-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #FFFFFF;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cv-header-text h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+    }
+
+    .cv-header-text h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .cv-body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .cv-sidebar {
+      width: 320px;
+      background-color: #FDFBFF;
+      border-right: 1px solid #EFE8F5;
+      padding: 36px 28px;
+      flex-shrink: 0;
+    }
+
+    .cv-main-content {
+      flex: 1;
+      padding: 36px 36px;
+    }
+
+    .cv-section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #5A189A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #EFE8F5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cv-sidebar .cv-section-title {
+      font-size: 15px;
+    }
+
+    .cv-text-paragraph {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #262626;
+      margin-bottom: 24px;
+    }
+
+    .cv-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px 0;
+    }
+
+    .cv-contact-list li {
+      font-size: 13.5px;
+      color: #262626;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      word-break: break-word;
+    }
+
+    .cv-contact-list li svg {
+      color: #5A189A;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cv-contact-list a {
+      color: #5A189A;
+      text-decoration: none;
+    }
+
+    .cv-contact-list a:hover {
+      text-decoration: underline;
+    }
+
+    .cv-skills-list, .cv-lang-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px 0;
+    }
+
+    .cv-skills-list li, .cv-lang-list li {
+      font-size: 14px;
+      color: #262626;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .cv-timeline-item {
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .cv-timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-job-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #262626;
+      margin: 0 0 2px 0;
+    }
+
+    .cv-company-info {
+      font-size: 14px;
+      font-weight: 500;
+      color: #5A189A;
+      margin-bottom: 4px;
+    }
+
+    .cv-job-meta {
+      font-size: 13px;
+      color: rgba(38, 38, 38, 0.6);
+      margin-bottom: 10px;
+    }
+
+    .cv-job-duties {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .cv-job-duties li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4A4A4A;
+      margin-bottom: 6px;
+    }
+
+    .cv-privacy-text {
+      font-size: 11px;
+      line-height: 1.5;
+      color: rgba(38, 38, 38, 0.45);
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid #EFE8F5;
+    }
+
+    /* Mobile Responsive Rules for CV */
+    @media (max-width: 767px) {
+      .cv-page-wrapper {
+        padding: 20px 12px 60px 12px;
+      }
+
+      .cv-header-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px;
+        gap: 16px;
+      }
+
+      .cv-avatar {
+        width: 100px;
+        height: 100px;
+      }
+
+      .cv-header-text h1 {
+        font-size: 24px;
+      }
+
+      .cv-header-text h2 {
+        font-size: 16px;
+      }
+
+      .cv-body {
+        flex-direction: column;
+      }
+
+      .cv-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #EFE8F5;
+        padding: 28px 20px;
+      }
+
+      .cv-main-content {
+        padding: 28px 20px;
+      }
+
+      .cv-action-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cv-download-btn, .cv-back-btn {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-white">
+    <div class="container-fluid">
+      <!-- Diana Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="./">
+        <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Desktop Nav links -->
+      <div class="d-none d-md-flex nav-links-center">
+        <a href="./#lavori" class="nav-link custom-nav-link">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link active">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+
+      <!-- Language Dropdown -->
+      <div class="language-dropdown-wrapper ms-auto ms-md-0 me-3 me-md-0">
+        <input type="checkbox" id="lang-toggle" class="lang-toggle-checkbox">
+        <label for="lang-toggle" class="lang-selector">
+          <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <span class="lang-text">IT</span>
+          <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </label>
+        <div class="lang-dropdown-menu">
+          <a href="#" class="lang-option active">IT</a>
+          <a href="#" class="lang-option">EN</a>
+        </div>
+      </div>
+
+      <!-- Hidden Checkbox for Mobile Menu Toggle -->
+      <input type="checkbox" id="mobile-menu-toggle" class="d-md-none">
+
+      <!-- Hamburger & Close Icons -->
+      <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none" aria-label="Toggle navigation">
+        <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </label>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-overlay-menu d-md-none">
+        <div class="mobile-nav-links">
+          <a href="./#lavori" class="custom-nav-link">I miei lavori</a>
+          <a href="chi-sono.html" class="custom-nav-link active">Chi sono</a>
+          <a href="contatti.html" class="custom-nav-link">Contattami</a>
+        </div>
+        <div class="mobile-lang-selector">
+          <button type="button" class="mobile-lang-btn active">
+            <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+          </button>
+          <button type="button" class="mobile-lang-btn">
+            <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- CV Page Container -->
+  <main class="cv-page-wrapper">
+    
+    <!-- Action Bar -->
+    <div class="cv-action-bar">
+      <a href="chi-sono.html" class="cv-back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Torna a Chi sono
+      </a>
+      <a href="https://drive.google.com/file/d/1QdhcTELnKDEm0WBbKUncUykwWFQoQCii/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cv-download-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Apri PDF Originale (Google Drive)
+      </a>
+    </div>
+
+    <!-- CV Card Container -->
+    <article class="cv-card">
+      
+      <!-- Banner Header -->
+      <header class="cv-header-banner">
+        <img src="assets/img/chi-sono/foto-profilo/DSC06202[1].jpg" alt="Diana Marie de Jesus" class="cv-avatar">
+        <div class="cv-header-text">
+          <h1>DIANA MARIE DE JESUS</h1>
+          <h2>Junior UX/UI Designer</h2>
+        </div>
+      </header>
+
+      <!-- CV Main Body Layout -->
+      <div class="cv-body">
+        
+        <!-- Left Sidebar Column -->
+        <aside class="cv-sidebar">
+          
+          <!-- Profilo -->
+          <section>
+            <h3 class="cv-section-title">Profilo</h3>
+            <p class="cv-text-paragraph">
+              Una "curiosa a tempo pieno" appassionata di esperienze digitali usabili e accattivanti. Sto completando il percorso UX/UI Design su Start2Impact con un case study completo, dalla ricerca utenti, wireframe, prototipi e ora user testing. Sono alle prime armi ma aggiungo il mio tocco unico per un design che va oltre l'estetica.
+            </p>
+          </section>
+
+          <!-- Contatti -->
+          <section>
+            <h3 class="cv-section-title">Contatti</h3>
+            <ul class="cv-contact-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Via del Tiro a Segno 423/I, 55100 Lucca</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+39 3711308590</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <a href="mailto:dianamarie.djesus@gmail.com">dianamarie.djesus@gmail.com</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <a href="https://dianadjesus.notion.site" target="_blank" rel="noopener noreferrer">dianadjesus.notion.site</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <a href="https://linkedin.com/in/diana-de-jesus" target="_blank" rel="noopener noreferrer">linkedin.com/in/diana-de-jesus</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                <span>Automunita</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h0a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h0"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M10 12h4"/></svg>
+                <span>Disponibile a trasferte e relocation</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Competenze -->
+          <section>
+            <h3 class="cv-section-title">Competenze</h3>
+            <ul class="cv-skills-list">
+              <li>• Adobe Creative Suite (Photoshop, InDesign, Illustrator)</li>
+              <li>• Figma | Wix | Canva</li>
+              <li>• GitHub | HTML & CSS</li>
+              <li>• Strumenti AI (ChatGPT, Gemini, Claude, Perplexity)</li>
+            </ul>
+          </section>
+
+          <!-- Lingue -->
+          <section>
+            <h3 class="cv-section-title">Lingue</h3>
+            <ul class="cv-lang-list">
+              <li><strong>C2 Italiano</strong></li>
+              <li><strong>C1 Inglese</strong></li>
+              <li><strong>C2 Tagalog</strong> (Madrelingua)</li>
+            </ul>
+          </section>
+
+        </aside>
+
+        <!-- Right Main Column -->
+        <main class="cv-main-content">
+          
+          <!-- Esperienze Professionali -->
+          <section>
+            <h3 class="cv-section-title">Esperienze Professionali</h3>
+            
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">Laboratorio personale di UX/UI Design</h4>
+              <div class="cv-company-info">start2impact University / In autonomia</div>
+              <div class="cv-job-meta">Online (da remoto) | 01/2023 - Oggi</div>
+              <ul class="cv-job-duties">
+                <li>Periodo dedicato ad esplorare e sperimentare il mondo della User Experience e della User Interface Design, combinando formazione mirata e sviluppo di progetti pratici e case study.</li>
+              </ul>
+            </div>
+
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">Addetta alla ristorazione</h4>
+              <div class="cv-company-info">McDonald's</div>
+              <div class="cv-job-meta">Lucca, Italia | 09/2024 - 09/2025</div>
+              <ul class="cv-job-duties">
+                <li>Collaborazione con il team per ottimizzare tempi di servizio e organizzazione in sala durante i momenti di maggiore affluenza.</li>
+                <li>Mantenimento della pulizia e dell'ordine nelle aree comuni, assicurando un ambiente piacevole e conforme agli standard aziendali.</li>
+                <li>Sviluppo di competenze di comunicazione efficace e gestione dello stress in un ambiente dinamico e multiculturale.</li>
+              </ul>
+            </div>
+
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">Addetta alle vendite</h4>
+              <div class="cv-company-info">Primark</div>
+              <div class="cv-job-meta">Bologna, Italia | 08/2022 - 12/2022</div>
+              <ul class="cv-job-duties">
+                <li>Sistemazione dell'ordine e il continuo riassortimento del reparto.</li>
+                <li>Gestione delle operazioni di cassa.</li>
+                <li>Assistenza ai clienti, aiutandoli ed indirizzandoli nelle decisioni per gli acquisti.</li>
+              </ul>
+            </div>
+
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">Operatore Amministrativo-Segretariale</h4>
+              <div class="cv-company-info">Università degli Studi di Ferrara - Tirocinio Extracurriculare</div>
+              <div class="cv-job-meta">Ferrara, Italia | 09/2021 - 03/2022</div>
+              <ul class="cv-job-duties">
+                <li>Supporto alle attività dell'ufficio e in particolare la gestione documentale sui tirocini curricolari tramite la piattaforma Almalaurea.</li>
+                <li>Supporto nell'organizzazione dei fascicoli sul Protocollo Informatico, utilizzando la piattaforma Titulus.</li>
+                <li>Supporto e assistenza alla Responsabile, Staff e studenti tramite la gestione degli account di posta su Zammad.</li>
+              </ul>
+            </div>
+
+          </section>
+
+          <!-- Educazione e Formazione -->
+          <section style="margin-top: 36px;">
+            <h3 class="cv-section-title">Educazione e Formazione</h3>
+            
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">start2impact University</h4>
+              <div class="cv-company-info">UX/UI Design</div>
+              <div class="cv-job-meta">Online (da remoto)</div>
+            </div>
+
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">Università degli Studi di Ferrara</h4>
+              <div class="cv-company-info">Laurea Triennale in Scienze Economiche e Gestione Aziendale</div>
+              <div class="cv-job-meta">Ferrara, Italia</div>
+            </div>
+
+            <div class="cv-timeline-item">
+              <h4 class="cv-job-title">Istituto Professionale Statale Aldrovandi Rubbiani</h4>
+              <div class="cv-company-info">Maturità Professionale - Grafico Pubblicitario</div>
+              <div class="cv-job-meta">Bologna, Italia</div>
+            </div>
+
+          </section>
+
+          <!-- Privacy Disclaimer -->
+          <footer class="cv-privacy-text">
+            Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base all'art. 13 del D. Lgs. 196/2003 e all'art. 13 del Regolamento UE 2016/679 relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali, ai fini della ricerca e della selezione del personale.
+          </footer>
+
+        </main>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-message">
+        Grazie per aver visitato il mio portfolio! ❤️
+      </div>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/diana-de-jesus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <img src="assets/img/footer/social-icons/linkedin.png" alt="LinkedIn" class="footer-social-icon">
+        </a>
+        <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <img src="assets/img/footer/social-icons/github.png" alt="GitHub" class="footer-social-icon">
+        </a>
+        <a href="https://www.start2impact.it/" target="_blank" rel="noopener noreferrer" aria-label="Start2Impact Profile">
+          <img src="assets/img/footer/social-icons/S2I.png" alt="Start2Impact" class="footer-social-icon">
+        </a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 Diana de Jesus
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
