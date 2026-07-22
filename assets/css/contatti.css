@@ -533,6 +533,9 @@ textarea {
 }
 /* --- Mobile viewports (< 768px) --- */
 @media (max-width: 767px) {
+  .language-dropdown-wrapper {
+    display: none !important;
+  }
   .navbar {
     position: sticky !important;
     top: 0 !important;
