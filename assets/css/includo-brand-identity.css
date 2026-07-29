@@ -17,22 +17,25 @@ body {
 .case-study-hero {
   width: 100%;
   height: 443px;
-  overflow: hidden;
+  background-color: #FDFCFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
-.case-study-hero .hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.case-study-hero .hero-logo {
+  width: 631px;
+  height: 188px;
+  object-fit: contain;
   display: block;
 }
 
 /* Main Container */
 .case-study-container {
-  max-width: 960px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 170px;
   box-sizing: border-box;
 }
 
@@ -156,9 +159,16 @@ body {
   margin-top: 48px;
   margin-bottom: 88px;
 }
-.carousel-section .carousel-container {
-  position: relative;
+.carousel-section .carousel-layout-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  position: relative;
+}
+.carousel-section .carousel-container {
+  flex-grow: 1;
+  position: relative;
   background-color: #FFFFFF;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 0;
@@ -182,17 +192,6 @@ body {
   height: auto;
   display: block;
 }
-.carousel-section .carousel-controls {
-  position: absolute;
-  top: 50%;
-  left: 24px;
-  right: 24px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-}
 .carousel-section .carousel-btn {
   width: 56px;
   height: 56px;
@@ -203,14 +202,15 @@ body {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  pointer-events: auto;
   transition: transform 0.1s ease;
+  flex-shrink: 0;
 }
 .carousel-section .carousel-btn:active {
   transform: scale(0.95);
 }
 .carousel-section .carousel-btn.btn-left {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-default.png');
+  margin-right: 32px;
 }
 .carousel-section .carousel-btn.btn-left:hover:not(.disabled) {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-hover.png');
@@ -224,6 +224,7 @@ body {
 }
 .carousel-section .carousel-btn.btn-right {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
+  margin-left: 32px;
 }
 .carousel-section .carousel-btn.btn-right:hover:not(.disabled) {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-hover.png');
@@ -241,7 +242,7 @@ body {
   font-weight: 400;
   color: rgba(38, 38, 38, 0.5);
   text-align: center;
-  margin-top: 16px;
+  margin-top: 8px;
   line-height: 1.4;
 }
 
@@ -249,6 +250,13 @@ body {
 @media (max-width: 991px) {
   .case-study-hero {
     height: 320px;
+  }
+  .case-study-hero .hero-logo {
+    width: 450px;
+    height: 134px;
+  }
+  .case-study-container {
+    padding: 0 60px;
   }
   .metadata-section .metadata-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -259,6 +267,10 @@ body {
 @media (max-width: 767px) {
   .case-study-hero {
     height: 240px;
+  }
+  .case-study-hero .hero-logo {
+    width: 290px;
+    height: 86px;
   }
   .case-study-container {
     padding: 0 16px;
@@ -289,12 +301,24 @@ body {
     margin-top: 32px;
     margin-bottom: 48px;
   }
-  .carousel-section .carousel-controls {
-    left: 8px;
-    right: 8px;
+  .carousel-section .carousel-layout-wrapper {
+    position: relative;
+    display: block;
   }
   .carousel-section .carousel-btn {
     width: 44px;
     height: 44px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .carousel-section .carousel-btn.btn-left {
+    left: 8px;
+    margin-right: 0;
+  }
+  .carousel-section .carousel-btn.btn-right {
+    right: 8px;
+    margin-left: 0;
   }
 }
