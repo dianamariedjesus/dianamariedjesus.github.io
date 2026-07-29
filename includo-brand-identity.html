@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <title>Diana de Jesus | IncluDO - Logo & Brand Identity</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  
+  <!-- Case Study CSS -->
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-white">
+    <div class="container-fluid mobile-nav-container">
+      <!-- Diana Logo -->
+      <a class="navbar-brand" href="./">
+        <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links (Centered) -->
+      <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+        <a href="./#lavori" class="nav-link custom-nav-link active">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+
+      <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
+      <div class="language-dropdown-wrapper d-none d-md-block">
+        <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+        <label for="lang-menu-toggle" class="lang-selector">
+          <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">IT</span>
+          <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </label>
+        <div class="lang-dropdown-menu">
+          <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
+          <a href="#" class="lang-item"><strong>EN</strong> <span>English</span></a>
+        </div>
+      </div>
+
+      <!-- Hidden Checkbox for Mobile Menu Toggle -->
+      <input type="checkbox" id="mobile-menu-toggle" class="d-md-none">
+
+      <!-- Hamburger Menu Label (Visible on Mobile) -->
+      <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none" aria-label="Toggle navigation">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </label>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-overlay-menu d-md-none">
+        <div class="mobile-nav-links">
+          <a href="./#lavori" class="custom-nav-link active">I miei lavori</a>
+          <a href="chi-sono.html" class="custom-nav-link">Chi sono</a>
+          <a href="contatti.html" class="custom-nav-link">Contattami</a>
+        </div>
+        <div class="mobile-lang-selector">
+          <button type="button" class="mobile-lang-btn active">
+            <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+          </button>
+          <button type="button" class="mobile-lang-btn">
+            <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Case Study Content -->
+  <main class="case-study-wrapper">
+
+    <!-- Copertina -->
+    <div class="case-study-hero">
+      <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png" alt="IncluDO Logo & Brand Identity copertina" class="hero-image">
+    </div>
+
+    <div class="case-study-container">
+      
+      <!-- Titolo Principale -->
+      <section class="case-study-title-section">
+        <h1 class="main-title"><span class="client-name">IncluDO</span> | Logo & Brand Identity</h1>
+      </section>
+
+      <!-- Tabella Metadata -->
+      <section class="metadata-section">
+        <div class="metadata-grid">
+          <div class="metadata-column">
+            <h2 class="metadata-heading">PROGETTO</h2>
+            <p class="metadata-text">IncluDO (Concept Project)</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">RUOLO</h2>
+            <p class="metadata-text">Visual & Brand Designer</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">DESCRIZIONE</h2>
+            <p class="metadata-text">Ideazione dell'identità visiva per un ente di formazione dedicato all'inclusione di migranti e persone svantaggiate.</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">COMPETENZE</h2>
+            <p class="metadata-text list-text">Logo Design & Branding</p>
+            <p class="metadata-text list-text">Visual System & Iconografia</p>
+            <p class="metadata-text list-text">Asset Social (FB, YT, IG)</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">TOOLS</h2>
+            <p class="metadata-text list-text">Adobe Illustrator</p>
+            <p class="metadata-text list-text">Adobe Photoshop</p>
+            <p class="metadata-text list-text">Figma</p>
+            <p class="metadata-text list-text">Canva</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sezioni di Testo -->
+      <div class="content-sections-wrapper">
+        
+        <!-- Contesto -->
+        <section class="case-study-section">
+          <h2 class="section-title">CONTESTO</h2>
+          <p class="section-paragraph">
+            IncluDO nasce dall’idea di una coppia che ha visto il proprio paesino svuotarsi e le botteghe artigiane chiudere. Il loro obiettivo è diventare un <strong>punto di riferimento per la formazione di mestieri tradizionali</strong> in declino, <strong>rendendoli accessibili a migranti e persone svantaggiate</strong>. Un progetto che unisce la salvaguardia dell’artigianato locale all’inclusione sociale e lavorativa.
+          </p>
+        </section>
+
+        <!-- Processo -->
+        <section class="case-study-section">
+          <h2 class="section-title">PROCESSO</h2>
+          <p class="section-paragraph">
+            Il mio obiettivo è stato <strong>dare un’identità di marca solida e coerente ad IncluDO</strong>. Ho progettato il <em>logo</em>, definito la <em>palette colori</em>, disegnato un <em>set di icone</em> su misura e creato la <em>veste grafica per i canali social</em>, traducendo i valori dell’azienda in un sistema visivo chiaro e riconoscibile.
+          </p>
+        </section>
+
+        <!-- La scelta del nome -->
+        <section class="case-study-section">
+          <h2 class="section-title">LA SCELTA DEL NOME</h2>
+          <p class="section-paragraph">
+            Il nome '<strong>IncluDO</strong>' nasce dall’unione di due concetti chiave:
+          </p>
+          <ul class="section-list">
+            <li><strong>Includere</strong>: facilitare l’integrazione sociale e lavorativa di giovani, migranti e persone svantaggiate attraverso la trasmissione di antichi mestieri.</li>
+            <li><strong>Do (fare)</strong>: rappresentare l’azione pratica e il valore del lavoro manuale.</li>
+          </ul>
+          <p class="section-paragraph">
+            Inoltre, la parola richiama la prima persona singolare del verbo "includere" (io includo), sottolineando una <strong>visione</strong> in cui <strong>nessuno viene lasciato indietro</strong>.
+          </p>
+        </section>
+
+        <!-- Marchio/Logo -->
+        <section class="case-study-section">
+          <h2 class="section-title">MARCHIO/LOGO</h2>
+          <p class="section-paragraph">
+            Nella progettazione del logo mi sono concentrata su <strong>quattro valori fondamentali dell’azienda</strong>: <em>supporto, diversità, inclusione e formazione artigianale</em>.
+            La scelta visiva si basa sulla <strong>personalizzazione dell’ultima lettera "O"</strong>, trasformata in un simbolo che <strong>racchiude due mani intrecciate all’interno di un cerchio</strong>. Questo elemento iconico diventa anche il pittogramma autonomo del brand, perfetto per essere utilizzato in spazi ridotti o come avatar social senza perdere la leggibilità.
+          </p>
+        </section>
+
+      </div>
+
+      <!-- Carosello -->
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <!-- Slide 1 (Active at load) -->
+            <div class="carousel-slide active">
+              <img src="assets/img/i-miei-lavori/brand-identity/slide1.png" alt="Diverse versioni del logo" class="carousel-img">
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <img src="assets/img/i-miei-lavori/brand-identity/slide2.png" alt="Diverse variazioni di colore del logo" class="carousel-img">
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-btn btn-left disabled" id="prevBtn" aria-label="Slide precedente"></button>
+            <button class="carousel-btn btn-right" id="nextBtn" aria-label="Slide successiva"></button>
+          </div>
+        </div>
+        <!-- Slide Caption -->
+        <div class="carousel-caption-text" id="carouselCaption">
+          Diverse versioni del logo: primaria, secondaria e ridotta
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Carousel JavaScript Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const slides = document.querySelectorAll(".carousel-slide");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const caption = document.getElementById("carouselCaption");
+
+      const captions = [
+        "Diverse versioni del logo: primaria, secondaria e ridotta",
+        "Diverse variazioni di colore del logo (a colori, bianco e nero) con scalabilità"
+      ];
+
+      let currentIndex = 0;
+
+      function updateCarousel(index) {
+        currentIndex = index;
+
+        // Toggle slides
+        slides.forEach((slide, i) => {
+          if (i === currentIndex) {
+            slide.classList.add("active");
+          } else {
+            slide.classList.remove("active");
+          }
+        });
+
+        // Update Caption
+        caption.textContent = captions[currentIndex];
+
+        // Update Button States
+        if (currentIndex === 0) {
+          prevBtn.classList.add("disabled");
+          prevBtn.disabled = true;
+          
+          nextBtn.classList.remove("disabled");
+          nextBtn.disabled = false;
+        } else {
+          prevBtn.classList.remove("disabled");
+          prevBtn.disabled = false;
+
+          nextBtn.classList.add("disabled");
+          nextBtn.disabled = true;
+        }
+      }
+
+      // Initial Call
+      updateCarousel(0);
+
+      // Event Listeners
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          updateCarousel(currentIndex - 1);
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < slides.length - 1) {
+          updateCarousel(currentIndex + 1);
+        }
+      });
+    });
+  </script>
+
+  <!-- Navbar Logic Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const activeLink = document.querySelector(".custom-nav-link.active");
+      if (activeLink) {
+        window.addEventListener("scroll", function() {
+          if (window.innerWidth >= 768) {
+            if (window.scrollY > 50) {
+              activeLink.classList.remove("active");
+            } else {
+              activeLink.classList.add("active");
+            }
+          } else {
+            activeLink.classList.remove("active");
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
