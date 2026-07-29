@@ -1,0 +1,300 @@
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #262626;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Wrapper Case Study */
+.case-study-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+/* Banner Copertina */
+.case-study-hero {
+  width: 100%;
+  height: 443px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.case-study-hero .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Main Container */
+.case-study-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+/* Title Section */
+.case-study-title-section {
+  margin-top: 24px;
+  text-align: center;
+}
+.case-study-title-section .main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #262626;
+  margin: 0;
+  line-height: 1.2;
+}
+.case-study-title-section .main-title .client-name {
+  color: #FF452A;
+}
+
+/* Metadata Section */
+.metadata-section {
+  margin-top: 88px;
+}
+.metadata-section .metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+.metadata-section .metadata-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.metadata-section .metadata-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(38, 38, 38, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px 0;
+}
+.metadata-section .metadata-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+.metadata-section .metadata-text.list-text {
+  margin-bottom: 6px;
+}
+.metadata-section .metadata-text.list-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Content Sections */
+.content-sections-wrapper {
+  margin-top: 136px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.case-study-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.case-study-section .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(38, 38, 38, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+.case-study-section .section-paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+.case-study-section .section-paragraph strong {
+  font-weight: 600;
+}
+.case-study-section .section-paragraph em {
+  font-style: italic;
+}
+.case-study-section .section-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 12px 0;
+}
+.case-study-section .section-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.9);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+.case-study-section .section-list li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+  color: rgba(38, 38, 38, 0.9);
+}
+.case-study-section .section-list li strong {
+  font-weight: 600;
+}
+
+/* Carousel Section */
+.carousel-section {
+  margin-top: 48px;
+  margin-bottom: 88px;
+}
+.carousel-section .carousel-container {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  overflow: hidden;
+}
+.carousel-section .carousel-wrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.carousel-section .carousel-slide {
+  display: none;
+  width: 100%;
+}
+.carousel-section .carousel-slide.active {
+  display: block;
+}
+.carousel-section .carousel-slide .carousel-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.carousel-section .carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  right: 24px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+.carousel-section .carousel-btn {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  pointer-events: auto;
+  transition: transform 0.1s ease;
+}
+.carousel-section .carousel-btn:active {
+  transform: scale(0.95);
+}
+.carousel-section .carousel-btn.btn-left {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-default.png');
+}
+.carousel-section .carousel-btn.btn-left:hover:not(.disabled) {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-hover.png');
+}
+.carousel-section .carousel-btn.btn-left:active:not(.disabled) {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-pressed.png');
+}
+.carousel-section .carousel-btn.btn-left.disabled {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-disabled.png');
+  cursor: not-allowed;
+}
+.carousel-section .carousel-btn.btn-right {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
+}
+.carousel-section .carousel-btn.btn-right:hover:not(.disabled) {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-hover.png');
+}
+.carousel-section .carousel-btn.btn-right:active:not(.disabled) {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-pressed.png');
+}
+.carousel-section .carousel-btn.btn-right.disabled {
+  background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-disabled.png');
+  cursor: not-allowed;
+}
+.carousel-section .carousel-caption-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.5);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.4;
+}
+
+/* Media Queries (Tablet & Mobile) */
+@media (max-width: 991px) {
+  .case-study-hero {
+    height: 320px;
+  }
+  .metadata-section .metadata-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-hero {
+    height: 240px;
+  }
+  .case-study-container {
+    padding: 0 16px;
+  }
+  .case-study-title-section {
+    margin-top: 16px;
+  }
+  .case-study-title-section .main-title {
+    font-size: 26px;
+  }
+  .metadata-section {
+    margin-top: 40px;
+  }
+  .metadata-section .metadata-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .content-sections-wrapper {
+    margin-top: 56px;
+    gap: 32px;
+  }
+  .case-study-section .section-paragraph, 
+  .case-study-section .section-list li {
+    font-size: 15px;
+  }
+  .carousel-section {
+    margin-top: 32px;
+    margin-bottom: 48px;
+  }
+  .carousel-section .carousel-controls {
+    left: 8px;
+    right: 8px;
+  }
+  .carousel-section .carousel-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
