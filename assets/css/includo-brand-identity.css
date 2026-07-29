@@ -61,27 +61,48 @@ body {
   margin-top: 88px;
 }
 .metadata-section .metadata-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 .metadata-section .metadata-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+.metadata-section .metadata-column:nth-child(1) {
+  width: 143px;
+  flex-shrink: 0;
+}
+.metadata-section .metadata-column:nth-child(2) {
+  width: 117px;
+  flex-shrink: 0;
+}
+.metadata-section .metadata-column:nth-child(3) {
+  width: 295px;
+  flex-shrink: 0;
+}
+.metadata-section .metadata-column:nth-child(4) {
+  width: 224px;
+  flex-shrink: 0;
+}
+.metadata-section .metadata-column:nth-child(5) {
+  width: 143px;
+  flex-shrink: 0;
+}
 .metadata-section .metadata-heading {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: rgba(38, 38, 38, 0.5);
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
 }
 .metadata-section .metadata-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
   line-height: 1.5;
@@ -170,7 +191,7 @@ body {
   flex-grow: 1;
   position: relative;
   background-color: #FFFFFF;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 0;
   overflow: hidden;
 }
@@ -183,6 +204,7 @@ body {
 .carousel-section .carousel-slide {
   display: none;
   width: 100%;
+  overflow: hidden;
 }
 .carousel-section .carousel-slide.active {
   display: block;
@@ -191,6 +213,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  transform: scale(1.015);
 }
 .carousel-section .carousel-btn {
   width: 56px;
@@ -259,8 +282,12 @@ body {
     padding: 0 60px;
   }
   .metadata-section .metadata-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+  }
+  .metadata-section .metadata-column {
+    width: auto !important;
   }
 }
 
@@ -288,6 +315,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+  .metadata-section .metadata-column {
+    width: auto !important;
   }
   .content-sections-wrapper {
     margin-top: 56px;
