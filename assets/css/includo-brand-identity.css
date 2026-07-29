@@ -141,14 +141,21 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin: 0 0 4px 0;
 }
 .case-study-section .section-paragraph strong {
   font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
 }
 .case-study-section .section-paragraph em {
   font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
 }
 .case-study-section .section-list {
   list-style: none;
@@ -160,8 +167,9 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
-  line-height: 1.6;
-  margin-bottom: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 2px;
   padding-left: 20px;
   position: relative;
 }
@@ -171,8 +179,14 @@ body {
   left: 5px;
   color: rgba(38, 38, 38, 0.9);
 }
+.case-study-section .section-list li:last-child {
+  margin-bottom: 0;
+}
 .case-study-section .section-list li strong {
   font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
 }
 
 /* Carousel Section */
@@ -210,10 +224,12 @@ body {
   display: block;
 }
 .carousel-section .carousel-slide .carousel-img {
-  width: 100%;
+  width: calc(100% + 8px);
   height: auto;
+  margin-left: -4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
   display: block;
-  transform: scale(1.015);
 }
 .carousel-section .carousel-btn {
   width: 56px;
@@ -243,7 +259,8 @@ body {
 }
 .carousel-section .carousel-btn.btn-left.disabled {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-disabled.png');
-  cursor: not-allowed;
+  cursor: default;
+  pointer-events: none;
 }
 .carousel-section .carousel-btn.btn-right {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
@@ -257,7 +274,8 @@ body {
 }
 .carousel-section .carousel-btn.btn-right.disabled {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-disabled.png');
-  cursor: not-allowed;
+  cursor: default;
+  pointer-events: none;
 }
 .carousel-section .carousel-caption-text {
   font-family: 'Poppins', sans-serif;
