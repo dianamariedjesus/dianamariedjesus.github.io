@@ -20,23 +20,26 @@ body {
 .case-study-hero {
   width: 100%;
   height: 443px;
-  overflow: hidden;
+  background-color: #FDFCFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .hero-logo {
+    width: 631px;
+    height: 188px;
+    object-fit: contain;
     display: block;
   }
 }
 
 // Main Container
 .case-study-container {
-  max-width: 960px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 170px; // Margini laterali di 170px
   box-sizing: border-box;
 }
 
@@ -177,9 +180,17 @@ body {
   margin-top: 48px; // Desktop: 48px from Marchio/Logo section
   margin-bottom: 88px; // Bottom spacing (since no footer is present for now)
   
-  .carousel-container {
-    position: relative;
+  .carousel-layout-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    position: relative;
+  }
+  
+  .carousel-container {
+    flex-grow: 1;
+    position: relative;
     background-color: #FFFFFF;
     
     // Double drop shadow & no rounded corners as specified
@@ -211,19 +222,6 @@ body {
     }
   }
   
-  // Navigation controls
-  .carousel-controls {
-    position: absolute;
-    top: 50%;
-    left: 24px;
-    right: 24px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    pointer-events: none; // Let clicks pass through empty space
-  }
-  
   .carousel-btn {
     width: 56px;
     height: 56px;
@@ -234,8 +232,8 @@ body {
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    pointer-events: auto; // Enable clicks on buttons
     transition: transform 0.1s ease;
+    flex-shrink: 0;
     
     &:active {
       transform: scale(0.95);
@@ -243,6 +241,7 @@ body {
     
     &.btn-left {
       background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-default.png');
+      margin-right: 32px; // Spazio di 32px dall'immagine
       
       &:hover:not(.disabled) {
         background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-hover.png');
@@ -260,6 +259,7 @@ body {
     
     &.btn-right {
       background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
+      margin-left: 32px; // Spazio di 32px dall'immagine
       
       &:hover:not(.disabled) {
         background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-hover.png');
@@ -283,7 +283,7 @@ body {
     font-weight: 400; // Poppins Regular 400
     color: rgba(38, 38, 38, 0.5); // #262626 con opacità 50%
     text-align: center;
-    margin-top: 16px;
+    margin-top: 8px; // Spazio verticale tra immagine e didascalia di 8px
     line-height: 1.4;
   }
 }
@@ -292,6 +292,15 @@ body {
 @media (max-width: 991px) {
   .case-study-hero {
     height: 320px;
+    
+    .hero-logo {
+      width: 450px;
+      height: 134px;
+    }
+  }
+  
+  .case-study-container {
+    padding: 0 60px; // Ridotto per tablet
   }
   
   .metadata-section {
@@ -305,10 +314,15 @@ body {
 @media (max-width: 767px) {
   .case-study-hero {
     height: 240px;
+    
+    .hero-logo {
+      width: 290px;
+      height: 86px;
+    }
   }
   
   .case-study-container {
-    padding: 0 16px;
+    padding: 0 16px; // Margine mobile standard
   }
   
   .case-study-title-section {
@@ -344,14 +358,28 @@ body {
     margin-top: 32px;
     margin-bottom: 48px;
     
-    .carousel-controls {
-      left: 8px;
-      right: 8px;
+    .carousel-layout-wrapper {
+      position: relative;
+      display: block; // Absolute controls relative to wrapper
     }
     
     .carousel-btn {
       width: 44px;
       height: 44px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      
+      &.btn-left {
+        left: 8px;
+        margin-right: 0;
+      }
+      
+      &.btn-right {
+        right: 8px;
+        margin-left: 0;
+      }
     }
   }
 }
