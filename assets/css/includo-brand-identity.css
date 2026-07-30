@@ -257,6 +257,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: top; /* allinea l'immagine in alto */
   display: block;
 }
 
@@ -414,7 +415,7 @@ body {
   color: rgba(38, 38, 38, 0.5);
   letter-spacing: 0.22em;
   line-height: 1.2;
-  text-align: center;
+  text-align: left; /* Allineato a sinistra */
   margin-bottom: 40px; /* Spaziatura tra il titolo e le card a 40px */
   text-transform: uppercase;
 }
@@ -529,6 +530,9 @@ body {
   }
   .other-works-section {
     margin-bottom: 80px;
+  }
+  .other-works-section .other-works-title {
+    text-align: center; /* Allineato al centro su mobile */
   }
   .other-works-section .other-works-grid {
     flex-direction: column;
