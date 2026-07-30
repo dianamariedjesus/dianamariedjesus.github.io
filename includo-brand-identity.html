@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.5">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.6">
 </head>
 
 <body>
@@ -212,6 +212,11 @@
         <div class="carousel-caption-text">
           Diverse versioni del logo: primaria, secondaria e ridotta
         </div>
+        <!-- Dots Indicators -->
+        <div class="carousel-dots">
+          <span class="carousel-dot active"></span>
+          <span class="carousel-dot"></span>
+        </div>
       </section>
 
       <!-- Seconda Parte Case Study -->
@@ -307,7 +312,14 @@
         </div>
         <!-- Slide Caption -->
         <div class="carousel-caption-text">
-          Immagine 1 — Facebook immagine copertina (851x315 px) con immagine icona (360x360 px)
+          Facebook immagine copertina (851x315 px) con immagine icona (360x360 px)
+        </div>
+        <!-- Dots Indicators -->
+        <div class="carousel-dots">
+          <span class="carousel-dot active"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
         </div>
       </section>
 
@@ -332,6 +344,7 @@
         const prevBtn = carouselEl.querySelector(".btn-left");
         const nextBtn = carouselEl.querySelector(".btn-right");
         const caption = carouselEl.querySelector(".carousel-caption-text");
+        const dots = carouselEl.querySelectorAll(".carousel-dot");
 
         let currentIndex = 0;
 
@@ -344,6 +357,15 @@
               slide.classList.add("active");
             } else {
               slide.classList.remove("active");
+            }
+          });
+
+          // Toggle dots
+          dots.forEach((dot, i) => {
+            if (i === currentIndex) {
+              dot.classList.add("active");
+            } else {
+              dot.classList.remove("active");
             }
           });
 
@@ -385,6 +407,13 @@
             updateCarousel(currentIndex + 1);
           }
         });
+
+        // Click indicators to navigate
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            updateCarousel(i);
+          });
+        });
       }
 
       // Initialize Logo Carousel (first one)
@@ -398,10 +427,10 @@
       // Initialize Social Carousel (second one)
       const socialCarouselEl = document.querySelector("#socialCarouselSection");
       const socialCaptions = [
-        "Immagine 1 — Facebook immagine copertina (851x315 px) con immagine icona (360x360 px)",
-        "Immagine 2 — YouTube immagine copertina (2560x1440 px) con immagine icona (800x800 px)",
-        "Immagine 3 — Facebook posts promozionali (1080x1350 px): presentazione azienda, evento, e servizi",
-        "Immagine 4 — Instagram posts promozionali (1080x1350 px): presentazione azienda, evento, e servizi"
+        "Facebook immagine copertina (851x315 px) con immagine icona (360x360 px)",
+        "YouTube immagine copertina (2560x1440 px) con immagine icona (800x800 px)",
+        "Facebook posts promozionali (1080x1350 px): presentazione azienda, evento, e servizi",
+        "Instagram posts promozionali (1080x1350 px): presentazione azienda, evento, e servizi"
       ];
       if (socialCarouselEl) initCarousel(socialCarouselEl, socialCaptions);
     });
