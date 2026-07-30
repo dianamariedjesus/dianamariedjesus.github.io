@@ -120,7 +120,7 @@ body {
   margin-top: 136px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 64px; /* Spazio tra le sezioni: 64px */
 }
 .case-study-section {
   display: flex;
@@ -189,10 +189,64 @@ body {
   margin-bottom: 0;
 }
 
+/* Card per immagini singole con lo stesso crop del carosello */
+.case-study-section .section-image-card {
+  margin-top: 48px; /* Spazio tra testo e immagine: 48px */
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+}
+.case-study-section .section-image-card .section-image {
+  width: calc(100% + 8px);
+  height: auto;
+  margin: -4px;
+  display: block;
+}
+
+/* Didascalia per immagini singole */
+.case-study-section .image-caption {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.5);
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Layout a colonne per la sezione Palette Colori */
+.palette-colori-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 8px;
+}
+.palette-colori-layout .palette-colori-text-col {
+  width: 594px;
+  flex-shrink: 0;
+}
+.palette-colori-layout .palette-colori-text-col .section-paragraph {
+  margin-bottom: 4px;
+}
+.palette-colori-layout .palette-colori-img-col {
+  width: 456px;
+  height: 259px;
+  flex-shrink: 0;
+}
+.palette-colori-layout .palette-colori-img-col .palette-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 /* Carousel Section */
 .carousel-section {
-  margin-top: 48px;
-  margin-bottom: 88px;
+  margin-top: 48px; /* Spazio tra testo e carosello: 48px */
+  margin-bottom: 64px; /* Spazio tra carosello e sezione successiva: 64px */
 }
 .carousel-section .carousel-layout-wrapper {
   display: flex;
@@ -241,11 +295,23 @@ body {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, opacity 0.2s ease;
   flex-shrink: 0;
+  
+  /* Stati di Opacità degli stati */
+  opacity: 0.5; /* Default: 50% */
 }
-.carousel-section .carousel-btn:active {
+.carousel-section .carousel-btn:hover:not(.disabled) {
+  opacity: 0.65; /* Hover: 65% */
+}
+.carousel-section .carousel-btn:active:not(.disabled) {
   transform: scale(0.95);
+  opacity: 0.9; /* Pressed: 90% */
+}
+.carousel-section .carousel-btn.disabled {
+  opacity: 0.25; /* Disabled: 25% */
+  cursor: default;
+  pointer-events: none;
 }
 .carousel-section .carousel-btn.btn-left {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-default.png');
@@ -259,8 +325,6 @@ body {
 }
 .carousel-section .carousel-btn.btn-left.disabled {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-disabled.png');
-  cursor: default;
-  pointer-events: none;
 }
 .carousel-section .carousel-btn.btn-right {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
@@ -274,8 +338,6 @@ body {
 }
 .carousel-section .carousel-btn.btn-right.disabled {
   background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-disabled.png');
-  cursor: default;
-  pointer-events: none;
 }
 .carousel-section .carousel-caption-text {
   font-family: 'Poppins', sans-serif;
@@ -306,6 +368,19 @@ body {
   }
   .metadata-section .metadata-column {
     width: auto !important;
+  }
+  .palette-colori-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  .palette-colori-layout .palette-colori-text-col {
+    width: 100%;
+  }
+  .palette-colori-layout .palette-colori-img-col {
+    width: 100%;
+    max-width: 456px;
+    height: auto;
   }
 }
 
@@ -344,6 +419,9 @@ body {
   .case-study-section .section-paragraph, 
   .case-study-section .section-list li {
     font-size: 15px;
+  }
+  .case-study-section .section-image-card {
+    margin-top: 32px;
   }
   .carousel-section {
     margin-top: 32px;
