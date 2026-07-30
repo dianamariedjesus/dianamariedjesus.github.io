@@ -39,7 +39,7 @@ body {
 .case-study-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 170px; // Margini laterali di 170px
+  padding: 0 284px; // Cambiato a 284px
   box-sizing: border-box;
 }
 
@@ -82,8 +82,7 @@ body {
     &:nth-child(1) { width: 143px; flex-shrink: 0; }
     &:nth-child(2) { width: 117px; flex-shrink: 0; }
     &:nth-child(3) { width: 295px; flex-shrink: 0; }
-    &:nth-child(4) { width: 224px; flex-shrink: 0; }
-    &:nth-child(5) { width: 143px; flex-shrink: 0; }
+    &:nth-child(4) { width: 143px; flex-shrink: 0; } // TOOLS è ora la quarta colonna
   }
   
   .metadata-heading {
@@ -118,10 +117,10 @@ body {
   margin-top: 0;
   display: flex;
   flex-direction: column;
-  gap: 64px; // Spazio tra le sezioni: 64px
+  gap: 56px; // Cambiato a 56px
   
   &:first-of-type {
-    margin-top: 136px; // Solo il primo wrapper ha il margine dai metadata
+    margin-top: 132px; // Cambiato a 132px
   }
 }
 
@@ -216,12 +215,12 @@ body {
     align-self: center; // Centra nel contenitore
     
     @media (min-width: 992px) {
-      width: 888px; // Dimensione esatta 888px in desktop
-      height: 422px; // Dimensione esatta 422px in desktop
+      width: 728px; // Cambiato a 728px
+      height: 398px; // Cambiato a 398px
     }
     
     @media (max-width: 991px) {
-      aspect-ratio: 888 / 422; // mantiene le proporzioni in responsive
+      aspect-ratio: 728 / 398; // mantiene le proporzioni in responsive
     }
     
     .section-image {
@@ -249,13 +248,20 @@ body {
 .palette-colori-layout {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch; // entrambe le colonne hanno la stessa altezza
   width: 100%;
   margin-top: 0; // allinea all'inizio della sezione
   
+  @media (min-width: 992px) {
+    height: 307px; // Altezza identica per le due colonne
+  }
+  
   .palette-colori-text-col {
-    width: 594px; // larghezza colonna testo
-    flex-shrink: 0;
+    @media (min-width: 992px) {
+      width: 429px; // Larghezza cambiata a 429px
+      height: 100%;
+      flex-shrink: 0;
+    }
     
     .section-title {
       margin-bottom: 8px; // spazio standard sotto il titolo
@@ -267,9 +273,11 @@ body {
   }
   
   .palette-colori-img-col {
-    width: 456px; // larghezza colonna immagine
-    height: 259px; // altezza colonna immagine
-    flex-shrink: 0;
+    @media (min-width: 992px) {
+      width: 403px; // Larghezza cambiata a 403px
+      height: 307px; // Altezza cambiata a 307px
+      flex-shrink: 0;
+    }
     
     .palette-img {
       width: 100%;
@@ -284,7 +292,7 @@ body {
 // Carousel Section
 .carousel-section {
   margin-top: 48px; // Spazio tra la parte testuale e carosello: 48px
-  margin-bottom: 64px; // Spazio tra carosello e la sezione successiva: 64px
+  margin-bottom: 56px; // Spazio tra carosello e la sezione successiva: 56px
   
   .carousel-layout-wrapper {
     display: flex;
@@ -302,8 +310,18 @@ body {
     // Double drop shadow & no rounded corners
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
     border-radius: 0;
-    
     overflow: hidden;
+    
+    @media (min-width: 992px) {
+      width: 728px; // Cambiato a 728px
+      height: 398px; // Cambiato a 398px
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width: 991px) {
+      aspect-ratio: 728 / 398;
+    }
   }
   
   .carousel-wrapper {
@@ -365,7 +383,7 @@ body {
     
     &.btn-left {
       background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-default.png');
-      margin-right: 32px; // Spazio di 32px dall'immagine
+      margin-right: 16px; // Cambiato a 16px
       
       &:hover:not(.disabled) {
         background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-hover.png');
@@ -382,7 +400,7 @@ body {
     
     &.btn-right {
       background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
-      margin-left: 32px; // Spazio di 32px dall'immagine
+      margin-left: 16px; // Cambiato a 16px
       
       &:hover:not(.disabled) {
         background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-hover.png');
@@ -405,7 +423,7 @@ body {
     font-weight: 400; // Poppins Regular 400
     color: rgba(38, 38, 38, 0.5); // #262626 con opacità 50%
     text-align: center;
-    margin-top: 8px; // Spazio verticale tra immagine e didascalia di 8px
+    margin-top: 16px; // Cambiato a 16px
     line-height: 1.4;
   }
 
@@ -444,7 +462,7 @@ body {
   height: 1px;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 0.5px;
-  margin: 88px auto; /* 88px top and bottom, centered */
+  margin: 76px auto; /* Cambiato a 76px sopra e sotto */
 }
 
 // Altri Lavori Section
@@ -455,13 +473,13 @@ body {
   
   .other-works-title {
     font-family: "Poppins", sans-serif;
-    font-size: 18px; /* Stesso stile della homepage */
+    font-size: 18px; // Stesso stile della homepage
     font-weight: 700;
-    color: rgba(38, 38, 38, 0.5); /* #262626 al 50% opacity */
+    color: rgba(38, 38, 38, 0.5); // #262626 al 50% opacity
     letter-spacing: 0.22em;
     line-height: 1.2;
-    text-align: center; // Allineato al centro (come da richiesta)
-    margin-bottom: 40px; /* Spaziatura tra il titolo e le card a 40px */
+    text-align: left; // Allineato a sinistra del box/griglia
+    margin-bottom: 40px; // Spaziatura tra il titolo e le card a 40px
     text-transform: uppercase;
   }
   
