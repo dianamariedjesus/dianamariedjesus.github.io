@@ -227,6 +227,8 @@
           <h2 class="section-title">Tipografia</h2>
           <p class="section-paragraph">
             Per garantire massima leggibilità e versatilità su tutti i dispositivi, ho scelto la famiglia di font <strong>Raleway</strong>, un carattere neo-grotesque sans-serif pulito e moderno.
+          </p>
+          <p class="section-paragraph">
             Ho utilizzato Raleway sia per il logo che per l'intera comunicazione di marca, strutturando una gerarchia visiva chiara attraverso l'uso di pesi differenti: <strong>Black e Bold</strong> per dare forza ai titoli e agli elementi chiave, Bold e SemiBold per i sottotitoli e le caption, e <strong>SemiBold e Medium</strong> per garantire un corpo del testo fluido.
           </p>
           <div class="section-image-card">
@@ -237,9 +239,9 @@
 
         <!-- Palette Colori -->
         <section class="case-study-section">
-          <h2 class="section-title">Palette Colori</h2>
           <div class="palette-colori-layout">
             <div class="palette-colori-text-col">
+              <h2 class="section-title">Palette Colori</h2>
               <p class="section-paragraph">
                 La palette cromatica nasce direttamente dai valori e dalla narrazione di IncluDO:
               </p>
@@ -489,6 +491,9 @@
     });
   </script>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Torna in alto"></button>
+
   <!-- Navbar Logic Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -506,6 +511,47 @@
           }
         });
       }
+    });
+  </script>
+
+  <!-- Back to Top Button Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const backToTopBtn = document.querySelector('.back-to-top');
+      const footer = document.querySelector('.footer-section');
+      
+      if (!backToTopBtn || !footer) return;
+
+      window.addEventListener('scroll', function() {
+        // Show/hide based on scroll position
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+        
+        // Dynamic bottom spacing relative to footer visibility
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (footerRect.top < windowHeight) {
+          const visibleFooterHeight = windowHeight - footerRect.top;
+          backToTopBtn.style.bottom = (visibleFooterHeight + 30) + 'px';
+        } else {
+          if (window.innerWidth >= 1440) {
+            backToTopBtn.style.bottom = '30px';
+          } else {
+            backToTopBtn.style.bottom = '20px';
+          }
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 

@@ -251,11 +251,15 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  margin-top: 8px; // mantiene il gap standard
+  margin-top: 0; // allinea all'inizio della sezione
   
   .palette-colori-text-col {
     width: 594px; // larghezza colonna testo
     flex-shrink: 0;
+    
+    .section-title {
+      margin-bottom: 8px; // spazio standard sotto il titolo
+    }
     
     .section-paragraph {
       margin-bottom: 4px;
@@ -271,7 +275,7 @@ body {
       width: 100%;
       height: 100%;
       object-fit: contain; // evita distorsione
-      object-position: top; // allinea l'immagine in alto
+      object-position: top; // allinea l'immagine in alto al titolo
       display: block;
     }
   }
@@ -456,7 +460,7 @@ body {
     color: rgba(38, 38, 38, 0.5); /* #262626 al 50% opacity */
     letter-spacing: 0.22em;
     line-height: 1.2;
-    text-align: left; // Allineato a sinistra
+    text-align: center; // Allineato al centro (come da richiesta)
     margin-bottom: 40px; /* Spaziatura tra il titolo e le card a 40px */
     text-transform: uppercase;
   }
@@ -467,6 +471,47 @@ body {
     align-items: start;
     gap: 32px; // Spaziatura di 32px tra le due card
     width: 100%;
+  }
+}
+
+// Back to Top Button
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  width: 64px;
+  height: 64px;
+  z-index: 1500;
+  cursor: pointer;
+  background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-default.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-image 0.1s ease;
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-hover.png');
+  }
+  
+  &:active {
+    background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-pressed.png');
+  }
+  
+  @media (max-width: 1439px) {
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
   }
 }
 
