@@ -117,11 +117,15 @@ body {
 
 /* Content Sections */
 .content-sections-wrapper {
-  margin-top: 136px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 64px; /* Spazio tra le sezioni: 64px */
 }
+.content-sections-wrapper:first-of-type {
+  margin-top: 136px; /* Solo il primo wrapper ha il margine dai metadata */
+}
+
 .case-study-section {
   display: flex;
   flex-direction: column;
@@ -349,6 +353,31 @@ body {
   line-height: 1.4;
 }
 
+/* Dots Indicators */
+.carousel-section .carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* Spaziatura tra di loro di 12px */
+  margin-top: 24px; /* Spaziatura tra il caption e questi elementi di 24px */
+  height: 16px;
+}
+.carousel-section .carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #262626;
+  opacity: 0.25; /* Default: 25% */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.carousel-section .carousel-dot.active {
+  width: 16px;
+  height: 16px;
+  opacity: 0.50; /* Pressed/Active: 50% */
+}
+
 /* Media Queries (Tablet & Mobile) */
 @media (max-width: 991px) {
   .case-study-hero {
@@ -413,8 +442,11 @@ body {
     width: auto !important;
   }
   .content-sections-wrapper {
-    margin-top: 56px;
+    margin-top: 0;
     gap: 32px;
+  }
+  .content-sections-wrapper:first-of-type {
+    margin-top: 56px;
   }
   .case-study-section .section-paragraph, 
   .case-study-section .section-list li {
