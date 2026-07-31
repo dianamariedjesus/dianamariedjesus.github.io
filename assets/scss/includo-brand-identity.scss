@@ -68,8 +68,8 @@ body {
   
   .metadata-grid {
     display: flex;
-    justify-content: flex-start; // Allineato a sinistra
-    gap: 16px; // Spazio tra le colonne: 16px
+    justify-content: space-between; // Spazio in auto
+    align-items: flex-start;
     width: 100%;
   }
   
@@ -78,10 +78,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     
-    // Per viewport desktop, larghezze specifiche per ogni colonna
+    // Per viewport desktop 1440px, larghezze specifiche per ogni colonna
     &:nth-child(1) { width: 143px; flex-shrink: 0; }
     &:nth-child(2) { width: 117px; flex-shrink: 0; }
-    &:nth-child(3) { width: 227px; flex-shrink: 0; } // Descrizione: 227px
+    &:nth-child(3) { width: 295px; flex-shrink: 0; } // Descrizione: 295px
     &:nth-child(4) { width: 143px; flex-shrink: 0; } // TOOLS è ora la quarta colonna
   }
   
@@ -215,8 +215,8 @@ body {
     align-self: center; // Centra nel contenitore
     
     @media (min-width: 992px) {
-      width: 548px; // Cambiato a 548px
-      height: 300px; // Cambiato a 300px
+      width: 728px; // Cambiato a 728px
+      height: 398px; // Cambiato a 398px
     }
     
     @media (max-width: 991px) {
@@ -298,7 +298,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; // Spazio di 12px tra frecce e carosello
+    gap: 16px; // Spazio di 16px tra frecce e carosello
     width: 100%;
     position: relative;
   }
@@ -314,8 +314,8 @@ body {
     overflow: hidden;
     
     @media (min-width: 992px) {
-      width: 548px; // Cambiato a 548px
-      height: 300px; // Cambiato a 300px
+      width: 728px; // Cambiato a 728px
+      height: 398px; // Cambiato a 398px
       flex-grow: 0;
       flex-shrink: 0;
     }
@@ -608,9 +608,9 @@ body {
 .back-to-top {
   position: fixed;
   bottom: 30px;
-  right: 60px; // Cambiato a 60px
-  width: 64px; // Cambiato a 64px
-  height: 64px; // Cambiato a 64px
+  right: 76px; // Cambiato a 76px
+  width: 80px; // Cambiato a 80px
+  height: 80px; // Cambiato a 80px
   z-index: 1500;
   cursor: pointer;
   background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-default.png');
