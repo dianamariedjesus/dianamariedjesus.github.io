@@ -661,13 +661,17 @@ body {
   
   .metadata-section {
     .metadata-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-direction: column; // Un'unica colonna
       gap: 24px;
     }
     .metadata-column {
       width: auto !important;
     }
+  }
+
+  .carousel-btn {
+    display: none !important; // Rimuove le frecce su tablet e mobile, lasciando solo le palline
   }
 
   // Layout responsivo per Palette Colori su tablet/mobile

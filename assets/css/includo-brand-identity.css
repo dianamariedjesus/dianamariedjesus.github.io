@@ -605,12 +605,15 @@ body {
     padding: 0 60px;
   }
   .metadata-section .metadata-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 24px;
   }
   .metadata-section .metadata-column {
     width: auto !important;
+  }
+  .carousel-btn {
+    display: none !important;
   }
   .palette-colori-layout {
     flex-direction: column;

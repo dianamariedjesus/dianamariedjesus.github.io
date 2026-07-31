@@ -489,6 +489,30 @@
             updateCarousel(i);
           });
         });
+
+        // Gestione Swipe Touch per Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselEl.addEventListener("touchstart", (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselEl.addEventListener("touchend", (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          const swipeThreshold = 50; // pixel minimi per lo swipe
+          if (touchStartX - touchEndX > swipeThreshold) {
+            // Swipe a sinistra -> successiva
+            if (currentIndex < slides.length - 1) {
+              updateCarousel(currentIndex + 1);
+            }
+          } else if (touchEndX - touchStartX > swipeThreshold) {
+            // Swipe a destra -> precedente
+            if (currentIndex > 0) {
+              updateCarousel(currentIndex - 1);
+            }
+          }
+        }, { passive: true });
       }
 
       // Initialize Logo Carousel (first one)
