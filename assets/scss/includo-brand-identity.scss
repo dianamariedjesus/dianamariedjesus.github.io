@@ -489,7 +489,7 @@ body {
 // Sidebar Navigation
 .sidebar-nav {
   position: fixed;
-  left: 60px; // margine a sinistra di 60px
+  left: 85px; // Default per 1400px - 1440px (gap di 16px tra overlay 183px e testo 284px: 284 - 183 - 16 = 85px)
   top: 50%; // incentrati alla tabella meta-data (e tenuti centrati verticalmente nella pagina)
   transform: translateY(-50%);
   z-index: 1200;
@@ -498,6 +498,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  
+  @media (min-width: 1441px) {
+    left: calc((100vw - 1440px) / 2 + 85px); // Mantiene esattamente 16px di gap a destra per schermi più larghi di 1440px
+  }
   
   @media (max-width: 1023px) {
     display: none !important; // nascondi su tablet e mobile per evitare sovrapposizioni
@@ -664,7 +668,7 @@ body {
   }
   
   .sidebar-nav {
-    left: 16px !important; // Margine a sinistra di 16px
+    left: 19px !important; // Margine a sinistra di 19px (gap di 16px tra overlay 138px e testo 173px: 173 - 138 - 16 = 19px)
     width: 138px !important;
   }
   
@@ -936,5 +940,81 @@ body {
       align-items: center;
       gap: 40px; // Spaziatura tra le card: 40px
     }
+  }
+}
+
+// Lightbox Modal for Case Study Images
+.carousel-img, .section-image, .palette-img {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.015);
+    filter: brightness(0.95);
+  }
+}
+
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 2100; // Sopra a tutto, incluse navbar e pulsanti
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(26, 26, 26, 0.95); // Vetro scuro premium
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  
+  &.active .lightbox-content {
+    transform: scale(1);
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+    
+    &:hover {
+      color: #FF452A; // Arancione di brand
+      transform: scale(1.1);
+    }
+  }
+  
+  .lightbox-caption {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.5;
   }
 }

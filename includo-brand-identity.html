@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=3.4">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=3.6">
 </head>
 
 <body>
@@ -753,6 +753,63 @@
       
       // Esegui sincronizzazione iniziale
       updateActiveLinkAndLine();
+    });
+  </script>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Zoomed Image">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- Lightbox Logic Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxClose = document.querySelector('.lightbox-close');
+      
+      // Seleziona tutte le immagini zoomabili del case study
+      const zoomableImages = document.querySelectorAll('.carousel-img, .section-image, .palette-img');
+      
+      zoomableImages.forEach(img => {
+        img.addEventListener('click', () => {
+          // Rimuove parametri query ?v=... se presenti per caricare l'immagine pulita
+          const srcClean = img.src.split('?')[0];
+          lightboxImg.src = srcClean;
+          lightboxCaption.textContent = img.alt || "";
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Disabilita lo scroll della pagina sottostante
+        });
+      });
+      
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Ripristina lo scroll
+        setTimeout(() => {
+          if (!lightbox.classList.contains('active')) {
+            lightboxImg.src = '';
+            lightboxCaption.textContent = '';
+          }
+        }, 300);
+      }
+      
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        // Chiude se si clicca sullo sfondo o sulla X
+        if (e.target === lightbox || e.target === lightboxClose) {
+          closeLightbox();
+        }
+      });
+      
+      // Tasto ESC per chiudere il Lightbox
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
     });
   </script>
 
