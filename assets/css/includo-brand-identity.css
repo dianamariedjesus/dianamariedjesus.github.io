@@ -268,11 +268,62 @@ body {
     flex-shrink: 0;
   }
 }
-.palette-colori-layout .palette-colori-img-col .palette-img {
+.palette-colori-layout .palette-colori-img-col .palette-html-container {
+  display: flex;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top; /* allinea l'immagine in alto al titolo */
+  box-sizing: border-box;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  border-radius: 12px;
+  margin-left: -8px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar:first-child {
+  margin-left: 0;
+  box-shadow: none;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar.bar-brown {
+  background-color: #4A2322;
+  color: #FFFFFF;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar.bar-blue {
+  background-color: #3B729B;
+  color: #FFFFFF;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar.bar-green {
+  background-color: #708B63;
+  color: #FFFFFF;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar.bar-cream {
+  background-color: #F9EFC5;
+  color: #262626;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar.bar-orange {
+  background-color: #E28C5A;
+  color: #262626;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar .palette-bar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  opacity: 0.9;
+}
+.palette-colori-layout .palette-colori-img-col .palette-html-container .palette-bar .palette-bar-content span {
   display: block;
 }
 
@@ -595,7 +646,7 @@ body {
 /* Media Query per Viewport da 1024px a 1399px */
 @media (min-width: 1024px) and (max-width: 1399px) {
   .case-study-container {
-    padding: 0 173px; /* Margini laterali a 173px */
+    padding: 0 170px; /* Margini laterali a 170px */
   }
   .metadata-section .metadata-grid {
     display: flex;
@@ -604,10 +655,22 @@ body {
   }
   .metadata-section .metadata-column {
     width: auto !important;
-    flex: 1;
+  }
+  .metadata-section .metadata-column:nth-child(1) {
+    width: 115px !important;
+    flex-shrink: 0;
+  }
+  .metadata-section .metadata-column:nth-child(2) {
+    width: 120px !important;
+    flex-shrink: 0;
   }
   .metadata-section .metadata-column:nth-child(3) {
-    flex: 2;
+    flex: 1;
+    width: auto !important;
+  }
+  .metadata-section .metadata-column:nth-child(4) {
+    width: 125px !important;
+    flex-shrink: 0;
   }
   .section-image-card {
     width: 100% !important;
@@ -622,15 +685,21 @@ body {
     height: auto !important;
   }
   .carousel-section {
-    max-width: 1100px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
   .carousel-section .carousel-layout-wrapper {
     width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
   }
   .carousel-section .carousel-container {
-    width: 100% !important;
+    flex: 1;
+    width: auto !important;
+    max-width: 728px;
     height: auto !important;
     aspect-ratio: 728 / 398;
   }
@@ -642,28 +711,34 @@ body {
     width: 100% !important;
     height: auto !important;
   }
+  .carousel-section .carousel-btn {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0;
+    margin: 0 !important;
+  }
   .palette-colori-layout {
     display: flex;
     flex-direction: row !important;
     align-items: stretch !important;
     gap: 50px !important;
     width: 100%;
+    height: auto !important;
   }
   .palette-colori-layout .palette-colori-text-col {
     flex: 1;
     width: auto !important;
-    height: auto;
+    height: auto !important;
   }
   .palette-colori-layout .palette-colori-img-col {
     flex: 1;
     width: auto !important;
     height: auto !important;
+    min-height: 320px;
     display: flex;
   }
-  .palette-colori-layout .palette-img {
-    width: 100% !important;
+  .palette-colori-layout .palette-colori-img-col .palette-html-container {
     height: 100% !important;
-    object-fit: cover !important;
   }
   .sidebar-nav {
     left: 16px !important;

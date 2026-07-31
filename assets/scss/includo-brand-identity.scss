@@ -279,12 +279,72 @@ body {
       flex-shrink: 0;
     }
     
-    .palette-img {
+    .palette-html-container {
+      display: flex;
       width: 100%;
       height: 100%;
-      object-fit: contain; // evita distorsione
-      object-position: top; // allinea l'immagine in alto al titolo
-      display: block;
+      box-sizing: border-box;
+      
+      .palette-bar {
+        flex: 1;
+        height: 100%;
+        position: relative;
+        border-radius: 12px;
+        margin-left: -8px; // sovrapposizione tra barre
+        box-shadow: -2px 0 8px rgba(0,0,0,0.06); // ombra per profondità
+        overflow: hidden;
+        
+        &:first-child {
+          margin-left: 0;
+          box-shadow: none;
+        }
+        
+        &.bar-brown {
+          background-color: #4A2322;
+          color: #FFFFFF;
+        }
+        
+        &.bar-blue {
+          background-color: #3B729B;
+          color: #FFFFFF;
+        }
+        
+        &.bar-green {
+          background-color: #708B63;
+          color: #FFFFFF;
+        }
+        
+        &.bar-cream {
+          background-color: #F9EFC5;
+          color: #262626;
+        }
+        
+        &.bar-orange {
+          background-color: #E28C5A;
+          color: #262626;
+        }
+        
+        .palette-bar-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-90deg);
+          white-space: nowrap;
+          font-family: "Poppins", sans-serif;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          opacity: 0.9;
+          
+          span {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
@@ -647,10 +707,10 @@ body {
 // Media Query per Viewport da 1024px a 1399px
 @media (min-width: 1024px) and (max-width: 1399px) {
   .case-study-container {
-    padding: 0 173px; // Margini laterali a 173px
+    padding: 0 170px; // Margini laterali a 170px
   }
 
-  // Risolve la sovrapposizione delle colonne nella tabella metadati
+  // Risolve la sovrapposizione delle colonne nella tabella metadati e allunga Tools orizzontalmente
   .metadata-section {
     .metadata-grid {
       display: flex;
@@ -660,10 +720,25 @@ body {
     
     .metadata-column {
       width: auto !important;
-      flex: 1;
+      
+      &:nth-child(1) {
+        width: 115px !important;
+        flex-shrink: 0;
+      }
+      
+      &:nth-child(2) {
+        width: 120px !important;
+        flex-shrink: 0;
+      }
       
       &:nth-child(3) {
-        flex: 2; // Dà più spazio alla descrizione per evitare sovrapposizioni
+        flex: 1; // La descrizione prende tutto lo spazio rimanente
+        width: auto !important;
+      }
+      
+      &:nth-child(4) {
+        width: 125px !important; // Estende i punti elencati sotto Tools orizzontalmente
+        flex-shrink: 0;
       }
     }
   }
@@ -684,15 +759,21 @@ body {
   }
   
   .carousel-section {
-    max-width: 1100px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 
     .carousel-layout-wrapper {
       width: 100% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px; // Spaziatura tra le frecce di controllo e il carosello
       
       .carousel-container {
-        width: 100% !important;
+        flex: 1;
+        width: auto !important;
+        max-width: 728px;
         height: auto !important;
         aspect-ratio: 728 / 398;
         
@@ -706,33 +787,40 @@ body {
           }
         }
       }
+
+      .carousel-btn {
+        width: 40px !important; // Ridimensionamento frecce di controllo per viewport ridotto
+        height: 40px !important;
+        flex-shrink: 0;
+        margin: 0 !important;
+      }
     }
   }
 
-  // Palette Colori: spaziatura 50px, colonne stessa altezza (stretch) e fluide
+  // Palette Colori: spaziatura 50px, altezze uguali (stretch), altezza auto per evitare sovrapposizioni
   .palette-colori-layout {
     display: flex;
-    flex-direction: row !important; // Assicura che rimanga affiancato su desktop medio
+    flex-direction: row !important;
     align-items: stretch !important; // Stessa altezza per entrambe le colonne
     gap: 50px !important; // Spaziatura a 50px
     width: 100%;
+    height: auto !important; // Rende l'altezza dinamica in base al testo per evitare sovrapposizioni
     
     .palette-colori-text-col {
       flex: 1;
       width: auto !important;
-      height: auto;
+      height: auto !important;
     }
     
     .palette-colori-img-col {
       flex: 1;
       width: auto !important;
       height: auto !important;
+      min-height: 320px; // Evita che l'immagine si rimpicciolisca troppo in altezza rispetto al testo
       display: flex;
       
-      .palette-img {
-        width: 100% !important;
+      .palette-html-container {
         height: 100% !important;
-        object-fit: cover !important;
       }
     }
   }
@@ -746,7 +834,7 @@ body {
       width: 138px !important;
       
       .overlay-link {
-        font-size: 12px; // Riduce leggermente la dimensione del testo per farlo entrare nella larghezza minore
+        font-size: 12px;
         padding: 4px 6px;
       }
     }
