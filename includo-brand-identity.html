@@ -100,6 +100,32 @@
   <!-- Case Study Content -->
   <main class="case-study-wrapper">
 
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-nav">
+      <div class="sidebar-lines">
+        <span class="nav-line line-1"></span>
+        <span class="nav-line line-2"></span>
+        <span class="nav-line line-3"></span>
+        <span class="nav-line line-4"></span>
+        <span class="nav-line line-5"></span>
+        <span class="nav-line line-6"></span>
+        <span class="nav-line line-7"></span>
+        <span class="nav-line line-8"></span>
+        <span class="nav-line line-9"></span>
+      </div>
+      <div class="sidebar-overlay">
+        <a href="#contesto" class="overlay-link active">CONTESTO</a>
+        <a href="#processo" class="overlay-link">PROCESSO</a>
+        <a href="#nome" class="overlay-link">NOME</a>
+        <a href="#marchio" class="overlay-link">MARCHIO/LOGO</a>
+        <a href="#tipografia" class="overlay-link">TIPOGRAFIA</a>
+        <a href="#palette" class="overlay-link">PALETTE COLORI</a>
+        <a href="#icone" class="overlay-link">ICONE</a>
+        <a href="#social" class="overlay-link">GRAFICA SOCIAL</a>
+        <a href="#conclusione" class="overlay-link">CONCLUSIONE</a>
+      </div>
+    </div>
+
     <!-- Copertina -->
     <div class="case-study-hero">
       <img src="assets/img/includo-brand-identity/IncluDO-logo.svg?v=1.1" alt="IncluDO Logo" class="hero-logo">
@@ -141,7 +167,7 @@
       <div class="content-sections-wrapper">
         
         <!-- Contesto -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="contesto">
           <h2 class="section-title">CONTESTO</h2>
           <p class="section-paragraph">
             IncluDO nasce dall’idea di una coppia che ha visto il proprio paesino svuotarsi e le botteghe artigiane chiudere. Il loro obiettivo è diventare un <strong>punto di riferimento per la formazione di mestieri tradizionali</strong> in declino, <strong>rendendoli accessibili a migranti e persone svantaggiate</strong>. Un progetto che unisce la salvaguardia dell’artigianato locale all’inclusione sociale e lavorativa.
@@ -149,7 +175,7 @@
         </section>
 
         <!-- Processo -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="processo">
           <h2 class="section-title">PROCESSO</h2>
           <p class="section-paragraph">
             Il mio obiettivo è stato <strong>dare un’identità di marca solida e coerente ad IncluDO</strong>. Ho progettato il <em>logo</em>, definito la <em>palette colori</em>, disegnato un <em>set di icone</em> su misura e creato la <em>veste grafica per i canali social</em>, traducendo i valori dell’azienda in un sistema visivo chiaro e riconoscibile.
@@ -157,7 +183,7 @@
         </section>
 
         <!-- La scelta del nome -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="nome">
           <h2 class="section-title">LA SCELTA DEL NOME</h2>
           <p class="section-paragraph">
             Il nome '<strong>IncluDO</strong>' nasce dall’unione di due concetti chiave:
@@ -172,7 +198,7 @@
         </section>
 
         <!-- Marchio/Logo -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="marchio">
           <h2 class="section-title">MARCHIO/LOGO</h2>
           <p class="section-paragraph">
             Nella progettazione del logo mi sono concentrata su <strong>quattro valori fondamentali dell’azienda</strong>: <em>supporto, diversità, inclusione e formazione artigianale</em>.
@@ -217,7 +243,7 @@
       <div class="content-sections-wrapper">
 
         <!-- Tipografia -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="tipografia">
           <h2 class="section-title">Tipografia</h2>
           <p class="section-paragraph">
             Per garantire massima leggibilità e versatilità su tutti i dispositivi, ho scelto la famiglia di font <strong>Raleway</strong>, un carattere neo-grotesque sans-serif pulito e moderno.
@@ -232,7 +258,7 @@
         </section>
 
         <!-- Palette Colori -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="palette">
           <div class="palette-colori-layout">
             <div class="palette-colori-text-col">
               <h2 class="section-title">Palette Colori</h2>
@@ -253,7 +279,7 @@
         </section>
 
         <!-- Icone -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="icone">
           <h2 class="section-title">Icone</h2>
           <p class="section-paragraph">
             Per valorizzare i servizi dell'ente, ho disegnato <strong>8 icone personalizzate che rappresentano i principali mestieri artigianali locali</strong>. Il set è stato pensato per identificare facilmente i diversi percorsi di formazione offerti sul sito e sui materiali informativi.
@@ -265,7 +291,7 @@
         </section>
 
         <!-- Grafica Social -->
-        <section class="case-study-section">
+        <section class="case-study-section" id="social">
           <h2 class="section-title">Grafica Social</h2>
           <p class="section-paragraph">
             Per garantire una presenza di marca coerente e d'impatto sui canali digitali, ho progettato le grafiche adattandole alle specifiche delle diverse piattaforme:
@@ -546,6 +572,37 @@
           behavior: 'smooth'
         });
       });
+    });
+  </script>
+
+  <!-- Sidebar Navigation Auto-Active Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll(".case-study-section[id]");
+      const navLinks = document.querySelectorAll(".overlay-link");
+      
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: 0
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach(link => {
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("active");
+              } else {
+                link.classList.remove("active");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+      
+      sections.forEach(section => observer.observe(section));
     });
   </script>
 
