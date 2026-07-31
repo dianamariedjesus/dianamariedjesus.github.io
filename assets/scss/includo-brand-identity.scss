@@ -644,140 +644,38 @@ body {
   }
 }
 
-// Media Query per Viewport da 1024px a 1399px
+// Viewport da 1024px a 1399px (Desktop Medio)
 @media (min-width: 1024px) and (max-width: 1399px) {
   .case-study-container {
-    padding: 0 170px; // Margini laterali a 170px
+    padding: 0 173px; // margini laterali a 173px
   }
-
-  // Risolve la sovrapposizione delle colonne nella tabella metadati e allunga Tools orizzontalmente
+  
   .metadata-section {
-    .metadata-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    
     .metadata-column {
-      flex-shrink: 0;
-      
-      &:nth-child(1) {
-        width: 143px !important;
-      }
-      
-      &:nth-child(2) {
-        width: 117px !important;
-      }
-      
+      flex-shrink: 1 !important;
       &:nth-child(3) {
-        width: 227px !important; // Larghezza della descrizione impostata a 227px
+        width: auto !important;
+        max-width: 295px;
       }
-      
-      &:nth-child(4) {
-        width: 143px !important; // Estende i punti elencati sotto Tools orizzontalmente
-      }
-    }
-  }
-
-  // Ridimensionamento fluido di caroselli e immagini singole in linea con il testo (max 1100px)
-  .section-image-card {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 1100px;
-    aspect-ratio: 728 / 398;
-    margin-left: auto;
-    margin-right: auto;
-    
-    .section-image {
-      width: 100% !important;
-      height: auto !important;
     }
   }
   
-  .carousel-section {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-
-    .carousel-layout-wrapper {
-      width: 100% !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px; // Spaziatura tra le frecce di controllo e il carosello
-      
-      .carousel-container {
-        flex: 1;
-        width: auto !important;
-        max-width: 728px;
-        height: auto !important;
-        aspect-ratio: 728 / 398;
-      }
-
-      .carousel-btn {
-        width: 40px !important; // Ridimensionamento frecce di controllo per viewport ridotto
-        height: 40px !important;
-        flex-shrink: 0;
-        margin: 0 !important;
-      }
-    }
-  }
-
-  // Palette Colori: metti l'immagine sotto il testo con gap 48px e allineamento centrale
   .palette-colori-layout {
-    display: flex;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 48px !important; // Spaziatura tra il testo e l'immagine
-    width: 100%;
-    height: auto !important;
-    
     .palette-colori-text-col {
-      width: 100% !important;
-      height: auto !important;
+      width: 50% !important;
+      flex-shrink: 1 !important;
     }
-    
     .palette-colori-img-col {
-      width: 403px !important; // Mantiene la dimensione originale
-      height: 307px !important; // Mantiene l'altezza originale
-      flex-shrink: 0;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      
-      .palette-img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain !important;
-        display: block !important;
-      }
+      width: 50% !important;
+      height: auto !important;
+      aspect-ratio: 403/307;
+      flex-shrink: 1 !important;
     }
-  }
-
-  // TOC Sidebar: larghezza 138px e margine a sinistra di 16px
-  .sidebar-nav {
-    left: 16px !important;
-    width: 138px !important;
-    
-    .sidebar-overlay {
-      width: 138px !important;
-      
-      .overlay-link {
-        font-size: 12px;
-        padding: 4px 6px;
-      }
-    }
-  }
-
-  // Bottone Back to Top: 64x64px con margine a destra di 60px
-  .back-to-top {
-    right: 60px !important;
-    width: 64px !important;
-    height: 64px !important;
   }
 }
 
 // Media Queries (Tablet & Mobile)
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .case-study-hero {
     height: 320px;
     
