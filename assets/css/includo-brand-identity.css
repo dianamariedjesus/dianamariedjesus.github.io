@@ -62,8 +62,7 @@ body {
 }
 .metadata-section .metadata-grid {
   display: flex;
-  justify-content: flex-start;
-  gap: 16px;
+  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
 }
@@ -81,7 +80,7 @@ body {
   flex-shrink: 0;
 }
 .metadata-section .metadata-column:nth-child(3) {
-  width: 227px;
+  width: 295px;
   flex-shrink: 0;
 }
 .metadata-section .metadata-column:nth-child(4) {
@@ -202,8 +201,8 @@ body {
 }
 @media (min-width: 992px) {
   .case-study-section .section-image-card {
-    width: 548px;
-    height: 300px;
+    width: 728px;
+    height: 398px;
   }
 }
 @media (max-width: 991px) {
@@ -286,7 +285,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
   position: relative;
 }
@@ -300,8 +299,8 @@ body {
 }
 @media (min-width: 992px) {
   .carousel-section .carousel-container {
-    width: 548px;
-    height: 300px;
+    width: 728px;
+    height: 398px;
     flex-grow: 0;
     flex-shrink: 0;
   }
@@ -559,9 +558,9 @@ body {
 .back-to-top {
   position: fixed;
   bottom: 30px;
-  right: 60px;
-  width: 64px;
-  height: 64px;
+  right: 76px;
+  width: 80px;
+  height: 80px;
   z-index: 1500;
   cursor: pointer;
   background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-default.png');
