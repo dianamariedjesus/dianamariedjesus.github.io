@@ -676,20 +676,26 @@ body {
   
   .sidebar-overlay {
     width: 138px !important; // Larghezza overlay a 138px
+    
+    a {
+      font-size: 12px !important; // Font ridotto a 12px nell'overlay
+    }
   }
 
-  // Carosello in linea con il testo (larghezza W_image = 100% - 120px)
+  // Carosello centrato con W_image = 548px e gap = 12px
   .carousel-section {
     .carousel-layout-wrapper {
       width: 100% !important;
       display: flex !important;
       align-items: center !important;
-      justify-content: space-between !important;
+      justify-content: center !important;
+      gap: 12px !important; // Spazio di 12px tra frecce e immagine
     }
     
     .carousel-track-wrapper {
-      width: calc(100% - 120px) !important;
+      width: 548px !important; // Larghezza esatta di 548px
       flex-grow: 0 !important;
+      margin: 0 !important;
     }
     
     .carousel-btn {
@@ -699,28 +705,28 @@ body {
     }
   }
   
-  // Immagini individuali allineate con le immagini del carosello
+  // Immagini individuali allineate con larghezza 548px
   .case-study-section {
     .section-image-card {
-      width: calc(100% - 120px) !important;
+      width: 548px !important; // Larghezza esatta di 548px
       margin-left: auto !important;
       margin-right: auto !important;
     }
   }
 
-  // Palette Colori: immagine sotto il testo
+  // Palette Colori: immagine sotto il testo con spaziatura di 48px
   .palette-colori-layout {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 32px !important;
+    gap: 48px !important; // Spazio tra testo e immagine: 48px
     
     .palette-colori-text-col {
       width: 100% !important;
     }
     
     .palette-colori-img-col {
-      width: calc(100% - 120px) !important; // Stessa larghezza delle immagini del carosello
-      max-width: 403px !important; // Mantiene il limite massimo desktop
+      width: 548px !important; // Larghezza esatta di 548px
+      max-width: 548px !important;
       height: auto !important;
       aspect-ratio: 403/307;
       margin-left: auto !important;
