@@ -619,15 +619,20 @@ body {
   .sidebar-overlay {
     width: 138px !important;
   }
+  .sidebar-overlay a {
+    font-size: 12px !important;
+  }
   .carousel-section .carousel-layout-wrapper {
     width: 100% !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
+    gap: 12px !important;
   }
   .carousel-section .carousel-track-wrapper {
-    width: calc(100% - 120px) !important;
+    width: 548px !important;
     flex-grow: 0 !important;
+    margin: 0 !important;
   }
   .carousel-section .carousel-btn {
     width: 44px !important;
@@ -635,21 +640,21 @@ body {
     margin: 0 !important;
   }
   .case-study-section .section-image-card {
-    width: calc(100% - 120px) !important;
+    width: 548px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
   .palette-colori-layout {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 32px !important;
+    gap: 48px !important;
   }
   .palette-colori-layout .palette-colori-text-col {
     width: 100% !important;
   }
   .palette-colori-layout .palette-colori-img-col {
-    width: calc(100% - 120px) !important;
-    max-width: 403px !important;
+    width: 548px !important;
+    max-width: 548px !important;
     height: auto !important;
     aspect-ratio: 403/307;
     margin-left: auto !important;
