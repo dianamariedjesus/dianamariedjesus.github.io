@@ -618,7 +618,7 @@ body {
   .palette-colori-layout {
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 32px;
   }
   .palette-colori-layout .palette-colori-text-col {
     width: 100%;
@@ -694,6 +694,12 @@ body {
     margin-bottom: 8px;
     color: rgba(38, 38, 38, 0.90);
   }
+  .case-study-section .section-paragraph:last-child,
+  .case-study-section .section-paragraph:last-of-type,
+  .case-study-section .section-list li:last-child,
+  .case-study-section .section-list li:last-of-type {
+    margin-bottom: 0 !important;
+  }
   .case-study-section .section-paragraph strong,
   .case-study-section .section-list li strong {
     font-weight: 500;
@@ -738,15 +744,21 @@ body {
     gap: 8px;
     margin-top: 24px;
   }
+  .divider-line {
+    margin: 80px auto;
+  }
+  .work-image-frame {
+    margin-bottom: 16px;
+  }
   .other-works-section {
-    margin-bottom: 80px;
+    margin-bottom: 128px;
   }
   .other-works-section .other-works-title {
     font-size: 16px;
     font-weight: 700;
     color: rgba(38, 38, 38, 0.50);
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
   .other-works-section .other-works-grid {
     flex-direction: column;
