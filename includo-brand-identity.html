@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.2">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.4">
 </head>
 
 <body>
@@ -567,25 +567,32 @@
       if (!backToTopBtn || !footer) return;
 
       window.addEventListener('scroll', function() {
-        // Show/hide based on scroll position
-        if (window.scrollY > 300) {
-          backToTopBtn.classList.add('visible');
-        } else {
-          backToTopBtn.classList.remove('visible');
-        }
-        
-        // Dynamic bottom spacing relative to footer visibility
         const footerRect = footer.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        
-        if (footerRect.top < windowHeight) {
-          const visibleFooterHeight = windowHeight - footerRect.top;
-          backToTopBtn.style.bottom = (visibleFooterHeight + 30) + 'px';
-        } else {
-          if (window.innerWidth >= 1440) {
-            backToTopBtn.style.bottom = '30px';
+        const isMobile = window.innerWidth < 1024; // tablet e mobile
+
+        if (isMobile) {
+          // Mobile: visibile SOLO sopra il footer (non accompagna durante tutto lo scroll)
+          if (footerRect.top < windowHeight) {
+            backToTopBtn.classList.add('visible');
+            const visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 20) + 'px'; // margine di 20px in basso
           } else {
-            backToTopBtn.style.bottom = '20px';
+            backToTopBtn.classList.remove('visible');
+          }
+        } else {
+          // Desktop: visibile quando si scende > 300px, segue lo scroll e si posiziona sopra il footer alla fine
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+
+          if (footerRect.top < windowHeight) {
+            const visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 30) + 'px';
+          } else {
+            backToTopBtn.style.bottom = '30px';
           }
         }
       });
