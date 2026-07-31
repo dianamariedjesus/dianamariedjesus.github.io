@@ -192,15 +192,23 @@ body {
 /* Card per immagini singole con lo stesso crop del carosello */
 .case-study-section .section-image-card {
   margin-top: 48px; /* Spazio tra testo e immagine: 48px */
-  max-width: 728px;
   width: 100%;
-  height: auto;
-  aspect-ratio: 728 / 398;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 0;
   overflow: hidden;
   display: flex;
   align-self: center;
+}
+@media (min-width: 992px) {
+  .case-study-section .section-image-card {
+    width: 728px; /* Cambiato a 728px */
+    height: 398px; /* Cambiato a 398px */
+  }
+}
+@media (max-width: 991px) {
+  .case-study-section .section-image-card {
+    aspect-ratio: 728 / 398;
+  }
 }
 .case-study-section .section-image-card .section-image {
   width: calc(100% + 8px);
@@ -281,17 +289,25 @@ body {
   position: relative;
 }
 .carousel-section .carousel-container {
-  flex-grow: 0;
-  flex-shrink: 0;
+  flex-grow: 1;
   position: relative;
   background-color: #FFFFFF;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 0;
   overflow: hidden;
-  max-width: 728px;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 728 / 398;
+}
+@media (min-width: 992px) {
+  .carousel-section .carousel-container {
+    width: 728px; /* Cambiato a 728px */
+    height: 398px; /* Cambiato a 398px */
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 991px) {
+  .carousel-section .carousel-container {
+    aspect-ratio: 728 / 398;
+  }
 }
 .carousel-section .carousel-wrapper {
   display: flex;
@@ -567,12 +583,19 @@ body {
 .back-to-top:active {
   background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-pressed.png');
 }
-@media (max-width: 1439px) {
+@media (max-width: 1023px) {
   .back-to-top {
     right: 20px;
     bottom: 20px;
     width: 48px;
     height: 48px;
+  }
+}
+
+/* Media Query per Viewport da 1024px a 1399px */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .case-study-container {
+    padding: 0 173px; /* Margini laterali a 173px */
   }
 }
 
@@ -748,32 +771,5 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .case-study-container {
-    padding: 0 80px 0 284px; /* lascia spazio a sinistra per il menu TOC Sidebar */
-  }
-  .metadata-section .metadata-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne per non affollare la griglia */
-    gap: 24px;
-  }
-  .metadata-section .metadata-column {
-    width: auto !important;
-  }
-  .palette-colori-layout {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-  }
-  .palette-colori-layout .palette-colori-text-col {
-    width: 100%;
-  }
-  .palette-colori-layout .palette-colori-img-col {
-    width: 100%;
-    max-width: 456px;
-    height: auto;
   }
 }
