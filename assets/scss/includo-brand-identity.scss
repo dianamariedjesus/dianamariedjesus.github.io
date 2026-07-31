@@ -35,12 +35,44 @@ body {
   }
 }
 
-// Main Container
 .case-study-container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 284px; // Cambiato a 284px
   box-sizing: border-box;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .case-study-container {
+    padding: 0 80px 0 284px; // lascia spazio a sinistra per il menu TOC Sidebar
+  }
+  
+  .metadata-section {
+    .metadata-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // 2 colonne per non affollare la griglia su schermi medi
+      gap: 24px;
+    }
+    .metadata-column {
+      width: auto !important;
+    }
+  }
+
+  .palette-colori-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    
+    .palette-colori-text-col {
+      width: 100%;
+    }
+    
+    .palette-colori-img-col {
+      width: 100%;
+      max-width: 456px;
+      height: auto;
+    }
+  }
 }
 
 // Title Section
@@ -214,14 +246,9 @@ body {
     display: flex;
     align-self: center; // Centra nel contenitore
     
-    @media (min-width: 992px) {
-      width: 728px; // Cambiato a 728px
-      height: 398px; // Cambiato a 398px
-    }
-    
-    @media (max-width: 991px) {
-      aspect-ratio: 728 / 398; // mantiene le proporzioni in responsive
-    }
+    max-width: 728px;
+    height: auto;
+    aspect-ratio: 728 / 398; // mantiene le proporzioni in responsive
     
     .section-image {
       width: calc(100% + 8px); // Crop di 4px su ciascun lato per coprire il bordo Figma
@@ -312,16 +339,12 @@ body {
     border-radius: 0;
     overflow: hidden;
     
-    @media (min-width: 992px) {
-      width: 728px; // Cambiato a 728px
-      height: 398px; // Cambiato a 398px
-      flex-grow: 0;
-      flex-shrink: 0;
-    }
-    
-    @media (max-width: 991px) {
-      aspect-ratio: 728 / 398;
-    }
+    max-width: 728px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 728 / 398; // mantiene le proporzioni in responsive
+    flex-grow: 0;
+    flex-shrink: 0;
   }
   
   .carousel-wrapper {
