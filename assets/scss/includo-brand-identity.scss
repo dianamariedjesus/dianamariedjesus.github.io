@@ -651,26 +651,88 @@ body {
   }
   
   .metadata-section {
+    .metadata-grid {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      gap: 16px !important; // Spazio tra le colonne: 16px
+      width: 100% !important;
+    }
+    
     .metadata-column {
-      flex-shrink: 1 !important;
-      &:nth-child(3) {
-        width: auto !important;
-        max-width: 295px;
-      }
+      flex-shrink: 0 !important; // Mantiene le larghezze esatte
+      
+      &:nth-child(1) { width: 143px !important; }
+      &:nth-child(2) { width: 117px !important; }
+      &:nth-child(3) { width: 227px !important; } // Descrizione: 227px
+      &:nth-child(4) { width: 143px !important; }
     }
   }
   
-  .palette-colori-layout {
-    .palette-colori-text-col {
-      width: 50% !important;
-      flex-shrink: 1 !important;
+  .sidebar-nav {
+    left: 16px !important; // Margine a sinistra di 16px
+    width: 138px !important;
+  }
+  
+  .sidebar-overlay {
+    width: 138px !important; // Larghezza overlay a 138px
+  }
+
+  // Carosello in linea con il testo (larghezza W_image = 100% - 120px)
+  .carousel-section {
+    .carousel-layout-wrapper {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
     }
+    
+    .carousel-track-wrapper {
+      width: calc(100% - 120px) !important;
+      flex-grow: 0 !important;
+    }
+    
+    .carousel-btn {
+      width: 44px !important;
+      height: 44px !important;
+      margin: 0 !important;
+    }
+  }
+  
+  // Immagini individuali allineate con le immagini del carosello
+  .case-study-section {
+    .section-image-card {
+      width: calc(100% - 120px) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  // Palette Colori: immagine sotto il testo
+  .palette-colori-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    
+    .palette-colori-text-col {
+      width: 100% !important;
+    }
+    
     .palette-colori-img-col {
-      width: 50% !important;
+      width: calc(100% - 120px) !important; // Stessa larghezza delle immagini del carosello
+      max-width: 403px !important; // Mantiene il limite massimo desktop
       height: auto !important;
       aspect-ratio: 403/307;
-      flex-shrink: 1 !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
+  }
+  
+  // Bottone Back to Top
+  .back-to-top {
+    width: 64px !important; // Cambiato a 64x64px
+    height: 64px !important;
+    right: 60px !important; // Margine a destra: 60px
   }
 }
 
