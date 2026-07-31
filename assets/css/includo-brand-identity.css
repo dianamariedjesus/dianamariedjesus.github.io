@@ -487,6 +487,9 @@ body {
   display: block;
   transition: background-color 0.2s ease;
 }
+.nav-line.active {
+  background-color: rgba(0, 0, 0, 0.50); /* colore 000000 opacity 50% */
+}
 .nav-line.line-1, .nav-line.line-2, .nav-line.line-9 { width: 20px; }
 .nav-line.line-3 { width: 22px; }
 .nav-line.line-4 { width: 25px; }
@@ -511,7 +514,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2px; /* spaziatura tra i testi di 2px */
-  border-radius: 4px;
+  border-radius: 12px; /* corner radius di 12px */
 }
 .overlay-link {
   display: block;

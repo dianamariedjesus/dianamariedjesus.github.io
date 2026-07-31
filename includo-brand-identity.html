@@ -575,34 +575,135 @@
     });
   </script>
 
-  <!-- Sidebar Navigation Auto-Active Script -->
+  <!-- Sidebar Navigation Auto-Active & Position Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      const sidebarNav = document.querySelector('.sidebar-nav');
+      const metadataSection = document.querySelector('.metadata-section');
+      const navbar = document.querySelector('.custom-navbar');
       const sections = document.querySelectorAll(".case-study-section[id]");
       const navLinks = document.querySelectorAll(".overlay-link");
+      const lines = document.querySelectorAll(".nav-line");
+
+      if (!sidebarNav || !metadataSection) return;
+
+      const overlayHeight = 292; // altezza fissa dell'overlay
+
+      // 1. Dynamic positioning logic
+      function updateSidebarPosition() {
+        if (window.innerWidth < 1024) return; // ignora su tablet e mobile dove è nascosto
+
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        const metaRect = metadataSection.getBoundingClientRect();
+        const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
+
+        if (window.scrollY === 0) {
+          sidebarNav.style.position = 'absolute';
+          sidebarNav.style.top = (metaCenterY - overlayHeight / 2) + 'px';
+          sidebarNav.style.transform = 'none'; // rimuove translateY per evitare conflitti absolute
+        } else {
+          sidebarNav.style.position = 'fixed';
+          sidebarNav.style.top = (navbarHeight + 48) + 'px';
+          sidebarNav.style.transform = 'none';
+        }
+      }
+
+      window.addEventListener('scroll', updateSidebarPosition);
+      window.addEventListener('resize', updateSidebarPosition);
+      updateSidebarPosition();
       
+      // Esegui dopo un breve ritardo per garantire il rendering completo
+      setTimeout(updateSidebarPosition, 150);
+
+      // 2. Active section highlights (IntersectionObserver)
       const observerOptions = {
         root: null,
-        rootMargin: "-20% 0px -60% 0px",
+        rootMargin: "-25% 0px -55% 0px",
         threshold: 0
       };
-      
+
+      let isScrollingManual = false;
+      let manualTimeout;
+
       const observer = new IntersectionObserver((entries) => {
+        if (isScrollingManual) return; // disattiva temporaneamente durante lo scorrimento manuale
+
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
-            navLinks.forEach(link => {
+            navLinks.forEach((link, idx) => {
               if (link.getAttribute("href") === `#${id}`) {
                 link.classList.add("active");
+                lines[idx].classList.add("active");
               } else {
                 link.classList.remove("active");
+                lines[idx].classList.remove("active");
               }
             });
           }
         });
       }, observerOptions);
-      
+
       sections.forEach(section => observer.observe(section));
+
+      // 3. Smooth scroll and click bindings
+      function handleScrollToSection(targetId, index) {
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          isScrollingManual = true;
+          clearTimeout(manualTimeout);
+
+          // Forza l'evidenziazione immediata al click
+          navLinks.forEach((l, idx) => {
+            if (idx === index) {
+              l.classList.add("active");
+              lines[idx].classList.add("active");
+            } else {
+              l.classList.remove("active");
+              lines[idx].classList.remove("active");
+            }
+          });
+
+          const navbarHeight = navbar ? navbar.offsetHeight : 80;
+          const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+
+          window.scrollTo({
+            top: targetTop,
+            behavior: 'smooth'
+          });
+
+          // Riattiva l'IntersectionObserver dopo che lo scroll smooth è terminato
+          manualTimeout = setTimeout(() => {
+            isScrollingManual = false;
+          }, 800);
+        }
+      }
+
+      // Click sui link dell'overlay
+      navLinks.forEach((link, idx) => {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          handleScrollToSection(targetId, idx);
+        });
+      });
+
+      // Click sulle linee indicatrici
+      lines.forEach((line, idx) => {
+        line.addEventListener("click", function() {
+          const targetLink = navLinks[idx];
+          if (targetLink) {
+            const targetId = targetLink.getAttribute("href");
+            handleScrollToSection(targetId, idx);
+          }
+        });
+      });
+      
+      // Evidenzia prima sezione e prima linea all'atterraggio
+      if (navLinks[0] && lines[0]) {
+        navLinks[0].classList.add("active");
+        lines[0].classList.add("active");
+      }
     });
   </script>
 
