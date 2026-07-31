@@ -678,7 +678,7 @@ body {
   .palette-colori-layout {
     flex-direction: column;
     align-items: center;
-    gap: 48px; // Spaziatura di 48px tra parte testuale ed immagine
+    gap: 32px; // Spaziatura di 32px tra parte testuale ed immagine
     
     .palette-colori-text-col {
       width: 100%;
@@ -765,6 +765,10 @@ body {
       margin-bottom: 8px; // paragraph spacing 8
       color: rgba(38, 38, 38, 0.90); // opacità 90%
       
+      &:last-child, &:last-of-type {
+        margin-bottom: 0 !important; // Rimuove gli 8px di spazio quando segue immagine, carosello o cambio container
+      }
+      
       strong {
         font-weight: 500; // Poppins Medium
         font-size: 16px;
@@ -783,7 +787,7 @@ body {
     }
     
     .section-image-card {
-      margin-top: 32px; // Margine tra testo e immagine
+      margin-top: 32px; // Margine tra testo e immagine: 32px
       
       .image-caption {
         margin-top: 8px; // Spazio superiore didascalia: 8px
@@ -816,15 +820,23 @@ body {
     }
   }
 
+  .divider-line {
+    margin: 80px auto; // Spazio sopra e sotto la linea divisoria di 80px
+  }
+
+  .work-image-frame {
+    margin-bottom: 16px; // Spaziatura tra l'immagine della card e il titolo di 16px
+  }
+
   .other-works-section {
-    margin-bottom: 80px;
+    margin-bottom: 128px; // Spazio tra l'ultima card della griglia e il footer: 128px
     
     .other-works-title {
       font-size: 16px;
       font-weight: 700; // Poppins Bold
       color: rgba(38, 38, 38, 0.50); // colore #262626 opacità 50%
       text-align: center; // allineato al centro
-      margin-bottom: 32px;
+      margin-bottom: 40px; // Spaziatura tra il titolo e la griglia: 40px
     }
 
     .other-works-grid {
