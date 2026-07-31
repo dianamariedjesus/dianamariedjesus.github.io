@@ -597,22 +597,68 @@ body {
   .case-study-container {
     padding: 0 173px;
   }
-  .metadata-section .metadata-column {
-    flex-shrink: 1 !important;
+  .metadata-section .metadata-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
-  .metadata-section .metadata-column:nth-child(3) {
-    width: auto !important;
-    max-width: 295px;
+  .metadata-section .metadata-column {
+    flex-shrink: 0 !important;
+  }
+  .metadata-section .metadata-column:nth-child(1) { width: 143px !important; }
+  .metadata-section .metadata-column:nth-child(2) { width: 117px !important; }
+  .metadata-section .metadata-column:nth-child(3) { width: 227px !important; }
+  .metadata-section .metadata-column:nth-child(4) { width: 143px !important; }
+  
+  .sidebar-nav {
+    left: 16px !important;
+    width: 138px !important;
+  }
+  .sidebar-overlay {
+    width: 138px !important;
+  }
+  .carousel-section .carousel-layout-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .carousel-section .carousel-track-wrapper {
+    width: calc(100% - 120px) !important;
+    flex-grow: 0 !important;
+  }
+  .carousel-section .carousel-btn {
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+  }
+  .case-study-section .section-image-card {
+    width: calc(100% - 120px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .palette-colori-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
   }
   .palette-colori-layout .palette-colori-text-col {
-    width: 50% !important;
-    flex-shrink: 1 !important;
+    width: 100% !important;
   }
   .palette-colori-layout .palette-colori-img-col {
-    width: 50% !important;
+    width: calc(100% - 120px) !important;
+    max-width: 403px !important;
     height: auto !important;
     aspect-ratio: 403/307;
-    flex-shrink: 1 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .back-to-top {
+    width: 64px !important;
+    height: 64px !important;
+    right: 60px !important;
   }
 }
 
