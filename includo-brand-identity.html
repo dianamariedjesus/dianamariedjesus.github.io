@@ -347,7 +347,7 @@
 
       <!-- Conclusione -->
       <div class="content-sections-wrapper">
-        <section class="case-study-section">
+        <section class="case-study-section" id="conclusione">
           <h2 class="section-title">CONCLUSIONE</h2>
           <p class="section-paragraph">
             Svolgere questo progetto mi ha permesso di applicare i principi del Visual Design per costruire una Brand Identity completa e ricca di significato. Dalla narrazione del naming fino alle grafiche social, <strong>ogni scelta progettuale</strong> è stata <strong>guidata dal desiderio di riflettere l'anima umana e inclusiva di IncluDO</strong>.
@@ -587,8 +587,6 @@
 
       if (!sidebarNav || !metadataSection) return;
 
-      const overlayHeight = 292; // altezza fissa dell'overlay
-
       // 1. Dynamic positioning logic
       function updateSidebarPosition() {
         if (window.innerWidth < 1024) return; // ignora su tablet e mobile dove è nascosto
@@ -596,10 +594,11 @@
         const navbarHeight = navbar ? navbar.offsetHeight : 80;
         const metaRect = metadataSection.getBoundingClientRect();
         const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
+        const currentHeight = sidebarNav.offsetHeight || 292;
 
         if (window.scrollY === 0) {
           sidebarNav.style.position = 'absolute';
-          sidebarNav.style.top = (metaCenterY - overlayHeight / 2) + 'px';
+          sidebarNav.style.top = (metaCenterY - currentHeight / 2) + 'px';
           sidebarNav.style.transform = 'none'; // rimuove translateY per evitare conflitti absolute
         } else {
           sidebarNav.style.position = 'fixed';
@@ -615,36 +614,42 @@
       // Esegui dopo un breve ritardo per garantire il rendering completo
       setTimeout(updateSidebarPosition, 150);
 
-      // 2. Active section highlights (IntersectionObserver)
-      const observerOptions = {
-        root: null,
-        rootMargin: "-25% 0px -55% 0px",
-        threshold: 0
-      };
-
+      // 2. Active section highlights (Direct Scrollspy)
       let isScrollingManual = false;
       let manualTimeout;
 
-      const observer = new IntersectionObserver((entries) => {
-        if (isScrollingManual) return; // disattiva temporaneamente durante lo scorrimento manuale
+      function updateActiveLinkAndLine() {
+        if (isScrollingManual) return;
 
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id");
-            navLinks.forEach((link, idx) => {
-              if (link.getAttribute("href") === `#${id}`) {
-                link.classList.add("active");
-                lines[idx].classList.add("active");
-              } else {
-                link.classList.remove("active");
-                lines[idx].classList.remove("active");
-              }
-            });
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        let currentActiveIdx = 0;
+        let minDistance = Infinity;
+
+        sections.forEach((section, idx) => {
+          const rect = section.getBoundingClientRect();
+          // Calcola la distanza rispetto alla soglia di lettura (navbar + 120px)
+          if (rect.top <= navbarHeight + 150) {
+            const dist = navbarHeight + 150 - rect.top;
+            if (dist < minDistance) {
+              minDistance = dist;
+              currentActiveIdx = idx;
+            }
           }
         });
-      }, observerOptions);
 
-      sections.forEach(section => observer.observe(section));
+        navLinks.forEach((link, idx) => {
+          if (idx === currentActiveIdx) {
+            link.classList.add("active");
+            lines[idx].classList.add("active");
+          } else {
+            link.classList.remove("active");
+            lines[idx].classList.remove("active");
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveLinkAndLine);
+      window.addEventListener('resize', updateActiveLinkAndLine);
 
       // 3. Smooth scroll and click bindings
       function handleScrollToSection(targetId, index) {
@@ -672,10 +677,11 @@
             behavior: 'smooth'
           });
 
-          // Riattiva l'IntersectionObserver dopo che lo scroll smooth è terminato
+          // Riattiva lo scroll spy dopo che lo scroll smooth è terminato
           manualTimeout = setTimeout(() => {
             isScrollingManual = false;
-          }, 800);
+            updateActiveLinkAndLine();
+          }, 1000);
         }
       }
 
@@ -699,11 +705,8 @@
         });
       });
       
-      // Evidenzia prima sezione e prima linea all'atterraggio
-      if (navLinks[0] && lines[0]) {
-        navLinks[0].classList.add("active");
-        lines[0].classList.add("active");
-      }
+      // Esegui sincronizzazione iniziale
+      updateActiveLinkAndLine();
     });
   </script>
 
