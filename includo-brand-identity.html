@@ -587,19 +587,28 @@
 
       if (!sidebarNav || !metadataSection) return;
 
-      // 1. Dynamic positioning logic
+      // 1. Dynamic positioning logic (sticky only after scrolling past metadata center)
+      let initialAbsoluteTop = null;
+
       function updateSidebarPosition() {
         if (window.innerWidth < 1024) return; // ignora su tablet e mobile dove è nascosto
 
         const navbarHeight = navbar ? navbar.offsetHeight : 80;
-        const metaRect = metadataSection.getBoundingClientRect();
-        const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
-        const currentHeight = sidebarNav.offsetHeight || 292;
+        
+        // Calcola la posizione iniziale una sola volta quando il caricamento è completato o siamo in cima
+        if (initialAbsoluteTop === null || window.scrollY === 0) {
+          const metaRect = metadataSection.getBoundingClientRect();
+          const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
+          const currentHeight = sidebarNav.offsetHeight || 276;
+          initialAbsoluteTop = metaCenterY - currentHeight / 2;
+        }
 
-        if (window.scrollY === 0) {
+        const stickyThreshold = initialAbsoluteTop - (navbarHeight + 48);
+
+        if (window.scrollY < stickyThreshold) {
           sidebarNav.style.position = 'absolute';
-          sidebarNav.style.top = (metaCenterY - currentHeight / 2) + 'px';
-          sidebarNav.style.transform = 'none'; // rimuove translateY per evitare conflitti absolute
+          sidebarNav.style.top = initialAbsoluteTop + 'px';
+          sidebarNav.style.transform = 'none';
         } else {
           sidebarNav.style.position = 'fixed';
           sidebarNav.style.top = (navbarHeight + 48) + 'px';
@@ -608,11 +617,17 @@
       }
 
       window.addEventListener('scroll', updateSidebarPosition);
-      window.addEventListener('resize', updateSidebarPosition);
+      window.addEventListener('resize', () => {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      });
       updateSidebarPosition();
       
-      // Esegui dopo un breve ritardo per garantire il rendering completo
-      setTimeout(updateSidebarPosition, 150);
+      // Forza ricalcolo dopo il rendering
+      setTimeout(() => {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      }, 150);
 
       // 2. Active section highlights (Direct Scrollspy)
       let isScrollingManual = false;
