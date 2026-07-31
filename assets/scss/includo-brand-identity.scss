@@ -649,6 +649,115 @@ body {
   .case-study-container {
     padding: 0 173px; // Margini laterali a 173px
   }
+
+  // Risolve la sovrapposizione delle colonne nella tabella metadati
+  .metadata-section {
+    .metadata-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    
+    .metadata-column {
+      width: auto !important;
+      flex: 1;
+      
+      &:nth-child(3) {
+        flex: 2; // Dà più spazio alla descrizione per evitare sovrapposizioni
+      }
+    }
+  }
+
+  // Ridimensionamento fluido di caroselli e immagini singole in linea con il testo (max 1100px)
+  .section-image-card {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 1100px;
+    aspect-ratio: 728 / 398;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .section-image {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+  
+  .carousel-section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .carousel-layout-wrapper {
+      width: 100% !important;
+      
+      .carousel-container {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 728 / 398;
+        
+        .carousel-slide {
+          width: 100% !important;
+          height: auto !important;
+          
+          .carousel-img {
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Palette Colori: spaziatura 50px, colonne stessa altezza (stretch) e fluide
+  .palette-colori-layout {
+    display: flex;
+    flex-direction: row !important; // Assicura che rimanga affiancato su desktop medio
+    align-items: stretch !important; // Stessa altezza per entrambe le colonne
+    gap: 50px !important; // Spaziatura a 50px
+    width: 100%;
+    
+    .palette-colori-text-col {
+      flex: 1;
+      width: auto !important;
+      height: auto;
+    }
+    
+    .palette-colori-img-col {
+      flex: 1;
+      width: auto !important;
+      height: auto !important;
+      display: flex;
+      
+      .palette-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+    }
+  }
+
+  // TOC Sidebar: larghezza 138px e margine a sinistra di 16px
+  .sidebar-nav {
+    left: 16px !important;
+    width: 138px !important;
+    
+    .sidebar-overlay {
+      width: 138px !important;
+      
+      .overlay-link {
+        font-size: 12px; // Riduce leggermente la dimensione del testo per farlo entrare nella larghezza minore
+        padding: 4px 6px;
+      }
+    }
+  }
+
+  // Bottone Back to Top: 64x64px con margine a destra di 60px
+  .back-to-top {
+    right: 60px !important;
+    width: 64px !important;
+    height: 64px !important;
+  }
 }
 
 // Media Queries (Tablet & Mobile)

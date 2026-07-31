@@ -597,6 +597,90 @@ body {
   .case-study-container {
     padding: 0 173px; /* Margini laterali a 173px */
   }
+  .metadata-section .metadata-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .metadata-section .metadata-column {
+    width: auto !important;
+    flex: 1;
+  }
+  .metadata-section .metadata-column:nth-child(3) {
+    flex: 2;
+  }
+  .section-image-card {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 1100px;
+    aspect-ratio: 728 / 398;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-image-card .section-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .carousel-section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carousel-section .carousel-layout-wrapper {
+    width: 100% !important;
+  }
+  .carousel-section .carousel-container {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 728 / 398;
+  }
+  .carousel-section .carousel-slide {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .carousel-section .carousel-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .palette-colori-layout {
+    display: flex;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 50px !important;
+    width: 100%;
+  }
+  .palette-colori-layout .palette-colori-text-col {
+    flex: 1;
+    width: auto !important;
+    height: auto;
+  }
+  .palette-colori-layout .palette-colori-img-col {
+    flex: 1;
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+  }
+  .palette-colori-layout .palette-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .sidebar-nav {
+    left: 16px !important;
+    width: 138px !important;
+  }
+  .sidebar-nav .sidebar-overlay {
+    width: 138px !important;
+  }
+  .sidebar-nav .overlay-link {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  .back-to-top {
+    right: 60px !important;
+    width: 64px !important;
+    height: 64px !important;
+  }
 }
 
 /* Media Queries (Tablet & Mobile) */
