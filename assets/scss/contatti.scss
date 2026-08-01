@@ -797,7 +797,7 @@ textarea {
     order: 1;
     font-size: 16px;
     padding: 0;
-    white-space: normal !important;
+    white-space: nowrap !important;
   }
 
   .footer-socials {
@@ -809,5 +809,12 @@ textarea {
   .footer-social-icon {
     width: 40px;
     height: 40px;
+  }
+}
+
+/* Wrap footer text only on very narrow screens (320px to 374px) */
+@media (max-width: 374px) {
+  .footer-message {
+    white-space: normal !important;
   }
 }
