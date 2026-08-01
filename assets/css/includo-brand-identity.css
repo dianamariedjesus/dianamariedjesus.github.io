@@ -663,8 +663,7 @@ body {
   .palette-colori-layout .palette-colori-img-col {
     width: 548px !important;
     max-width: 548px !important;
-    height: auto !important;
-    aspect-ratio: 403/307;
+    height: 303px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }

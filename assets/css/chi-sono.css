@@ -1085,7 +1085,7 @@ html, body {
     line-height: 1.34 !important;
     font-weight: 600 !important;
     color: #262626 !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
   }
 
   .footer-socials {
@@ -1114,5 +1114,11 @@ html, body {
   .footer-social-icon {
     width: 40px !important;
     height: 40px !important;
+  }
+}
+
+@media (max-width: 374px) {
+  .footer-message {
+    white-space: normal !important;
   }
 }

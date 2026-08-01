@@ -1043,11 +1043,18 @@ html, body {
 
   .footer-message {
     order: 2;
-    white-space: normal !important;
+    white-space: nowrap !important;
   }
 
   .footer-socials {
     order: 3;
     justify-content: center;
+  }
+}
+
+/* Wrap footer text only on very narrow screens (320px to 374px) */
+@media (max-width: 374px) {
+  .footer-message {
+    white-space: normal !important;
   }
 }
