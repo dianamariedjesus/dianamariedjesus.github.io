@@ -1085,7 +1085,7 @@ html, body {
     line-height: 1.34 !important;
     font-weight: 600 !important;
     color: #262626 !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
   }
 
   .footer-socials {

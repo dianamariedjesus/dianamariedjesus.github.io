@@ -683,33 +683,38 @@ body {
     }
   }
 
-  // Carosello centrato con W_image = 548px e gap = 12px
+  // Carosello centrato con W_totale = 684px, W_image = 548px, gap = 12px, W_btn = 56px
   .carousel-section {
     .carousel-layout-wrapper {
-      width: 100% !important;
+      width: 684px !important; // Larghezza totale del carosello con comandi
+      margin-left: auto !important;
+      margin-right: auto !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       gap: 12px !important; // Spazio di 12px tra frecce e immagine
     }
     
-    .carousel-track-wrapper {
+    .carousel-container {
       width: 548px !important; // Larghezza esatta di 548px
+      height: 300px !important; // Altezza proporzionata
       flex-grow: 0 !important;
+      flex-shrink: 0 !important;
       margin: 0 !important;
     }
     
     .carousel-btn {
-      width: 44px !important;
-      height: 44px !important;
+      width: 56px !important; // Larghezza bottone a 56px per totale 684px (56 + 12 + 548 + 12 + 56 = 684px)
+      height: 56px !important; // Mantiene proporzioni quadrate
       margin: 0 !important;
     }
   }
   
-  // Immagini individuali allineate con larghezza 548px
+  // Immagini individuali allineate con larghezza 548px e altezza 300px
   .case-study-section {
     .section-image-card {
       width: 548px !important; // Larghezza esatta di 548px
+      height: 300px !important; // Altezza coerente con il carosello
       margin-left: auto !important;
       margin-right: auto !important;
     }
