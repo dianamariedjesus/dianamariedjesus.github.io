@@ -189,30 +189,7 @@ body {
   color: rgba(38, 38, 38, 0.9);
 }
 
-/* Infografica Placeholder (3 Card per il Problema) */
-.infographic-placeholder-container {
-  margin-top: 24px;
-  background-color: #FBFBFC;
-  border: 1px dashed #CBD5E1;
-  border-radius: 12px;
-  padding: 24px;
-}
-.infographic-placeholder-header {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.placeholder-tag {
-  display: inline-block;
-  background-color: #E2E8F0;
-  color: #475569;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 4px 12px;
-  border-radius: 6px;
-  text-transform: uppercase;
-}
+/* Infografica (3 Card per il Problema) */
 .problem-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -221,32 +198,68 @@ body {
 .problem-card {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 .problem-card-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #1E293B;
-  margin: 0 0 4px 0;
-  line-height: 1.3;
+  margin: 0;
+  line-height: 1.35;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 12px;
+}
+.problem-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.item-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.problem-icon-bg {
+  background-color: #FFE4E6;
+}
+.impact-icon-bg {
+  background-color: #F3E8FF;
+}
+.item-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.item-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.text-danger-label {
+  color: #E11D48;
+}
+.text-purple-label {
+  color: #7C3AED;
 }
 .problem-card-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 400;
   color: #475569;
-  line-height: 1.5;
+  line-height: 1.45;
   margin: 0;
-}
-.problem-card-text strong {
-  font-weight: 600;
-  color: #0F172A;
 }
 
 /* Placeholders per Mini-Video (Sezione Soluzioni) */
