@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=2.0">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
           <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"></path>
           </svg>
           <span class="lang-text">IT</span>
           <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -107,12 +107,32 @@
         <span class="nav-line line-2"></span>
         <span class="nav-line line-3"></span>
         <span class="nav-line line-4"></span>
+        <span class="nav-line line-5"></span>
+        <span class="nav-line line-6"></span>
+        <span class="nav-line line-7"></span>
+        <span class="nav-line line-8"></span>
+        <span class="nav-line line-9"></span>
+        <span class="nav-line line-10"></span>
+        <span class="nav-line line-11"></span>
+        <span class="nav-line line-12"></span>
+        <span class="nav-line line-13"></span>
+        <span class="nav-line line-14"></span>
       </div>
       <div class="sidebar-overlay">
         <a href="#contesto" class="overlay-link active">CONTESTO</a>
         <a href="#problema" class="overlay-link">PROBLEMA</a>
         <a href="#soluzioni" class="overlay-link">SOLUZIONI</a>
         <a href="#vincoli" class="overlay-link">I VINCOLI DEL PROGETTO</a>
+        <a href="#processo" class="overlay-link">IL PROCESSO DI DESIGN</a>
+        <a href="#accessibilita" class="overlay-link">ACCESSIBILITÀ (WCAG)</a>
+        <a href="#competitor" class="overlay-link">ANALISI COMPETITIVA</a>
+        <a href="#sondaggio" class="overlay-link">SONDAGGIO QUANTITATIVO</a>
+        <a href="#personas" class="overlay-link">USER PERSONAS</a>
+        <a href="#riprogettazione" class="overlay-link">RIPROGETTAZIONE PAGINE</a>
+        <a href="#usertesting" class="overlay-link">USER TESTING (UXARMY)</a>
+        <a href="#risultati" class="overlay-link">RISULTATI E IMPATTO</a>
+        <a href="#modifiche" class="overlay-link">MODIFICHE DEFINITIVE</a>
+        <a href="#tradeoff" class="overlay-link">TRADE-OFF E CONCLUSIONE</a>
       </div>
     </div>
 
@@ -289,10 +309,570 @@
           </p>
         </section>
 
+        <!-- Il Processo di Design -->
+        <section class="case-study-section" id="processo">
+          <h2 class="section-title">IL PROCESSO DI DESIGN</h2>
+          <h3 class="section-subtitle">
+            L'analisi delle euristiche di Nielsen rivela un'ottima facilità d'uso di base ma gravi criticità su contrasti e bug tecnici.
+          </h3>
+          <p class="section-paragraph">
+            Ho aperto il progetto con un'analisi euristica sui 10 Principi di Nielsen per individuare le barriere del sito storico testando l'esperienza in modalità desktop.
+          </p>
+          
+          <!-- Infografica Nielsen -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[INFOGRAFICA - VALUTAZIONE EURISTICHE DI NIELSEN]</span>
+            </div>
+            <div class="nielsen-scores-grid">
+              <div class="nielsen-card">
+                <div class="nielsen-card-header">
+                  <span class="nielsen-title">Learnability (Facilità d'uso iniziale)</span>
+                  <span class="nielsen-score">4 / 5</span>
+                </div>
+                <p class="nielsen-desc">Il sito è subito chiaro e facile da capire per chiunque, anche se alcuni link poco coerenti creano un po' di confusione iniziale.</p>
+              </div>
+              <div class="nielsen-card">
+                <div class="nielsen-card-header">
+                  <span class="nielsen-title">Efficiency (Velocità ed Efficienza)</span>
+                  <span class="nielsen-score">3.5 / 5</span>
+                </div>
+                <p class="nielsen-desc">Ci si muove bene grazie a menu e footer chiari, ma i continui reindirizzamenti verso siti esterni rallentano l'esperienza.</p>
+              </div>
+              <div class="nielsen-card">
+                <div class="nielsen-card-header">
+                  <span class="nielsen-title">Memorability (Facilità di Ricordo)</span>
+                  <span class="nielsen-score">4 / 5</span>
+                </div>
+                <p class="nielsen-desc">La struttura semplice rende facile orientarsi anche dopo tempo, ma manca un'area personale per ritrovare al volo i corsi salvati.</p>
+              </div>
+              <div class="nielsen-card">
+                <div class="nielsen-card-header">
+                  <span class="nielsen-title">Errors (Gestione degli Errori)</span>
+                  <span class="nielsen-score">2 / 5</span>
+                </div>
+                <p class="nielsen-desc">Ci sono troppi problemi tecnici che ostacolano l'utente, come link rotti (errori 404), video che non partono e avvisi poco chiari.</p>
+              </div>
+              <div class="nielsen-card" style="grid-column: span 2;">
+                <div class="nielsen-card-header">
+                  <span class="nielsen-title">Satisfaction (Gradevolezza Visiva)</span>
+                  <span class="nielsen-score">2.5 / 5</span>
+                </div>
+                <p class="nielsen-desc">I testi e l'impostazione generale sono ordinati, ma i colori troppo accesi e i testi sovrapposti alle immagini stancano e rendono difficile la lettura.</p>
+              </div>
+            </div>
+            <div class="nielsen-overall-banner">
+              PUNTEGGIO COMPLESSIVO OVERALL ⭐ 3.2 / 5
+            </div>
+          </div>
+          <p class="section-paragraph">
+            In sintesi: Il sito ha un'ottima base strutturale ed è facile da capire, ma ha bisogno urgente di un redesign per sistemare i contrasti visivi, eliminare i link rotti e gestire i corsi direttamente sulla piattaforma senza mandare l'utente altrove.
+          </p>
+        </section>
+
+        <!-- Accessibilità WCAG -->
+        <section class="case-study-section" id="accessibilita">
+          <h2 class="section-title">ACCESSIBILITÀ &amp; INTERVENTI WCAG</h2>
+          <h3 class="section-subtitle">
+            Traduzione delle criticità di accessibilità in interventi di design pronti per lo sviluppo.
+          </h3>
+          <p class="section-paragraph">
+            Dietro l’interfaccia grafica di Acumen Academy si nascondevano barriere invisibili ma bloccanti per molti utenti: testi illeggibili per basso contrasto, elementi non navigabili da tastiera e moduli privi di etichette visibili. Per allineare il sito agli standard internazionali WCAG, ho mappato le criticità più gravi del portale storico, traducendole in soluzioni di design concrete e pronte per lo sviluppo.
+          </p>
+
+          <!-- Infografica 4 Card WCAG -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[INFOGRAFICA - 4 CARD ACCESSIBILITÀ]</span>
+            </div>
+            <div class="wcag-cards-grid">
+              <div class="wcag-card">
+                <h4 class="wcag-card-title">1. Contrasto &amp; Leggibilità</h4>
+                <div class="wcag-asis-box">
+                  <span class="wcag-label">Criticità Riscontrate (As-Is):</span>
+                  <p class="wcag-text">Testi chiave nell'Hero e testi sopra le immagini con rapporto di contrasto sotto il minimo WCAG (4.5:1). Utilizzo eccessivo del grassetto (bold) su frasi e titoli lunghi.</p>
+                </div>
+                <div class="wcag-tobe-box">
+                  <span class="wcag-label">Soluzione UX Proposta (To-Be):</span>
+                  <p class="wcag-text">Aumento dei rapporti di contrasto ad almeno 4.5:1 (3:1 per testi grandi). Inserimento di overlay scuri semitrasparenti e ottimizzazione della gerarchia dei pesi font.</p>
+                </div>
+              </div>
+              <div class="wcag-card">
+                <h4 class="wcag-card-title">2. Navigazione da Tastiera &amp; Focus</h4>
+                <div class="wcag-asis-box">
+                  <span class="wcag-label">Criticità Riscontrate (As-Is):</span>
+                  <p class="wcag-text">Frecce del menu dropdown Foundry, navigazione dei caroselli e filtri corsi ignorati dal tasto Tab della tastiera. Indicatore di focus visivo debole o del tutto invisibile.</p>
+                </div>
+                <div class="wcag-tobe-box">
+                  <span class="wcag-label">Soluzione UX Proposta (To-Be):</span>
+                  <p class="wcag-text">Integrazione dell'attributo <code>tabindex="0"</code> su tutti gli elementi interattivi non nativi. Definizione tramite CSS di focus indicator ad alto contrasto.</p>
+                </div>
+              </div>
+              <div class="wcag-card">
+                <h4 class="wcag-card-title">3. Struttura Semantica HTML</h4>
+                <div class="wcag-asis-box">
+                  <span class="wcag-label">Criticità Riscontrate (As-Is):</span>
+                  <p class="wcag-text">Uso scorretto dei tag di heading (es. numeri percentuali marcati come H1). Elementi di navigazione correlati ed icone social non strutturati semanticamente come liste.</p>
+                </div>
+                <div class="wcag-tobe-box">
+                  <span class="wcag-label">Soluzione UX Proposta (To-Be):</span>
+                  <p class="wcag-text">Ripristino di una corretta struttura dei titoli (H1 singolo per pagina, H2/H3 a cascata). Conversione di menu, elenchi benefici ed icone social nel footer in liste semantiche (tag <code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code>).</p>
+                </div>
+              </div>
+              <div class="wcag-card">
+                <h4 class="wcag-card-title">4. Moduli e Campi di Input</h4>
+                <div class="wcag-asis-box">
+                  <span class="wcag-label">Criticità Riscontrate (As-Is):</span>
+                  <p class="wcag-text">Form della newsletter nel footer privo di etichette (label) visibili, sostituiti da placeholder temporanei. Campi di input con stili incoerenti e assenza di <code>autocomplete</code>.</p>
+                </div>
+                <div class="wcag-tobe-box">
+                  <span class="wcag-label">Soluzione UX Proposta (To-Be):</span>
+                  <p class="wcag-text">Introduzione di tag <code>&lt;label&gt;</code> sempre visibili e persistenti (linee guida Material Design). Unificazione visiva dello stile e aggiunta dei tag di autocompilazione programmatica.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Analisi Competitiva -->
+        <section class="case-study-section" id="competitor">
+          <h2 class="section-title">ANALISI COMPETITIVA</h2>
+          <h3 class="section-subtitle">
+            Analisi competitiva per allinearsi ai migliori standard e-learning.
+          </h3>
+          <p class="section-paragraph">
+            Per progettare una soluzione d'impatto, ho voluto alzare lo sguardo per mappare come si muovono i principali player del settore dell'e-learning e dell'impatto sociale, conducendo una competitor analysis mirata su tre competitor diretti (Global Health Learning Center, Philanthropy University, HREA) e due giganti indiretti (Coursera e TED-Ed). L'obiettivo era intercettare i migliori standard di mercato per trasformarli in opportunità concrete di redesign.
+          </p>
+
+          <!-- Tabella Competitor -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[TABELLA - COMPETITOR ANALYSIS]</span>
+            </div>
+            <div class="competitor-table-container">
+              <table class="competitor-table">
+                <thead>
+                  <tr>
+                    <th>Competitor</th>
+                    <th>Tipo</th>
+                    <th>Social Login</th>
+                    <th>Breadcrumbs</th>
+                    <th>Live Chat Support</th>
+                    <th>Ricerca Globale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Acumen Academy (As-Is)</strong></td>
+                    <td>Diretto</td>
+                    <td>❌ Assente</td>
+                    <td>❌ Assente</td>
+                    <td>❌ Assente</td>
+                    <td>⚠️ Limitata</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Global Health Learning Center</strong></td>
+                    <td>Diretto</td>
+                    <td>❌ Assente</td>
+                    <td>✅ Presente</td>
+                    <td>❌ Assente</td>
+                    <td>⚠️ Parziale</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Philanthropy University</strong></td>
+                    <td>Diretto</td>
+                    <td>✅ Presente</td>
+                    <td>✅ Presente</td>
+                    <td>⚠️ Form Email</td>
+                    <td>✅ Avanzata</td>
+                  </tr>
+                  <tr>
+                    <td><strong>HREA</strong></td>
+                    <td>Diretto</td>
+                    <td>❌ Assente</td>
+                    <td>❌ Assente</td>
+                    <td>❌ Assente</td>
+                    <td>⚠️ Base</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Coursera</strong></td>
+                    <td>Indiretto</td>
+                    <td>✅ Presente</td>
+                    <td>✅ Presente</td>
+                    <td>✅ Live Chat 24/7</td>
+                    <td>✅ Avanzata con Filtri</td>
+                  </tr>
+                  <tr>
+                    <td><strong>TED-Ed</strong></td>
+                    <td>Indiretto</td>
+                    <td>✅ Presente</td>
+                    <td>✅ Presente</td>
+                    <td>⚠️ Help Center</td>
+                    <td>✅ Avanzata</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="section-paragraph">
+            In sintesi, introdurremo il social login per un onboarding immediato, le breadcrumbs per non far perdere mai la bussola agli utenti, una livechat di supporto e una struttura di ricerca finalmente globale.
+          </p>
+        </section>
+
+        <!-- Sondaggio Quantitativo -->
+        <section class="case-study-section" id="sondaggio">
+          <h2 class="section-title">RICERCA UTENTE &amp; SONDAGGIO</h2>
+          <h3 class="section-subtitle">
+            Sondaggio quantitativo su utenti reali per validare il target e trasformare le loro priorità in obiettivi di design (UX Goal).
+          </h3>
+          <p class="section-paragraph">
+            Per validare le mie ipotesi sul target, ho somministrato un sondaggio di 12 domande a un campione di 30 utenti reali.
+          </p>
+
+          <!-- Infografica Sondaggio -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[INFOGRAFICA - 3 CARD RISULTATI SONDAGGIO]</span>
+            </div>
+            <div class="problem-cards-grid">
+              <div class="problem-card">
+                <h4 class="problem-card-title">Card 1: Target &amp; Budget 💸</h4>
+                <p class="problem-card-text">Il target principale è composto da giovani lavoratori tra i 25 e i 34 anni. Ben l'80% è pronto a investire nella propria formazione sociale, ma preferisce un budget accessibile, idealmente tra gli 0 e i 19€.</p>
+                <p class="problem-card-text"><strong>UX Goal:</strong> Massima trasparenza sui prezzi e forte risalto visivo all'offerta dei corsi gratuiti.</p>
+              </div>
+              <div class="problem-card">
+                <h4 class="problem-card-title">Card 2: Il potenziale del Brand 🚀</h4>
+                <p class="problem-card-text">Un impressionante 93,3% degli intervistati non conosce Acumen Academy. Tuttavia, una volta scoperta la sua mission, il 37% dichiara di voler partecipare attivamente alla piattaforma.</p>
+                <p class="problem-card-text"><strong>UX Goal:</strong> Una Homepage d'impatto che comunichi la proposta di valore del brand nei primi 3 secondi.</p>
+              </div>
+              <div class="problem-card">
+                <h4 class="problem-card-title">Card 3: Esperienza d'Uso 🧩</h4>
+                <p class="problem-card-text">Le priorità assolute per gli utenti sono un'interfaccia semplice e intuitiva (86,7%) e la presenza di recensioni reali (80%) per validare la qualità dei corsi.</p>
+                <p class="problem-card-text"><strong>UX Goal:</strong> Zero rumore visivo, contrasti di colore impeccabili e recensioni degli studenti ben visibili in ogni pagina.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- User Personas -->
+        <section class="case-study-section" id="personas">
+          <h2 class="section-title">USER PERSONAS</h2>
+          <h3 class="section-subtitle">
+            Tre profili costruiti sui dati della ricerca per guidare l'architettura dei contenuti e le scelte di interfaccia.
+          </h3>
+          <p class="section-paragraph">
+            Per dare un volto umano ed empirico ai dati raccolti dal sondaggio, ho delineato tre User Personas rappresentative dei diversi segmenti di pubblico dell'accademia, analizzandone biografia, obiettivi, necessità e punti di attrito:
+          </p>
+
+          <!-- Schede User Personas -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[INFOGRAFICA - 3 SCHEDE USER PERSONAS]</span>
+            </div>
+            <div class="personas-cards-grid">
+              <!-- Persona 1 -->
+              <div class="persona-card">
+                <div class="persona-header">
+                  <h4 class="persona-name">Gabriele</h4>
+                  <span class="persona-meta">Età: 21 anni | Studente</span>
+                </div>
+                <div>
+                  <div class="persona-section-label">Profilo</div>
+                  <p class="persona-text">Studente di Scienze Ambientali, introverso e orientato ai dettagli. Dedicato ad approfondire sulla sostenibilità. Naviga da smartphone e laptop.</p>
+                </div>
+                <div>
+                  <div class="persona-section-label">Needs &amp; Obiettivi</div>
+                  <p class="persona-text">Risorse accademiche oltre il programma universitario; interfaccia pulita, responsive e corsi gratuiti o accessibili.</p>
+                </div>
+                <div>
+                  <div class="persona-section-label">Pains &amp; Difficoltà</div>
+                  <p class="persona-text">Budget limitato e timidezza (preferisce evitare interazioni video o lavori di gruppo forzati).</p>
+                </div>
+                <div class="persona-goal-box">
+                  <p class="persona-text"><strong>👉 UX Goal:</strong> Navigazione responsive senza scatti, filtri corsi gratuiti e forum asincroni.</p>
+                </div>
+              </div>
+              <!-- Persona 2 -->
+              <div class="persona-card">
+                <div class="persona-header">
+                  <h4 class="persona-name">Elena</h4>
+                  <span class="persona-meta">Età: 29 anni | Assistente Sociale</span>
+                </div>
+                <div>
+                  <div class="persona-section-label">Profilo</div>
+                  <p class="persona-text">Lavora presso un centro per famiglie a basso reddito, socievole e generosa. Partecipa a workshop. Usa laptop ed email.</p>
+                </div>
+                <div>
+                  <div class="persona-section-label">Needs &amp; Obiettivi</div>
+                  <p class="persona-text">Competenze pratiche basate su casi reali; flessibilità oraria, canali di mentoring e forum attivi.</p>
+                </div>
+                <div>
+                  <div class="persona-section-label">Pains &amp; Difficoltà</div>
+                  <p class="persona-text">Pochissimo tempo a disposizione e timore che manchino corsi specifici sul terzo settore.</p>
+                </div>
+                <div class="persona-goal-box">
+                  <p class="persona-text"><strong>👉 UX Goal:</strong> FAQ esaustive, assistenza immediata in tempo reale e categorizzazione sociale.</p>
+                </div>
+              </div>
+              <!-- Persona 3 -->
+              <div class="persona-card">
+                <div class="persona-header">
+                  <h4 class="persona-name">Marco</h4>
+                  <span class="persona-meta">Età: 38 anni | Manager Privato</span>
+                </div>
+                <div>
+                  <div class="persona-section-label">Profilo</div>
+                  <p class="persona-text">Lavora da anni nel privato, pragmatico e orientato ai risultati. Vuole riorientare la propria carriera verso il no-profit. Usa laptop.</p>
+                </div>
+                <div>
+                  <div class="persona-section-label">Needs &amp; Obiettivi</div>
+                  <p class="persona-text">Competenze certificate per passaggio lavorativo; piattaforma flessibile per ritmi serrati e percorsi guidati.</p>
+                </div>
+                <div>
+                  <div class="persona-section-label">Pains &amp; Difficoltà</div>
+                  <p class="persona-text">Tempo estremamente ridotto e preferenza per percorsi strutturati rispetto all'esplorazione libera.</p>
+                </div>
+                <div class="persona-goal-box">
+                  <p class="persona-text"><strong>👉 UX Goal:</strong> Area personale con indicatori di progresso visivi e feature di salvataggio corsi.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Riprogettazione 5 Pagine -->
+        <section class="case-study-section" id="riprogettazione">
+          <h2 class="section-title">RIPROGETTAZIONE DELLE 5 PAGINE CHIAVE</h2>
+          <h3 class="section-subtitle">
+            La riprogettazione delle 5 pagine chiave su desktop passando dalla struttura informativa dei wireframe al Design System finale.
+          </h3>
+          <p class="section-paragraph">
+            Definiti i bisogni delle persone e i requisiti di accessibilità, ho sviluppato la struttura logica e l'interfaccia visiva delle 5 pagine cardine del portale desktop. Il passaggio dai wireframe a media fedeltà al prototipo finale ha permesso di testare percorsi chiari, gerarchie visive pulite e componenti scalabili prima di passare alla validazione sul campo.
+          </p>
+
+          <!-- Carosello 5 Pagine Wireframe/DS -->
+          <div class="carousel-placeholder-box">
+            <span class="placeholder-tag">[CAROSELLO CON 3-SEGMENT TOGGLE SWITCH - 5 PAGINE]</span>
+            <div class="carousel-slides-list" style="margin-top: 16px;">
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 1: Homepage</div>
+                <div class="carousel-slide-caption"><strong>Didascalia:</strong> Nuovo header minimale, proposta di valore chiara nei primi 3 secondi, CTA in primo piano e sezioni riorganizzate per allineare l'impatto visivo ai migliori standard e-learning.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 2: Pagina Elenco Corsi</div>
+                <div class="carousel-slide-caption"><strong>Didascalia:</strong> Corsi in evidenza con card interattive, ordinamento rapido "Sort by", sidebar filtri con un layout ad accordion per prezzi e durate, e paginazione per una griglia sempre pulita e ordinata.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 3: Pagina Dettaglio Corso</div>
+                <div class="carousel-slide-caption"><strong>Didascalia:</strong> Inserimento del tasto "Save Course" accanto a "Enroll Now", menu per accedere rapidamente alle sezioni chiave, recensioni riordinate e corsi correlati allineati il Design System.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 4: Pagina My Dashboard</div>
+                <div class="carousel-slide-caption"><strong>Didascalia:</strong> Bacheca personale con saluto personalizzato, sidebar fissa con le informazioni utente e menu a schede (All, Saved, Ongoing, Completed) per gestire i corsi in pochi click.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 5: Pagina Contact Us</div>
+                <div class="carousel-slide-caption"><strong>Didascalia:</strong> Testata informativa e triplice canale di supporto: Email Support con indirizzi email e form dedicato, Chat Support con overlay Livechat centrato e Help Center con pagina FAQ divise per macro-categorie.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- User Testing -->
+        <section class="case-study-section" id="usertesting">
+          <h2 class="section-title">VALIDAZIONE &amp; USER TESTING (UXArmy)</h2>
+          <h3 class="section-subtitle">
+            Sessione di usabilità non moderata da remoto su Desktop (1440px) per testare l'efficacia dei flussi chiave prima del rilascio.
+          </h3>
+          <p class="section-paragraph">
+            Dopo la prototipazione Figma, ho sottoposto l'interfaccia a una sessione di User Testing da remoto con 5 partecipanti in target per osservarne il comportamento spontaneo tramite Think Aloud (pensare ad alta voce ad accensione del microfono e della webcam), testando la navigazione, l'uso della sidebar filtri e la reperibilità del supporto in tempo reale.
+          </p>
+          <ul class="section-list">
+            <li><strong>Il Pilot Test:</strong> Prima del lancio ufficiale, ha fatto emergere un limite strutturale nell'icona flottante della chat, che copriva contenuti sui monitor desktop più piccoli. L'ho sostituita con un overlay centrato con oscuramento dello sfondo (dimming), accessibile da "Contact Us", riformulando il Task 3 in modo neutro.</li>
+          </ul>
+
+          <!-- Carosello Prima e Dopo Live Chat -->
+          <div class="carousel-placeholder-box">
+            <span class="placeholder-tag">[CAROSELLO DI IMMAGINI - PRIMA E DOPO LIVE CHAT]</span>
+            <div class="carousel-slides-list" style="margin-top: 16px;">
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🔴 Immagine 1 - PRIMA (Pilot Test)</div>
+                <div class="carousel-slide-caption">L'icona fluttuante in basso a destra risultava invadente sui monitor desktop ridotti, creando sovrapposizioni visive con i testi e i controlli attivi della pagina.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🟢 Immagine 2 — DOPO (Test Ufficiale)</div>
+                <div class="carousel-slide-caption">Live Chat riprogettata in un overlay centrato con effetto dimming (sfondo oscurato), attivabile da "Chat Support" per garantire massima concentrazione sul problema.</div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="section-list" style="margin-top: 16px;">
+            <li><strong>I 3 Task &amp; Domande Finali:</strong> Protocollo operativo di test e questionario qualitativo.</li>
+          </ul>
+
+          <!-- Protocollo 3 Task + Survey -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[LAYOUT 3+1; GRIGLIA A 4 CARD DI PROTOCOLLO (3 TASK + 1 SURVEY)]</span>
+            </div>
+            <div class="protocol-cards-grid">
+              <div class="protocol-card">
+                <h4 class="problem-card-title">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
+                <p class="problem-card-text">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
+              </div>
+              <div class="protocol-card">
+                <h4 class="problem-card-title">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
+                <p class="problem-card-text">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
+              </div>
+              <div class="protocol-card">
+                <h4 class="problem-card-title">🎯 TASK 3 (Supporto Rapido)</h4>
+                <p class="problem-card-text">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
+              </div>
+              <div class="protocol-card">
+                <h4 class="problem-card-title">📋 DOMANDE FINALI POST-TEST</h4>
+                <p class="problem-card-text">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
+                <p class="problem-card-text">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
+                <p class="problem-card-text">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Risultati e Impatto -->
+        <section class="case-study-section" id="risultati">
+          <h2 class="section-title">I RISULTATI E L'IMPATTO</h2>
+          <h3 class="section-subtitle">
+            Le Metriche di Successo per Singolo Task
+          </h3>
+          <p class="section-paragraph">
+            I tre task hanno misurato rispettivamente la credibilità dell'ente, l'efficienza dei filtri di ricerca e la rapidità nel reperire assistenza immediata. I dati confermano il pieno raggiungimento degli obiettivi primari su desktop:
+          </p>
+
+          <!-- Cards Metriche -->
+          <div class="metrics-cards-grid">
+            <div class="metric-card">
+              <span class="metric-task-name">Task 1 — Credibilità &amp; Impatto</span>
+              <span class="metric-value">0% Errori Critici</span>
+              <p class="metric-desc">100% Fiducia: Tutti i partecipanti hanno compreso la missione dell'ente e validato l'autorevolezza del brand grazie ai dati di impatto e ai loghi istituzionali.</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-task-name">Task 2 — Filtri &amp; Catalogo</span>
+              <span class="metric-value">100% Completion</span>
+              <p class="metric-desc">4/5 Voto "Molto Facile": Il sistema di filtraggio laterale ha permesso di isolare con successo i corsi gratuiti e brevi anche con la barra di ricerca disabilitata.</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-task-name">Task 3 — Supporto Immediato</span>
+              <span class="metric-value">1m 15s Risoluzione</span>
+              <p class="metric-desc">Nessun abbandono per blocco tecnico: L'accesso all'assistenza è risultato rapido e fluido grazie alla riprogettazione dell'overlay Live Chat.</p>
+            </div>
+          </div>
+
+          <h3 class="section-subtitle" style="margin-top: 32px;">
+            Comportamenti Utente &amp; Modelli Mentali Chiave
+          </h3>
+          <p class="section-paragraph">
+            L'analisi incrociata di sessioni Think Aloud e mappe di calore ha fatto emergere diverse abitudini d'uso consolidate da considerare nell'interfaccia. Tra queste, tre comportamenti principali hanno guidato le successive iterazioni:
+          </p>
+          <ul class="section-list">
+            <li><strong>Fidget Clicking &amp; Ancoraggi Visivi:</strong> 4 utenti su 5 hanno cliccato ripetutamente a vuoto negli spazi bianchi per scandire la lettura. I blocchi di testo fitto generano affaticamento, mentre i grassetti guidano lo sguardo in modo mirato.</li>
+            <li><strong>Browsing Visivo vs Filtri:</strong> Nel Task 2, il 40% del campione (2 su 5) ha ignorato la barra laterale dei filtri, scansionando a vista la griglia e usando la parola "Business" nel titolo come esca visiva immediata.</li>
+            <li><strong>Footer come Rifugio d'Aiuto &amp; Termini Complessi:</strong> Nel Task 3, il 100% degli utenti è sceso nel footer per trovare assistenza per assenza di voci esplicite nell'header; termini accademici inglesi (es. "Fellow") hanno creato blocchi cognitivi.</li>
+          </ul>
+        </section>
+
+        <!-- Le 5 Modifiche Definitive -->
+        <section class="case-study-section" id="modifiche">
+          <h2 class="section-title">LE 5 MODIFICHE DEFINITIVE AL PROTOTIPO</h2>
+          <p class="section-paragraph">
+            Dai comportamenti spontanei e le frizioni riscontrate durante il test, ho implementato 5 interventi strutturali sul prototipo finale. Gli interventi si focalizzano su scansionabilità, gerarchia dei menu e accessibilità complessiva:
+          </p>
+
+          <!-- Carosello 5 Modifiche Prima e Dopo -->
+          <div class="carousel-placeholder-box">
+            <span class="placeholder-tag">[CAROSELLO - 5 IMMAGINI: PRIMA E DOPO]</span>
+            <div class="carousel-slides-list" style="margin-top: 16px;">
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 1 — Scansionabilità &amp; Tooltip</div>
+                <div class="carousel-slide-caption">Inserimento di grassetti mirati e introduzione di tooltip in hover sui termini gergali per superare le barriere linguistiche.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 2 — Menu Globale &amp; Voce "Get Help"</div>
+                <div class="carousel-slide-caption">Sostituzione dell'icona lente con il menu dropdown "Get Help" nell'header e unificazione dell'etichetta del footer in "About".</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 3 — Card Corsi &amp; Filtri Ottimizzati</div>
+                <div class="carousel-slide-caption">Integrazione dei tag di categoria sulle card e riformulazione delle etichette di durata per evitare errori di ancoraggio numerico.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 4 — Accesso Intelligente &amp; Supporto in Dashboard</div>
+                <div class="carousel-slide-caption">Aggiunta del link di assistenza nella bacheca personale (My Dashboard) e redirect automatico alla pagina di partenza dopo il login.</div>
+              </div>
+              <div class="carousel-slide-item">
+                <div class="carousel-slide-name">🖼️ Slide 5 — Umanizzazione del Brand &amp; Overlay Live Chat</div>
+                <div class="carousel-slide-caption">Aggiunta della sezione sulla fondatrice in About e consolidamento dell'overlay centrato oscurato (dimming) per la chat.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trade-Off e Conclusione -->
+        <section class="case-study-section" id="tradeoff">
+          <h2 class="section-title">TRADE-OFF E LIMITI CONSAPEVOLI</h2>
+          <h3 class="section-subtitle">
+            Saper scegliere cosa non fare per mantenere il focus sulle reali leve del Digital Product Design.
+          </h3>
+          <p class="section-paragraph">
+            Ogni rinuncia è stata guidata da motivazioni strategiche, dai vincoli di testing e dai dati emersi sul campo, evitando distrazioni visive o deviazioni dal perimetro di progettazione.
+          </p>
+          <ul class="section-list">
+            <li><strong>Perimetro di Prodotto:</strong> Ho concentrato lo sforzo esclusivamente su architettura informativa, usabilità ed LMS interno, rinunciando a proposte commerciali, nuovi corsi o campagne di marketing.</li>
+            <li><strong>Evoluzione della Live Chat:</strong> A seguito delle sovrapposizioni visive emerse nel Pilot Test sui monitor più piccoli, ho rimosso la chat fluttuante in basso a destra, sostituendola con un overlay centrato in "Get Help".</li>
+            <li><strong>Testing &amp; Bias del Campione:</strong> Ho reclutato colleghi accettando il bias d'esperto e ho scelto la modalità Figma Focused (su UXArmy) per estendere il test a 5 utenti reali anziché 3.</li>
+          </ul>
+
+          <h2 class="section-title" style="margin-top: 32px;">IMPATTO QUALITATIVO E COSA RIMANE OGGI</h2>
+          <p class="section-paragraph">
+            Attraverso questo redesign ho voluto dimostrare come un'architettura complessa possa trasformarsi in uno strumento di studio fluido e inclusivo, risolvendo i salti verso piattaforme esterne e restituendo piena autonomia alle persone.
+          </p>
+          <p class="section-paragraph">
+            Il lavoro svolto sul campo e l'attenzione agli standard WCAG 2.1 rappresentano per me una base solida di metodo e cura del dettaglio, confermando quanto l'ascolto degli utenti sia essenziale per costruire prodotti digitali etici, accessibili e realmente utili.
+          </p>
+        </section>
+
       </div>
 
       <!-- Linea Divisoria -->
       <div class="divider-line"></div>
+
+      <!-- Guarda i miei altri lavori -->
+      <section class="other-works-section">
+        <h2 class="other-works-title">GUARDA I MIEI ALTRI LAVORI</h2>
+        <div class="other-works-grid">
+          <!-- Card 2: IncluDO Brand Identity -->
+          <a href="includo-brand-identity.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
+            <div class="work-card">
+              <div class="work-image-frame">
+                <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png" alt="IncluDO Logo &amp; Brand Identity copertina" class="work-image">
+              </div>
+              <h3 class="work-title"><span class="work-client">IncluDO</span> | Logo &amp; Brand Identity</h3>
+              <p class="work-description">
+                Ideazione di un'identità per un'ente di formazione per migranti e persone svantaggiate.
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 3: IncluDO Copywriting -->
+          <div class="work-card">
+            <div class="work-image-frame">
+              <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png" alt="IncluDO Copywriting Blog Post copertina" class="work-image">
+            </div>
+            <h3 class="work-title"><span class="work-client">IncluDO</span> | Copywriting Blog Post</h3>
+            <p class="work-description">
+              Scrittura di un articolo web ad alto impatto emotivo per un'azienda contro le disuguaglianze.
+            </p>
+          </div>
+        </div>
+      </section>
 
     </div>
   </main>
@@ -410,7 +990,7 @@
         if (initialAbsoluteTop === null || window.scrollY === 0) {
           const metaRect = metadataSection.getBoundingClientRect();
           const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
-          const currentHeight = sidebarNav.offsetHeight || 200;
+          const currentHeight = sidebarNav.offsetHeight || 300;
           initialAbsoluteTop = metaCenterY - currentHeight / 2;
         }
 
