@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <title>Diana de Jesus | Acumen Academy - Redesign End-to-End & Prototipo Accessibile</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  
+  <!-- Case Study CSS -->
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=1.0">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-white">
+    <div class="container-fluid mobile-nav-container">
+      <!-- Diana Logo -->
+      <a class="navbar-brand" href="./">
+        <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links (Centered) -->
+      <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+        <a href="./#lavori" class="nav-link custom-nav-link active">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+
+      <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
+      <div class="language-dropdown-wrapper d-none d-md-block">
+        <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+        <label for="lang-menu-toggle" class="lang-selector">
+          <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">IT</span>
+          <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </label>
+        <div class="lang-dropdown-menu">
+          <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
+          <a href="#" class="lang-item"><strong>EN</strong> <span>English</span></a>
+        </div>
+      </div>
+
+      <!-- Hidden Checkbox for Mobile Menu Toggle -->
+      <input type="checkbox" id="mobile-menu-toggle" class="d-md-none">
+
+      <!-- Hamburger Menu Label (Visible on Mobile) -->
+      <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none" aria-label="Toggle navigation">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </label>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-overlay-menu d-md-none">
+        <div class="mobile-nav-links">
+          <a href="./#lavori" class="custom-nav-link active">I miei lavori</a>
+          <a href="chi-sono.html" class="custom-nav-link">Chi sono</a>
+          <a href="contatti.html" class="custom-nav-link">Contattami</a>
+        </div>
+        <div class="mobile-lang-selector">
+          <button type="button" class="mobile-lang-btn active">
+            <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+          </button>
+          <button type="button" class="mobile-lang-btn">
+            <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Case Study Content -->
+  <main class="case-study-wrapper">
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-nav">
+      <div class="sidebar-lines">
+        <span class="nav-line line-1"></span>
+        <span class="nav-line line-2"></span>
+        <span class="nav-line line-3"></span>
+        <span class="nav-line line-4"></span>
+      </div>
+      <div class="sidebar-overlay">
+        <a href="#contesto" class="overlay-link active">CONTESTO</a>
+        <a href="#problema" class="overlay-link">PROBLEMA</a>
+        <a href="#soluzioni" class="overlay-link">SOLUZIONI</a>
+        <a href="#vincoli" class="overlay-link">I VINCOLI DEL PROGETTO</a>
+      </div>
+    </div>
+
+    <!-- Copertina Hero (Vuota per ora) -->
+    <div class="case-study-hero"></div>
+
+    <div class="case-study-container">
+      
+      <!-- Titolo Principale -->
+      <section class="case-study-title-section">
+        <h1 class="main-title"><span class="client-name">Acumen Academy</span>&nbsp;&nbsp;|&nbsp;&nbsp;Redesign End-to-End &amp; Prototipo Accessibile</h1>
+      </section>
+
+      <!-- Tabella Metadata -->
+      <section class="metadata-section">
+        <div class="metadata-grid">
+          <div class="metadata-column">
+            <h2 class="metadata-heading">PROGETTO</h2>
+            <p class="metadata-text">Acumen Academy (Concept Project)</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">RUOLO</h2>
+            <p class="metadata-text">Lead Product &amp; UX/UI Designer</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">COMPETENZE</h2>
+            <p class="metadata-text list-text">UX Research</p>
+            <p class="metadata-text list-text">Accessibilità (WCAG 2.1)</p>
+            <p class="metadata-text list-text">Wireframing</p>
+            <p class="metadata-text list-text">Design System</p>
+            <p class="metadata-text list-text">Prototipazione Figma</p>
+            <p class="metadata-text list-text">User Testing (UXArmy)</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">STRUMENTI</h2>
+            <p class="metadata-text list-text">Figma</p>
+            <p class="metadata-text list-text">UXArmy</p>
+            <p class="metadata-text list-text">Stark/A11y</p>
+            <p class="metadata-text list-text">Google Forms</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sezioni di Testo -->
+      <div class="content-sections-wrapper">
+        
+        <!-- Contesto -->
+        <section class="case-study-section" id="contesto">
+          <h2 class="section-title">CONTESTO</h2>
+          <h3 class="section-subtitle">
+            Una scuola globale per il cambiamento sociale che ha evoluto l'offerta formativa per concentrarsi sulla leadership.
+          </h3>
+          <p class="section-paragraph">
+            Acumen Academy si configura nel panorama e-learning come la prima scuola mondiale per il cambiamento sociale, fondata da Jacqueline Novogratz per combattere la povertà e promuovere la salute globale.
+          </p>
+          <p class="section-paragraph">
+            Nel 2023, quando ho iniziato questo concept project su Start2Impact, l'offerta includeva ancora dei percorsi formativi avanzati basati su coorte (Accelerators). A seguito di un posizionamento del brand nel maggio 2024, l'ente ha riallineato il proprio focus attorno alla formazione sulla leadership, la community di Alumni (Fellowships/Foundry) e l'accesso a risorse per startup ad alto impatto (Founders Hub), declassando gli Accelerators tra i programmi passati.
+          </p>
+          <p class="section-paragraph">
+            Nonostante la missione elevata, la ricerca sul target ha evidenziato un forte deficit di notorietà esterna del brand: la gran parte delle persone non conosceva l'accademia prima del sondaggio.
+          </p>
+        </section>
+
+        <!-- Problema -->
+        <section class="case-study-section" id="problema">
+          <h2 class="section-title">PROBLEMA</h2>
+          <h3 class="section-subtitle">
+            Un'esperienza utente frammentata tra siti terzi, con bug critici e problemi di leggibilità visiva e mobile.
+          </h3>
+          <p class="section-paragraph">
+            Il portale storico di Acumen Academy (2023) creava forte attrito nell'esperienza di studio e navigazione da desktop. L'interfaccia soffriva di una grave frammentazione visiva, reindirizzamenti esterni disorientanti e una generale assenza di supporto in tempo reale.
+          </p>
+
+          <!-- Infografica 3 Card (Placeholder) -->
+          <div class="infographic-placeholder-container">
+            <div class="infographic-placeholder-header">
+              <span class="placeholder-tag">[INFOGRAFICA - 3 CARD]</span>
+            </div>
+            <div class="problem-cards-grid">
+              <div class="problem-card">
+                <h4 class="problem-card-title">1. Navigazione Inconsistente &amp; Mancanza di Credibilità</h4>
+                <p class="problem-card-text"><strong>Il Problema:</strong> Testi fitti ricchi di gergo inglese e immagini di sfondo ad alto contrasto errato non trasmettevano l'autorevolezza del brand.</p>
+                <p class="problem-card-text"><strong>L'Impatto:</strong> Diffidenza iniziale da parte dei nuovi visitatori e affaticamento visivo durante la lettura.</p>
+              </div>
+              <div class="problem-card">
+                <h4 class="problem-card-title">2. Filtri Datati &amp; Rumore Visivo</h4>
+                <p class="problem-card-text"><strong>Il Problema:</strong> Pagina corsi con una sidebar filtri datata e rigida, affiancata da card con indicazioni poco scannabili e mal organizzate visivamente.</p>
+                <p class="problem-card-text"><strong>L'Impatto:</strong> Scorrimento a vuoto e perdita di tempo nel filtrare e isolare rapidamente i percorsi brevi o gratuiti adatti alle proprie disponibilità.</p>
+              </div>
+              <div class="problem-card">
+                <h4 class="problem-card-title">3. Reindirizzamenti Esterni &amp; Supporto Inesistente</h4>
+                <p class="problem-card-text"><strong>Il Problema:</strong> Iscrivendosi ad un corso, l'utente veniva espulso dal sito verso piattaforme terze (Thinkific/NovoEd) senza un'assistenza immediata quando si è di fronte ad un problema.</p>
+                <p class="problem-card-text"><strong>L'Impatto:</strong> Disorientamento, perdita di continuità del brand e abbandono della piattaforma al primo problema bloccante.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Soluzioni -->
+        <section class="case-study-section" id="soluzioni">
+          <h2 class="section-title">SOLUZIONI</h2>
+          <h3 class="section-subtitle">
+            I risultati della ricerca utente e dei test sul campo tradotti in un'esperienza e-learning fluida e accessibile.
+          </h3>
+          <p class="section-paragraph">
+            Ogni soluzione visiva e di navigazione è stata validata attraverso i 3 task del test di usabilità e un tratto del flusso utente di Gabriele (una delle mie User Personas), rifinita con gli insights emersi dal campo, garantendo un'interazione fluida e ad attrito zero.
+          </p>
+
+          <!-- Spazio per 4 Mini-Video (Placeholders) -->
+          <div class="media-placeholders-wrapper">
+            
+            <!-- Mini-Video 1 Placeholder -->
+            <div class="mini-video-card-placeholder">
+              <div class="video-preview-box">
+                <span class="video-placeholder-badge">🎬 MINI-VIDEO 1</span>
+                <p class="video-placeholder-title">Validazione della trasparenza e credibilità della brand senza perdere la navigazione principale</p>
+              </div>
+              <div class="video-details">
+                <p class="video-content"><strong>Contenuto del Video:</strong> Flusso del Task 1 (Homepage &rarr; click su About nell'header/footer &rarr; esplorazione dati di impatto con tooltip sulle parole gergali inglesi e testi alleggeriti &rarr; click sul logo Acumen Academy per rientrare in Homepage).</p>
+                <p class="video-caption"><strong>Didascalia:</strong> Testi alleggeriti con grassetti come ancoraggi visivi e tooltip esplicativi in hover sulle parole gergali in inglese per rassicurare l'utente sulla serietà dell'ente.</p>
+              </div>
+            </div>
+
+            <!-- Mini-Video 2 Placeholder -->
+            <div class="mini-video-card-placeholder">
+              <div class="video-preview-box">
+                <span class="video-placeholder-badge">🎬 MINI-VIDEO 2</span>
+                <p class="video-placeholder-title">Filtri Intuitivi &amp; Card Corsi Ottimizzate</p>
+              </div>
+              <div class="video-details">
+                <p class="video-content"><strong>Contenuto del Video:</strong> Flusso del Task 2 (Navigazione alla pagina corsi &rarr; uso della sidebar filtri con selezione Business Strategy + durata &lt; 1 Hour / 1-4 Hours + Free &rarr; aggiornamento griglia con 4 risultati e tag chiari sulle card &rarr; click sul corso).</p>
+                <p class="video-caption"><strong>Didascalia:</strong> Sidebar dei filtri riprogettata con icone e card corsi ottimizzate tramite tag e durate chiare per trovare subito le risorse rilevanti.</p>
+              </div>
+            </div>
+
+            <!-- Mini-Video 3 Placeholder -->
+            <div class="mini-video-card-placeholder">
+              <div class="video-preview-box">
+                <span class="video-placeholder-badge">🎬 MINI-VIDEO 3</span>
+                <p class="video-placeholder-title">Onboarding &amp; Supporto Immediato in Overlay ("Get Help")</p>
+              </div>
+              <div class="video-details">
+                <p class="video-content"><strong>Contenuto del Video:</strong> Flusso del Task 3 (Pagina corso &rarr; click su Enroll Now &rarr; simulazione iscrizione account &rarr; problema bloccante &rarr; click su Contact Us nell'header o dentro My Dashboard &rarr; click su Chat Now &rarr; apertura dell'overlay centrato di Live Chat).</p>
+                <p class="video-caption"><strong>Didascalia:</strong> Social Login via Gmail, menu dropdown "Get Help" accessibile anche dalla Dashboard e Live Chat centrata in overlay nata dai feedback del Pilot Test.</p>
+              </div>
+            </div>
+
+            <!-- Mini-Video 4 Placeholder -->
+            <div class="mini-video-card-placeholder">
+              <div class="video-preview-box">
+                <span class="video-placeholder-badge">🎬 MINI-VIDEO 4</span>
+                <p class="video-placeholder-title">Esperienza Didattica In-Platform &amp; Gestione Bacheca</p>
+              </div>
+              <div class="video-details">
+                <p class="video-content"><strong>Contenuto del Video:</strong> Flusso di Gabriele (Pagina corso &rarr; click su Save Course &rarr; simulazione iscrizione account &rarr; atterraggio in My Dashboard &rarr; click su Enroll Now dentro la card del corso salvato &rarr; ingresso nell'LMS interno per lo svolgimento della lezione).</p>
+                <p class="video-caption"><strong>Didascalia:</strong> Salvataggio corso, passaggio in Dashboard e fruizione didattica in-platform totalmente unificata sotto l'architettura di Acumen Academy.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- I Vincoli del Progetto -->
+        <section class="case-study-section" id="vincoli">
+          <h2 class="section-title">I VINCOLI DEL PROGETTO</h2>
+          <h3 class="section-subtitle">
+            Garantire un'accessibilità totale su Desktop, rispettando la nuova identità visiva del brand.
+          </h3>
+          <p class="section-paragraph">
+            Progettare l'esperienza e-learning in-platform per laptop ha richiesto di bilanciare il layout su un canvas desktop da 1440px (con griglia a 12 colonne stretch) con i severi requisiti di accessibilità WCAG 2.1 AA/AAA per l'inclusione digitale.
+          </p>
+          <p class="section-paragraph">
+            Il tutto integrandosi con la nuova identità del brand, preservando le famiglie tipografiche storiche (AvantGarde-Demi e Caecilia LT Pro) e la coerenza del Design System tra le varie sezioni.
+          </p>
+        </section>
+
+      </div>
+
+      <!-- Linea Divisoria -->
+      <div class="divider-line"></div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+      <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
+      <div class="footer-socials">
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+        </a>
+        <!-- GitHub Link -->
+        <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+        </a>
+        <!-- start2impact Link -->
+        <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Torna in alto"></button>
+
+  <!-- Navbar Logic Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const activeLink = document.querySelector(".custom-nav-link.active");
+      if (activeLink) {
+        window.addEventListener("scroll", function() {
+          if (window.innerWidth >= 768) {
+            if (window.scrollY > 50) {
+              activeLink.classList.remove("active");
+            } else {
+              activeLink.classList.add("active");
+            }
+          } else {
+            activeLink.classList.remove("active");
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Back to Top Button Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const backToTopBtn = document.querySelector('.back-to-top');
+      const footer = document.querySelector('.footer-section');
+      
+      if (!backToTopBtn || !footer) return;
+
+      window.addEventListener('scroll', function() {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const isMobile = window.innerWidth < 1024;
+
+        if (isMobile) {
+          if (footerRect.top < windowHeight) {
+            backToTopBtn.classList.add('visible');
+            const visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 20) + 'px';
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        } else {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+
+          if (footerRect.top < windowHeight) {
+            const visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 30) + 'px';
+          } else {
+            backToTopBtn.style.bottom = '30px';
+          }
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <!-- Sidebar Navigation Auto-Active & Position Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sidebarNav = document.querySelector('.sidebar-nav');
+      const metadataSection = document.querySelector('.metadata-section');
+      const navbar = document.querySelector('.navbar');
+      const sections = document.querySelectorAll(".case-study-section[id]");
+      const navLinks = document.querySelectorAll(".overlay-link");
+      const lines = document.querySelectorAll(".nav-line");
+
+      if (!sidebarNav || !metadataSection) return;
+
+      let initialAbsoluteTop = null;
+
+      function updateSidebarPosition() {
+        if (window.innerWidth < 1024) return;
+
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        
+        if (initialAbsoluteTop === null || window.scrollY === 0) {
+          const metaRect = metadataSection.getBoundingClientRect();
+          const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
+          const currentHeight = sidebarNav.offsetHeight || 200;
+          initialAbsoluteTop = metaCenterY - currentHeight / 2;
+        }
+
+        const stickyThreshold = initialAbsoluteTop - (navbarHeight + 48);
+
+        if (window.scrollY < stickyThreshold) {
+          sidebarNav.style.position = 'absolute';
+          sidebarNav.style.top = initialAbsoluteTop + 'px';
+          sidebarNav.style.transform = 'none';
+        } else {
+          sidebarNav.style.position = 'fixed';
+          sidebarNav.style.top = (navbarHeight + 48) + 'px';
+          sidebarNav.style.transform = 'none';
+        }
+      }
+
+      window.addEventListener('scroll', updateSidebarPosition);
+      window.addEventListener('resize', () => {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      });
+      updateSidebarPosition();
+      
+      setTimeout(() => {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      }, 150);
+
+      let isScrollingManual = false;
+      let manualTimeout;
+
+      function updateActiveLinkAndLine() {
+        if (isScrollingManual) return;
+
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        let currentActiveIdx = 0;
+        let minDistance = Infinity;
+
+        sections.forEach((section, idx) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= navbarHeight + 150) {
+            const dist = navbarHeight + 150 - rect.top;
+            if (dist < minDistance) {
+              minDistance = dist;
+              currentActiveIdx = idx;
+            }
+          }
+        });
+
+        navLinks.forEach((link, idx) => {
+          if (idx === currentActiveIdx) {
+            link.classList.add("active");
+            if (lines[idx]) lines[idx].classList.add("active");
+          } else {
+            link.classList.remove("active");
+            if (lines[idx]) lines[idx].classList.remove("active");
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveLinkAndLine);
+      window.addEventListener('resize', updateActiveLinkAndLine);
+
+      function handleScrollToSection(targetId, index) {
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          isScrollingManual = true;
+          clearTimeout(manualTimeout);
+
+          navLinks.forEach((l, idx) => {
+            if (idx === index) {
+              l.classList.add("active");
+              if (lines[idx]) lines[idx].classList.add("active");
+            } else {
+              l.classList.remove("active");
+              if (lines[idx]) lines[idx].classList.remove("active");
+            }
+          });
+
+          const navbarHeight = navbar ? navbar.offsetHeight : 80;
+          const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 48;
+
+          window.scrollTo({
+            top: targetTop,
+            behavior: 'smooth'
+          });
+
+          manualTimeout = setTimeout(() => {
+            isScrollingManual = false;
+            updateActiveLinkAndLine();
+          }, 1000);
+        }
+      }
+
+      navLinks.forEach((link, idx) => {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          handleScrollToSection(targetId, idx);
+        });
+      });
+
+      lines.forEach((line, idx) => {
+        line.addEventListener("click", function() {
+          const targetLink = navLinks[idx];
+          if (targetLink) {
+            const targetId = targetLink.getAttribute("href");
+            handleScrollToSection(targetId, idx);
+          }
+        });
+      });
+      
+      updateActiveLinkAndLine();
+    });
+  </script>
+
+</body>
+</html>
