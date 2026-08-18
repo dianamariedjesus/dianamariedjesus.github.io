@@ -13,27 +13,24 @@ body {
   width: 100%;
 }
 
-/* Banner Copertina (Vuoto per ora) */
+/* Banner Copertina */
 .case-study-hero {
   width: 100%;
   height: 443px;
   background-color: #FDFCFC;
-  border-bottom: 1px dashed #E0E0E0;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
-  position: relative;
+  overflow: hidden;
 }
-.case-study-hero::after {
-  content: "Spazio riservato alla copertina principale";
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(38, 38, 38, 0.4);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.case-study-hero .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* Main Container */
@@ -143,7 +140,7 @@ body {
 }
 .case-study-section .section-subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px !important;
+  font-size: 18px;
   font-weight: 600;
   color: #262626;
   line-height: 1.6;
@@ -155,18 +152,22 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
-  line-height: 1.6;
-  letter-spacing: 0.01em;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin: 0;
 }
 .case-study-section .section-paragraph strong {
-  font-weight: 700 !important;
-  color: #111827 !important;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  color: rgba(38, 38, 38, 0.9);
 }
 .case-study-section .section-paragraph em {
-  font-style: italic !important;
-  font-weight: 500 !important;
-  color: #1F2937 !important;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
 }
 
 .section-list {
