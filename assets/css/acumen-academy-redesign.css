@@ -17,20 +17,21 @@ body {
 .case-study-hero {
   width: 100%;
   height: 443px;
-  background-color: #FDFCFC;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 37px;
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 .case-study-hero .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  width: 668.56px;
+  height: auto;
+  max-width: 100%;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* Main Container */
@@ -294,6 +295,20 @@ body {
   align-items: center;
   padding: 20px;
   text-align: center;
+}
+.video-preview-box.media-active {
+  min-height: auto;
+  background-color: transparent;
+  border: 1px solid #E2E8F0;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.video-gif-media {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 .video-placeholder-badge {
   background-color: #7C3AED;
