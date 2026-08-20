@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=8.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=9.0">
 </head>
 
 <body>
@@ -292,7 +292,7 @@
             <!-- Mini-Video 1 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline class="video-player-media" preload="metadata">
+                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video1.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -307,7 +307,7 @@
             <!-- Mini-Video 2 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline class="video-player-media" preload="metadata">
+                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video2.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -322,7 +322,7 @@
             <!-- Mini-Video 3 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline class="video-player-media" preload="metadata">
+                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video3.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -337,7 +337,7 @@
             <!-- Mini-Video 4 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline class="video-player-media" preload="metadata">
+                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video4.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -1170,6 +1170,17 @@
   </div>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.video-container-box').forEach(function(box) {
+        box.addEventListener('touchstart', function() {
+          box.classList.add('active-touch');
+          setTimeout(function() {
+            box.classList.remove('active-touch');
+          }, 3500);
+        }, { passive: true });
+      });
+    });
+
     function openVideoModal(videoSrc) {
       var modal = document.getElementById('videoLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');

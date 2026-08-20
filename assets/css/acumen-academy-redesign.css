@@ -297,6 +297,16 @@ body {
   display: block;
   border-radius: 10px;
 }
+/* Nasconde il pulsante 3 puntini del menu opzioni nativo dei video (WebKit/Chrome/Safari) */
+video::-webkit-media-controls-overflow-button,
+video::-internal-media-controls-overflow-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  -webkit-appearance: none !important;
+}
+
 .btn-lightbox-trigger {
   position: absolute;
   top: 14px;
@@ -314,8 +324,16 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.2s ease, background-color 0.2s ease;
   z-index: 10;
+}
+.video-container-box:hover .btn-lightbox-trigger,
+.video-container-box:focus-within .btn-lightbox-trigger,
+.video-container-box.active-touch .btn-lightbox-trigger {
+  opacity: 1;
+  pointer-events: auto;
 }
 .btn-lightbox-trigger:hover {
   background-color: rgba(15, 23, 42, 0.95);
@@ -324,11 +342,12 @@ body {
 }
 .video-caption-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 400;
-  color: #475569;
+  color: rgba(38, 38, 38, 0.65);
   line-height: 1.5;
-  margin: 0;
+  letter-spacing: 0.01em;
+  margin: 4px 0 0 0;
 }
 
 /* Lightbox Modal Video Ingrandito */
