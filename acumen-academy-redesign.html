@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=9.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=10.0">
 </head>
 
 <body>
@@ -292,14 +292,17 @@
             <!-- Mini-Video 1 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
+                <video id="vid1" autoplay loop muted playsinline class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video1.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
-                <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video1.mp4?v=1.0')">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                  <span>Ingrandisci</span>
-                </button>
+                <div class="video-hover-overlay">
+                  <button type="button" class="btn-video-control" onclick="togglePlayPause(event, 'vid1')">⏸ Pausa</button>
+                  <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video1.mp4?v=1.0')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                    <span>Ingrandisci</span>
+                  </button>
+                </div>
               </div>
               <p class="video-caption-text">Testi alleggeriti con grassetti come ancoraggi visivi e tooltip esplicativi in hover sulle parole gergali in inglese per rassicurare l'utente sulla serietà dell'ente.</p>
             </div>
@@ -307,14 +310,17 @@
             <!-- Mini-Video 2 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
+                <video id="vid2" autoplay loop muted playsinline class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video2.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
-                <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video2.mp4?v=1.0')">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                  <span>Ingrandisci</span>
-                </button>
+                <div class="video-hover-overlay">
+                  <button type="button" class="btn-video-control" onclick="togglePlayPause(event, 'vid2')">⏸ Pausa</button>
+                  <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video2.mp4?v=1.0')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                    <span>Ingrandisci</span>
+                  </button>
+                </div>
               </div>
               <p class="video-caption-text">Sidebar dei filtri riprogettata con icone e card corsi ottimizzate tramite tag e durate chiare per trovare subito le risorse rilevanti.</p>
             </div>
@@ -322,14 +328,17 @@
             <!-- Mini-Video 3 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
+                <video id="vid3" autoplay loop muted playsinline class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video3.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
-                <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video3.mp4?v=1.0')">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                  <span>Ingrandisci</span>
-                </button>
+                <div class="video-hover-overlay">
+                  <button type="button" class="btn-video-control" onclick="togglePlayPause(event, 'vid3')">⏸ Pausa</button>
+                  <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video3.mp4?v=1.0')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                    <span>Ingrandisci</span>
+                  </button>
+                </div>
               </div>
               <p class="video-caption-text">Social Login via Gmail, menu dropdown "Get Help" accessibile anche dalla Dashboard e Live Chat centrata in overlay nata dai feedback del Pilot Test.</p>
             </div>
@@ -337,14 +346,17 @@
             <!-- Mini-Video 4 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video controls loop muted playsinline controlsList="nodownload noplaybackrate noremoteplayback" class="video-player-media" preload="metadata">
+                <video id="vid4" autoplay loop muted playsinline class="video-player-media" preload="metadata">
                   <source src="assets/img/acumen-academy-redesign/Mini-video4.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
-                <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video4.mp4?v=1.0')">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                  <span>Ingrandisci</span>
-                </button>
+                <div class="video-hover-overlay">
+                  <button type="button" class="btn-video-control" onclick="togglePlayPause(event, 'vid4')">⏸ Pausa</button>
+                  <button type="button" class="btn-lightbox-trigger" onclick="openVideoModal('assets/img/acumen-academy-redesign/Mini-video4.mp4?v=1.0')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                    <span>Ingrandisci</span>
+                  </button>
+                </div>
               </div>
               <p class="video-caption-text">Salvataggio corso, passaggio in Dashboard e fruizione didattica in-platform totalmente unificata sotto l'architettura di Acumen Academy.</p>
             </div>
@@ -1180,6 +1192,20 @@
         }, { passive: true });
       });
     });
+
+    function togglePlayPause(e, videoId) {
+      if (e) e.stopPropagation();
+      var video = document.getElementById(videoId);
+      var btn = e ? e.currentTarget : null;
+      if (!video) return;
+      if (video.paused) {
+        video.play();
+        if (btn) btn.innerHTML = '⏸ Pausa';
+      } else {
+        video.pause();
+        if (btn) btn.innerHTML = '▶ Riproduci';
+      }
+    }
 
     function openVideoModal(videoSrc) {
       var modal = document.getElementById('videoLightboxModal');
