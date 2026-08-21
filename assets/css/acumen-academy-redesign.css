@@ -607,20 +607,22 @@ body {
   gap: 14px;
   border-bottom: 1px solid #F1F5F9;
   padding-bottom: 14px;
+  min-height: 124px;
 }
 .persona-avatar-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 90px;
+  height: 110px;
+  border-radius: 8px;
   object-fit: cover;
-  border: 2px solid #E2E8F0;
+  object-position: top center;
+  border: 1px solid #CBD5E1;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .persona-header-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 .persona-name {
   font-family: 'Poppins', sans-serif;
@@ -638,7 +640,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex: 1;
+}
+.persona-block.block-profilo {
+  min-height: 96px;
+}
+.persona-block.block-needs {
+  min-height: 76px;
+}
+.persona-block.block-pains {
+  min-height: 76px;
 }
 .persona-section-label {
   font-size: 13px;
@@ -654,6 +664,9 @@ body {
 }
 .persona-goal-box {
   margin-top: auto;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
   background-color: #EFF6FF;
   border-radius: 6px;
   padding: 10px 12px;
