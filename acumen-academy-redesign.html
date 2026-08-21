@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=14.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=15.0">
 </head>
 
 <body>
@@ -613,7 +613,10 @@
               <!-- Persona 1 -->
               <div class="persona-card">
                 <div class="persona-header">
-                  <img src="assets/img/acumen-academy-redesign/gabriele-persona.jpg?v=1.0" alt="Gabriele" class="persona-avatar-img">
+                  <div class="persona-avatar-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/gabriele-persona.jpg?v=1.0', 'User Persona — Gabriele (21 anni | Studente)')" title="Clicca per ingrandire la foto">
+                    <img src="assets/img/acumen-academy-redesign/gabriele-persona.jpg?v=1.0" alt="Gabriele" class="persona-avatar-img">
+                    <div class="persona-zoom-badge">🔍 Ingrandisci</div>
+                  </div>
                   <div class="persona-header-text">
                     <h4 class="persona-name">Gabriele</h4>
                     <span class="persona-meta">Età: 21 anni | Studente</span>
@@ -638,7 +641,10 @@
               <!-- Persona 2 -->
               <div class="persona-card">
                 <div class="persona-header">
-                  <img src="assets/img/acumen-academy-redesign/elena-persona.jpg?v=1.0" alt="Elena" class="persona-avatar-img">
+                  <div class="persona-avatar-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/elena-persona.jpg?v=1.0', 'User Persona — Elena (29 anni | Assistente Sociale)')" title="Clicca per ingrandire la foto">
+                    <img src="assets/img/acumen-academy-redesign/elena-persona.jpg?v=1.0" alt="Elena" class="persona-avatar-img elena-img">
+                    <div class="persona-zoom-badge">🔍 Ingrandisci</div>
+                  </div>
                   <div class="persona-header-text">
                     <h4 class="persona-name">Elena</h4>
                     <span class="persona-meta">Età: 29 anni | Assistente Sociale</span>
@@ -663,7 +669,10 @@
               <!-- Persona 3 -->
               <div class="persona-card">
                 <div class="persona-header">
-                  <img src="assets/img/acumen-academy-redesign/marco-persona.jpg?v=1.0" alt="Marco" class="persona-avatar-img">
+                  <div class="persona-avatar-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/marco-persona.jpg?v=1.0', 'User Persona — Marco (38 anni | Manager Privato)')" title="Clicca per ingrandire la foto">
+                    <img src="assets/img/acumen-academy-redesign/marco-persona.jpg?v=1.0" alt="Marco" class="persona-avatar-img">
+                    <div class="persona-zoom-badge">🔍 Ingrandisci</div>
+                  </div>
                   <div class="persona-header-text">
                     <h4 class="persona-name">Marco</h4>
                     <span class="persona-meta">Età: 38 anni | Manager Privato</span>
@@ -1146,11 +1155,13 @@
     });
   </script>
 
-  <!-- Modal Lightbox per Ingrandire i Video -->
-  <div id="videoLightboxModal" class="video-lightbox-overlay" onclick="closeVideoModal(event)">
+  <!-- Modal Lightbox per Ingrandire Media (Video e Foto) -->
+  <div id="mediaLightboxModal" class="video-lightbox-overlay" onclick="closeMediaModal(event)">
     <div class="lightbox-modal-content" onclick="event.stopPropagation()">
-      <button type="button" class="lightbox-close-btn" onclick="closeVideoModal(event)" aria-label="Chiudi video">&times;</button>
-      <video id="lightboxVideoPlayer" controls loop muted playsinline class="lightbox-video"></video>
+      <button type="button" class="lightbox-close-btn" onclick="closeMediaModal(event)" aria-label="Chiudi modal">&times;</button>
+      <video id="lightboxVideoPlayer" controls loop muted playsinline class="lightbox-video" style="display: none;"></video>
+      <img id="lightboxImageDisplay" src="" alt="Foto Persona Ingrandita" class="lightbox-img" style="display: none;">
+      <div id="lightboxCaption" class="lightbox-caption" style="display: none;"></div>
     </div>
   </div>
 
@@ -1181,25 +1192,67 @@
     }
 
     function openVideoModal(videoSrc) {
-      var modal = document.getElementById('videoLightboxModal');
+      var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
+      var img = document.getElementById('lightboxImageDisplay');
+      var caption = document.getElementById('lightboxCaption');
+      if (img) img.style.display = 'none';
+      if (caption) caption.style.display = 'none';
+      player.style.display = 'block';
       player.src = videoSrc;
       modal.style.display = 'flex';
       player.play();
     }
-    function closeVideoModal(e) {
-      var modal = document.getElementById('videoLightboxModal');
+
+    function openImageModal(imgSrc, captionText) {
+      var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
+      var img = document.getElementById('lightboxImageDisplay');
+      var caption = document.getElementById('lightboxCaption');
       if (player) {
         player.pause();
         player.src = '';
+        player.style.display = 'none';
+      }
+      img.src = imgSrc;
+      img.style.display = 'block';
+      if (captionText) {
+        caption.textContent = captionText;
+        caption.style.display = 'block';
+      } else {
+        caption.style.display = 'none';
+      }
+      modal.style.display = 'flex';
+    }
+
+    function closeMediaModal(e) {
+      var modal = document.getElementById('mediaLightboxModal');
+      var player = document.getElementById('lightboxVideoPlayer');
+      var img = document.getElementById('lightboxImageDisplay');
+      var caption = document.getElementById('lightboxCaption');
+      if (player) {
+        player.pause();
+        player.src = '';
+        player.style.display = 'none';
+      }
+      if (img) {
+        img.src = '';
+        img.style.display = 'none';
+      }
+      if (caption) {
+        caption.style.display = 'none';
       }
       if (modal) {
         modal.style.display = 'none';
       }
     }
+
+    function closeVideoModal(e) {
+      closeMediaModal(e);
+    }
+
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeVideoModal(e);
+      if (e.key === 'Escape') closeMediaModal(e);
     });
   </script>
 

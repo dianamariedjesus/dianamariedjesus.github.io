@@ -609,6 +609,39 @@ body {
   padding-bottom: 14px;
   min-height: 124px;
 }
+.persona-avatar-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.persona-avatar-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.persona-avatar-wrapper:hover .persona-zoom-badge {
+  opacity: 1;
+}
+.persona-zoom-badge {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.8);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
 .persona-avatar-img {
   width: 90px;
   height: 110px;
@@ -616,8 +649,11 @@ body {
   object-fit: cover;
   object-position: top center;
   border: 1px solid #CBD5E1;
-  flex-shrink: 0;
+  display: block;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.persona-avatar-img.elena-img {
+  object-position: center 18%;
 }
 .persona-header-text {
   display: flex;
@@ -1006,4 +1042,23 @@ body {
   .protocol-cards-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Lightbox Modal per Immagini */
+.lightbox-img {
+  max-width: 85vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.lightbox-caption {
+  margin-top: 14px;
+  color: #F8FAFC;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.01em;
 }
