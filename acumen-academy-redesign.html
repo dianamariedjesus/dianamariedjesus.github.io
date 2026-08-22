@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=18.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=19.0">
 </head>
 
 <body>
@@ -723,9 +723,9 @@
               <div class="comparison-card-item">
                 <div class="comparison-card-header">
                   <span>🔴 Pagina Storica (As-Is)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')" aria-label="Ingrandisci">🔍</button>
+                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                 </div>
-                <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')" title="Clicca per ingrandire">
+                <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'homepage-stages')" title="Clicca per ingrandire">
                   <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0" alt="Homepage Storica As-Is" class="comparison-card-img">
                 </div>
                 <div class="comparison-card-desc">
@@ -737,9 +737,9 @@
               <div class="comparison-card-item">
                 <div class="comparison-card-header">
                   <span>📐 Wireframe (Mid-Fi)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')" aria-label="Ingrandisci">🔍</button>
+                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                 </div>
-                <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')" title="Clicca per ingrandire">
+                <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'homepage-stages')" title="Clicca per ingrandire">
                   <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0" alt="Homepage Wireframe Mid-Fi" class="comparison-card-img">
                 </div>
                 <div class="comparison-card-desc">
@@ -751,9 +751,9 @@
               <div class="comparison-card-item">
                 <div class="comparison-card-header">
                   <span>🟢 UI Finale (To-Be)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')" aria-label="Ingrandisci">🔍</button>
+                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                 </div>
-                <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')" title="Clicca per ingrandire">
+                <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'homepage-stages')" title="Clicca per ingrandire">
                   <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
                 </div>
                 <div class="comparison-card-desc">
@@ -1212,12 +1212,17 @@
     });
   </script>
 
-  <!-- Modal Lightbox per Ingrandire Media (Video e Foto) -->
+  <!-- Modal Lightbox per Ingrandire Media (Video e Foto con Frecce di Navigazione) -->
   <div id="mediaLightboxModal" class="video-lightbox-overlay" onclick="closeMediaModal(event)">
+    <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateLightbox(event, -1)" aria-label="Immagine precedente">&#10094;</button>
+    <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateLightbox(event, 1)" aria-label="Immagine successiva">&#10095;</button>
+    
     <div class="lightbox-modal-content" onclick="event.stopPropagation()">
       <button type="button" class="lightbox-close-btn" onclick="closeMediaModal(event)" aria-label="Chiudi modal">&times;</button>
       <video id="lightboxVideoPlayer" controls loop muted playsinline class="lightbox-video" style="display: none;"></video>
-      <img id="lightboxImageDisplay" src="" alt="Foto Persona Ingrandita" class="lightbox-img" style="display: none;">
+      <div id="lightboxImageScrollContainer" class="lightbox-img-scroll-container" style="display: none;">
+        <img id="lightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
+      </div>
       <div id="lightboxCaption" class="lightbox-caption" style="display: none;"></div>
     </div>
   </div>
@@ -1248,45 +1253,122 @@
       }
     }
 
+    var currentGalleryIndex = 0;
+    var currentGalleryItems = [];
+
+    var homepageStagesGallery = [
+      {
+        src: 'assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0',
+        title: '1. Pagina Storica (As-Is) — Acumen Academy'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0',
+        title: '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0',
+        title: '3. UI Finale (To-Be) — Acumen Academy'
+      }
+    ];
+
     function openVideoModal(videoSrc) {
       var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
-      var img = document.getElementById('lightboxImageDisplay');
+      var scrollBox = document.getElementById('lightboxImageScrollContainer');
       var caption = document.getElementById('lightboxCaption');
-      if (img) img.style.display = 'none';
+      var prevBtn = document.getElementById('lightboxPrevBtn');
+      var nextBtn = document.getElementById('lightboxNextBtn');
+
+      if (scrollBox) scrollBox.style.display = 'none';
       if (caption) caption.style.display = 'none';
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+
       player.style.display = 'block';
       player.src = videoSrc;
       modal.style.display = 'flex';
       player.play();
     }
 
+    function openGalleryModal(index, galleryType) {
+      if (galleryType === 'homepage-stages') {
+        currentGalleryItems = homepageStagesGallery;
+      } else {
+        currentGalleryItems = [];
+      }
+      currentGalleryIndex = index;
+      renderGalleryItem();
+    }
+
     function openImageModal(imgSrc, captionText) {
+      currentGalleryItems = [{ src: imgSrc, title: captionText || '' }];
+      currentGalleryIndex = 0;
+      renderGalleryItem();
+    }
+
+    function renderGalleryItem() {
       var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
+      var scrollBox = document.getElementById('lightboxImageScrollContainer');
       var img = document.getElementById('lightboxImageDisplay');
       var caption = document.getElementById('lightboxCaption');
+      var prevBtn = document.getElementById('lightboxPrevBtn');
+      var nextBtn = document.getElementById('lightboxNextBtn');
+
       if (player) {
         player.pause();
         player.src = '';
         player.style.display = 'none';
       }
-      img.src = imgSrc;
-      img.style.display = 'block';
-      if (captionText) {
-        caption.textContent = captionText;
-        caption.style.display = 'block';
-      } else {
-        caption.style.display = 'none';
+
+      if (currentGalleryItems.length > 0) {
+        var item = currentGalleryItems[currentGalleryIndex];
+        img.src = item.src;
+        if (scrollBox) {
+          scrollBox.style.display = 'block';
+          scrollBox.scrollTop = 0;
+        }
+        img.style.display = 'block';
+
+        if (caption) {
+          if (item.title) {
+            caption.textContent = item.title;
+            caption.style.display = 'block';
+          } else {
+            caption.style.display = 'none';
+          }
+        }
+
+        var showNav = currentGalleryItems.length > 1;
+        if (prevBtn) prevBtn.style.display = showNav ? 'flex' : 'none';
+        if (nextBtn) nextBtn.style.display = showNav ? 'flex' : 'none';
       }
-      modal.style.display = 'flex';
+
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function navigateLightbox(e, direction) {
+      if (e) e.stopPropagation();
+      if (currentGalleryItems.length <= 1) return;
+
+      currentGalleryIndex += direction;
+      if (currentGalleryIndex < 0) {
+        currentGalleryIndex = currentGalleryItems.length - 1;
+      } else if (currentGalleryIndex >= currentGalleryItems.length) {
+        currentGalleryIndex = 0;
+      }
+      renderGalleryItem();
     }
 
     function closeMediaModal(e) {
       var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
+      var scrollBox = document.getElementById('lightboxImageScrollContainer');
       var img = document.getElementById('lightboxImageDisplay');
       var caption = document.getElementById('lightboxCaption');
+      var prevBtn = document.getElementById('lightboxPrevBtn');
+      var nextBtn = document.getElementById('lightboxNextBtn');
+
       if (player) {
         player.pause();
         player.src = '';
@@ -1296,9 +1378,14 @@
         img.src = '';
         img.style.display = 'none';
       }
+      if (scrollBox) {
+        scrollBox.style.display = 'none';
+      }
       if (caption) {
         caption.style.display = 'none';
       }
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
       if (modal) {
         modal.style.display = 'none';
       }
@@ -1308,30 +1395,13 @@
       closeMediaModal(e);
     }
 
-    function switchHomepageStage(e, stageId) {
-      if (e) e.preventDefault();
-      var buttons = document.querySelectorAll('.stage-toggle-btn');
-      buttons.forEach(function(btn) { btn.classList.remove('active'); });
-      if (e && e.currentTarget) e.currentTarget.classList.add('active');
-
-      var gridPanel = document.getElementById('homepageStageGrid');
-      var asisPanel = document.getElementById('homepageStageAsis');
-      var wireframePanel = document.getElementById('homepageStageWireframe');
-      var uiPanel = document.getElementById('homepageStageUI');
-
-      if (gridPanel) gridPanel.style.display = 'none';
-      if (asisPanel) asisPanel.style.display = 'none';
-      if (wireframePanel) wireframePanel.style.display = 'none';
-      if (uiPanel) uiPanel.style.display = 'none';
-
-      if (stageId === 'grid3col' && gridPanel) gridPanel.style.display = 'block';
-      if (stageId === 'asis' && asisPanel) asisPanel.style.display = 'block';
-      if (stageId === 'wireframe' && wireframePanel) wireframePanel.style.display = 'block';
-      if (stageId === 'ui' && uiPanel) uiPanel.style.display = 'block';
-    }
-
     document.addEventListener('keydown', function(e) {
+      var modal = document.getElementById('mediaLightboxModal');
+      if (!modal || modal.style.display === 'none') return;
+
       if (e.key === 'Escape') closeMediaModal(e);
+      if (e.key === 'ArrowLeft') navigateLightbox(e, -1);
+      if (e.key === 'ArrowRight') navigateLightbox(e, 1);
     });
   </script>
 
