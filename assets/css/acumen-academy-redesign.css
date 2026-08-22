@@ -1044,14 +1044,22 @@ body {
   }
 }
 
-/* Lightbox Modal per Immagini */
-.lightbox-img {
-  max-width: 85vw;
-  max-height: 80vh;
+/* Lightbox Modal per Immagini e Galleria */
+.lightbox-img-scroll-container {
+  max-width: 88vw;
+  max-height: 82vh;
+  overflow: auto;
   border-radius: 12px;
-  object-fit: contain;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  background-color: #0F172A;
   border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.lightbox-img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .lightbox-caption {
   margin-top: 14px;
@@ -1061,6 +1069,40 @@ body {
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.01em;
+}
+
+/* Lightbox Navigation Arrows (Frecce Sinistra / Destra) */
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(15, 23, 42, 0.75);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10001;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  user-select: none;
+}
+.lightbox-nav-btn.prev {
+  left: 24px;
+}
+.lightbox-nav-btn.next {
+  right: 24px;
+}
+.lightbox-nav-btn:hover {
+  background-color: #0284C7;
+  border-color: #0284C7;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
 }
 
 /* Wireframe & UI Slide 1 Comparison Component */
