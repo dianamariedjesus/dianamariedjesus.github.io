@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=17.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=18.0">
 </head>
 
 <body>
@@ -710,130 +710,57 @@
             
             <!-- Header della Slide 1 -->
             <div class="slide-header-box">
-              <h4 class="slide-page-title">🖼️ Slide 1: Homepage — Confronto Evolutivo delle 3 Fasi</h4>
+              <h4 class="slide-page-title">Homepage</h4>
               <p class="slide-page-desc">
-                Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Seleziona una fase per vederla nel mock-up del browser o passa alla vista <strong>📑 Confronto a 3 Colonne</strong> per una panoramica affiancata. Clicca su qualsiasi immagine per ingrandirla a schermo intero.
+                Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
               </p>
             </div>
 
-            <!-- Segmented Control Bar per cambiare fase -->
-            <div class="stage-toggle-bar">
-              <button type="button" class="stage-toggle-btn active" onclick="switchHomepageStage(event, 'grid3col')">📑 Confronto a 3 Colonne</button>
-              <button type="button" class="stage-toggle-btn" onclick="switchHomepageStage(event, 'asis')">🔴 1. Storico (As-Is)</button>
-              <button type="button" class="stage-toggle-btn" onclick="switchHomepageStage(event, 'wireframe')">📐 2. Wireframe (Mid-Fi)</button>
-              <button type="button" class="stage-toggle-btn" onclick="switchHomepageStage(event, 'ui')">🟢 3. UI Finale (To-Be)</button>
-            </div>
-
-            <!-- Vista 1: Confronto a 3 Colonne -->
-            <div id="homepageStageGrid" class="stage-view-panel">
-              <div class="comparison-grid-3col">
-                
-                <!-- Colonna 1: As-Is -->
-                <div class="comparison-card-item">
-                  <div class="comparison-card-header">
-                    <span>🔴 Pagina Storica (As-Is)</span>
-                    <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')">🔍 Ingrandisci</button>
-                  </div>
-                  <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0" alt="Homepage Storica As-Is" class="comparison-card-img">
-                  </div>
-                  <div class="comparison-card-desc">
-                    <strong>Criticità:</strong> Layout scuro con testi in sovrapposizione ad alto contrasto errato, link poco coerenti, assenza di supporto in tempo reale e reindirizzamenti esterni disorientanti.
-                  </div>
+            <!-- Vista 3 Colonne Diretta (Senza Container esterni né Menu) -->
+            <div class="comparison-grid-3col">
+              
+              <!-- Colonna 1: As-Is -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header">
+                  <span>🔴 Pagina Storica (As-Is)</span>
+                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')" aria-label="Ingrandisci">🔍</button>
                 </div>
-
-                <!-- Colonna 2: Wireframe Mid-Fi -->
-                <div class="comparison-card-item">
-                  <div class="comparison-card-header">
-                    <span>📐 Wireframe (Mid-Fi)</span>
-                    <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')">🔍 Ingrandisci</button>
-                  </div>
-                  <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0" alt="Homepage Wireframe Mid-Fi" class="comparison-card-img">
-                  </div>
-                  <div class="comparison-card-desc">
-                    <strong>Struttura:</strong> Griglia a 12 colonne stretch su desktop (1440px), hero section essenziale, riorganizzazione dei moduli didattici ed introduzione di loghi di autorevolezza e dati di impatto.
-                  </div>
+                <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')" title="Clicca per ingrandire">
+                  <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0" alt="Homepage Storica As-Is" class="comparison-card-img">
                 </div>
-
-                <!-- Colonna 3: UI Finale To-Be -->
-                <div class="comparison-card-item">
-                  <div class="comparison-card-header">
-                    <span>🟢 UI Finale (To-Be)</span>
-                    <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')">🔍 Ingrandisci</button>
-                  </div>
-                  <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
-                  </div>
-                  <div class="comparison-card-desc">
-                    <strong>Risultato:</strong> Proposta di valore nei primi 3 secondi, caratteri storici preservati, WCAG 2.1 AA/AAA rispettati con contrasto font 4.5:1 e menu "Get Help" accessibile.
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Vista 2: Single Stage Browser View (As-Is) -->
-            <div id="homepageStageAsis" class="stage-view-panel" style="display: none;">
-              <div class="browser-mockup-frame">
-                <div class="browser-mockup-header">
-                  <div class="browser-dots">
-                    <span class="browser-dot red"></span>
-                    <span class="browser-dot yellow"></span>
-                    <span class="browser-dot green"></span>
-                  </div>
-                  <div class="browser-url-bar">https://acumenacademy.org (Sito Storico 2023 - As-Is)</div>
-                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')">🔍 Ingrandisci</button>
-                </div>
-                <div class="browser-mockup-body" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0', '1. Pagina Storica (As-Is) — Acumen Academy')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=1.0" alt="Pagina Storica As-Is" class="browser-mockup-img">
+                <div class="comparison-card-desc">
+                  <strong>Criticità:</strong> Layout scuro con testi in sovrapposizione ad alto contrasto errato, link poco coerenti, assenza di supporto in tempo reale e reindirizzamenti esterni disorientanti.
                 </div>
               </div>
-              <div class="stage-analytical-caption">
-                <strong>🔴 Analisi dello Stato Storico (As-Is):</strong> La Homepage del 2023 soffriva di forte rumore visivo, blocchi di testo blu scuro ad alto attrito visivo, mancanza di chiarezza sul valore del brand e frammentazione della navigazione.
-              </div>
-            </div>
 
-            <!-- Vista 3: Single Stage Browser View (Wireframe) -->
-            <div id="homepageStageWireframe" class="stage-view-panel" style="display: none;">
-              <div class="browser-mockup-frame">
-                <div class="browser-mockup-header">
-                  <div class="browser-dots">
-                    <span class="browser-dot red"></span>
-                    <span class="browser-dot yellow"></span>
-                    <span class="browser-dot green"></span>
-                  </div>
-                  <div class="browser-url-bar">https://figma.com/wireframe/acumen-homepage (Wireframe Mid-Fi)</div>
-                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')">🔍 Ingrandisci</button>
+              <!-- Colonna 2: Wireframe Mid-Fi -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header">
+                  <span>📐 Wireframe (Mid-Fi)</span>
+                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')" aria-label="Ingrandisci">🔍</button>
                 </div>
-                <div class="browser-mockup-body" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0" alt="Wireframe Mid-Fi" class="browser-mockup-img">
+                <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0', '2. Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy')" title="Clicca per ingrandire">
+                  <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=1.0" alt="Homepage Wireframe Mid-Fi" class="comparison-card-img">
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Struttura:</strong> Griglia a 12 colonne stretch su desktop (1440px), hero section essenziale, riorganizzazione dei moduli didattici ed introduzione di loghi di autorevolezza e dati di impatto.
                 </div>
               </div>
-              <div class="stage-analytical-caption">
-                <strong>📐 Analisi del Wireframe (Mid-Fi):</strong> Strutturazione dell'architettura informativa con griglia a 12 colonne (1440px desktop), definizione dei blocchi principali di credibilità (loghi e dati di impatto) e semplificazione delle sezioni di esplorazione corsi.
-              </div>
-            </div>
 
-            <!-- Vista 4: Single Stage Browser View (UI Finale) -->
-            <div id="homepageStageUI" class="stage-view-panel" style="display: none;">
-              <div class="browser-mockup-frame">
-                <div class="browser-mockup-header">
-                  <div class="browser-dots">
-                    <span class="browser-dot red"></span>
-                    <span class="browser-dot yellow"></span>
-                    <span class="browser-dot green"></span>
-                  </div>
-                  <div class="browser-url-bar">https://acumenacademy.org (UI Finale Riprogettata - To-Be)</div>
-                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')">🔍 Ingrandisci</button>
+              <!-- Colonna 3: UI Finale To-Be -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header">
+                  <span>🟢 UI Finale (To-Be)</span>
+                  <button type="button" class="btn-card-zoom" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')" aria-label="Ingrandisci">🔍</button>
                 </div>
-                <div class="browser-mockup-body" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0" alt="UI Finale To-Be" class="browser-mockup-img">
+                <div class="comparison-img-wrapper" onclick="openImageModal('assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0', '3. UI Finale (To-Be) — Acumen Academy')" title="Clicca per ingrandire">
+                  <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=1.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Risultato:</strong> Proposta di valore nei primi 3 secondi, caratteri storici preservati, WCAG 2.1 AA/AAA rispettati con contrasto font 4.5:1 e menu "Get Help" accessibile.
                 </div>
               </div>
-              <div class="stage-analytical-caption">
-                <strong>🟢 Analisi della UI Finale (To-Be):</strong> Header pulito e minimale con voce "Get Help", hero d'impatto con proposta di valore immediata, caratteri tipografici storici preservati (AvantGarde-Demi e Caecilia LT Pro) ed elevati contrasti cromatici allineati a WCAG 2.1 AA/AAA.
-              </div>
+
             </div>
 
           </div>
