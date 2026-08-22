@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=25.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=26.0">
 </head>
 
 <body>
@@ -705,142 +705,200 @@
             Definiti i bisogni delle persone e i requisiti di accessibilità, ho sviluppato la struttura logica e l'interfaccia visiva delle 5 pagine cardine del portale desktop. Il passaggio dai wireframe a media fedeltà al prototipo finale ha permesso di testare percorsi chiari, gerarchie visive pulite e componenti scalabili prima di passare alla validazione sul campo.
           </p>
 
-          <!-- Componente Confronto 3 Fasi per Slide 1: Homepage -->
-          <div class="wireframe-ui-container">
+          <!-- Carosello Scorrevole Riprogettazione 5 Pagine -->
+          <div class="main-carousel-wrapper">
             
-            <!-- Header della Slide 1 -->
-            <div class="slide-header-box">
-              <h4 class="slide-page-title">Homepage</h4>
-              <p class="slide-page-desc">
-                Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
-              </p>
-            </div>
-
-            <!-- Vista 3 Colonne Diretta (Senza Container esterni né Menu) -->
-            <div class="comparison-grid-3col">
-              
-              <!-- Colonna 1: As-Is -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header">
-                  <span>Pagina Storica (As-Is)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
-                </div>
-                <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'homepage-stages')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=2.0" alt="Homepage Storica As-Is" class="comparison-card-img">
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Criticità:</strong> Layout scuro con testi in sovrapposizione ad alto contrasto errato, link poco coerenti, assenza di supporto in tempo reale e reindirizzamenti esterni disorientanti.
-                </div>
+            <!-- Barra di Navigazione superiore con Tab e Frecce -->
+            <div class="main-carousel-nav-bar">
+              <div class="main-carousel-tabs">
+                <button type="button" class="main-carousel-tab active" onclick="goToMainSlide(0)">1. Homepage</button>
+                <button type="button" class="main-carousel-tab" onclick="goToMainSlide(1)">2. Pagina Elenco Corsi</button>
+                <button type="button" class="main-carousel-tab" onclick="goToMainSlide(2)">3. Pagina Dettaglio Corso</button>
+                <button type="button" class="main-carousel-tab" onclick="goToMainSlide(3)">4. Pagina My Dashboard</button>
+                <button type="button" class="main-carousel-tab" onclick="goToMainSlide(4)">5. Pagina Contact Us</button>
               </div>
-
-              <!-- Colonna 2: Wireframe Mid-Fi -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header">
-                  <span>Wireframe (Mid-Fi)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
-                </div>
-                <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'homepage-stages')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=2.0" alt="Homepage Wireframe Mid-Fi" class="comparison-card-img">
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Struttura:</strong> Griglia a 12 colonne stretch su desktop (1440px), hero section essenziale, riorganizzazione dei moduli didattici ed introduzione di loghi di autorevolezza e dati di impatto.
-                </div>
-              </div>
-
-              <!-- Colonna 3: UI Finale To-Be -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header">
-                  <span>UI Finale (To-Be)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
-                </div>
-                <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'homepage-stages')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=2.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Risultato:</strong> Proposta di valore nei primi 3 secondi, caratteri storici preservati, WCAG 2.1 AA/AAA rispettati con contrasto font 4.5:1 e menu "Get Help" accessibile.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Componente Confronto 3 Fasi per Slide 2: Pagina Elenco Corsi -->
-          <div class="wireframe-ui-container">
-            
-            <!-- Header della Slide 2 -->
-            <div class="slide-header-box">
-              <h4 class="slide-page-title">Pagina Elenco Corsi</h4>
-              <p class="slide-page-desc">
-                Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
-              </p>
-            </div>
-
-            <!-- Vista 3 Colonne Diretta (Pagina Elenco Corsi) -->
-            <div class="comparison-grid-3col">
-              
-              <!-- Colonna 1: As-Is -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header">
-                  <span>Pagina Storica (As-Is)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
-                </div>
-                <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'courses-stages')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/courses-asis.png?v=1.0" alt="Pagina Elenco Corsi Storica As-Is" class="comparison-card-img">
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Criticità:</strong> Griglia corsi disorganizzata, filtri assenti o poco visibili, mancanza di ordinamento rapido e scarsa gerarchia per livello di difficoltà e prezzo.
-                </div>
-              </div>
-
-              <!-- Colonna 2: Wireframe Mid-Fi -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header">
-                  <span>Wireframe (Mid-Fi)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
-                </div>
-                <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'courses-stages')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/courses-wireframe.png?v=1.0" alt="Pagina Elenco Corsi Wireframe Mid-Fi" class="comparison-card-img">
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Struttura:</strong> Sidebar filtri con layout ad accordion (prezzo, durata, argomento), ordinamento rapido "Sort by" e paginazione per una griglia sempre pulita ed ordinata.
-                </div>
-              </div>
-
-              <!-- Colonna 3: UI Finale To-Be -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header">
-                  <span>UI Finale (To-Be)</span>
-                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
-                </div>
-                <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'courses-stages')" title="Clicca per ingrandire">
-                  <img src="assets/img/acumen-academy-redesign/courses-ui.png?v=1.0" alt="Pagina Elenco Corsi UI Finale To-Be" class="comparison-card-img">
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Risultato:</strong> Corsi in evidenza con card interattive, ordinamento dinamico, filtri intuitivi per prezzi e durate, e paginazione fluida per migliorare l'esplorazione.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Note segnaposto per le prossime slide 3-5 -->
-          <div class="carousel-placeholder-box" style="margin-top: 28px;">
-            <div class="carousel-slides-list">
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 3: Pagina Dettaglio Corso (In attesa delle immagini)</div>
-                <div class="carousel-slide-caption">Inserimento del tasto "Save Course" accanto a "Enroll Now", menu per accedere rapidamente alle sezioni chiave, recensioni riordinate.</div>
-              </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 4: Pagina My Dashboard (In attesa delle immagini)</div>
-                <div class="carousel-slide-caption">Bacheca personale con saluto personalizzato, sidebar fissa con le informazioni utente e menu a schede per gestire i corsi.</div>
-              </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 5: Pagina Contact Us (In attesa delle immagini)</div>
-                <div class="carousel-slide-caption">Testata informativa e triplice canale di supporto: Email Support, Chat Support con overlay Livechat centrato e Help Center FAQ.</div>
+              <div class="main-carousel-controls">
+                <button type="button" id="mainSlidePrevBtn" class="carousel-arrow-btn" onclick="moveMainSlide(-1)" aria-label="Slide precedente" disabled>‹</button>
+                <button type="button" id="mainSlideNextBtn" class="carousel-arrow-btn" onclick="moveMainSlide(1)" aria-label="Slide successiva">›</button>
               </div>
             </div>
+
+            <!-- Viewport e Track del Carosello -->
+            <div class="main-carousel-viewport">
+              <div id="mainCarouselTrack" class="main-carousel-track">
+                
+                <!-- Slide 1: Homepage -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container">
+                    <div class="slide-header-box">
+                      <h4 class="slide-page-title">Homepage</h4>
+                      <p class="slide-page-desc">
+                        Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
+                      </p>
+                    </div>
+                    <div class="comparison-grid-3col">
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>Pagina Storica (As-Is)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'homepage-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=2.0" alt="Homepage Storica As-Is" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Criticità:</strong> Layout scuro con testi in sovrapposizione ad alto contrasto errato, link poco coerenti, assenza di supporto in tempo reale e reindirizzamenti esterni disorientanti.
+                        </div>
+                      </div>
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>Wireframe (Mid-Fi)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'homepage-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=2.0" alt="Homepage Wireframe Mid-Fi" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Struttura:</strong> Griglia a 12 colonne stretch su desktop (1440px), hero section essenziale, riorganizzazione dei moduli didattici ed introduzione di loghi di autorevolezza e dati di impatto.
+                        </div>
+                      </div>
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>UI Finale (To-Be)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'homepage-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=2.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Risultato:</strong> Proposta di valore nei primi 3 secondi, caratteri storici preservati, WCAG 2.1 AA/AAA rispettati con contrasto font 4.5:1 e menu "Get Help" accessibile.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Pagina Elenco Corsi -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container">
+                    <div class="slide-header-box">
+                      <h4 class="slide-page-title">Pagina Elenco Corsi</h4>
+                      <p class="slide-page-desc">
+                        Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
+                      </p>
+                    </div>
+                    <div class="comparison-grid-3col">
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>Pagina Storica (As-Is)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'courses-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/courses-asis.png?v=1.0" alt="Pagina Elenco Corsi Storica As-Is" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Criticità:</strong> Griglia corsi disorganizzata, filtri assenti o poco visibili, mancanza di ordinamento rapido e scarsa gerarchia per livello di difficoltà e prezzo.
+                        </div>
+                      </div>
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>Wireframe (Mid-Fi)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'courses-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/courses-wireframe.png?v=1.0" alt="Pagina Elenco Corsi Wireframe Mid-Fi" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Struttura:</strong> Sidebar filtri con layout ad accordion (prezzo, durata, argomento), ordinamento rapido "Sort by" e paginazione per una griglia sempre pulita ed ordinata.
+                        </div>
+                      </div>
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>UI Finale (To-Be)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'courses-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/courses-ui.png?v=1.0" alt="Pagina Elenco Corsi UI Finale To-Be" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Risultato:</strong> Corsi in evidenza con card interattive, ordinamento dinamico, filtri intuitivi per prezzi e durate, e paginazione fluida per migliorare l'esplorazione.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Pagina Dettaglio Corso -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container">
+                    <div class="slide-header-box">
+                      <h4 class="slide-page-title">Pagina Dettaglio Corso</h4>
+                      <p class="slide-page-desc">
+                        Inserimento del tasto "Save Course" accanto a "Enroll Now", menu per accedere rapidamente alle sezioni chiave, recensioni riordinate e corsi correlati allineati al Design System.
+                      </p>
+                    </div>
+                    <div class="carousel-placeholder-box" style="margin-top: 0;">
+                      <div class="carousel-slides-list">
+                        <div class="carousel-slide-item">
+                          <div class="carousel-slide-name">🖼️ Slide 3: Pagina Dettaglio Corso (In attesa delle immagini)</div>
+                          <div class="carousel-slide-caption">Inserimento del tasto "Save Course" accanto a "Enroll Now", menu per accedere rapidamente alle sezioni chiave, recensioni riordinate e corsi correlati.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Pagina My Dashboard -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container">
+                    <div class="slide-header-box">
+                      <h4 class="slide-page-title">Pagina My Dashboard</h4>
+                      <p class="slide-page-desc">
+                        Bacheca personale con saluto personalizzato, sidebar fissa con le informazioni utente e menu a schede (All, Saved, Ongoing, Completed) per gestire i corsi in pochi click.
+                      </p>
+                    </div>
+                    <div class="carousel-placeholder-box" style="margin-top: 0;">
+                      <div class="carousel-slides-list">
+                        <div class="carousel-slide-item">
+                          <div class="carousel-slide-name">🖼️ Slide 4: Pagina My Dashboard (In attesa delle immagini)</div>
+                          <div class="carousel-slide-caption">Bacheca personale con saluto personalizzato, sidebar fissa con le informazioni utente e menu a schede per gestire i corsi.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5: Pagina Contact Us -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container">
+                    <div class="slide-header-box">
+                      <h4 class="slide-page-title">Pagina Contact Us</h4>
+                      <p class="slide-page-desc">
+                        Testata informativa e triplice canale di supporto: Email Support con form dedicato, Chat Support con overlay Livechat centrato e Help Center con pagina FAQ divise per macro-categorie.
+                      </p>
+                    </div>
+                    <div class="carousel-placeholder-box" style="margin-top: 0;">
+                      <div class="carousel-slides-list">
+                        <div class="carousel-slide-item">
+                          <div class="carousel-slide-name">🖼️ Slide 5: Pagina Contact Us (In attesa delle immagini)</div>
+                          <div class="carousel-slide-caption">Testata informativa e triplice canale di supporto: Email Support, Chat Support con overlay Livechat centrato e Help Center FAQ.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Indicatori a pallino inferiori -->
+            <div class="main-carousel-dots">
+              <button type="button" class="main-carousel-dot active" onclick="goToMainSlide(0)" aria-label="Slide 1"></button>
+              <button type="button" class="main-carousel-dot" onclick="goToMainSlide(1)" aria-label="Slide 2"></button>
+              <button type="button" class="main-carousel-dot" onclick="goToMainSlide(2)" aria-label="Slide 3"></button>
+              <button type="button" class="main-carousel-dot" onclick="goToMainSlide(3)" aria-label="Slide 4"></button>
+              <button type="button" class="main-carousel-dot" onclick="goToMainSlide(4)" aria-label="Slide 5"></button>
+            </div>
+
           </div>
         </section>
 
@@ -1466,13 +1524,48 @@
       closeMediaModal(e);
     }
 
+    var currentMainSlide = 0;
+    var totalMainSlides = 5;
+
+    function goToMainSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= totalMainSlides) index = totalMainSlides - 1;
+      currentMainSlide = index;
+
+      var track = document.getElementById('mainCarouselTrack');
+      if (track) {
+        track.style.transform = 'translateX(-' + (currentMainSlide * 100) + '%)';
+      }
+
+      var tabs = document.querySelectorAll('.main-carousel-tab');
+      tabs.forEach(function(tab, i) {
+        if (i === currentMainSlide) tab.classList.add('active');
+        else tab.classList.remove('active');
+      });
+
+      var dots = document.querySelectorAll('.main-carousel-dot');
+      dots.forEach(function(dot, i) {
+        if (i === currentMainSlide) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+
+      var prevBtn = document.getElementById('mainSlidePrevBtn');
+      var nextBtn = document.getElementById('mainSlideNextBtn');
+      if (prevBtn) prevBtn.disabled = (currentMainSlide === 0);
+      if (nextBtn) nextBtn.disabled = (currentMainSlide === totalMainSlides - 1);
+    }
+
+    function moveMainSlide(direction) {
+      goToMainSlide(currentMainSlide + direction);
+    }
+
     document.addEventListener('keydown', function(e) {
       var modal = document.getElementById('mediaLightboxModal');
-      if (!modal || modal.style.display === 'none') return;
-
-      if (e.key === 'Escape') closeMediaModal(e);
-      if (e.key === 'ArrowLeft') navigateLightbox(e, -1);
-      if (e.key === 'ArrowRight') navigateLightbox(e, 1);
+      if (modal && modal.style.display !== 'none') {
+        if (e.key === 'Escape') closeMediaModal(e);
+        if (e.key === 'ArrowLeft') navigateLightbox(e, -1);
+        if (e.key === 'ArrowRight') navigateLightbox(e, 1);
+      }
     });
   </script>
 
