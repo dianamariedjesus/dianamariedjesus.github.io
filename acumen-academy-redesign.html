@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=24.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=25.0">
 </head>
 
 <body>
@@ -765,13 +765,69 @@
 
           </div>
 
-          <!-- Note segnaposto per le prossime slide 2-5 -->
+          <!-- Componente Confronto 3 Fasi per Slide 2: Pagina Elenco Corsi -->
+          <div class="wireframe-ui-container">
+            
+            <!-- Header della Slide 2 -->
+            <div class="slide-header-box">
+              <h4 class="slide-page-title">Pagina Elenco Corsi</h4>
+              <p class="slide-page-desc">
+                Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
+              </p>
+            </div>
+
+            <!-- Vista 3 Colonne Diretta (Pagina Elenco Corsi) -->
+            <div class="comparison-grid-3col">
+              
+              <!-- Colonna 1: As-Is -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header">
+                  <span>Pagina Storica (As-Is)</span>
+                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
+                </div>
+                <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'courses-stages')" title="Clicca per ingrandire">
+                  <img src="assets/img/acumen-academy-redesign/courses-asis.png?v=1.0" alt="Pagina Elenco Corsi Storica As-Is" class="comparison-card-img">
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Criticità:</strong> Griglia corsi disorganizzata, filtri assenti o poco visibili, mancanza di ordinamento rapido e scarsa gerarchia per livello di difficoltà e prezzo.
+                </div>
+              </div>
+
+              <!-- Colonna 2: Wireframe Mid-Fi -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header">
+                  <span>Wireframe (Mid-Fi)</span>
+                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
+                </div>
+                <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'courses-stages')" title="Clicca per ingrandire">
+                  <img src="assets/img/acumen-academy-redesign/courses-wireframe.png?v=1.0" alt="Pagina Elenco Corsi Wireframe Mid-Fi" class="comparison-card-img">
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Struttura:</strong> Sidebar filtri con layout ad accordion (prezzo, durata, argomento), ordinamento rapido "Sort by" e paginazione per una griglia sempre pulita ed ordinata.
+                </div>
+              </div>
+
+              <!-- Colonna 3: UI Finale To-Be -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header">
+                  <span>UI Finale (To-Be)</span>
+                  <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
+                </div>
+                <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'courses-stages')" title="Clicca per ingrandire">
+                  <img src="assets/img/acumen-academy-redesign/courses-ui.png?v=1.0" alt="Pagina Elenco Corsi UI Finale To-Be" class="comparison-card-img">
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Risultato:</strong> Corsi in evidenza con card interattive, ordinamento dinamico, filtri intuitivi per prezzi e durate, e paginazione fluida per migliorare l'esplorazione.
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Note segnaposto per le prossime slide 3-5 -->
           <div class="carousel-placeholder-box" style="margin-top: 28px;">
             <div class="carousel-slides-list">
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 2: Pagina Elenco Corsi (In attesa delle immagini)</div>
-                <div class="carousel-slide-caption">Corsi in evidenza con card interattive, ordinamento rapido "Sort by", sidebar filtri con layout ad accordion per prezzi e durate, e paginazione.</div>
-              </div>
               <div class="carousel-slide-item">
                 <div class="carousel-slide-name">🖼️ Slide 3: Pagina Dettaglio Corso (In attesa delle immagini)</div>
                 <div class="carousel-slide-caption">Inserimento del tasto "Save Course" accanto a "Enroll Now", menu per accedere rapidamente alle sezioni chiave, recensioni riordinate.</div>
@@ -1259,15 +1315,30 @@
     var homepageStagesGallery = [
       {
         src: 'assets/img/acumen-academy-redesign/homepage-asis.png?v=2.0',
-        title: 'Pagina Storica (As-Is) — Acumen Academy'
+        title: 'Pagina Storica (As-Is) — Homepage'
       },
       {
         src: 'assets/img/acumen-academy-redesign/homepage-wireframe.png?v=2.0',
-        title: 'Wireframe Media-Fedeltà (Mid-Fi) — Acumen Academy'
+        title: 'Wireframe Media-Fedeltà (Mid-Fi) — Homepage'
       },
       {
         src: 'assets/img/acumen-academy-redesign/homepage-ui.png?v=2.0',
-        title: 'UI Finale (To-Be) — Acumen Academy'
+        title: 'UI Finale (To-Be) — Homepage'
+      }
+    ];
+
+    var coursesStagesGallery = [
+      {
+        src: 'assets/img/acumen-academy-redesign/courses-asis.png?v=1.0',
+        title: 'Pagina Storica (As-Is) — Pagina Elenco Corsi'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/courses-wireframe.png?v=1.0',
+        title: 'Wireframe Media-Fedeltà (Mid-Fi) — Pagina Elenco Corsi'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/courses-ui.png?v=1.0',
+        title: 'UI Finale (To-Be) — Pagina Elenco Corsi'
       }
     ];
 
@@ -1293,6 +1364,8 @@
     function openGalleryModal(index, galleryType) {
       if (galleryType === 'homepage-stages') {
         currentGalleryItems = homepageStagesGallery;
+      } else if (galleryType === 'courses-stages') {
+        currentGalleryItems = coursesStagesGallery;
       } else {
         currentGalleryItems = [];
       }
