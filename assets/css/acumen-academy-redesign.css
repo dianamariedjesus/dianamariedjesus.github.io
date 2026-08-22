@@ -1240,11 +1240,19 @@ body {
   overflow-y: auto;
   background-color: #F1F5F9;
   cursor: pointer;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .browser-mockup-img {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
   display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 .stage-analytical-caption {
   background-color: #F8FAFC;
