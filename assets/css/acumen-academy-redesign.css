@@ -1046,20 +1046,21 @@ body {
 
 /* Lightbox Modal per Immagini e Galleria */
 .lightbox-img-scroll-container {
-  max-width: 88vw;
-  max-height: 82vh;
-  overflow: auto;
+  width: 1000px;
+  max-width: 85vw;
+  max-height: 78vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 12px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
-  background-color: #0F172A;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .lightbox-img {
+  width: 100%;
   max-width: 100%;
-  width: auto;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 .lightbox-caption {
   margin-top: 14px;
