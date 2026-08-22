@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=26.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=27.0">
 </head>
 
 <body>
@@ -708,7 +708,7 @@
           <!-- Carosello Scorrevole Riprogettazione 5 Pagine -->
           <div class="main-carousel-wrapper">
             
-            <!-- Barra di Navigazione superiore con Tab e Frecce -->
+            <!-- Barra di Navigazione superiore con Tab -->
             <div class="main-carousel-nav-bar">
               <div class="main-carousel-tabs">
                 <button type="button" class="main-carousel-tab active" onclick="goToMainSlide(0)">1. Homepage</button>
@@ -716,10 +716,6 @@
                 <button type="button" class="main-carousel-tab" onclick="goToMainSlide(2)">3. Pagina Dettaglio Corso</button>
                 <button type="button" class="main-carousel-tab" onclick="goToMainSlide(3)">4. Pagina My Dashboard</button>
                 <button type="button" class="main-carousel-tab" onclick="goToMainSlide(4)">5. Pagina Contact Us</button>
-              </div>
-              <div class="main-carousel-controls">
-                <button type="button" id="mainSlidePrevBtn" class="carousel-arrow-btn" onclick="moveMainSlide(-1)" aria-label="Slide precedente" disabled>‹</button>
-                <button type="button" id="mainSlideNextBtn" class="carousel-arrow-btn" onclick="moveMainSlide(1)" aria-label="Slide successiva">›</button>
               </div>
             </div>
 
@@ -732,9 +728,6 @@
                   <div class="wireframe-ui-container">
                     <div class="slide-header-box">
                       <h4 class="slide-page-title">Homepage</h4>
-                      <p class="slide-page-desc">
-                        Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
-                      </p>
                     </div>
                     <div class="comparison-grid-3col">
                       <div class="comparison-card-item">
@@ -782,9 +775,6 @@
                   <div class="wireframe-ui-container">
                     <div class="slide-header-box">
                       <h4 class="slide-page-title">Pagina Elenco Corsi</h4>
-                      <p class="slide-page-desc">
-                        Confronto diretto tra la pagina storica (As-Is), il wireframe a media fedeltà (Mid-Fi) e la veste grafica finale (To-Be UI). Clicca su qualsiasi immagine per ingrandirla a schermo intero.
-                      </p>
                     </div>
                     <div class="comparison-grid-3col">
                       <div class="comparison-card-item">
@@ -832,9 +822,6 @@
                   <div class="wireframe-ui-container">
                     <div class="slide-header-box">
                       <h4 class="slide-page-title">Pagina Dettaglio Corso</h4>
-                      <p class="slide-page-desc">
-                        Inserimento del tasto "Save Course" accanto a "Enroll Now", menu per accedere rapidamente alle sezioni chiave, recensioni riordinate e corsi correlati allineati al Design System.
-                      </p>
                     </div>
                     <div class="carousel-placeholder-box" style="margin-top: 0;">
                       <div class="carousel-slides-list">
@@ -852,9 +839,6 @@
                   <div class="wireframe-ui-container">
                     <div class="slide-header-box">
                       <h4 class="slide-page-title">Pagina My Dashboard</h4>
-                      <p class="slide-page-desc">
-                        Bacheca personale con saluto personalizzato, sidebar fissa con le informazioni utente e menu a schede (All, Saved, Ongoing, Completed) per gestire i corsi in pochi click.
-                      </p>
                     </div>
                     <div class="carousel-placeholder-box" style="margin-top: 0;">
                       <div class="carousel-slides-list">
@@ -872,9 +856,6 @@
                   <div class="wireframe-ui-container">
                     <div class="slide-header-box">
                       <h4 class="slide-page-title">Pagina Contact Us</h4>
-                      <p class="slide-page-desc">
-                        Testata informativa e triplice canale di supporto: Email Support con form dedicato, Chat Support con overlay Livechat centrato e Help Center con pagina FAQ divise per macro-categorie.
-                      </p>
                     </div>
                     <div class="carousel-placeholder-box" style="margin-top: 0;">
                       <div class="carousel-slides-list">
@@ -1548,11 +1529,6 @@
         if (i === currentMainSlide) dot.classList.add('active');
         else dot.classList.remove('active');
       });
-
-      var prevBtn = document.getElementById('mainSlidePrevBtn');
-      var nextBtn = document.getElementById('mainSlideNextBtn');
-      if (prevBtn) prevBtn.disabled = (currentMainSlide === 0);
-      if (nextBtn) nextBtn.disabled = (currentMainSlide === totalMainSlides - 1);
     }
 
     function moveMainSlide(direction) {
