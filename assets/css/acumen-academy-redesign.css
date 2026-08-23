@@ -1268,6 +1268,7 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  height: 100%;
 }
 .comparison-card-header {
   background-color: #F8FAFC;
@@ -1294,11 +1295,13 @@ body {
   transform: scale(1.2);
 }
 .comparison-img-wrapper {
+  height: 480px;
   max-height: 480px;
   overflow-y: auto;
   position: relative;
   cursor: pointer;
   background-color: #F8FAFC;
+  flex: 1;
 }
 .comparison-card-img {
   width: 100%;
@@ -1312,7 +1315,7 @@ body {
   line-height: 1.5;
   background-color: #FFFFFF;
   border-top: 1px solid #F1F5F9;
-  flex: 1;
+  margin-top: auto;
 }
 
 /* Browser Mockup Frame */
