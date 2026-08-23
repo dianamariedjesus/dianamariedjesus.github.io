@@ -850,7 +850,7 @@ body {
 /* Sidebar Navigation */
 .sidebar-nav {
   position: fixed;
-  left: 40px;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1200;
@@ -860,7 +860,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1023px) {
   .sidebar-nav {
     display: none !important;
   }
@@ -986,7 +986,7 @@ body {
 .back-to-top:active {
   background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-pressed.png');
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .back-to-top {
     right: 20px;
     bottom: 20px;
@@ -997,8 +997,16 @@ body {
 
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
+  .sidebar-nav {
+    left: 16px;
+    width: 220px;
+  }
+  .sidebar-overlay {
+    width: 220px;
+  }
   .case-study-container {
-    padding: 0 173px;
+    padding-left: 250px;
+    padding-right: 140px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
