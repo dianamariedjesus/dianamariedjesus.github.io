@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=34.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=35.0">
 </head>
 
 <body>
@@ -702,7 +702,7 @@
         <section class="case-study-section" id="riprogettazione">
           <h3 class="subsection-title">6. WIREFRAME &amp; UI</h3>
           <p class="section-paragraph">
-            Definiti i bisogni delle persone e i requisiti di accessibilità, ho sviluppato la struttura logica e l'interfaccia visiva delle 5 pagine cardine del portale desktop. Il passaggio dai wireframe a media fedeltà al prototipo finale ha permesso di testare percorsi chiari, gerarchie visive pulite e componenti scalabili prima di passare alla validazione sul campo.
+            Definiti i bisogni delle persone e i requisiti di accessibilità, ho sviluppato <strong>la struttura logica e l'interfaccia visiva delle 5 pagine cardine del portale desktop.</strong> Il passaggio dai wireframe a media fedeltà al prototipo finale ha permesso di testare percorsi chiari, gerarchie visive pulite e componenti scalabili prima di passare alla validazione sul campo.
           </p>
 
           <!-- Carosello Scorrevole Riprogettazione 5 Pagine -->
@@ -961,55 +961,99 @@
         <!-- User Testing -->
         <section class="case-study-section" id="usertesting">
           <h2 class="section-title">VALIDAZIONE &amp; USER TESTING (UXArmy)</h2>
-          <h3 class="section-subtitle">
-            Sessione di usabilità non moderata da remoto su Desktop (1440px) per testare l'efficacia dei flussi chiave prima del rilascio.
-          </h3>
-          <p class="section-paragraph">
-            Dopo la prototipazione Figma, ho sottoposto l'interfaccia a una sessione di User Testing da remoto con 5 partecipanti in target per osservarne il comportamento spontaneo tramite Think Aloud (pensare ad alta voce ad accensione del microfono e della webcam), testando la navigazione, l'uso della sidebar filtri e la reperibilità del supporto in tempo reale.
+          
+          <p class="section-paragraph" style="margin-top: 20px;">
+            Dopo la prototipazione Figma, ho sottoposto l'interfaccia a una sessione di <strong>User Testing da remoto con 5 partecipanti</strong> in target per osservarne il comportamento spontaneo tramite <em>Think Aloud</em> (pensare ad alta voce ad accensione del microfono e della webcam), testando la navigazione, l'uso della sidebar filtri e la reperibilità del supporto in tempo reale.
           </p>
           <ul class="section-list">
-            <li><strong>Il Pilot Test:</strong> Prima del lancio ufficiale, ha fatto emergere un limite strutturale nell'icona flottante della chat, che copriva contenuti sui monitor desktop più piccoli. L'ho sostituita con un overlay centrato con oscuramento dello sfondo (dimming), accessibile da "Contact Us", riformulando il Task 3 in modo neutro.</li>
+            <li><strong>Il Pilot Test:</strong> Prima del lancio ufficiale, ha fatto emergere <strong>un limite strutturale nell'icona flottante della chat</strong>, che copriva contenuti sui monitor desktop più piccoli. <strong>L’ho sostituita con un overlay centrato</strong> con oscuramento dello sfondo (dimming), accessibile da "Contact Us", riformulando il Task 3 in modo neutro.</li>
           </ul>
 
-          <!-- Carosello Prima e Dopo Live Chat -->
-          <div class="carousel-placeholder-box">
-            <div class="carousel-slides-list" style="margin-top: 16px;">
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🔴 Immagine 1 - PRIMA (Pilot Test)</div>
-                <div class="carousel-slide-caption">L'icona fluttuante in basso a destra risultava invadente sui monitor desktop ridotti, creando sovrapposizioni visive con i testi e i controlli attivi della pagina.</div>
+          <!-- Confronto 2 Colonne PRIMA e DOPO Live Chat (Pilot Test) -->
+          <div class="pilot-test-comparison-container" style="margin-top: 20px;">
+            <div class="comparison-grid-3col" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+              
+              <!-- Colonna PRIMA (Pilot Test) -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header" style="background-color: #FEF2F2; color: #991B1B;">
+                  <span>🔴 PRIMA (Pilot Test - Icona Flottante)</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px; background-color: #F8FAFC;">
+                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-1.png', 'Pilot Test PRIMA 1 — Icona flottante chiusa sulla Homepage')" title="Clicca per ingrandire">
+                    <img src="assets/img/acumen-academy-redesign/pilot-prima-1.png" alt="Pilot Test Prima 1 - Icona Chiusa" class="comparison-card-img">
+                  </div>
+                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-2.png', 'Pilot Test PRIMA 2 — Pop-up chat aperto in basso a destra')" title="Clicca per ingrandire">
+                    <img src="assets/img/acumen-academy-redesign/pilot-prima-2.png" alt="Pilot Test Prima 2 - Chat Aperta" class="comparison-card-img">
+                  </div>
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Criticità riscontrata:</strong> L'icona fluttuante ed il relativo pop-up in basso a destra risultavano invadenti sui monitor desktop ridotti, creando sovrapposizioni visive con i testi e i controlli attivi della pagina.
+                </div>
               </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🟢 Immagine 2 — DOPO (Test Ufficiale)</div>
-                <div class="carousel-slide-caption">Live Chat riprogettata in un overlay centrato con effetto dimming (sfondo oscurato), attivabile da "Chat Support" per garantire massima concentrazione sul problema.</div>
+
+              <!-- Colonna DOPO (Test Ufficiale) -->
+              <div class="comparison-card-item">
+                <div class="comparison-card-header" style="background-color: #F0FDF4; color: #166534;">
+                  <span>🟢 DOPO (Test Ufficiale - Overlay Centrato)</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px; background-color: #F8FAFC;">
+                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-1.png', 'Test Ufficiale DOPO 1 — Scheda Chat Support nella pagina Contact Us')" title="Clicca per ingrandire">
+                    <img src="assets/img/acumen-academy-redesign/pilot-dopo-1.png" alt="Test Ufficiale Dopo 1 - Pagina Contact Us" class="comparison-card-img">
+                  </div>
+                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-2.png', 'Test Ufficiale DOPO 2 — Overlay Livechat centrato a schermo intero')" title="Clicca per ingrandire">
+                    <img src="assets/img/acumen-academy-redesign/pilot-dopo-2.png" alt="Test Ufficiale Dopo 2 - Livechat Overlay Centrato" class="comparison-card-img">
+                  </div>
+                </div>
+                <div class="comparison-card-desc">
+                  <strong>Soluzione adottata:</strong> Livechat riprogettata in un overlay centrato con effetto dimming (sfondo oscurato), accessibile direttamente dalla pagina "Contact Us" per una consultazione pulita senza ostacolare la navigazione.
+                </div>
               </div>
+
             </div>
           </div>
 
-          <ul class="section-list" style="margin-top: 16px;">
-            <li><strong>I 3 Task &amp; Domande Finali:</strong> Protocollo operativo di test e questionario qualitativo.</li>
+          <ul class="section-list" style="margin-top: 24px;">
+            <li><strong>I 3 Task &amp; Domande Finali:</strong> Protocollo operativo di test e questionario qualitativo post-test.</li>
           </ul>
 
-          <!-- Protocollo 3 Task + Survey -->
-          <div class="infographic-placeholder-container">
-            <div class="protocol-cards-grid">
-              <div class="protocol-card">
-                <h4 class="problem-card-title">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
-                <p class="problem-card-text">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
+          <!-- Protocollo 3 Task (Sinistra) + Survey Domande (Destra) -->
+          <div class="protocol-2col-layout" style="margin-top: 16px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              
+              <!-- Colonna Sinistra: 3 Task di Test -->
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0;">
+                  <h4 class="problem-card-title" style="margin-bottom: 6px;">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
+                  <p class="problem-card-text" style="margin: 0;">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
+                </div>
+                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0;">
+                  <h4 class="problem-card-title" style="margin-bottom: 6px;">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
+                  <p class="problem-card-text" style="margin: 0;">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
+                </div>
+                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0;">
+                  <h4 class="problem-card-title" style="margin-bottom: 6px;">🎯 TASK 3 (Supporto Rapido)</h4>
+                  <p class="problem-card-text" style="margin: 0;">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
+                </div>
               </div>
-              <div class="protocol-card">
-                <h4 class="problem-card-title">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
-                <p class="problem-card-text">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
+
+              <!-- Colonna Destra: Domande Finali Post-Test -->
+              <div class="protocol-card" style="border-left: 4px solid #0F172A; margin: 0; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 class="problem-card-title" style="margin-bottom: 14px;">📋 DOMANDE FINALI POST-TEST</h4>
+                  <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="background-color: #F8FAFC; padding: 12px 14px; border-radius: 8px; border: 1px solid #E2E8F0;">
+                      <p class="problem-card-text" style="margin: 0;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
+                    </div>
+                    <div style="background-color: #F8FAFC; padding: 12px 14px; border-radius: 8px; border: 1px solid #E2E8F0;">
+                      <p class="problem-card-text" style="margin: 0;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
+                    </div>
+                    <div style="background-color: #F8FAFC; padding: 12px 14px; border-radius: 8px; border: 1px solid #E2E8F0;">
+                      <p class="problem-card-text" style="margin: 0;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="protocol-card">
-                <h4 class="problem-card-title">🎯 TASK 3 (Supporto Rapido)</h4>
-                <p class="problem-card-text">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
-              </div>
-              <div class="protocol-card">
-                <h4 class="problem-card-title">📋 DOMANDE FINALI POST-TEST</h4>
-                <p class="problem-card-text">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
-                <p class="problem-card-text">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
-                <p class="problem-card-text">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
-              </div>
+
             </div>
           </div>
         </section>
