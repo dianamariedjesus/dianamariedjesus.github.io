@@ -770,8 +770,8 @@ body {
   margin-top: 20px;
 }
 .metric-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background-color: #F0FDF4;
+  border: 1px solid #BBF7D0;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -782,17 +782,17 @@ body {
 .metric-task-name {
   font-size: 13px;
   font-weight: 700;
-  color: #1E293B;
+  color: #166534;
   text-transform: uppercase;
 }
 .metric-value {
   font-size: 20px;
   font-weight: 800;
-  color: #0284C7;
+  color: #15803D;
 }
 .metric-desc {
   font-size: 13.5px;
-  color: #475569;
+  color: #334155;
   line-height: 1.5;
   margin: 0;
 }
