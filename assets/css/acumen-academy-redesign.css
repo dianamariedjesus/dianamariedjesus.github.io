@@ -1092,24 +1092,28 @@ body {
 /* Modifiche Carousel Single-Row Tabs */
 .mod-carousel-tabs-row {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  gap: 4px;
+  gap: 6px;
   background-color: #F1F5F9;
-  padding: 6px 14px;
+  padding: 6px;
   border-radius: 12px;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .mod-carousel-tabs-row .main-carousel-tab {
   flex: 1 1 0;
   min-width: 0;
-  white-space: nowrap;
-  font-size: 11.5px;
-  padding: 8px 4px;
+  white-space: normal;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 8px 10px;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Lightbox Navigation Arrows (Frecce Sinistra / Destra) */
