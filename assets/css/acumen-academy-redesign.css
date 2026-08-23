@@ -197,6 +197,12 @@ body {
   padding-left: 20px;
   position: relative;
 }
+.section-list li strong {
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: rgba(38, 38, 38, 0.9);
+}
 .section-list li::before {
   content: "•";
   position: absolute;
