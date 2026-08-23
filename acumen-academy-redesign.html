@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=42.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=43.0">
 </head>
 
 <body>
@@ -1134,13 +1134,13 @@
         <section class="case-study-section" id="modifiche">
           <h2 class="section-title">LE 5 MODIFICHE DEFINITIVE AL PROTOTIPO</h2>
           <p class="section-paragraph">
-            Dai comportamenti spontanei e le frizioni riscontrate durante il test, ho implementato 5 interventi strutturali sul prototipo finale. Gli interventi si focalizzano su scansionabilità, gerarchia dei menu e accessibilità complessiva:
+            Dai comportamenti spontanei e le frizioni riscontrate durante il test, ho implementato <strong>5 interventi strutturali sul prototipo finale</strong>. Gli interventi si focalizzano su scansionabilità, gerarchia dei menu e accessibilità complessiva:
           </p>
 
           <!-- Carosello 5 Modifiche Prima e Dopo -->
           <div class="modifiche-carousel-wrapper" style="margin-top: 10px;">
             <div class="main-carousel-nav-bar">
-              <div class="main-carousel-tabs" style="justify-content: flex-start; flex-wrap: wrap; gap: 6px;">
+              <div class="main-carousel-tabs mod-carousel-tabs-row" style="justify-content: space-between; flex-wrap: nowrap; gap: 6px; width: 100%;">
                 <button type="button" class="main-carousel-tab active" id="mod-tab-0" onclick="goToModSlide(0)">Scansionabilità &amp; Tooltip</button>
                 <button type="button" class="main-carousel-tab" id="mod-tab-1" onclick="goToModSlide(1)">Menu Globale &amp; "Get Help"</button>
                 <button type="button" class="main-carousel-tab" id="mod-tab-2" onclick="goToModSlide(2)">Card Corsi &amp; Filtri</button>
@@ -1159,16 +1159,16 @@
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Scansionabilità &amp; Tooltip — PRIMA (As-Is) vs DOPO (To-Be)</span>
                       </div>
-                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-1')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide1-prima.png" alt="Scansionabilità e Tooltip PRIMA" class="comparison-card-img">
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC; height: 380px;">
+                        <div class="comparison-img-wrapper" style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;" onclick="openGalleryModal(0, 'mod-1')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide1-prima.png" alt="Scansionabilità e Tooltip PRIMA" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain;">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'mod-1')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide1-dopo.png" alt="Scansionabilità e Tooltip DOPO" class="comparison-card-img">
+                        <div class="comparison-img-wrapper" style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;" onclick="openGalleryModal(1, 'mod-1')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide1-dopo.png" alt="Scansionabilità e Tooltip DOPO" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain;">
                         </div>
                       </div>
-                      <div class="comparison-card-desc" style="border-bottom: none;">
-                        <strong>Intervento effettuato:</strong> Inserimento di grassetti mirati e introduzione di tooltip in hover sui termini gergali per superare le barriere linguistiche e guidare la lettura scansionabile.
+                      <div class="comparison-card-desc" style="border-bottom: none; border-top: 1px solid #E2E8F0; margin: 0; padding: 14px 16px; min-height: 68px; display: flex; align-items: center;">
+                        <span><strong>Intervento effettuato:</strong> Inserimento di grassetti mirati e introduzione di tooltip in hover sui termini gergali per superare le barriere linguistiche e guidare la lettura scansionabile.</span>
                       </div>
                     </div>
                   </div>
@@ -1181,16 +1181,16 @@
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Menu Globale &amp; Voce "Get Help" — PRIMA (As-Is) vs DOPO (To-Be)</span>
                       </div>
-                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-2')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide2-prima.png" alt="Menu Globale PRIMA" class="comparison-card-img">
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC; height: 380px;">
+                        <div class="comparison-img-wrapper" style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;" onclick="openGalleryModal(0, 'mod-2')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide2-prima.png" alt="Menu Globale PRIMA" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain;">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'mod-2')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide2-dopo.png" alt="Menu Globale DOPO" class="comparison-card-img">
+                        <div class="comparison-img-wrapper" style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;" onclick="openGalleryModal(1, 'mod-2')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide2-dopo.png" alt="Menu Globale DOPO" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain;">
                         </div>
                       </div>
-                      <div class="comparison-card-desc" style="border-bottom: none;">
-                        <strong>Intervento effettuato:</strong> Sostituzione dell'icona lente con il menu dropdown "Get Help" nell'header e unificazione dell'etichetta del footer in "About".
+                      <div class="comparison-card-desc" style="border-bottom: none; border-top: 1px solid #E2E8F0; margin: 0; padding: 14px 16px; min-height: 68px; display: flex; align-items: center;">
+                        <span><strong>Intervento effettuato:</strong> Sostituzione dell'icona lente con il menu dropdown "Get Help" nell'header e unificazione dell'etichetta del footer in "About".</span>
                       </div>
                     </div>
                   </div>
@@ -1203,16 +1203,16 @@
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Card Corsi &amp; Filtri Ottimizzati — PRIMA (As-Is) vs DOPO (To-Be)</span>
                       </div>
-                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-3')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide3-prima.png" alt="Card Corsi PRIMA" class="comparison-card-img">
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC; height: 380px;">
+                        <div class="comparison-img-wrapper" style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;" onclick="openGalleryModal(0, 'mod-3')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide3-prima.png" alt="Card Corsi PRIMA" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain;">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'mod-3')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide3-dopo.png" alt="Card Corsi DOPO" class="comparison-card-img">
+                        <div class="comparison-img-wrapper" style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;" onclick="openGalleryModal(1, 'mod-3')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide3-dopo.png" alt="Card Corsi DOPO" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain;">
                         </div>
                       </div>
-                      <div class="comparison-card-desc" style="border-bottom: none;">
-                        <strong>Intervento effettuato:</strong> Integrazione dei tag di categoria sulle card e riformulazione delle etichette di durata per evitare errori di ancoraggio numerico.
+                      <div class="comparison-card-desc" style="border-bottom: none; border-top: 1px solid #E2E8F0; margin: 0; padding: 14px 16px; min-height: 68px; display: flex; align-items: center;">
+                        <span><strong>Intervento effettuato:</strong> Integrazione dei tag di categoria sulle card e riformulazione delle etichette di durata per evitare errori di ancoraggio numerico.</span>
                       </div>
                     </div>
                   </div>
@@ -1225,13 +1225,13 @@
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Accesso Intelligente &amp; Supporto in Dashboard</span>
                       </div>
-                      <div style="padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-4')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide4.png" alt="Supporto in Dashboard" class="comparison-card-img">
+                      <div style="padding: 14px; background-color: #F8FAFC; height: 380px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <div class="comparison-img-wrapper" style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; background: none; border: none; box-shadow: none;" onclick="openGalleryModal(0, 'mod-4')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide4.png" alt="Supporto in Dashboard" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: 6px;">
                         </div>
                       </div>
-                      <div class="comparison-card-desc" style="border-bottom: none;">
-                        <strong>Intervento effettuato:</strong> Aggiunta del link di assistenza nella bacheca personale (My Dashboard) e redirect automatico alla pagina di partenza dopo il login.
+                      <div class="comparison-card-desc" style="border-bottom: none; border-top: 1px solid #E2E8F0; margin: 0; padding: 14px 16px; min-height: 68px; display: flex; align-items: center;">
+                        <span><strong>Intervento effettuato:</strong> Aggiunta del link di assistenza nella bacheca personale (My Dashboard) e redirect automatico alla pagina di partenza dopo il login.</span>
                       </div>
                     </div>
                   </div>
@@ -1244,13 +1244,13 @@
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Umanizzazione del Brand &amp; Overlay Live Chat</span>
                       </div>
-                      <div style="padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-5')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/slide5.png" alt="Umanizzazione del Brand e Live Chat Overlay" class="comparison-card-img">
+                      <div style="padding: 14px; background-color: #F8FAFC; height: 380px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <div class="comparison-img-wrapper" style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; background: none; border: none; box-shadow: none;" onclick="openGalleryModal(0, 'mod-5')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide5.png" alt="Umanizzazione del Brand e Live Chat Overlay" class="comparison-card-img" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: 6px;">
                         </div>
                       </div>
-                      <div class="comparison-card-desc" style="border-bottom: none;">
-                        <strong>Intervento effettuato:</strong> Aggiunta della sezione sulla fondatrice in About e consolidamento dell'overlay centrato oscurato (dimming) per la chat.
+                      <div class="comparison-card-desc" style="border-bottom: none; border-top: 1px solid #E2E8F0; margin: 0; padding: 14px 16px; min-height: 68px; display: flex; align-items: center;">
+                        <span><strong>Intervento effettuato:</strong> Aggiunta della sezione sulla fondatrice in About e consolidamento dell'overlay centrato oscurato (dimming) per la chat.</span>
                       </div>
                     </div>
                   </div>
