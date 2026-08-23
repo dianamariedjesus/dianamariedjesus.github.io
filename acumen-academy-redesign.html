@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=30.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=31.0">
 </head>
 
 <body>
@@ -757,7 +757,7 @@
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
                         <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'homepage-stages')" title="Clicca per ingrandire">
-                          <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=3.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
+                          <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=4.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
                           <strong>Risultato:</strong> Header pulito e minimale, proposta di valore nei primi 3 secondi, caratteri tipografici storici preservati (AvantGarde-Demi e Caecilia LT Pro) ed elevati contrasti cromatici allineati a WCAG 2.1 AA/AAA.
@@ -858,11 +858,41 @@
                 <!-- Slide 4: Pagina My Dashboard -->
                 <div class="main-carousel-slide">
                   <div class="wireframe-ui-container">
-                    <div class="carousel-placeholder-box" style="margin-top: 0;">
-                      <div class="carousel-slides-list">
-                        <div class="carousel-slide-item">
-                          <div class="carousel-slide-name">🖼️ Slide 4: Pagina My Dashboard (In attesa delle immagini)</div>
-                          <div class="carousel-slide-caption">Bacheca personale con saluto personalizzato, sidebar fissa con le informazioni utente e menu a schede per gestire i corsi.</div>
+                    <div class="comparison-grid-3col">
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>Pagina Storica (As-Is)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'dashboard-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'dashboard-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/dashboard-asis.png?v=1.0" alt="Pagina My Dashboard Storica As-Is" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Criticità:</strong> Layout essenziale ed impersonale, scarsa organizzazione dei percorsi formativi in corso e assenza di un riepilogo visivo dello stato di avanzamento.
+                        </div>
+                      </div>
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>Wireframe (Mid-Fi)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'dashboard-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'dashboard-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/dashboard-wireframe.png?v=1.0" alt="Pagina My Dashboard Wireframe Mid-Fi" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Struttura:</strong> Saluto personalizzato, sidebar fissa con dati utente e menu a schede (All, Saved, Ongoing, Completed) per una gestione immediata dei corsi.
+                        </div>
+                      </div>
+                      <div class="comparison-card-item">
+                        <div class="comparison-card-header">
+                          <span>UI Finale (To-Be)</span>
+                          <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'dashboard-stages')" aria-label="Ingrandisci">🔍</button>
+                        </div>
+                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'dashboard-stages')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/dashboard-ui.png?v=1.0" alt="Pagina My Dashboard UI Finale To-Be" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-card-desc">
+                          <strong>Risultato:</strong> Dashboard intuitiva con card corsi arricchite da barre di progresso visive, filtri rapidi per stato di avanzamento ed una veste grafica coerente.
                         </div>
                       </div>
                     </div>
@@ -1376,7 +1406,7 @@
         title: 'Wireframe Media-Fedeltà (Mid-Fi) — Homepage'
       },
       {
-        src: 'assets/img/acumen-academy-redesign/homepage-ui.png?v=3.0',
+        src: 'assets/img/acumen-academy-redesign/homepage-ui.png?v=4.0',
         title: 'UI Finale (To-Be) — Homepage'
       }
     ];
@@ -1411,6 +1441,21 @@
       }
     ];
 
+    var dashboardStagesGallery = [
+      {
+        src: 'assets/img/acumen-academy-redesign/dashboard-asis.png?v=1.0',
+        title: 'Pagina Storica (As-Is) — Pagina My Dashboard'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/dashboard-wireframe.png?v=1.0',
+        title: 'Wireframe Media-Fedeltà (Mid-Fi) — Pagina My Dashboard'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/dashboard-ui.png?v=1.0',
+        title: 'UI Finale (To-Be) — Pagina My Dashboard'
+      }
+    ];
+
     function openVideoModal(videoSrc) {
       var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
@@ -1437,6 +1482,8 @@
         currentGalleryItems = coursesStagesGallery;
       } else if (galleryType === 'course-detail-stages') {
         currentGalleryItems = courseDetailStagesGallery;
+      } else if (galleryType === 'dashboard-stages') {
+        currentGalleryItems = dashboardStagesGallery;
       } else {
         currentGalleryItems = [];
       }
