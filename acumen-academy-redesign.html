@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=37.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=38.0">
 </head>
 
 <body>
@@ -983,20 +983,20 @@
                 
                 <!-- Slide 1: PRIMA -->
                 <div class="main-carousel-slide">
-                  <div class="wireframe-ui-container" style="border: none; padding: 0;">
-                    <div class="comparison-card-item">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #FEF2F2; color: #991B1B;">
                         <span>🔴 PRIMA (Pilot Test - Icona Flottante in basso a destra)</span>
                       </div>
                       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-1.png', 'Pilot Test PRIMA 1 — Icona flottante chiusa sulla Homepage')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'pilot-prima')" title="Clicca per ingrandire">
                           <img src="assets/img/acumen-academy-redesign/pilot-prima-1.png" alt="Pilot Test Prima 1 - Icona Chiusa" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-2.png', 'Pilot Test PRIMA 2 — Pop-up chat aperto in basso a destra')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'pilot-prima')" title="Clicca per ingrandire">
                           <img src="assets/img/acumen-academy-redesign/pilot-prima-2.png" alt="Pilot Test Prima 2 - Chat Aperta" class="comparison-card-img">
                         </div>
                       </div>
-                      <div class="comparison-card-desc">
+                      <div class="comparison-card-desc" style="border-bottom: none;">
                         <strong>Criticità riscontrata:</strong> L'icona fluttuante ed il relativo pop-up in basso a destra risultavano invadenti sui monitor desktop ridotti, creando sovrapposizioni visive con i testi e i controlli attivi della pagina.
                       </div>
                     </div>
@@ -1005,20 +1005,20 @@
 
                 <!-- Slide 2: DOPO -->
                 <div class="main-carousel-slide">
-                  <div class="wireframe-ui-container" style="border: none; padding: 0;">
-                    <div class="comparison-card-item">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F0FDF4; color: #166534;">
                         <span>🟢 DOPO (Test Ufficiale - Overlay Livechat Centrato)</span>
                       </div>
                       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-1.png', 'Test Ufficiale DOPO 1 — Scheda Chat Support nella pagina Contact Us')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'pilot-dopo')" title="Clicca per ingrandire">
                           <img src="assets/img/acumen-academy-redesign/pilot-dopo-1.png" alt="Test Ufficiale Dopo 1 - Pagina Contact Us" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-2.png', 'Test Ufficiale DOPO 2 — Overlay Livechat centrato a schermo intero')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'pilot-dopo')" title="Clicca per ingrandire">
                           <img src="assets/img/acumen-academy-redesign/pilot-dopo-2.png" alt="Test Ufficiale Dopo 2 - Livechat Overlay Centrato" class="comparison-card-img">
                         </div>
                       </div>
-                      <div class="comparison-card-desc">
+                      <div class="comparison-card-desc" style="border-bottom: none;">
                         <strong>Soluzione adottata:</strong> Livechat riprogettata in un overlay centrato con effetto dimming (sfondo oscurato), accessibile dalla pagina "Contact Us" e attivabile da "Chat Support" per una consultazione pulita senza ostacolare la navigazione.
                       </div>
                     </div>
@@ -1035,12 +1035,12 @@
             </div>
           </div>
 
-          <ul class="section-list" style="margin-top: 14px;">
+          <ul class="section-list" style="margin-top: 28px;">
             <li><strong>I 3 Task &amp; Domande Finali:</strong> Protocollo operativo di test e questionario qualitativo post-test.</li>
           </ul>
 
           <!-- Protocollo 3 Task (Sinistra) + Survey Domande (Destra) -->
-          <div class="protocol-2col-layout" style="margin-top: 8px;">
+          <div class="protocol-2col-layout" style="margin-top: 12px;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch;">
               
               <!-- Colonna Sinistra: 3 Task di Test -->
@@ -1062,17 +1062,11 @@
               <!-- Colonna Destra: Domande Finali Post-Test -->
               <div class="protocol-card" style="margin: 0; padding: 12px 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
                 <div>
-                  <h4 class="problem-card-title" style="margin-bottom: 10px; font-size: 14px; padding-bottom: 6px;">📋 DOMANDE FINALI POST-TEST</h4>
-                  <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <div style="background-color: #F8FAFC; padding: 10px 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
-                      <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.4;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
-                    </div>
-                    <div style="background-color: #F8FAFC; padding: 10px 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
-                      <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.4;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
-                    </div>
-                    <div style="background-color: #F8FAFC; padding: 10px 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
-                      <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.4;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
-                    </div>
+                  <h4 class="problem-card-title" style="margin-bottom: 12px; font-size: 14px; padding-bottom: 6px;">📋 DOMANDE FINALI POST-TEST</h4>
+                  <div style="display: flex; flex-direction: column; gap: 12px; padding: 4px 0;">
+                    <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
+                    <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
+                    <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
                   </div>
                 </div>
               </div>
@@ -1568,6 +1562,28 @@
       }
     ];
 
+    var pilotPrimaGallery = [
+      {
+        src: 'assets/img/acumen-academy-redesign/pilot-prima-1.png',
+        title: 'Pilot Test PRIMA 1 — Icona flottante chiusa sulla Homepage'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/pilot-prima-2.png',
+        title: 'Pilot Test PRIMA 2 — Pop-up chat aperto in basso a destra'
+      }
+    ];
+
+    var pilotDopoGallery = [
+      {
+        src: 'assets/img/acumen-academy-redesign/pilot-dopo-1.png',
+        title: 'Test Ufficiale DOPO 1 — Scheda Chat Support nella pagina Contact Us'
+      },
+      {
+        src: 'assets/img/acumen-academy-redesign/pilot-dopo-2.png',
+        title: 'Test Ufficiale DOPO 2 — Overlay Livechat centrato a schermo intero'
+      }
+    ];
+
     function openVideoModal(videoSrc) {
       var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
@@ -1598,6 +1614,10 @@
         currentGalleryItems = dashboardStagesGallery;
       } else if (galleryType === 'contact-stages') {
         currentGalleryItems = contactStagesGallery;
+      } else if (galleryType === 'pilot-prima') {
+        currentGalleryItems = pilotPrimaGallery;
+      } else if (galleryType === 'pilot-dopo') {
+        currentGalleryItems = pilotDopoGallery;
       } else {
         currentGalleryItems = [];
       }
