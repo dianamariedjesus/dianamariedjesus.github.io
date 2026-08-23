@@ -850,7 +850,7 @@ body {
 /* Sidebar Navigation */
 .sidebar-nav {
   position: fixed;
-  left: 30px;
+  left: 24px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1200;
@@ -998,8 +998,13 @@ body {
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
   .sidebar-nav {
-    left: 16px;
+    left: 24px;
     width: 220px;
+  }
+  .sidebar-lines {
+    gap: 8px;
+    transform: scale(0.85);
+    transform-origin: left center;
   }
   .sidebar-overlay {
     width: 220px;
