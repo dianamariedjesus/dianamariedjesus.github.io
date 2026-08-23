@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=41.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=42.0">
 </head>
 
 <body>
@@ -1138,28 +1138,134 @@
           </p>
 
           <!-- Carosello 5 Modifiche Prima e Dopo -->
-          <div class="carousel-placeholder-box">
-            <div class="carousel-slides-list" style="margin-top: 16px;">
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 1 — Scansionabilità &amp; Tooltip</div>
-                <div class="carousel-slide-caption">Inserimento di grassetti mirati e introduzione di tooltip in hover sui termini gergali per superare le barriere linguistiche.</div>
+          <div class="modifiche-carousel-wrapper" style="margin-top: 10px;">
+            <div class="main-carousel-nav-bar">
+              <div class="main-carousel-tabs" style="justify-content: flex-start; flex-wrap: wrap; gap: 6px;">
+                <button type="button" class="main-carousel-tab active" id="mod-tab-0" onclick="goToModSlide(0)">Scansionabilità &amp; Tooltip</button>
+                <button type="button" class="main-carousel-tab" id="mod-tab-1" onclick="goToModSlide(1)">Menu Globale &amp; "Get Help"</button>
+                <button type="button" class="main-carousel-tab" id="mod-tab-2" onclick="goToModSlide(2)">Card Corsi &amp; Filtri</button>
+                <button type="button" class="main-carousel-tab" id="mod-tab-3" onclick="goToModSlide(3)">Supporto in Dashboard</button>
+                <button type="button" class="main-carousel-tab" id="mod-tab-4" onclick="goToModSlide(4)">Umanizzazione &amp; Live Chat</button>
               </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 2 — Menu Globale &amp; Voce "Get Help"</div>
-                <div class="carousel-slide-caption">Sostituzione dell'icona lente con il menu dropdown "Get Help" nell'header e unificazione dell'etichetta del footer in "About".</div>
+            </div>
+
+            <div class="main-carousel-viewport" style="border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background-color: #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+              <div class="main-carousel-track" id="modifiche-carousel-track" style="transform: translateX(0%); transition: transform 0.4s ease;">
+                
+                <!-- Slide 1: Scansionabilità & Tooltip (2 Immagini) -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
+                      <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
+                        <span>Scansionabilità &amp; Tooltip — PRIMA (As-Is) vs DOPO (To-Be)</span>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-1')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide1-prima.png" alt="Scansionabilità e Tooltip PRIMA" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'mod-1')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide1-dopo.png" alt="Scansionabilità e Tooltip DOPO" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc" style="border-bottom: none;">
+                        <strong>Intervento effettuato:</strong> Inserimento di grassetti mirati e introduzione di tooltip in hover sui termini gergali per superare le barriere linguistiche e guidare la lettura scansionabile.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Menu Globale & Voce "Get Help" (2 Immagini) -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
+                      <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
+                        <span>Menu Globale &amp; Voce "Get Help" — PRIMA (As-Is) vs DOPO (To-Be)</span>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-2')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide2-prima.png" alt="Menu Globale PRIMA" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'mod-2')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide2-dopo.png" alt="Menu Globale DOPO" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc" style="border-bottom: none;">
+                        <strong>Intervento effettuato:</strong> Sostituzione dell'icona lente con il menu dropdown "Get Help" nell'header e unificazione dell'etichetta del footer in "About".
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Card Corsi & Filtri Ottimizzati (2 Immagini) -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
+                      <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
+                        <span>Card Corsi &amp; Filtri Ottimizzati — PRIMA (As-Is) vs DOPO (To-Be)</span>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-3')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide3-prima.png" alt="Card Corsi PRIMA" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'mod-3')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide3-dopo.png" alt="Card Corsi DOPO" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc" style="border-bottom: none;">
+                        <strong>Intervento effettuato:</strong> Integrazione dei tag di categoria sulle card e riformulazione delle etichette di durata per evitare errori di ancoraggio numerico.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Accesso Intelligente & Supporto in Dashboard (1 Immagine) -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
+                      <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
+                        <span>Accesso Intelligente &amp; Supporto in Dashboard</span>
+                      </div>
+                      <div style="padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-4')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide4.png" alt="Supporto in Dashboard" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc" style="border-bottom: none;">
+                        <strong>Intervento effettuato:</strong> Aggiunta del link di assistenza nella bacheca personale (My Dashboard) e redirect automatico alla pagina di partenza dopo il login.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5: Umanizzazione del Brand & Overlay Live Chat (1 Immagine) -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0; margin: 0; box-shadow: none;">
+                    <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
+                      <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
+                        <span>Umanizzazione del Brand &amp; Overlay Live Chat</span>
+                      </div>
+                      <div style="padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'mod-5')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/slide5.png" alt="Umanizzazione del Brand e Live Chat Overlay" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc" style="border-bottom: none;">
+                        <strong>Intervento effettuato:</strong> Aggiunta della sezione sulla fondatrice in About e consolidamento dell'overlay centrato oscurato (dimming) per la chat.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 3 — Card Corsi &amp; Filtri Ottimizzati</div>
-                <div class="carousel-slide-caption">Integrazione dei tag di categoria sulle card e riformulazione delle etichette di durata per evitare errori di ancoraggio numerico.</div>
-              </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 4 — Accesso Intelligente &amp; Supporto in Dashboard</div>
-                <div class="carousel-slide-caption">Aggiunta del link di assistenza nella bacheca personale (My Dashboard) e redirect automatico alla pagina di partenza dopo il login.</div>
-              </div>
-              <div class="carousel-slide-item">
-                <div class="carousel-slide-name">🖼️ Slide 5 — Umanizzazione del Brand &amp; Overlay Live Chat</div>
-                <div class="carousel-slide-caption">Aggiunta della sezione sulla fondatrice in About e consolidamento dell'overlay centrato oscurato (dimming) per la chat.</div>
-              </div>
+            </div>
+
+            <!-- Indicatori a pallino inferiori -->
+            <div class="main-carousel-dots">
+              <button type="button" class="main-carousel-dot active" id="mod-dot-0" onclick="goToModSlide(0)" aria-label="Modifica 1"></button>
+              <button type="button" class="main-carousel-dot" id="mod-dot-1" onclick="goToModSlide(1)" aria-label="Modifica 2"></button>
+              <button type="button" class="main-carousel-dot" id="mod-dot-2" onclick="goToModSlide(2)" aria-label="Modifica 3"></button>
+              <button type="button" class="main-carousel-dot" id="mod-dot-3" onclick="goToModSlide(3)" aria-label="Modifica 4"></button>
+              <button type="button" class="main-carousel-dot" id="mod-dot-4" onclick="goToModSlide(4)" aria-label="Modifica 5"></button>
             </div>
           </div>
         </section>
@@ -1597,6 +1703,25 @@
       }
     ];
 
+    var mod1Gallery = [
+      { src: 'assets/img/acumen-academy-redesign/slide1-prima.png', title: 'Scansionabilità & Tooltip — PRIMA (As-Is)' },
+      { src: 'assets/img/acumen-academy-redesign/slide1-dopo.png', title: 'Scansionabilità & Tooltip — DOPO (To-Be)' }
+    ];
+    var mod2Gallery = [
+      { src: 'assets/img/acumen-academy-redesign/slide2-prima.png', title: 'Menu Globale & Voce "Get Help" — PRIMA (As-Is)' },
+      { src: 'assets/img/acumen-academy-redesign/slide2-dopo.png', title: 'Menu Globale & Voce "Get Help" — DOPO (To-Be)' }
+    ];
+    var mod3Gallery = [
+      { src: 'assets/img/acumen-academy-redesign/slide3-prima.png', title: 'Card Corsi & Filtri Ottimizzati — PRIMA (As-Is)' },
+      { src: 'assets/img/acumen-academy-redesign/slide3-dopo.png', title: 'Card Corsi & Filtri Ottimizzati — DOPO (To-Be)' }
+    ];
+    var mod4Gallery = [
+      { src: 'assets/img/acumen-academy-redesign/slide4.png', title: 'Accesso Intelligente & Supporto in Dashboard' }
+    ];
+    var mod5Gallery = [
+      { src: 'assets/img/acumen-academy-redesign/slide5.png', title: 'Umanizzazione del Brand & Overlay Live Chat' }
+    ];
+
     function openVideoModal(videoSrc) {
       var modal = document.getElementById('mediaLightboxModal');
       var player = document.getElementById('lightboxVideoPlayer');
@@ -1631,6 +1756,16 @@
         currentGalleryItems = pilotPrimaGallery;
       } else if (galleryType === 'pilot-dopo') {
         currentGalleryItems = pilotDopoGallery;
+      } else if (galleryType === 'mod-1') {
+        currentGalleryItems = mod1Gallery;
+      } else if (galleryType === 'mod-2') {
+        currentGalleryItems = mod2Gallery;
+      } else if (galleryType === 'mod-3') {
+        currentGalleryItems = mod3Gallery;
+      } else if (galleryType === 'mod-4') {
+        currentGalleryItems = mod4Gallery;
+      } else if (galleryType === 'mod-5') {
+        currentGalleryItems = mod5Gallery;
       } else {
         currentGalleryItems = [];
       }
@@ -1765,6 +1900,19 @@
       for (var i = 0; i < 2; i++) {
         var tab = document.getElementById('pilot-tab-' + i);
         var dot = document.getElementById('pilot-dot-' + i);
+        if (tab) tab.classList.toggle('active', i === index);
+        if (dot) dot.classList.toggle('active', i === index);
+      }
+    }
+
+    function goToModSlide(index) {
+      var track = document.getElementById('modifiche-carousel-track');
+      if (track) {
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      }
+      for (var i = 0; i < 5; i++) {
+        var tab = document.getElementById('mod-tab-' + i);
+        var dot = document.getElementById('mod-dot-' + i);
         if (tab) tab.classList.toggle('active', i === index);
         if (dot) dot.classList.toggle('active', i === index);
       }
