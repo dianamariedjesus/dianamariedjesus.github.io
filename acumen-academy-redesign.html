@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=38.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=39.0">
 </head>
 
 <body>
@@ -1060,14 +1060,12 @@
               </div>
 
               <!-- Colonna Destra: Domande Finali Post-Test -->
-              <div class="protocol-card" style="margin: 0; padding: 12px 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                <div>
-                  <h4 class="problem-card-title" style="margin-bottom: 12px; font-size: 14px; padding-bottom: 6px;">📋 DOMANDE FINALI POST-TEST</h4>
-                  <div style="display: flex; flex-direction: column; gap: 12px; padding: 4px 0;">
-                    <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
-                    <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
-                    <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
-                  </div>
+              <div class="protocol-card" style="margin: 0; padding: 12px 16px; display: flex; flex-direction: column; height: 100%;">
+                <h4 class="problem-card-title" style="margin-bottom: 8px; font-size: 14px; padding-bottom: 6px;">📋 DOMANDE FINALI POST-TEST</h4>
+                <div style="display: flex; flex-direction: column; justify-content: space-around; flex: 1; padding: 4px 0;">
+                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
+                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
+                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
                 </div>
               </div>
 
@@ -1078,11 +1076,9 @@
         <!-- Risultati e Impatto -->
         <section class="case-study-section" id="risultati">
           <h2 class="section-title">I RISULTATI E L'IMPATTO</h2>
-          <h3 class="section-subtitle">
-            Le Metriche di Successo per Singolo Task
-          </h3>
+          
           <p class="section-paragraph">
-            I tre task hanno misurato rispettivamente la credibilità dell'ente, l'efficienza dei filtri di ricerca e la rapidità nel reperire assistenza immediata. I dati confermano il pieno raggiungimento degli obiettivi primari su desktop:
+            I tre task hanno misurato rispettivamente la credibilità dell'ente, l'efficienza dei filtri di ricerca e la rapidità nel reperire assistenza immediata. I dati confermano <strong>il pieno raggiungimento degli obiettivi primari</strong> su desktop:
           </p>
 
           <!-- Cards Metriche -->
@@ -1108,13 +1104,27 @@
             Comportamenti Utente &amp; Modelli Mentali Chiave
           </h3>
           <p class="section-paragraph">
-            L'analisi incrociata di sessioni Think Aloud e mappe di calore ha fatto emergere diverse abitudini d'uso consolidate da considerare nell'interfaccia. Tra queste, tre comportamenti principali hanno guidato le successive iterazioni:
+            L'analisi incrociata di sessioni <em>Think Aloud</em> e mappe di calore ha fatto emergere diverse <strong>abitudini d'uso consolidate</strong> da considerare nell'interfaccia. Tra queste, <strong>tre comportamenti principali hanno guidato le successive iterazioni</strong>:
           </p>
-          <ul class="section-list">
-            <li><strong>Fidget Clicking &amp; Ancoraggi Visivi:</strong> 4 utenti su 5 hanno cliccato ripetutamente a vuoto negli spazi bianchi per scandire la lettura. I blocchi di testo fitto generano affaticamento, mentre i grassetti guidano lo sguardo in modo mirato.</li>
-            <li><strong>Browsing Visivo vs Filtri:</strong> Nel Task 2, il 40% del campione (2 su 5) ha ignorato la barra laterale dei filtri, scansionando a vista la griglia e usando la parola "Business" nel titolo come esca visiva immediata.</li>
-            <li><strong>Footer come Rifugio d'Aiuto &amp; Termini Complessi:</strong> Nel Task 3, il 100% degli utenti è sceso nel footer per trovare assistenza per assenza di voci esplicite nell'header; termini accademici inglesi (es. "Fellow") hanno creato blocchi cognitivi.</li>
-          </ul>
+
+          <!-- 3 Colonne affiancate per i comportamenti (senza card e senza bordi) -->
+          <div class="behaviors-3col-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 16px;">
+            <div>
+              <p class="section-paragraph" style="margin: 0; font-size: 15px; line-height: 1.6;">
+                <strong>Fidget Clicking &amp; Ancoraggi Visivi:</strong> <em>4 utenti su 5 hanno cliccato ripetutamente a vuoto negli spazi bianchi per scandire la lettura.</em> I blocchi di testo fitto generano affaticamento, mentre i grassetti guidano lo sguardo in modo mirato.
+              </p>
+            </div>
+            <div>
+              <p class="section-paragraph" style="margin: 0; font-size: 15px; line-height: 1.6;">
+                <strong>Browsing Visivo vs Filtri:</strong> Nel Task 2, <em>il 40% del campione (2 su 5) ha ignorato la barra laterale dei filtri</em>, scansionando a vista la griglia e <em>usando la parola "Business" nel titolo come esca visiva immediata.</em>
+              </p>
+            </div>
+            <div>
+              <p class="section-paragraph" style="margin: 0; font-size: 15px; line-height: 1.6;">
+                <strong>Footer come Rifugio d'Aiuto &amp; Termini Complessi:</strong> Nel Task 3, <em>il 100% degli utenti è sceso nel footer per trovare assistenza</em> per assenza di voci esplicite nell'header; <em>termini accademici inglesi (es. "Fellow") hanno creato blocchi cognitivi.</em>
+              </p>
+            </div>
+          </div>
         </section>
 
         <!-- Le 5 Modifiche Definitive -->
