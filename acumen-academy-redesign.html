@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=47.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=48.0">
 </head>
 
 <body>
@@ -1497,18 +1497,21 @@
 
         const navbarHeight = navbar ? navbar.offsetHeight : 80;
         let currentActiveIdx = 0;
-        let minDistance = Infinity;
 
-        sections.forEach((section, idx) => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= navbarHeight + 150) {
-            const dist = navbarHeight + 150 - rect.top;
-            if (dist < minDistance) {
-              minDistance = dist;
+        // Special check if scrolled near bottom of page (e.g. #tradeoff)
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+
+        if (pageHeight - scrollPosition <= 75) {
+          currentActiveIdx = navLinks.length - 1;
+        } else {
+          sections.forEach((section, idx) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= navbarHeight + 140) {
               currentActiveIdx = idx;
             }
-          }
-        });
+          });
+        }
 
         navLinks.forEach((link, idx) => {
           if (idx === currentActiveIdx) {
@@ -1541,7 +1544,7 @@
           });
 
           const navbarHeight = navbar ? navbar.offsetHeight : 80;
-          const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 48;
+          const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
 
           window.scrollTo({
             top: targetTop,
@@ -1551,7 +1554,7 @@
           manualTimeout = setTimeout(() => {
             isScrollingManual = false;
             updateActiveLinkAndLine();
-          }, 1000);
+          }, 1200);
         }
       }
 
