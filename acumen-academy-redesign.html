@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=35.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=36.0">
 </head>
 
 <body>
@@ -962,93 +962,116 @@
         <section class="case-study-section" id="usertesting">
           <h2 class="section-title">VALIDAZIONE &amp; USER TESTING (UXArmy)</h2>
           
-          <p class="section-paragraph" style="margin-top: 20px;">
+          <p class="section-paragraph">
             Dopo la prototipazione Figma, ho sottoposto l'interfaccia a una sessione di <strong>User Testing da remoto con 5 partecipanti</strong> in target per osservarne il comportamento spontaneo tramite <em>Think Aloud</em> (pensare ad alta voce ad accensione del microfono e della webcam), testando la navigazione, l'uso della sidebar filtri e la reperibilità del supporto in tempo reale.
           </p>
           <ul class="section-list">
             <li><strong>Il Pilot Test:</strong> Prima del lancio ufficiale, ha fatto emergere <strong>un limite strutturale nell'icona flottante della chat</strong>, che copriva contenuti sui monitor desktop più piccoli. <strong>L’ho sostituita con un overlay centrato</strong> con oscuramento dello sfondo (dimming), accessibile da "Contact Us", riformulando il Task 3 in modo neutro.</li>
           </ul>
 
-          <!-- Confronto 2 Colonne PRIMA e DOPO Live Chat (Pilot Test) -->
-          <div class="pilot-test-comparison-container" style="margin-top: 20px;">
-            <div class="comparison-grid-3col" style="grid-template-columns: 1fr 1fr; gap: 20px;">
-              
-              <!-- Colonna PRIMA (Pilot Test) -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header" style="background-color: #FEF2F2; color: #991B1B;">
-                  <span>🔴 PRIMA (Pilot Test - Icona Flottante)</span>
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px; background-color: #F8FAFC;">
-                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-1.png', 'Pilot Test PRIMA 1 — Icona flottante chiusa sulla Homepage')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/pilot-prima-1.png" alt="Pilot Test Prima 1 - Icona Chiusa" class="comparison-card-img">
-                  </div>
-                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-2.png', 'Pilot Test PRIMA 2 — Pop-up chat aperto in basso a destra')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/pilot-prima-2.png" alt="Pilot Test Prima 2 - Chat Aperta" class="comparison-card-img">
-                  </div>
-                </div>
-                <div class="comparison-card-desc">
-                  <strong>Criticità riscontrata:</strong> L'icona fluttuante ed il relativo pop-up in basso a destra risultavano invadenti sui monitor desktop ridotti, creando sovrapposizioni visive con i testi e i controlli attivi della pagina.
-                </div>
+          <!-- Carosello 2 Slide Pilot Test (PRIMA vs DOPO) -->
+          <div class="pilot-carousel-wrapper" style="margin-top: 10px;">
+            <div class="main-carousel-nav-bar">
+              <div class="main-carousel-tabs" style="justify-content: flex-start;">
+                <button type="button" class="main-carousel-tab active" id="pilot-tab-0" onclick="goToPilotSlide(0)">🔴 Slide 1: PRIMA (Pilot Test - Icona Flottante)</button>
+                <button type="button" class="main-carousel-tab" id="pilot-tab-1" onclick="goToPilotSlide(1)">🟢 Slide 2: DOPO (Test Ufficiale - Overlay Centrato)</button>
               </div>
+            </div>
 
-              <!-- Colonna DOPO (Test Ufficiale) -->
-              <div class="comparison-card-item">
-                <div class="comparison-card-header" style="background-color: #F0FDF4; color: #166534;">
-                  <span>🟢 DOPO (Test Ufficiale - Overlay Centrato)</span>
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px; background-color: #F8FAFC;">
-                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-1.png', 'Test Ufficiale DOPO 1 — Scheda Chat Support nella pagina Contact Us')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/pilot-dopo-1.png" alt="Test Ufficiale Dopo 1 - Pagina Contact Us" class="comparison-card-img">
+            <div class="main-carousel-viewport" style="border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background-color: #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+              <div class="main-carousel-track" id="pilot-carousel-track" style="transform: translateX(0%); transition: transform 0.4s ease;">
+                
+                <!-- Slide 1: PRIMA -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0;">
+                    <div class="comparison-card-item">
+                      <div class="comparison-card-header" style="background-color: #FEF2F2; color: #991B1B;">
+                        <span>🔴 PRIMA (Pilot Test - Icona Flottante in basso a destra)</span>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: 380px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-1.png', 'Pilot Test PRIMA 1 — Icona flottante chiusa sulla Homepage')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/pilot-prima-1.png" alt="Pilot Test Prima 1 - Icona Chiusa" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-img-wrapper" style="height: 380px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-prima-2.png', 'Pilot Test PRIMA 2 — Pop-up chat aperto in basso a destra')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/pilot-prima-2.png" alt="Pilot Test Prima 2 - Chat Aperta" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc">
+                        <strong>Criticità riscontrata:</strong> L'icona fluttuante ed il relativo pop-up in basso a destra risultavano invadenti sui monitor desktop ridotti, creando sovrapposizioni visive con i testi e i controlli attivi della pagina.
+                      </div>
+                    </div>
                   </div>
-                  <div class="comparison-img-wrapper" style="height: 220px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-2.png', 'Test Ufficiale DOPO 2 — Overlay Livechat centrato a schermo intero')" title="Clicca per ingrandire">
-                    <img src="assets/img/acumen-academy-redesign/pilot-dopo-2.png" alt="Test Ufficiale Dopo 2 - Livechat Overlay Centrato" class="comparison-card-img">
+                </div>
+
+                <!-- Slide 2: DOPO -->
+                <div class="main-carousel-slide">
+                  <div class="wireframe-ui-container" style="border: none; padding: 0;">
+                    <div class="comparison-card-item">
+                      <div class="comparison-card-header" style="background-color: #F0FDF4; color: #166534;">
+                        <span>🟢 DOPO (Test Ufficiale - Overlay Livechat Centrato)</span>
+                      </div>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
+                        <div class="comparison-img-wrapper" style="height: 380px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-1.png', 'Test Ufficiale DOPO 1 — Scheda Chat Support nella pagina Contact Us')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/pilot-dopo-1.png" alt="Test Ufficiale Dopo 1 - Pagina Contact Us" class="comparison-card-img">
+                        </div>
+                        <div class="comparison-img-wrapper" style="height: 380px;" onclick="openImageModal('assets/img/acumen-academy-redesign/pilot-dopo-2.png', 'Test Ufficiale DOPO 2 — Overlay Livechat centrato a schermo intero')" title="Clicca per ingrandire">
+                          <img src="assets/img/acumen-academy-redesign/pilot-dopo-2.png" alt="Test Ufficiale Dopo 2 - Livechat Overlay Centrato" class="comparison-card-img">
+                        </div>
+                      </div>
+                      <div class="comparison-card-desc">
+                        <strong>Soluzione adottata:</strong> Livechat riprogettata in un overlay centrato con effetto dimming (sfondo oscurato), accessibile direttamente dalla pagina "Contact Us" per una consultazione pulita senza ostacolare la navigazione.
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="comparison-card-desc">
-                  <strong>Soluzione adottata:</strong> Livechat riprogettata in un overlay centrato con effetto dimming (sfondo oscurato), accessibile direttamente dalla pagina "Contact Us" per una consultazione pulita senza ostacolare la navigazione.
-                </div>
+
               </div>
+            </div>
 
+            <!-- Indicatori a pallino inferiori -->
+            <div class="main-carousel-dots">
+              <button type="button" class="main-carousel-dot active" id="pilot-dot-0" onclick="goToPilotSlide(0)" aria-label="Slide 1 PRIMA"></button>
+              <button type="button" class="main-carousel-dot" id="pilot-dot-1" onclick="goToPilotSlide(1)" aria-label="Slide 2 DOPO"></button>
             </div>
           </div>
 
-          <ul class="section-list" style="margin-top: 24px;">
+          <ul class="section-list" style="margin-top: 14px;">
             <li><strong>I 3 Task &amp; Domande Finali:</strong> Protocollo operativo di test e questionario qualitativo post-test.</li>
           </ul>
 
           <!-- Protocollo 3 Task (Sinistra) + Survey Domande (Destra) -->
-          <div class="protocol-2col-layout" style="margin-top: 16px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="protocol-2col-layout" style="margin-top: 8px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch;">
               
               <!-- Colonna Sinistra: 3 Task di Test -->
-              <div style="display: flex; flex-direction: column; gap: 14px;">
-                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0;">
-                  <h4 class="problem-card-title" style="margin-bottom: 6px;">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
-                  <p class="problem-card-text" style="margin: 0;">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
+              <div style="display: flex; flex-direction: column; gap: 10px; justify-content: space-between; height: 100%;">
+                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0; padding: 12px 16px; flex: 1;">
+                  <h4 class="problem-card-title" style="margin-bottom: 4px; font-size: 14px; padding-bottom: 6px;">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
+                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
                 </div>
-                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0;">
-                  <h4 class="problem-card-title" style="margin-bottom: 6px;">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
-                  <p class="problem-card-text" style="margin: 0;">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
+                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0; padding: 12px 16px; flex: 1;">
+                  <h4 class="problem-card-title" style="margin-bottom: 4px; font-size: 14px; padding-bottom: 6px;">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
+                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
                 </div>
-                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0;">
-                  <h4 class="problem-card-title" style="margin-bottom: 6px;">🎯 TASK 3 (Supporto Rapido)</h4>
-                  <p class="problem-card-text" style="margin: 0;">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
+                <div class="protocol-card" style="border-left: 4px solid #0284C7; margin: 0; padding: 12px 16px; flex: 1;">
+                  <h4 class="problem-card-title" style="margin-bottom: 4px; font-size: 14px; padding-bottom: 6px;">🎯 TASK 3 (Supporto Rapido)</h4>
+                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
                 </div>
               </div>
 
               <!-- Colonna Destra: Domande Finali Post-Test -->
-              <div class="protocol-card" style="border-left: 4px solid #0F172A; margin: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div class="protocol-card" style="border-left: 4px solid #0F172A; margin: 0; padding: 12px 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
                 <div>
-                  <h4 class="problem-card-title" style="margin-bottom: 14px;">📋 DOMANDE FINALI POST-TEST</h4>
-                  <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <div style="background-color: #F8FAFC; padding: 12px 14px; border-radius: 8px; border: 1px solid #E2E8F0;">
-                      <p class="problem-card-text" style="margin: 0;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
+                  <h4 class="problem-card-title" style="margin-bottom: 10px; font-size: 14px; padding-bottom: 6px;">📋 DOMANDE FINALI POST-TEST</h4>
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="background-color: #F8FAFC; padding: 10px 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                      <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.4;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
                     </div>
-                    <div style="background-color: #F8FAFC; padding: 12px 14px; border-radius: 8px; border: 1px solid #E2E8F0;">
-                      <p class="problem-card-text" style="margin: 0;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
+                    <div style="background-color: #F8FAFC; padding: 10px 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                      <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.4;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
                     </div>
-                    <div style="background-color: #F8FAFC; padding: 12px 14px; border-radius: 8px; border: 1px solid #E2E8F0;">
-                      <p class="problem-card-text" style="margin: 0;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
+                    <div style="background-color: #F8FAFC; padding: 10px 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                      <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.4;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
                     </div>
                   </div>
                 </div>
@@ -1699,6 +1722,19 @@
         if (i === currentMainSlide) dot.classList.add('active');
         else dot.classList.remove('active');
       });
+    }
+
+    function goToPilotSlide(index) {
+      var track = document.getElementById('pilot-carousel-track');
+      if (track) {
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      }
+      for (var i = 0; i < 2; i++) {
+        var tab = document.getElementById('pilot-tab-' + i);
+        var dot = document.getElementById('pilot-dot-' + i);
+        if (tab) tab.classList.toggle('active', i === index);
+        if (dot) dot.classList.toggle('active', i === index);
+      }
     }
 
     function moveMainSlide(direction) {
