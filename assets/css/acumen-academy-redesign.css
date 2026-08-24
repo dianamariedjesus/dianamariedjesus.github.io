@@ -247,11 +247,18 @@ body {
   line-height: 1.35;
   border-bottom: 1px solid #F1F5F9;
   padding-bottom: 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 .problem-item-row {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  flex: 1;
+}
+.problem-item-row:nth-of-type(1) {
+  min-height: 105px;
 }
 .item-icon-wrapper {
   width: 32px;
@@ -284,7 +291,7 @@ body {
   color: #E11D48;
 }
 .text-purple-label {
-  color: #7C3AED;
+  color: #5A189A;
 }
 .problem-card-text {
   font-family: 'Poppins', sans-serif;
