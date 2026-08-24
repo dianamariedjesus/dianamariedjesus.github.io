@@ -229,13 +229,13 @@ body {
 }
 .survey-goal-box {
   margin-top: auto;
-  background-color: #F0F9FF;
-  border-left: 3px solid #0284C7;
+  background-color: #F7F3FA;
+  border-left: 3px solid #5A189A;
   padding: 10px 12px;
   border-radius: 6px;
 }
 .survey-goal-box .problem-card-text {
-  color: #0369A1;
+  color: #5A189A;
   font-weight: 500;
 }
 .problem-card-title {
