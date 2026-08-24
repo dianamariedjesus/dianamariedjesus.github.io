@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=50.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=51.0">
 </head>
 
 <body>
@@ -1461,15 +1461,18 @@
         if (window.innerWidth < 1024) return;
 
         const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        const metaHeading = document.querySelector('.metadata-heading');
         
         if (initialAbsoluteTop === null || window.scrollY === 0) {
-          const metaRect = metadataSection.getBoundingClientRect();
-          const metaCenterY = metaRect.top + window.scrollY + metaRect.height / 2;
-          const currentHeight = sidebarNav.offsetHeight || 300;
-          initialAbsoluteTop = metaCenterY - currentHeight / 2;
+          if (metaHeading) {
+            initialAbsoluteTop = metaHeading.getBoundingClientRect().top + window.scrollY;
+          } else {
+            const metaRect = metadataSection.getBoundingClientRect();
+            initialAbsoluteTop = metaRect.top + window.scrollY;
+          }
         }
 
-        const stickyThreshold = initialAbsoluteTop - (navbarHeight + 48);
+        const stickyThreshold = initialAbsoluteTop - (navbarHeight + 36);
 
         if (window.scrollY < stickyThreshold) {
           sidebarNav.style.position = 'absolute';
@@ -1477,7 +1480,7 @@
           sidebarNav.style.transform = 'none';
         } else {
           sidebarNav.style.position = 'fixed';
-          sidebarNav.style.top = (navbarHeight + 48) + 'px';
+          sidebarNav.style.top = (navbarHeight + 36) + 'px';
           sidebarNav.style.transform = 'none';
         }
       }
@@ -1496,18 +1499,6 @@
 
       let isScrollingManual = false;
       let manualTimeout;
-
-      function alignOverlayWithActiveLine(activeIdx) {
-        const overlayContainer = document.querySelector('.sidebar-overlay');
-        if (!overlayContainer || !lines[activeIdx] || !navLinks[activeIdx]) return;
-
-        overlayContainer.style.top = '0px';
-        const lineTop = lines[activeIdx].offsetTop;
-        const linkTop = navLinks[activeIdx].offsetTop;
-        const targetTop = lineTop - linkTop;
-
-        overlayContainer.style.top = targetTop + 'px';
-      }
 
       function updateActiveLinkAndLine() {
         if (isScrollingManual) return;
@@ -1541,8 +1532,6 @@
             if (lines[idx]) lines[idx].classList.remove("active");
           }
         });
-
-        alignOverlayWithActiveLine(currentActiveIdx);
       }
 
       window.addEventListener('scroll', updateActiveLinkAndLine);
@@ -1563,8 +1552,6 @@
               if (lines[idx]) lines[idx].classList.remove("active");
             }
           });
-
-          alignOverlayWithActiveLine(index);
 
           const navbarHeight = navbar ? navbar.offsetHeight : 80;
           const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
