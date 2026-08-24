@@ -1043,24 +1043,6 @@ body {
 
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
-  .sidebar-nav {
-    left: 10px;
-    width: 155px;
-  }
-  .sidebar-lines {
-    gap: 9px;
-  }
-  .sidebar-overlay {
-    width: 155px;
-    padding: 10px 6px;
-  }
-  .overlay-link {
-    font-size: 11px;
-    padding: 3px 6px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
   .case-study-container {
     padding: 0 175px;
   }
