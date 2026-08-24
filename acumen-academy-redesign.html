@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=49.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=50.0">
 </head>
 
 <body>
@@ -1497,6 +1497,18 @@
       let isScrollingManual = false;
       let manualTimeout;
 
+      function alignOverlayWithActiveLine(activeIdx) {
+        const overlayContainer = document.querySelector('.sidebar-overlay');
+        if (!overlayContainer || !lines[activeIdx] || !navLinks[activeIdx]) return;
+
+        overlayContainer.style.top = '0px';
+        const lineTop = lines[activeIdx].offsetTop;
+        const linkTop = navLinks[activeIdx].offsetTop;
+        const targetTop = lineTop - linkTop;
+
+        overlayContainer.style.top = targetTop + 'px';
+      }
+
       function updateActiveLinkAndLine() {
         if (isScrollingManual) return;
 
@@ -1529,6 +1541,8 @@
             if (lines[idx]) lines[idx].classList.remove("active");
           }
         });
+
+        alignOverlayWithActiveLine(currentActiveIdx);
       }
 
       window.addEventListener('scroll', updateActiveLinkAndLine);
@@ -1549,6 +1563,8 @@
               if (lines[idx]) lines[idx].classList.remove("active");
             }
           });
+
+          alignOverlayWithActiveLine(index);
 
           const navbarHeight = navbar ? navbar.offsetHeight : 80;
           const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
