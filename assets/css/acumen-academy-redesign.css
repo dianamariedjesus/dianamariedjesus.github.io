@@ -226,33 +226,25 @@ body {
 }
 .problem-card-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 15.5px;
+  font-size: 15px;
   font-weight: 700;
   color: #1E293B;
   margin: 0;
   line-height: 1.35;
   border-bottom: 1px solid #F1F5F9;
   padding-bottom: 12px;
-  min-height: 48px;
-  height: 48px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
 }
 .problem-item-row {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  flex-direction: column;
+  gap: 4px;
 }
 .problem-item-row:nth-of-type(1) {
-  min-height: 110px;
-  height: 110px;
-  box-sizing: border-box;
-}
-.problem-item-row:nth-of-type(2) {
-  min-height: 95px;
-  height: 95px;
-  box-sizing: border-box;
+  margin-bottom: 8px;
 }
 .item-icon-wrapper {
   width: 32px;
@@ -1056,12 +1048,19 @@ body {
 
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
+  .case-study-hero {
+    margin: 20px auto 24px auto;
+  }
   .case-study-hero .hero-img {
-    width: 520px;
+    width: 480px;
     height: auto;
   }
+  .case-study-title-section {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
   .case-study-title-section .main-title {
-    font-size: 25px;
+    font-size: 24px;
     white-space: nowrap;
     letter-spacing: -0.01em;
   }
@@ -1075,6 +1074,9 @@ body {
     margin-bottom: 20px;
   }
   /* Metadata table grid alignment for laptop */
+  .metadata-section {
+    margin-top: 32px;
+  }
   .metadata-section .metadata-grid {
     grid-template-columns: 1.15fr 1fr 1.35fr 1fr;
     gap: 12px;
@@ -1110,12 +1112,12 @@ body {
   }
   /* Comparison image wrapper height on laptop matching Contact Us wireframe */
   .comparison-img-wrapper {
-    height: 320px;
-    max-height: 320px;
+    max-height: 300px;
   }
-  /* Metric cards header box on laptop */
+  /* Metric cards header box on laptop for 100% align-top of paragraphs */
   .metric-header-box {
-    min-height: 64px;
+    min-height: 76px;
+    margin-bottom: 8px;
   }
   .metric-desc {
     font-size: 13px;
@@ -1431,7 +1433,6 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  height: 100%;
 }
 .comparison-card-header {
   background-color: #F8FAFC;
@@ -1445,7 +1446,6 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 44px;
-  height: 44px;
   box-sizing: border-box;
 }
 .btn-card-zoom {
@@ -1461,13 +1461,14 @@ body {
   transform: scale(1.2);
 }
 .comparison-img-wrapper {
-  height: 320px;
-  max-height: 320px;
+  max-height: 340px;
   overflow-y: auto;
   position: relative;
   cursor: pointer;
   background-color: #F8FAFC;
-  flex: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   box-sizing: border-box;
 }
 .comparison-card-img {
@@ -1482,7 +1483,7 @@ body {
   line-height: 1.5;
   background-color: #FFFFFF;
   border-top: 1px solid #F1F5F9;
-  flex: 1;
+  margin-top: auto;
   box-sizing: border-box;
 }
 
