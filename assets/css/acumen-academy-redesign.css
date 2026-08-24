@@ -64,31 +64,17 @@ body {
   margin-top: 88px;
 }
 .metadata-section .metadata-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1.35fr 1fr;
+  gap: 16px;
   width: 100%;
+  box-sizing: border-box;
 }
 .metadata-section .metadata-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.metadata-section .metadata-column:nth-child(1) {
-  width: 175px;
-  flex-shrink: 0;
-}
-.metadata-section .metadata-column:nth-child(2) {
-  width: 155px;
-  flex-shrink: 0;
-}
-.metadata-section .metadata-column:nth-child(3) {
-  width: 245px;
-  flex-shrink: 0;
-}
-.metadata-section .metadata-column:nth-child(4) {
-  width: 135px;
-  flex-shrink: 0;
+  min-width: 0;
 }
 .metadata-section .metadata-heading {
   font-family: 'Poppins', sans-serif;
@@ -101,7 +87,7 @@ body {
 }
 .metadata-section .metadata-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
   line-height: 1.5;
@@ -786,17 +772,25 @@ body {
   flex-direction: column;
   gap: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  box-sizing: border-box;
 }
 .metric-task-name {
   font-size: 13px;
   font-weight: 700;
   color: #166534;
   text-transform: uppercase;
+  min-height: 38px;
+  display: flex;
+  align-items: flex-start;
 }
 .metric-value {
   font-size: 20px;
   font-weight: 800;
   color: #15803D;
+  min-height: 54px;
+  display: flex;
+  align-items: flex-start;
 }
 .metric-desc {
   font-size: 13.5px;
@@ -1059,6 +1053,56 @@ body {
     line-height: 1.65;
     letter-spacing: -0.01em;
     margin-bottom: 20px;
+  }
+  /* Metadata table grid alignment for laptop */
+  .metadata-section .metadata-grid {
+    grid-template-columns: 1.15fr 1fr 1.35fr 1fr;
+    gap: 12px;
+  }
+  .metadata-section .metadata-heading {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .metadata-section .metadata-text {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  /* Nielsen card scores single line on laptop */
+  .nielsen-card-header {
+    gap: 8px;
+  }
+  .nielsen-score {
+    font-size: 13px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  /* Horizontal carousel tab row fit on laptop */
+  .main-carousel-tab {
+    font-size: 11.5px;
+    padding: 8px 4px;
+    letter-spacing: -0.01em;
+  }
+  .mod-carousel-tabs-row .main-carousel-tab {
+    font-size: 11.5px;
+    padding: 6px 3px;
+    line-height: 1.25;
+  }
+  /* Comparison image wrapper height on laptop for top caption alignment */
+  .comparison-img-wrapper {
+    height: 380px;
+    max-height: 380px;
+  }
+  /* Metric cards paragraph top alignment on laptop */
+  .metric-task-name {
+    min-height: 38px;
+  }
+  .metric-value {
+    font-size: 18px;
+    min-height: 52px;
+  }
+  .metric-desc {
+    font-size: 13px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1384,6 +1428,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 44px;
+  height: 44px;
+  box-sizing: border-box;
 }
 .btn-card-zoom {
   background: transparent;
@@ -1404,7 +1451,8 @@ body {
   position: relative;
   cursor: pointer;
   background-color: #F8FAFC;
-  flex: 1;
+  flex: none;
+  box-sizing: border-box;
 }
 .comparison-card-img {
   width: 100%;
@@ -1418,7 +1466,8 @@ body {
   line-height: 1.5;
   background-color: #FFFFFF;
   border-top: 1px solid #F1F5F9;
-  margin-top: auto;
+  flex: 1;
+  box-sizing: border-box;
 }
 
 /* Browser Mockup Frame */
