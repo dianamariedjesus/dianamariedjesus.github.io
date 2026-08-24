@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=57.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=58.0">
 </head>
 
 <body>
@@ -1372,7 +1372,11 @@
   </footer>
 
   <!-- Back to Top Button -->
-  <button class="back-to-top" aria-label="Torna in alto"></button>
+  <button class="back-to-top" aria-label="Torna in alto">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
 
   <!-- Navbar Logic Script -->
   <script>
@@ -1405,18 +1409,27 @@
       window.addEventListener('scroll', function() {
         const footerRect = footer.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        const isMobile = window.innerWidth < 1024;
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const pageHeight = document.documentElement.scrollHeight;
+        const isMobileOrTablet = window.innerWidth < 1024;
 
-        if (isMobile) {
-          if (footerRect.top < windowHeight) {
+        if (isMobileOrTablet) {
+          // Mobile e Tablet: appare solo quando l'utente ha scrollato fino in fondo
+          const isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect.top <= windowHeight);
+          if (isAtBottom) {
             backToTopBtn.classList.add('visible');
-            const visibleFooterHeight = windowHeight - footerRect.top;
-            backToTopBtn.style.bottom = (visibleFooterHeight + 20) + 'px';
+            if (footerRect.top < windowHeight) {
+              const visibleFooterHeight = windowHeight - footerRect.top;
+              backToTopBtn.style.bottom = (visibleFooterHeight + 16) + 'px';
+            } else {
+              backToTopBtn.style.bottom = '20px';
+            }
           } else {
             backToTopBtn.classList.remove('visible');
           }
         } else {
-          if (window.scrollY > 300) {
+          // Laptop e Desktop: presente quando si scrolla (scrollY > 300)
+          if (scrollPosition > 300) {
             backToTopBtn.classList.add('visible');
           } else {
             backToTopBtn.classList.remove('visible');
@@ -1424,7 +1437,7 @@
 
           if (footerRect.top < windowHeight) {
             const visibleFooterHeight = windowHeight - footerRect.top;
-            backToTopBtn.style.bottom = (visibleFooterHeight + 30) + 'px';
+            backToTopBtn.style.bottom = (visibleFooterHeight + 24) + 'px';
           } else {
             backToTopBtn.style.bottom = '30px';
           }

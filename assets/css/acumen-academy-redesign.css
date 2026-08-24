@@ -1006,38 +1006,46 @@ body {
 .back-to-top {
   position: fixed;
   bottom: 30px;
-  right: 76px;
-  width: 80px;
-  height: 80px;
-  z-index: 1500;
-  cursor: pointer;
-  background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-default.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #5A189A;
+  color: #FFFFFF;
   border: none;
   outline: none;
+  z-index: 1500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(90, 24, 154, 0.35);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background-image 0.1s ease;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .back-to-top.visible {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 .back-to-top:hover {
-  background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-hover.png');
+  background-color: #FF452A;
+  color: #FFFFFF;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 69, 42, 0.40);
 }
 .back-to-top:active {
-  background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-pressed.png');
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255, 69, 42, 0.30);
 }
-@media (max-width: 1199px) {
+@media (max-width: 1023px) {
   .back-to-top {
     right: 20px;
     bottom: 20px;
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
   }
 }
 
