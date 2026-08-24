@@ -210,19 +210,16 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  gap: 16px;
   height: 100%;
+  box-sizing: border-box;
 }
-.survey-goal-box {
-  margin-top: auto;
-  background-color: #F7F3FA;
-  border-left: 3px solid #5A189A;
-  padding: 10px 12px;
-  border-radius: 6px;
-}
-.survey-goal-box .problem-card-text {
-  color: #5A189A;
-  font-weight: 500;
+.problem-card-header {
+  min-height: 48px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  align-items: flex-start;
 }
 .problem-card-title {
   font-family: 'Poppins', sans-serif;
@@ -231,20 +228,18 @@ body {
   color: #1E293B;
   margin: 0;
   line-height: 1.35;
-  border-bottom: 1px solid #F1F5F9;
-  padding-bottom: 12px;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
 }
-.problem-item-row {
+.problem-card-section {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.problem-item-row:nth-of-type(1) {
-  margin-bottom: 8px;
+.problem-section-body {
+  min-height: 125px;
+  margin-bottom: 16px;
+}
+.impact-section-body {
+  min-height: 110px;
 }
 .item-icon-wrapper {
   width: 32px;
@@ -775,8 +770,9 @@ body {
   box-sizing: border-box;
 }
 .metric-header-box {
-  min-height: 64px;
-  margin-bottom: 12px;
+  min-height: 60px;
+  height: 60px;
+  margin-bottom: 6px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -786,11 +782,11 @@ body {
   font-weight: 700;
   color: #166534;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   display: block;
 }
 .metric-value {
-  font-size: 20px;
+  font-size: 19.5px;
   font-weight: 800;
   color: #15803D;
   display: block;
@@ -1049,18 +1045,20 @@ body {
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
   .case-study-hero {
-    margin: 20px auto 24px auto;
+    margin: 36px auto 0 auto;
+    display: flex;
+    justify-content: center;
   }
   .case-study-hero .hero-img {
-    width: 480px;
+    width: 540px;
     height: auto;
   }
   .case-study-title-section {
-    margin-top: 20px;
-    margin-bottom: 24px;
+    margin-top: 36px;
+    margin-bottom: 0;
   }
   .case-study-title-section .main-title {
-    font-size: 24px;
+    font-size: 24.5px;
     white-space: nowrap;
     letter-spacing: -0.01em;
   }
@@ -1075,7 +1073,7 @@ body {
   }
   /* Metadata table grid alignment for laptop */
   .metadata-section {
-    margin-top: 32px;
+    margin-top: 64px;
   }
   .metadata-section .metadata-grid {
     grid-template-columns: 1.15fr 1fr 1.35fr 1fr;
@@ -1112,11 +1110,13 @@ body {
   }
   /* Comparison image wrapper height on laptop matching Contact Us wireframe */
   .comparison-img-wrapper {
-    max-height: 300px;
+    height: 215px;
+    max-height: 215px;
   }
   /* Metric cards header box on laptop for 100% align-top of paragraphs */
   .metric-header-box {
-    min-height: 76px;
+    min-height: 82px;
+    height: 82px;
     margin-bottom: 8px;
   }
   .metric-desc {
@@ -1461,14 +1461,13 @@ body {
   transform: scale(1.2);
 }
 .comparison-img-wrapper {
-  max-height: 340px;
+  height: 260px;
+  max-height: 260px;
   overflow-y: auto;
   position: relative;
   cursor: pointer;
   background-color: #F8FAFC;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  display: block;
   box-sizing: border-box;
 }
 .comparison-card-img {
