@@ -1044,17 +1044,31 @@ body {
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
   .sidebar-nav {
-    left: 12px;
-    width: 200px;
+    left: 10px;
+    width: 155px;
   }
   .sidebar-lines {
-    gap: 10px;
+    gap: 9px;
   }
   .sidebar-overlay {
-    width: 200px;
+    width: 155px;
+    padding: 10px 6px;
+  }
+  .overlay-link {
+    font-size: 11px;
+    padding: 3px 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .case-study-container {
-    padding: 0 250px;
+    padding: 0 175px;
+  }
+  .section-paragraph {
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
