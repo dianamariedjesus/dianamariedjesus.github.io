@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=48.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=49.0">
 </head>
 
 <body>
@@ -117,6 +117,7 @@
         <span class="nav-line line-12"></span>
         <span class="nav-line line-13"></span>
         <span class="nav-line line-14"></span>
+        <span class="nav-line line-15"></span>
       </div>
       <div class="sidebar-overlay">
         <a href="#contesto" class="overlay-link active">Contesto</a>
@@ -1444,11 +1445,15 @@
       const sidebarNav = document.querySelector('.sidebar-nav');
       const metadataSection = document.querySelector('.metadata-section');
       const navbar = document.querySelector('.navbar');
-      const sections = document.querySelectorAll(".case-study-section[id]");
       const navLinks = document.querySelectorAll(".overlay-link");
       const lines = document.querySelectorAll(".nav-line");
 
-      if (!sidebarNav || !metadataSection) return;
+      if (!sidebarNav || !metadataSection || !navLinks.length) return;
+
+      const targetElements = Array.from(navLinks).map(link => {
+        const href = link.getAttribute('href');
+        return href ? document.querySelector(href) : null;
+      });
 
       let initialAbsoluteTop = null;
 
@@ -1502,13 +1507,15 @@
         const scrollPosition = window.scrollY + window.innerHeight;
         const pageHeight = document.documentElement.scrollHeight;
 
-        if (pageHeight - scrollPosition <= 75) {
+        if (pageHeight - scrollPosition <= 80) {
           currentActiveIdx = navLinks.length - 1;
         } else {
-          sections.forEach((section, idx) => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= navbarHeight + 140) {
-              currentActiveIdx = idx;
+          targetElements.forEach((el, idx) => {
+            if (el) {
+              const rect = el.getBoundingClientRect();
+              if (rect.top <= navbarHeight + 140) {
+                currentActiveIdx = idx;
+              }
             }
           });
         }
