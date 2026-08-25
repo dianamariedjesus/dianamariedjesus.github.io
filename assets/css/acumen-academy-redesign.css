@@ -1159,17 +1159,18 @@ body {
   }
   /* Section Problema card alignment on laptop */
   .problem-cards-grid .problem-card {
-    padding: 16px 18px 24px 18px;
+    padding: 18px 18px 32px 18px;
+    min-height: 410px;
   }
   .problem-card-header {
-    min-height: 52px;
-    height: 52px;
+    min-height: 54px;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #F1F5F9;
   }
   .problem-card-title {
@@ -1179,12 +1180,13 @@ body {
     margin: 0;
   }
   .problem-section-body {
-    min-height: 126px;
-    height: 126px;
-    margin-bottom: 10px;
+    min-height: 138px;
+    height: 138px;
+    margin-bottom: 12px;
   }
   .impact-section-body {
-    min-height: 95px;
+    min-height: 105px;
+    height: 105px;
   }
   .survey-card-header {
     min-height: 38px;
