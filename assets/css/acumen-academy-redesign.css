@@ -1203,11 +1203,13 @@ body {
     margin: 0;
   }
   .problem-section-body {
-    min-height: 145px;
-    margin-bottom: 12px;
+    min-height: 165px;
+    height: 165px;
+    margin-bottom: 14px;
   }
   .impact-section-body {
     min-height: 105px;
+    height: 105px;
   }
   .survey-card-header {
     min-height: 38px;
@@ -1538,6 +1540,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  align-items: stretch;
 }
 .comparison-card-item {
   background-color: #FFFFFF;
@@ -1547,6 +1550,8 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  box-sizing: border-box;
 }
 .comparison-card-header {
   background-color: #F8FAFC;
