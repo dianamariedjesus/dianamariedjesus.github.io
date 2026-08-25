@@ -214,12 +214,24 @@ body {
   box-sizing: border-box;
 }
 .problem-card-header {
-  min-height: 48px;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
+  min-height: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #F1F5F9;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+.survey-card-header {
+  min-height: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 .problem-card-title {
   font-family: 'Poppins', sans-serif;
@@ -235,11 +247,16 @@ body {
   gap: 4px;
 }
 .problem-section-body {
-  min-height: 125px;
-  margin-bottom: 16px;
+  min-height: 120px;
+  margin-bottom: 14px;
 }
 .impact-section-body {
-  min-height: 110px;
+  min-height: 105px;
+}
+.survey-body-section {
+  min-height: 120px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
 }
 .item-icon-wrapper {
   width: 32px;
@@ -1114,6 +1131,45 @@ body {
   .comparison-img-wrapper {
     height: 215px;
     max-height: 215px;
+  }
+  /* Section Problema card alignment on laptop */
+  .problem-card-header {
+    min-height: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+  .problem-card-title {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .problem-section-body {
+    min-height: 98px;
+    height: 98px;
+    margin-bottom: 10px;
+  }
+  .impact-section-body {
+    min-height: 88px;
+    height: 88px;
+  }
+  /* Section Sondaggio card alignment on laptop */
+  .survey-card-header {
+    min-height: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+  .survey-body-section {
+    min-height: 145px;
+    height: 145px;
+    margin-bottom: 12px;
   }
   /* Metric cards alignment on laptop */
   .metric-task-name {
