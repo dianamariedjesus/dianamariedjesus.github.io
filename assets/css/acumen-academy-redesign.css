@@ -434,8 +434,8 @@ body {
 }
 .lightbox-modal-content {
   position: relative;
-  max-width: 1200px;
-  width: 90%;
+  width: 100%;
+  max-width: 872px;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -1152,16 +1152,35 @@ body {
     padding: 6px 3px;
     line-height: 1.25;
   }
-  /* Comparison image wrapper height on laptop matching Contact Us wireframe */
-  .comparison-img-wrapper {
+  /* Comparison image wrapper height on laptop matching Contact Us wireframe across all pages and phases */
+  .comparison-img-wrapper,
+  .wireframe-img-wrapper {
     height: 215px;
     max-height: 215px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .comparison-img-wrapper img,
+  .wireframe-img-wrapper img {
+    height: 215px;
+    max-height: 215px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: top center;
+  }
+  .lightbox-modal-content,
+  .lightbox-img-scroll-container {
+    width: 100%;
+    max-width: calc(100vw - 350px);
+  }
+  .lightbox-img {
+    width: 100%;
+    height: auto;
   }
   /* Section Problema card alignment on laptop */
-  .problem-cards-grid .problem-card {
-    padding: 18px 18px 32px 18px;
-    min-height: 410px;
-  }
   .problem-card-header {
     min-height: 54px;
     height: 54px;
@@ -1273,8 +1292,8 @@ body {
 
 /* Lightbox Modal per Immagini e Galleria */
 .lightbox-img-scroll-container {
-  width: 1100px;
-  max-width: 88vw;
+  width: 100%;
+  max-width: 872px;
   max-height: 85vh;
   overflow: hidden;
   border-radius: 12px;
@@ -1292,8 +1311,8 @@ body {
   display: none;
 }
 .lightbox-img {
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   max-height: 80vh;
   object-fit: contain;
   display: block;
