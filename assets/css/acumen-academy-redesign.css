@@ -16,14 +16,13 @@ body {
 /* Banner Copertina */
 .case-study-hero {
   width: 100%;
-  height: 443px;
   background-color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 37px;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
 }
 .case-study-hero .hero-img {
@@ -31,6 +30,7 @@ body {
   height: auto;
   max-width: 100%;
   display: block;
+  margin: 0 auto;
   image-rendering: -webkit-optimize-contrast;
 }
 
@@ -765,31 +765,19 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  height: 100%;
-  box-sizing: border-box;
-}
-.metric-header-box {
-  min-height: 60px;
-  height: 60px;
-  margin-bottom: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 .metric-task-name {
   font-size: 13px;
   font-weight: 700;
   color: #166534;
   text-transform: uppercase;
-  margin-bottom: 2px;
-  display: block;
 }
 .metric-value {
-  font-size: 19.5px;
+  font-size: 20px;
   font-weight: 800;
   color: #15803D;
-  display: block;
 }
 .metric-desc {
   font-size: 13.5px;
@@ -842,10 +830,26 @@ body {
 }
 .other-works-section .other-works-grid {
   display: flex;
-  justify-content: center;
-  align-items: start;
-  gap: 32px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 36px;
   width: 100%;
+}
+.other-works-section .other-works-grid > a {
+  flex: 0 0 440px;
+  max-width: 440px;
+  text-decoration: none;
+  color: inherit;
+}
+.other-works-section .other-works-grid > .work-card:last-child {
+  flex: 0 0 200px;
+  max-width: 200px;
+}
+.other-works-section .other-works-grid > .work-card:last-child .work-image-frame {
+  width: 140px;
+  height: 88px;
+  aspect-ratio: auto;
+  margin-bottom: 16px;
 }
 .problem-icon-bg {
   background-color: #FFE4E6;
@@ -1045,13 +1049,16 @@ body {
 /* Media Queries per Contenitore */
 @media (min-width: 1024px) and (max-width: 1399px) {
   .case-study-hero {
-    margin: 36px auto 0 auto;
+    padding: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
   }
   .case-study-hero .hero-img {
-    width: 540px;
+    width: 668.56px;
+    max-width: 100%;
     height: auto;
+    display: block;
   }
   .case-study-title-section {
     margin-top: 36px;
@@ -1112,12 +1119,6 @@ body {
   .comparison-img-wrapper {
     height: 215px;
     max-height: 215px;
-  }
-  /* Metric cards header box on laptop for 100% align-top of paragraphs */
-  .metric-header-box {
-    min-height: 82px;
-    height: 82px;
-    margin-bottom: 8px;
   }
   .metric-desc {
     font-size: 13px;
