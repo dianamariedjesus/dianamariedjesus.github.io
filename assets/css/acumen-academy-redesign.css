@@ -1154,22 +1154,23 @@ body {
   }
   /* Comparison image wrapper height on laptop matching Contact Us wireframe across all pages and phases */
   .comparison-img-wrapper,
-  .wireframe-img-wrapper {
+  .wireframe-img-wrapper,
+  .mod-carousel-slide .comparison-img-wrapper {
     height: 215px;
     max-height: 215px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    border-radius: 8px;
+    box-sizing: border-box;
   }
   .comparison-img-wrapper img,
-  .wireframe-img-wrapper img {
-    height: 215px;
-    max-height: 215px;
-    width: auto;
+  .wireframe-img-wrapper img,
+  .mod-carousel-slide .comparison-img-wrapper img {
+    width: 100%;
     max-width: 100%;
-    object-fit: contain;
-    object-position: top center;
+    height: auto;
+    display: block;
   }
   .lightbox-modal-content,
   .lightbox-img-scroll-container {
@@ -1181,9 +1182,12 @@ body {
     height: auto;
   }
   /* Section Problema card alignment on laptop */
+  .problem-cards-grid .problem-card {
+    padding: 22px;
+    box-sizing: border-box;
+  }
   .problem-card-header {
-    min-height: 54px;
-    height: 54px;
+    min-height: 52px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1199,13 +1203,11 @@ body {
     margin: 0;
   }
   .problem-section-body {
-    min-height: 138px;
-    height: 138px;
+    min-height: 145px;
     margin-bottom: 12px;
   }
   .impact-section-body {
     min-height: 105px;
-    height: 105px;
   }
   .survey-card-header {
     min-height: 38px;
@@ -1294,27 +1296,22 @@ body {
 .lightbox-img-scroll-container {
   width: 100%;
   max-width: 872px;
-  max-height: 85vh;
-  overflow: hidden;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
   background-color: #0F172A;
   border: 1px solid rgba(255, 255, 255, 0.2);
   line-height: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.lightbox-img-scroll-container::-webkit-scrollbar {
-  display: none;
+  display: block;
+  box-sizing: border-box;
+  scrollbar-width: thin;
 }
 .lightbox-img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  max-height: 80vh;
-  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
