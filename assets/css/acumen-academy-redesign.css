@@ -1171,7 +1171,10 @@ body {
   .comparison-card-img {
     width: 100%;
     max-width: 100%;
+    min-height: 206.4px;
     height: auto;
+    object-fit: cover;
+    object-position: top center;
     display: block;
   }
   .lightbox-modal-content,
