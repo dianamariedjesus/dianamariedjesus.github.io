@@ -1155,18 +1155,20 @@ body {
   /* Comparison image wrapper height on laptop matching Contact Us wireframe across all pages and phases */
   .comparison-img-wrapper,
   .wireframe-img-wrapper,
+  .comparison-card-item .comparison-img-wrapper,
   .mod-carousel-slide .comparison-img-wrapper {
-    height: 215px;
-    max-height: 215px;
+    height: 206.4px !important;
+    min-height: 206.4px !important;
+    max-height: 206.4px !important;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
-    border-radius: 8px;
     box-sizing: border-box;
   }
   .comparison-img-wrapper img,
   .wireframe-img-wrapper img,
-  .mod-carousel-slide .comparison-img-wrapper img {
+  .mod-carousel-slide .comparison-img-wrapper img,
+  .comparison-card-img {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -1184,6 +1186,7 @@ body {
   /* Section Problema card alignment on laptop */
   .problem-cards-grid .problem-card {
     padding: 22px;
+    min-height: 430px;
     box-sizing: border-box;
   }
   .problem-card-header {
