@@ -1152,11 +1152,18 @@ body {
     padding: 6px 3px;
     line-height: 1.25;
   }
+  /* Modifiche carousel image wrapper height on laptop matching 206.4px rendered image height */
+  .mod-img-container-box .comparison-img-wrapper {
+    height: 206.4px !important;
+    min-height: 206.4px !important;
+    max-height: 206.4px !important;
+  }
+  .mod-img-container-box .comparison-card-img {
+    max-height: 206.4px;
+  }
   /* Comparison image wrapper height on laptop matching Contact Us wireframe across all pages and phases */
   .comparison-img-wrapper,
-  .wireframe-img-wrapper,
-  .comparison-card-item .comparison-img-wrapper,
-  .mod-carousel-slide .comparison-img-wrapper {
+  .wireframe-img-wrapper {
     height: 206.4px !important;
     min-height: 206.4px !important;
     max-height: 206.4px !important;
@@ -1543,6 +1550,39 @@ body {
 }
 .stage-view-panel {
   animation: fadeIn 0.3s ease;
+}
+
+/* Section LE 5 MODIFICHE DEFINITIVE AL PROTOTIPO */
+.mod-img-container-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 14px;
+  background-color: #F8FAFC;
+  box-sizing: border-box;
+}
+.mod-img-container-box.single-img {
+  grid-template-columns: 1fr;
+}
+.mod-img-container-box .comparison-img-wrapper {
+  height: 257px !important;
+  min-height: 257px !important;
+  max-height: 257px !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8FAFC;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.mod-img-container-box .comparison-card-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 257px;
+  object-fit: contain;
+  display: block;
 }
 
 /* 3-Column Comparison Grid */
