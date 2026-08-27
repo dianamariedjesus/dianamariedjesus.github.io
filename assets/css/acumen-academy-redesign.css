@@ -1184,13 +1184,22 @@ body {
     object-position: top center;
     display: block;
   }
+  .comparison-card-item,
+  .wireframe-ui-container .comparison-card-item {
+    height: 461px !important;
+    min-height: 461px !important;
+    max-height: 461px !important;
+  }
   .comparison-card-header {
     min-height: 48px;
     height: 48px;
   }
-  .comparison-card-desc {
+  .comparison-card-desc,
+  .wireframe-ui-container .comparison-card-desc {
     margin-top: 0 !important;
-    min-height: 206.6px;
+    height: 206.6px !important;
+    min-height: 206.6px !important;
+    max-height: 206.6px !important;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1600,7 +1609,8 @@ body {
   gap: 16px;
   align-items: stretch !important;
 }
-.comparison-card-item {
+.comparison-card-item,
+.wireframe-ui-container .comparison-card-item {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 10px;
@@ -1609,7 +1619,9 @@ body {
   flex-direction: column !important;
   justify-content: flex-start !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  height: 100% !important;
+  height: 476px !important;
+  min-height: 476px !important;
+  max-height: 476px !important;
   box-sizing: border-box;
 }
 .comparison-card-header {
@@ -1654,15 +1666,18 @@ body {
   height: auto;
   display: block;
 }
-.comparison-card-desc {
+.comparison-card-desc,
+.wireframe-ui-container .comparison-card-desc {
   padding: 14px;
   font-size: 13px;
   color: #475569;
   line-height: 1.5;
   background-color: #FFFFFF;
   border-top: 1px solid #F1F5F9;
-  margin-top: 0;
-  min-height: 168px;
+  margin-top: 0 !important;
+  height: 168px !important;
+  min-height: 168px !important;
+  max-height: 168px !important;
   flex: 1;
   display: flex;
   flex-direction: column;
