@@ -1424,7 +1424,7 @@ body {
     flex-direction: column !important;
     justify-content: flex-start !important;
     height: 100% !important;
-    min-height: 175px !important;
+    min-height: auto !important;
     padding: 16px !important;
     box-sizing: border-box !important;
   }
@@ -1476,8 +1476,46 @@ body {
     line-height: 1.4 !important;
   }
 
+  /* User Personas in 3 colonne su Tablet */
+  .personas-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+  .persona-card {
+    min-height: auto !important;
+    height: 100% !important;
+    padding: 14px !important;
+    box-sizing: border-box !important;
+  }
+  .persona-header {
+    gap: 8px !important;
+  }
+  .persona-avatar-wrapper {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .persona-name {
+    font-size: 13.5px !important;
+  }
+  .persona-meta {
+    font-size: 10.5px !important;
+  }
+  .persona-section-label {
+    font-size: 11px !important;
+    margin-bottom: 3px !important;
+  }
+  .persona-text {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+  }
+  .persona-goal-box {
+    padding: 8px 10px !important;
+    margin-top: 6px !important;
+  }
+
   /* Altre Griglie su Tablet */
-  .personas-cards-grid,
   .metrics-cards-grid,
   .protocol-cards-grid,
   .survey-cards-grid {
@@ -1488,7 +1526,6 @@ body {
 
   /* Reset Card Heights on Tablet */
   .survey-cards-grid .survey-card,
-  .persona-card,
   .metric-card,
   .protocol-card {
     min-height: auto !important;
@@ -1517,31 +1554,41 @@ body {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
   }
+
+  /* Carosello Wireframe & UI in 3 colonne su Tablet */
   .comparison-grid-3col {
     display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
   }
+  #mainCarouselTrack .comparison-card-item,
   .comparison-card-item {
-    height: auto !important;
+    height: 100% !important;
     min-height: auto !important;
     max-height: none !important;
   }
   .comparison-card-header {
     height: auto !important;
-    min-height: 44px !important;
+    min-height: 40px !important;
+    padding: 6px 8px !important;
+    font-size: 11.5px !important;
   }
   .comparison-img-wrapper {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: 380px !important;
+    height: 206.4px !important;
+    min-height: 206.4px !important;
+    max-height: 206.4px !important;
     overflow-y: auto !important;
   }
+  #mainCarouselTrack .comparison-card-desc,
   .comparison-card-desc {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
     margin-top: 0 !important;
+    padding: 10px !important;
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
     flex: none !important;
   }
   .mod-img-container-box {
