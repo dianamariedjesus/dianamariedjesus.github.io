@@ -64,9 +64,8 @@ body {
   margin-top: 88px;
 }
 .metadata-section .metadata-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   width: 100%;
   box-sizing: border-box;
@@ -1121,9 +1120,8 @@ body {
     margin-top: 56px;
   }
   .metadata-section .metadata-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
   .metadata-section .metadata-heading {
