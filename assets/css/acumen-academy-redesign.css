@@ -486,6 +486,9 @@ body {
   flex-direction: column;
   gap: 6px;
 }
+.nielsen-card-full {
+  grid-column: span 2;
+}
 .nielsen-card-header {
   display: flex;
   justify-content: space-between;
@@ -1401,9 +1404,54 @@ body {
     margin-bottom: 8px !important;
   }
 
-  /* Infografiche & Griglie su Tablet */
-  .nielsen-scores-grid,
-  .wcag-cards-grid,
+  /* Infografica Nielsen su Tablet (2 colonne con altezze/larghezze uguali) */
+  .nielsen-scores-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+  .nielsen-card {
+    grid-column: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    min-height: 175px !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+  }
+  .nielsen-card-full {
+    grid-column: span 2 !important;
+    min-height: auto !important;
+  }
+
+  /* Infografica WCAG su Tablet (Griglia 4x4 / 4 colonne) */
+  .wcag-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+  .wcag-card {
+    padding: 12px !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .wcag-card-title {
+    font-size: 12.5px !important;
+    margin-bottom: 8px !important;
+    min-height: 36px !important;
+  }
+  .wcag-label {
+    font-size: 10.5px !important;
+  }
+  .wcag-text {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Altre Griglie su Tablet */
   .personas-cards-grid,
   .metrics-cards-grid,
   .protocol-cards-grid,
@@ -1416,9 +1464,7 @@ body {
   /* Reset Card Heights on Tablet */
   .survey-cards-grid .survey-card,
   .persona-card,
-  .wcag-card,
   .metric-card,
-  .nielsen-card,
   .protocol-card {
     min-height: auto !important;
     height: auto !important;
@@ -1595,6 +1641,28 @@ body {
     gap: 16px !important;
   }
 
+  .nielsen-card,
+  .nielsen-card-full {
+    grid-column: span 1 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Tabella Competitor Analysis con scroll orizzontale su Mobile */
+  .competitor-table-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    display: block !important;
+    margin-top: 12px !important;
+    padding-bottom: 8px !important;
+    box-sizing: border-box !important;
+  }
+  .competitor-table {
+    min-width: 620px !important;
+    width: 620px !important;
+  }
+
   /* Reset Card Heights on Mobile */
   .problem-cards-grid .problem-card,
   .survey-cards-grid .survey-card,
@@ -1602,6 +1670,7 @@ body {
   .wcag-card,
   .metric-card,
   .nielsen-card,
+  .nielsen-card-full,
   .protocol-card {
     min-height: auto !important;
     height: auto !important;
