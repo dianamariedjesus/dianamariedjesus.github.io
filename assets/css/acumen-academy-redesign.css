@@ -1559,8 +1559,44 @@ body {
     box-sizing: border-box !important;
   }
 
+  /* Infografica Metrica Risultati & Impatto in 3 colonne su Tablet */
+  .metrics-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+  .metric-card {
+    padding: 14px !important;
+    height: 100% !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+  .metric-task-name {
+    font-size: 11px !important;
+  }
+  .metric-value {
+    font-size: 16px !important;
+    margin: 4px 0 6px 0 !important;
+  }
+  .metric-desc {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Comportamenti Utente & Modelli Mentali su Tablet */
+  .behaviors-3col-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 14px !important;
+  }
+  .behaviors-3col-grid .section-paragraph {
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+  }
+
   /* Altre Griglie su Tablet */
-  .metrics-cards-grid,
   .protocol-cards-grid,
   .survey-cards-grid {
     display: grid !important;
@@ -1570,7 +1606,6 @@ body {
 
   /* Reset Card Heights on Tablet */
   .survey-cards-grid .survey-card,
-  .metric-card,
   .protocol-card {
     min-height: auto !important;
     height: auto !important;
@@ -1990,6 +2025,18 @@ body {
     height: auto !important;
     min-height: auto !important;
     padding: 12px 14px !important;
+  }
+
+  /* Comportamenti Utente & Modelli Mentali Chiave in 1 colonna su Mobile */
+  .behaviors-3col-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-top: 12px !important;
+  }
+  .behaviors-3col-grid .section-paragraph {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
   }
 
   /* Video & Interactive Prototype Box su Mobile */
