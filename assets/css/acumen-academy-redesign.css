@@ -1489,8 +1489,13 @@ body {
     padding: 14px !important;
     box-sizing: border-box !important;
   }
+  .persona-card .persona-header,
   .persona-header {
     gap: 8px !important;
+    padding: 0 0 8px 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    border-bottom: 1px dashed #E2E8F0 !important;
   }
   .persona-avatar-wrapper {
     width: 60px !important;
@@ -2166,7 +2171,8 @@ body {
   gap: 16px;
   align-items: stretch !important;
 }
-#mainCarouselTrack .comparison-card-item {
+#mainCarouselTrack .comparison-card-item,
+.comparison-card-item {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 10px;
@@ -2175,10 +2181,14 @@ body {
   flex-direction: column !important;
   justify-content: flex-start !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  height: 476px !important;
-  min-height: 476px !important;
-  max-height: 476px !important;
   box-sizing: border-box;
+}
+@media (min-width: 1400px) {
+  #mainCarouselTrack .comparison-card-item {
+    height: 476px !important;
+    min-height: 476px !important;
+    max-height: 476px !important;
+  }
 }
 .comparison-card-header {
   background-color: #F8FAFC;
@@ -2222,7 +2232,8 @@ body {
   height: auto;
   display: block;
 }
-#mainCarouselTrack .comparison-card-desc {
+#mainCarouselTrack .comparison-card-desc,
+.comparison-card-desc {
   padding: 14px;
   font-size: 13px;
   color: #475569;
@@ -2230,14 +2241,20 @@ body {
   background-color: #FFFFFF;
   border-top: 1px solid #F1F5F9;
   margin-top: 0 !important;
-  height: 168px !important;
-  min-height: 168px !important;
-  max-height: 168px !important;
+  box-sizing: border-box;
+}
+@media (min-width: 1400px) {
+  #mainCarouselTrack .comparison-card-desc {
+    height: 168px !important;
+    min-height: 168px !important;
+    max-height: 168px !important;
+  }
+}
+.comparison-card-desc {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box;
 }
 
 /* Pilot Test Carousel in Validazione & User Testing */
