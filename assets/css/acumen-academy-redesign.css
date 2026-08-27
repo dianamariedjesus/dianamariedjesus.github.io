@@ -492,7 +492,9 @@ body {
 .nielsen-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
 }
 .nielsen-title {
   font-family: 'Poppins', sans-serif;
@@ -500,15 +502,20 @@ body {
   font-weight: 700;
   color: #1E293B;
   margin: 0;
+  flex: 1;
+  min-width: 0;
 }
 .nielsen-score {
   background-color: #F7F3FA;
   color: #5A189A;
   border: 1px solid rgba(90, 24, 154, 0.15);
   font-weight: 700;
-  font-size: 14px;
-  padding: 2px 10px;
+  font-size: 13.5px;
+  padding: 3px 10px;
   border-radius: 12px;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: inline-block;
 }
 .nielsen-desc {
   font-family: 'Poppins', sans-serif;
@@ -1404,7 +1411,7 @@ body {
     margin-bottom: 8px !important;
   }
 
-  /* Infografica Nielsen su Tablet (2 colonne con altezze/larghezze uguali) */
+  /* Infografica Nielsen su Tablet (2 colonne con altezze/larghezze uguali e score su 1 riga) */
   .nielsen-scores-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1425,30 +1432,48 @@ body {
     grid-column: span 2 !important;
     min-height: auto !important;
   }
+  .nielsen-card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+  .nielsen-title {
+    font-size: 13.5px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .nielsen-score {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 13px !important;
+    padding: 3px 9px !important;
+  }
 
-  /* Infografica WCAG su Tablet (Griglia 4x4 / 4 colonne) */
+  /* Infografica WCAG su Tablet (2 colonne: 2 card a sinistra, 2 card a destra) */
   .wcag-cards-grid {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 12px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
     align-items: stretch !important;
   }
   .wcag-card {
-    padding: 12px !important;
+    padding: 16px !important;
     height: 100% !important;
     box-sizing: border-box !important;
   }
   .wcag-card-title {
-    font-size: 12.5px !important;
-    margin-bottom: 8px !important;
-    min-height: 36px !important;
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    min-height: auto !important;
   }
   .wcag-label {
-    font-size: 10.5px !important;
+    font-size: 11.5px !important;
   }
   .wcag-text {
-    font-size: 11.5px !important;
-    line-height: 1.35 !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
   }
 
   /* Altre Griglie su Tablet */
@@ -1646,6 +1671,24 @@ body {
     grid-column: span 1 !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+  .nielsen-card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+  .nielsen-title {
+    font-size: 13.5px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .nielsen-score {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 12.5px !important;
+    padding: 2px 8px !important;
   }
 
   /* Tabella Competitor Analysis con scroll orizzontale su Mobile */
