@@ -1293,29 +1293,66 @@ body {
 /* 1. TABLET VIEWPORT (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .case-study-container {
-    padding: 0 32px;
+    padding: 0 32px !important;
+  }
+
+  /* Hero Image & Main Title on Tablet */
+  .case-study-hero {
+    margin: 24px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .case-study-hero .hero-cover-img {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
   }
   .case-study-title-section .main-title {
-    font-size: 28px;
-    line-height: 1.3;
+    font-size: 24px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 20px 0 !important;
   }
-  
-  /* Metadata Grid on Tablet */
+
+  /* Metadata Grid 2x2 on Tablet */
   .metadata-section {
-    margin-top: 64px;
+    margin-top: 48px !important;
   }
   .metadata-section .metadata-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 24px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .metadata-section .metadata-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .metadata-section .metadata-heading {
-    font-size: 16.5px;
-    margin-bottom: 12px;
+    font-size: 15.5px !important;
+    margin-bottom: 10px !important;
   }
   .metadata-section .metadata-text {
-    font-size: 14.5px;
-    line-height: 1.45;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Section Titles & Paragraphs on Tablet */
+  .content-sections-wrapper {
+    gap: 48px !important;
+  }
+  .section-title {
+    font-size: 20px !important;
+    margin-bottom: 14px !important;
+  }
+  .section-paragraph {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 14px !important;
   }
 
   /* Infografiche & Griglie su Tablet */
@@ -1326,8 +1363,9 @@ body {
   .metrics-cards-grid,
   .protocol-cards-grid,
   .survey-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 
   /* Reset Card Heights on Tablet */
@@ -1335,10 +1373,12 @@ body {
   .survey-cards-grid .survey-card,
   .persona-card,
   .wcag-card,
-  .metric-card {
+  .metric-card,
+  .nielsen-card,
+  .protocol-card {
     min-height: auto !important;
     height: auto !important;
-    padding: 20px;
+    padding: 20px !important;
   }
   .problem-card-header,
   .problem-section-body,
@@ -1347,25 +1387,27 @@ body {
   .survey-body-section {
     min-height: auto !important;
     height: auto !important;
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
   }
 
   /* Caroselli & Tab Navigation su Tablet */
   .main-carousel-tabs {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding-bottom: 8px;
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    padding-bottom: 8px !important;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
   }
   .main-carousel-tab {
-    white-space: nowrap;
-    flex-shrink: 0;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
   .comparison-grid-3col {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
   .comparison-card-item {
     height: auto !important;
@@ -1374,13 +1416,13 @@ body {
   }
   .comparison-card-header {
     height: auto !important;
-    min-height: 44px;
+    min-height: 44px !important;
   }
   .comparison-img-wrapper {
     height: auto !important;
     min-height: auto !important;
     max-height: 380px !important;
-    overflow-y: auto;
+    overflow-y: auto !important;
   }
   .comparison-card-desc {
     height: auto !important;
@@ -1390,8 +1432,9 @@ body {
     flex: none !important;
   }
   .mod-img-container-box {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
   }
   .mod-img-container-box .comparison-img-wrapper {
     height: auto !important;
@@ -1401,49 +1444,79 @@ body {
 
   /* Other Works Grid su Tablet */
   .other-works-grid {
-    flex-direction: row;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
   }
   .other-work-card {
-    flex: 1;
-    max-width: 50%;
+    flex: 1 !important;
+    max-width: 50% !important;
   }
 }
 
 /* 2. MOBILE VIEWPORT (320px - 767px) */
 @media (max-width: 767px) {
   .case-study-container {
-    padding: 0 16px;
+    padding: 0 16px !important;
+  }
+
+  /* Hero Image & Main Title on Mobile */
+  .case-study-hero {
+    margin: 16px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .case-study-hero .hero-cover-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
   }
   .case-study-title-section .main-title {
-    font-size: 21px;
-    line-height: 1.35;
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 16px 0 !important;
   }
-  .section-title {
-    font-size: 19px;
-    margin-bottom: 14px;
-  }
-  .section-paragraph {
-    font-size: 14px;
-    line-height: 1.55;
-  }
-  
-  /* Metadata Grid on Mobile */
+
+  /* Metadata Grid Single Column on Mobile */
   .metadata-section {
-    margin-top: 48px;
+    margin-top: 36px !important;
   }
   .metadata-section .metadata-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .metadata-section .metadata-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .metadata-section .metadata-heading {
-    font-size: 15.5px;
-    margin-bottom: 10px;
+    font-size: 14.5px !important;
+    margin-bottom: 6px !important;
   }
   .metadata-section .metadata-text {
-    font-size: 14px;
-    line-height: 1.45;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Section Titles & Paragraphs on Mobile */
+  .content-sections-wrapper {
+    gap: 36px !important;
+  }
+  .section-title {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+  .section-paragraph {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
   }
 
   /* Infografiche & Griglie su Mobile */
@@ -1454,8 +1527,9 @@ body {
   .metrics-cards-grid,
   .protocol-cards-grid,
   .survey-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
   /* Reset Card Heights on Mobile */
@@ -1468,7 +1542,7 @@ body {
   .protocol-card {
     min-height: auto !important;
     height: auto !important;
-    padding: 16px;
+    padding: 16px !important;
   }
   .problem-card-header,
   .problem-section-body,
@@ -1477,27 +1551,29 @@ body {
   .survey-body-section {
     min-height: auto !important;
     height: auto !important;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   /* Caroselli & Tab Navigation su Mobile */
   .main-carousel-tabs {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding-bottom: 6px;
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    padding-bottom: 6px !important;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
   }
   .main-carousel-tab {
-    white-space: nowrap;
-    font-size: 12px;
-    padding: 6px 12px;
-    flex-shrink: 0;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    flex-shrink: 0 !important;
   }
   .comparison-grid-3col {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
   .comparison-card-item {
     height: auto !important;
@@ -1506,31 +1582,32 @@ body {
   }
   .comparison-card-header {
     height: auto !important;
-    min-height: 42px;
-    padding: 8px 12px;
-    font-size: 12.5px;
+    min-height: 42px !important;
+    padding: 8px 12px !important;
+    font-size: 12.5px !important;
   }
   .comparison-img-wrapper {
     height: auto !important;
     min-height: auto !important;
     max-height: 280px !important;
-    overflow-y: auto;
+    overflow-y: auto !important;
   }
   .comparison-card-desc {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
     margin-top: 0 !important;
-    padding: 12px;
-    font-size: 12.5px;
+    padding: 12px !important;
+    font-size: 12.5px !important;
     flex: none !important;
   }
   
   /* Section 5 Modifiche su Mobile */
   .mod-img-container-box {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 10px !important;
   }
   .mod-img-container-box .comparison-img-wrapper {
     height: auto !important;
@@ -1540,25 +1617,27 @@ body {
 
   /* Section Pilot Test su Mobile */
   .pilot-carousel-wrapper .main-carousel-slide div[style*="grid-template-columns"] {
+    display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 10px;
-    padding: 10px;
+    gap: 10px !important;
+    padding: 10px !important;
   }
 
   /* Video & Interactive Prototype Box su Mobile */
   .video-container-box {
-    border-radius: 8px;
+    border-radius: 8px !important;
   }
 
   /* Other Works Grid su Mobile */
   .other-works-grid {
-    flex-direction: column;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
   }
   .other-work-card {
     width: 100% !important;
     max-width: 100% !important;
-    flex: none;
+    flex: none !important;
   }
 
   /* Modal Lightbox su Mobile */
