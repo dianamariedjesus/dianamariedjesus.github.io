@@ -1298,32 +1298,40 @@ body {
 
   /* Hero Image & Main Title on Tablet */
   .case-study-hero {
-    margin: 24px 0 !important;
+    margin: 20px 0 0 0 !important;
+    padding: 0 32px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
     display: flex !important;
     justify-content: center !important;
   }
+  .case-study-hero img,
+  .case-study-hero .hero-img,
   .case-study-hero .hero-cover-img {
     width: 100% !important;
-    max-width: 600px !important;
+    max-width: 420px !important;
     height: auto !important;
     margin: 0 auto !important;
     border-radius: 10px !important;
+  }
+  .case-study-title-section {
+    margin-top: 24px !important;
   }
   .case-study-title-section .main-title {
     font-size: 24px !important;
     line-height: 1.35 !important;
     text-align: center !important;
-    margin: 20px 0 !important;
+    margin: 0 !important;
   }
 
-  /* Metadata Grid 2x2 on Tablet */
+  /* Metadata Grid ALWAYS 4 COLUMNS on Tablet */
   .metadata-section {
-    margin-top: 48px !important;
+    margin-top: 36px !important;
   }
   .metadata-section .metadata-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 28px 24px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -1333,12 +1341,12 @@ body {
     box-sizing: border-box !important;
   }
   .metadata-section .metadata-heading {
-    font-size: 15.5px !important;
-    margin-bottom: 10px !important;
+    font-size: 13.5px !important;
+    margin-bottom: 8px !important;
   }
   .metadata-section .metadata-text {
-    font-size: 14px !important;
-    line-height: 1.45 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
   }
 
   /* Section Titles & Paragraphs on Tablet */
@@ -1462,10 +1470,15 @@ body {
 
   /* Hero Image & Main Title on Mobile */
   .case-study-hero {
-    margin: 16px 0 !important;
+    margin: 16px 0 0 0 !important;
+    padding: 0 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
     display: flex !important;
     justify-content: center !important;
   }
+  .case-study-hero img,
+  .case-study-hero .hero-img,
   .case-study-hero .hero-cover-img {
     width: 100% !important;
     max-width: 100% !important;
@@ -1473,11 +1486,14 @@ body {
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
+  .case-study-title-section {
+    margin-top: 16px !important;
+  }
   .case-study-title-section .main-title {
     font-size: 19px !important;
     line-height: 1.35 !important;
     text-align: center !important;
-    margin: 16px 0 !important;
+    margin: 0 !important;
   }
 
   /* Metadata Grid Single Column on Mobile */
