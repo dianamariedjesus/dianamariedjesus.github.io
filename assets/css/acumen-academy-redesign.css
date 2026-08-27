@@ -1369,18 +1369,26 @@ body {
   .case-study-section {
     gap: 8px !important;
   }
-  .case-study-section .section-title {
+  .case-study-section .section-title,
+  .section-title {
     font-size: 15px !important;
-    margin-bottom: 4px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
   }
-  .case-study-section .section-subtitle {
+  .case-study-section .section-subtitle,
+  .section-subtitle {
     font-size: 16.5px !important;
     margin-bottom: 4px !important;
   }
-  .section-paragraph {
+  .section-paragraph,
+  .section-list li {
     font-size: 14px !important;
     line-height: 1.5 !important;
     margin-bottom: 8px !important;
+  }
+  .section-list {
+    margin-top: 14px !important;
+    margin-bottom: 14px !important;
   }
   .section-paragraph:last-child {
     margin-bottom: 0 !important;
@@ -1488,7 +1496,7 @@ body {
     flex-direction: column !important;
     justify-content: flex-start !important;
     align-items: stretch !important;
-    gap: 10px !important;
+    gap: 8px !important;
     min-height: auto !important;
     height: 100% !important;
     padding: 14px !important;
@@ -1502,7 +1510,7 @@ body {
     gap: 8px !important;
     padding: 0 0 8px 0 !important;
     margin-top: 0 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
     border-bottom: 1px dashed #E2E8F0 !important;
   }
   .persona-avatar-wrapper {
@@ -1536,17 +1544,17 @@ body {
     line-height: 1.35 !important;
   }
   .persona-card .block-profilo {
-    min-height: 105px !important;
+    min-height: 88px !important;
   }
   .persona-card .block-needs {
-    min-height: 105px !important;
+    min-height: 88px !important;
   }
   .persona-card .block-pains {
-    min-height: 95px !important;
+    min-height: 78px !important;
   }
   .persona-card .persona-goal-box {
     padding: 8px 10px !important;
-    min-height: 75px !important;
+    min-height: 70px !important;
     margin-top: auto !important;
     box-sizing: border-box !important;
   }
@@ -1724,18 +1732,26 @@ body {
   .case-study-section {
     gap: 6px !important;
   }
-  .case-study-section .section-title {
+  .case-study-section .section-title,
+  .section-title {
     font-size: 14px !important;
+    line-height: 1.35 !important;
     margin-bottom: 4px !important;
   }
-  .case-study-section .section-subtitle {
+  .case-study-section .section-subtitle,
+  .section-subtitle {
     font-size: 15.5px !important;
     margin-bottom: 4px !important;
   }
-  .section-paragraph {
+  .section-paragraph,
+  .section-list li {
     font-size: 13px !important;
     line-height: 1.45 !important;
     margin-bottom: 6px !important;
+  }
+  .section-list {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
   .section-paragraph:last-child {
     margin-bottom: 0 !important;
