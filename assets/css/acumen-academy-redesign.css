@@ -1190,7 +1190,7 @@ body {
   }
   .comparison-card-desc {
     margin-top: 0 !important;
-    min-height: 140px;
+    min-height: 206.6px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1662,7 +1662,7 @@ body {
   background-color: #FFFFFF;
   border-top: 1px solid #F1F5F9;
   margin-top: 0;
-  min-height: 115px;
+  min-height: 168px;
   flex: 1;
   display: flex;
   flex-direction: column;
