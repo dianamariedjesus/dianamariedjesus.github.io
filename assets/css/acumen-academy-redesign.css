@@ -1349,18 +1349,31 @@ body {
     line-height: 1.4 !important;
   }
 
-  /* Section Titles & Paragraphs on Tablet */
+  /* Section Titles & Content Wrapper Spacing on Tablet */
   .content-sections-wrapper {
-    gap: 48px !important;
+    gap: 40px !important;
   }
-  .section-title {
-    font-size: 20px !important;
-    margin-bottom: 14px !important;
+  .content-sections-wrapper:first-of-type {
+    margin-top: 48px !important;
+  }
+  .case-study-section {
+    gap: 8px !important;
+  }
+  .case-study-section .section-title {
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .section-subtitle {
+    font-size: 16.5px !important;
+    margin-bottom: 4px !important;
   }
   .section-paragraph {
     font-size: 14px !important;
-    line-height: 1.55 !important;
-    margin-bottom: 14px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .section-paragraph:last-child {
+    margin-bottom: 0 !important;
   }
 
   /* Infografiche & Griglie su Tablet */
@@ -1521,18 +1534,31 @@ body {
     line-height: 1.4 !important;
   }
 
-  /* Section Titles & Paragraphs on Mobile */
+  /* Section Titles & Content Wrapper Spacing on Mobile */
   .content-sections-wrapper {
-    gap: 36px !important;
+    gap: 32px !important;
   }
-  .section-title {
-    font-size: 18px !important;
-    margin-bottom: 12px !important;
+  .content-sections-wrapper:first-of-type {
+    margin-top: 32px !important;
+  }
+  .case-study-section {
+    gap: 6px !important;
+  }
+  .case-study-section .section-title {
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .section-subtitle {
+    font-size: 15.5px !important;
+    margin-bottom: 4px !important;
   }
   .section-paragraph {
     font-size: 13px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 12px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 10px !important;
+  }
+  .section-paragraph:last-child {
+    margin-bottom: 0 !important;
   }
 
   /* Infografiche & Griglie su Mobile */
