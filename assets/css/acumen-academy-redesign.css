@@ -1535,9 +1535,20 @@ body {
     font-size: 11.5px !important;
     line-height: 1.35 !important;
   }
-  .persona-goal-box {
+  .persona-card .block-profilo {
+    min-height: 105px !important;
+  }
+  .persona-card .block-needs {
+    min-height: 105px !important;
+  }
+  .persona-card .block-pains {
+    min-height: 95px !important;
+  }
+  .persona-card .persona-goal-box {
     padding: 8px 10px !important;
-    margin-top: 6px !important;
+    min-height: 75px !important;
+    margin-top: auto !important;
+    box-sizing: border-box !important;
   }
 
   /* Altre Griglie su Tablet */
@@ -1827,34 +1838,45 @@ body {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
+  /* Carosello Wireframe & UI su Mobile con altezza uniforme fissa a 460.25px */
   #mainCarouselTrack .comparison-card-item,
   .comparison-card-item {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+    height: 460.25px !important;
+    min-height: 460.25px !important;
+    max-height: 460.25px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
   .comparison-card-header {
-    height: auto !important;
-    min-height: 42px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
     padding: 8px 12px !important;
     font-size: 12.5px !important;
+    box-sizing: border-box !important;
   }
   #mainCarouselTrack .comparison-img-wrapper,
   .comparison-img-wrapper {
-    height: 260px !important;
-    min-height: 260px !important;
-    max-height: 260px !important;
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
     overflow-y: auto !important;
+    box-sizing: border-box !important;
   }
   #mainCarouselTrack .comparison-card-desc,
   .comparison-card-desc {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+    height: 164.25px !important;
+    min-height: 164.25px !important;
+    max-height: 164.25px !important;
     margin-top: 0 !important;
     padding: 12px !important;
     font-size: 12.5px !important;
-    flex: none !important;
+    line-height: 1.4 !important;
+    flex: 1 !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
   }
   
   /* Section 5 Modifiche su Mobile */
