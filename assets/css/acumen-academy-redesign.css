@@ -1184,8 +1184,7 @@ body {
     object-position: top center;
     display: block;
   }
-  .comparison-card-item,
-  .wireframe-ui-container .comparison-card-item {
+  #mainCarouselTrack .comparison-card-item {
     height: 461px !important;
     min-height: 461px !important;
     max-height: 461px !important;
@@ -1194,8 +1193,7 @@ body {
     min-height: 48px;
     height: 48px;
   }
-  .comparison-card-desc,
-  .wireframe-ui-container .comparison-card-desc {
+  #mainCarouselTrack .comparison-card-desc {
     margin-top: 0 !important;
     height: 206.6px !important;
     min-height: 206.6px !important;
@@ -1204,6 +1202,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+  .pilot-carousel-wrapper .comparison-card-item {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  .pilot-carousel-wrapper .comparison-card-desc {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    margin-top: 0 !important;
+    padding: 14px 16px;
+    flex: none !important;
   }
   .lightbox-modal-content,
   .lightbox-img-scroll-container {
@@ -1609,8 +1620,7 @@ body {
   gap: 16px;
   align-items: stretch !important;
 }
-.comparison-card-item,
-.wireframe-ui-container .comparison-card-item {
+#mainCarouselTrack .comparison-card-item {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 10px;
@@ -1666,8 +1676,7 @@ body {
   height: auto;
   display: block;
 }
-.comparison-card-desc,
-.wireframe-ui-container .comparison-card-desc {
+#mainCarouselTrack .comparison-card-desc {
   padding: 14px;
   font-size: 13px;
   color: #475569;
@@ -1683,6 +1692,25 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
+}
+
+/* Pilot Test Carousel in Validazione & User Testing */
+.pilot-carousel-wrapper .comparison-card-item {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  border: none;
+  box-shadow: none;
+}
+.pilot-carousel-wrapper .comparison-card-desc {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  margin-top: 0 !important;
+  padding: 14px 16px;
+  flex: none !important;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: none;
 }
 
 /* Browser Mockup Frame */
