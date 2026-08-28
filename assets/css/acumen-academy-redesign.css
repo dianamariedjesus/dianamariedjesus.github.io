@@ -2292,6 +2292,9 @@ body {
 }
 .lightbox-nav-btn.hidden {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 .lightbox-nav-btn.prev {
   left: -58px !important;
