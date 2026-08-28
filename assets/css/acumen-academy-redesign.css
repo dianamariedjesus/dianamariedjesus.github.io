@@ -1675,11 +1675,35 @@ body {
     overflow-y: auto !important;
     box-sizing: border-box !important;
   }
-  .modifiche-carousel-wrapper .comparison-card-item {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+  /* Tablet: Slide 1, 2, 3 con didascalia in basso e immagini centrate */
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-item,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-item,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 520px !important;
+    min-height: 520px !important;
+    box-sizing: border-box !important;
   }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .mod-img-container-box,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .mod-img-container-box,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .mod-img-container-box {
+    flex: 1 !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-desc,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-desc,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-desc {
+    margin-top: auto !important;
+  }
+
+  /* Tablet: Slide 4 e 5 senza scrollbar sulle immagini */
   .modifiche-carousel-wrapper .comparison-card-desc {
     padding: 16px 20px !important;
     margin: 0 !important;
@@ -1690,15 +1714,12 @@ body {
     box-sizing: border-box !important;
     overflow: visible !important;
   }
-  .mod-img-container-box {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
-  }
   .mod-img-container-box .comparison-img-wrapper {
     height: auto !important;
     min-height: auto !important;
-    max-height: 320px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
   }
   .mod-img-container-box.single-img {
     display: flex !important;
@@ -1709,16 +1730,20 @@ body {
     box-sizing: border-box !important;
   }
   .mod-img-container-box.single-img .comparison-img-wrapper {
-    max-width: 580px !important;
+    max-width: 100% !important;
     width: 100% !important;
     margin: 0 auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    max-height: none !important;
   }
   .mod-img-container-box.single-img .comparison-card-img {
     max-width: 100% !important;
     height: auto !important;
+    max-height: none !important;
     margin: 0 auto !important;
   }
 
@@ -2136,6 +2161,29 @@ body {
     overflow-y: visible !important;
   }
 
+  /* Mobile: Ultime 2 slide (Slide 4 e 5) con didascalia in basso e immagine centrata */
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-item,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    min-height: 480px !important;
+    box-sizing: border-box !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .mod-img-container-box,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .mod-img-container-box {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-desc,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-desc {
+    margin-top: auto !important;
+  }
+
   /* Section Pilot Test & 3 Task Infografica su Mobile */
   .pilot-carousel-wrapper {
     margin-top: 0 !important;
@@ -2270,6 +2318,30 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* Non rendere scrollabili le immagini ingrandite su Laptop (1024px) e Tablet */
+@media (min-width: 768px) and (max-width: 1399px) {
+  .lightbox-img-scroll-container {
+    max-height: 80vh !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+  }
+  .lightbox-img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 75vh !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
+  }
 }
 .lightbox-caption {
   margin-top: 14px;
