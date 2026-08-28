@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=103.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=104.0">
 </head>
 
 <body>
@@ -1733,23 +1733,15 @@
       }
     ];
 
-    var mod1Gallery = [
-      { src: 'assets/img/acumen-academy-redesign/slide1-prima.png', title: 'Scansionabilità & Tooltip — PRIMA (As-Is)' },
-      { src: 'assets/img/acumen-academy-redesign/slide1-dopo.png', title: 'Scansionabilità & Tooltip — DOPO (To-Be)' }
-    ];
-    var mod2Gallery = [
-      { src: 'assets/img/acumen-academy-redesign/slide2-prima.png', title: 'Menu Globale & Voce "Get Help" — PRIMA (As-Is)' },
-      { src: 'assets/img/acumen-academy-redesign/slide2-dopo.png', title: 'Menu Globale & Voce "Get Help" — DOPO (To-Be)' }
-    ];
-    var mod3Gallery = [
-      { src: 'assets/img/acumen-academy-redesign/slide3-prima.png', title: 'Card Corsi & Filtri Ottimizzati — PRIMA (As-Is)' },
-      { src: 'assets/img/acumen-academy-redesign/slide3-dopo.png', title: 'Card Corsi & Filtri Ottimizzati — DOPO (To-Be)' }
-    ];
-    var mod4Gallery = [
-      { src: 'assets/img/acumen-academy-redesign/slide4.png', title: 'Accesso Intelligente & Supporto in Dashboard' }
-    ];
-    var mod5Gallery = [
-      { src: 'assets/img/acumen-academy-redesign/slide5.png', title: 'Umanizzazione del Brand & Overlay Live Chat' }
+    var modificheGallery = [
+      { src: 'assets/img/acumen-academy-redesign/slide1-prima.png', title: '1. Scansionabilità & Tooltip — PRIMA (As-Is)' },
+      { src: 'assets/img/acumen-academy-redesign/slide1-dopo.png', title: '1. Scansionabilità & Tooltip — DOPO (To-Be)' },
+      { src: 'assets/img/acumen-academy-redesign/slide2-prima.png', title: '2. Menu Globale & Voce "Get Help" — PRIMA (As-Is)' },
+      { src: 'assets/img/acumen-academy-redesign/slide2-dopo.png', title: '2. Menu Globale & Voce "Get Help" — DOPO (To-Be)' },
+      { src: 'assets/img/acumen-academy-redesign/slide3-prima.png', title: '3. Card Corsi & Filtri Ottimizzati — PRIMA (As-Is)' },
+      { src: 'assets/img/acumen-academy-redesign/slide3-dopo.png', title: '3. Card Corsi & Filtri Ottimizzati — DOPO (To-Be)' },
+      { src: 'assets/img/acumen-academy-redesign/slide4.png', title: '4. Accesso Intelligente & Supporto in Dashboard' },
+      { src: 'assets/img/acumen-academy-redesign/slide5.png', title: '5. Umanizzazione del Brand & Overlay Live Chat' }
     ];
 
     function openVideoModal(videoSrc) {
@@ -1774,32 +1766,44 @@
     function openGalleryModal(index, galleryType) {
       if (galleryType === 'homepage-stages') {
         currentGalleryItems = homepageStagesGallery;
+        currentGalleryIndex = index;
       } else if (galleryType === 'courses-stages') {
         currentGalleryItems = coursesStagesGallery;
+        currentGalleryIndex = index;
       } else if (galleryType === 'course-detail-stages') {
         currentGalleryItems = courseDetailStagesGallery;
+        currentGalleryIndex = index;
       } else if (galleryType === 'dashboard-stages') {
         currentGalleryItems = dashboardStagesGallery;
+        currentGalleryIndex = index;
       } else if (galleryType === 'contact-stages') {
         currentGalleryItems = contactStagesGallery;
+        currentGalleryIndex = index;
       } else if (galleryType === 'pilot-prima') {
-        currentGalleryItems = pilotPrimaGallery;
+        currentGalleryItems = pilotPrimaGallery.concat(pilotDopoGallery);
+        currentGalleryIndex = index;
       } else if (galleryType === 'pilot-dopo') {
-        currentGalleryItems = pilotDopoGallery;
+        currentGalleryItems = pilotPrimaGallery.concat(pilotDopoGallery);
+        currentGalleryIndex = pilotPrimaGallery.length + index;
       } else if (galleryType === 'mod-1') {
-        currentGalleryItems = mod1Gallery;
+        currentGalleryItems = modificheGallery;
+        currentGalleryIndex = index;
       } else if (galleryType === 'mod-2') {
-        currentGalleryItems = mod2Gallery;
+        currentGalleryItems = modificheGallery;
+        currentGalleryIndex = 2 + index;
       } else if (galleryType === 'mod-3') {
-        currentGalleryItems = mod3Gallery;
+        currentGalleryItems = modificheGallery;
+        currentGalleryIndex = 4 + index;
       } else if (galleryType === 'mod-4') {
-        currentGalleryItems = mod4Gallery;
+        currentGalleryItems = modificheGallery;
+        currentGalleryIndex = 6;
       } else if (galleryType === 'mod-5') {
-        currentGalleryItems = mod5Gallery;
+        currentGalleryItems = modificheGallery;
+        currentGalleryIndex = 7;
       } else {
         currentGalleryItems = [];
+        currentGalleryIndex = 0;
       }
-      currentGalleryIndex = index;
       renderGalleryItem();
     }
 
@@ -1842,11 +1846,10 @@
           }
         }
 
-        var hasPrev = currentGalleryIndex > 0;
-        var hasNext = currentGalleryIndex < currentGalleryItems.length - 1;
+        var hasMultiple = currentGalleryItems.length > 1;
 
-        if (prevBtn) prevBtn.style.display = hasPrev ? 'flex' : 'none';
-        if (nextBtn) nextBtn.style.display = hasNext ? 'flex' : 'none';
+        if (prevBtn) prevBtn.style.display = hasMultiple ? 'flex' : 'none';
+        if (nextBtn) nextBtn.style.display = hasMultiple ? 'flex' : 'none';
       }
 
       if (modal) modal.style.display = 'flex';
@@ -1854,11 +1857,9 @@
 
     function navigateLightbox(e, direction) {
       if (e) e.stopPropagation();
-      var newIndex = currentGalleryIndex + direction;
-      if (newIndex >= 0 && newIndex < currentGalleryItems.length) {
-        currentGalleryIndex = newIndex;
-        renderGalleryItem();
-      }
+      if (!currentGalleryItems || currentGalleryItems.length <= 1) return;
+      currentGalleryIndex = (currentGalleryIndex + direction + currentGalleryItems.length) % currentGalleryItems.length;
+      renderGalleryItem();
     }
 
     function closeMediaModal(e) {

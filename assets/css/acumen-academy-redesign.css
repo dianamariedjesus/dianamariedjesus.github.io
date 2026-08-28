@@ -2049,16 +2049,59 @@ body {
     line-height: 1.4 !important;
     overflow: visible !important;
   }
-  .mod-img-container-box {
+  .modifiche-carousel-wrapper .mod-img-container-box {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 10px !important;
-    padding: 10px !important;
+    gap: 6px !important;
+    padding: 6px 8px !important;
+    background-color: #F8FAFC !important;
   }
-  .mod-img-container-box .comparison-img-wrapper {
+  .modifiche-carousel-wrapper .comparison-img-wrapper {
     height: auto !important;
     min-height: auto !important;
-    max-height: 260px !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .modifiche-carousel-wrapper .comparison-card-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 6px !important;
+  }
+
+  /* Altezza fissa ed uniforme a 536px per le prime 3 slide (con 2 immagini) */
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-item,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-item,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-item {
+    height: 536px !important;
+    min-height: 536px !important;
+    max-height: 536px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-desc,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-desc,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-desc {
+    flex: 1 !important;
+    height: auto !important;
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    overflow-y: auto !important;
+  }
+
+  /* Slide 4 e Slide 5 (con 1 immagine) hanno altezza dinamica automatica */
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-item,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-item {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
   }
 
   /* Section Pilot Test & 3 Task Infografica su Mobile */
