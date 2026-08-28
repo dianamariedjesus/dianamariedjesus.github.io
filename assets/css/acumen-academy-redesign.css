@@ -1676,13 +1676,26 @@ body {
     box-sizing: border-box !important;
   }
   /* Tablet: Slide 1, 2, 3 con didascalia in basso e immagini centrate */
+  .modifiche-carousel-wrapper .main-carousel-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+  }
+  .modifiche-carousel-wrapper .wireframe-ui-container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-item,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-item,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-item {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    height: 520px !important;
+    flex: 1 !important;
+    height: 100% !important;
     min-height: 520px !important;
     box-sizing: border-box !important;
   }
@@ -1696,11 +1709,13 @@ body {
     align-items: center !important;
     align-content: center !important;
     justify-items: center !important;
+    margin: auto 0 !important;
   }
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-desc,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-desc,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-desc {
     margin-top: auto !important;
+    width: 100% !important;
   }
 
   /* Tablet: Slide 4 e 5 senza scrollbar sulle immagini */
