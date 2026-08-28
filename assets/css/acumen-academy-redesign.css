@@ -2049,14 +2049,16 @@ body {
     line-height: 1.4 !important;
     overflow: visible !important;
   }
-  .modifiche-carousel-wrapper .mod-img-container-box {
+  .modifiche-carousel-wrapper .mod-img-container-box,
+  .mod-img-container-box {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 6px !important;
     padding: 6px 8px !important;
     background-color: #F8FAFC !important;
   }
-  .modifiche-carousel-wrapper .comparison-img-wrapper {
+  .modifiche-carousel-wrapper .comparison-img-wrapper,
+  .mod-img-container-box .comparison-img-wrapper {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
@@ -2066,20 +2068,23 @@ body {
     border: none !important;
     box-shadow: none !important;
   }
-  .modifiche-carousel-wrapper .comparison-card-img {
+  .modifiche-carousel-wrapper .comparison-card-img,
+  .mod-img-container-box .comparison-card-img {
     display: block !important;
     width: 100% !important;
     height: auto !important;
+    max-height: none !important;
     border-radius: 6px !important;
+    object-fit: initial !important;
   }
 
-  /* Altezza fissa ed uniforme a 536px per le prime 3 slide (con 2 immagini) */
+  /* Altezza fissa ed uniforme a 490px per le prime 3 slide (con 2 immagini) */
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-item,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-item,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-item {
-    height: 536px !important;
-    min-height: 536px !important;
-    max-height: 536px !important;
+    height: 490px !important;
+    min-height: 490px !important;
+    max-height: 490px !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
@@ -2449,25 +2454,27 @@ body {
 .mod-img-container-box.single-img {
   grid-template-columns: 1fr;
 }
-.mod-img-container-box .comparison-img-wrapper {
-  height: 257px !important;
-  min-height: 257px !important;
-  max-height: 257px !important;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F8FAFC;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-.mod-img-container-box .comparison-card-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 257px;
-  object-fit: contain;
-  display: block;
+@media (min-width: 1024px) {
+  .mod-img-container-box .comparison-img-wrapper {
+    height: 257px;
+    min-height: 257px;
+    max-height: 257px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8FAFC;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .mod-img-container-box .comparison-card-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 257px;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 /* 3-Column Comparison Grid */
