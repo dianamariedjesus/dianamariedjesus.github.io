@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=107.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=108.0">
 </head>
 
 <body>
@@ -1848,8 +1848,24 @@
         var hasPrev = currentGalleryIndex > 0;
         var hasNext = currentGalleryIndex < currentGalleryItems.length - 1;
 
-        if (prevBtn) prevBtn.style.display = hasPrev ? 'flex' : 'none';
-        if (nextBtn) nextBtn.style.display = hasNext ? 'flex' : 'none';
+        if (prevBtn) {
+          if (hasPrev) {
+            prevBtn.classList.remove('hidden');
+            prevBtn.style.display = 'flex';
+          } else {
+            prevBtn.classList.add('hidden');
+            prevBtn.style.display = 'none';
+          }
+        }
+        if (nextBtn) {
+          if (hasNext) {
+            nextBtn.classList.remove('hidden');
+            nextBtn.style.display = 'flex';
+          } else {
+            nextBtn.classList.add('hidden');
+            nextBtn.style.display = 'none';
+          }
+        }
       }
 
       if (modal) modal.style.display = 'flex';
