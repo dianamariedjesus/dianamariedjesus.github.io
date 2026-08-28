@@ -210,7 +210,7 @@ body {
 }
 .sfida-card-header {
   background-color: transparent;
-  padding: 18px 18px 4px 18px;
+  padding: 18px 18px 18px 18px !important;
   border-bottom: none;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -218,7 +218,7 @@ body {
   color: #1E293B;
 }
 .sfida-card-body {
-  padding: 4px 18px 18px 18px;
+  padding: 0 18px 18px 18px !important;
   font-family: 'Poppins', sans-serif;
   font-size: 13.5px;
   font-weight: 400;
