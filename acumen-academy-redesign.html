@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=105.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=106.0">
 </head>
 
 <body>
@@ -1846,10 +1846,11 @@
           }
         }
 
-        var hasMultiple = currentGalleryItems.length > 1;
+        var hasPrev = currentGalleryIndex > 0;
+        var hasNext = currentGalleryIndex < currentGalleryItems.length - 1;
 
-        if (prevBtn) prevBtn.style.display = hasMultiple ? 'flex' : 'none';
-        if (nextBtn) nextBtn.style.display = hasMultiple ? 'flex' : 'none';
+        if (prevBtn) prevBtn.style.display = hasPrev ? 'flex' : 'none';
+        if (nextBtn) nextBtn.style.display = hasNext ? 'flex' : 'none';
       }
 
       if (modal) modal.style.display = 'flex';
@@ -1857,9 +1858,11 @@
 
     function navigateLightbox(e, direction) {
       if (e) e.stopPropagation();
-      if (!currentGalleryItems || currentGalleryItems.length <= 1) return;
-      currentGalleryIndex = (currentGalleryIndex + direction + currentGalleryItems.length) % currentGalleryItems.length;
-      renderGalleryItem();
+      var newIndex = currentGalleryIndex + direction;
+      if (newIndex >= 0 && newIndex < currentGalleryItems.length) {
+        currentGalleryIndex = newIndex;
+        renderGalleryItem();
+      }
     }
 
     function closeMediaModal(e) {

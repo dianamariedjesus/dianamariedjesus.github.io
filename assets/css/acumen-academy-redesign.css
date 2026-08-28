@@ -2078,35 +2078,26 @@ body {
     object-fit: initial !important;
   }
 
-  /* Altezza fissa ed uniforme a 490px per le prime 3 slide (con 2 immagini) */
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-item,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-item,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-item {
-    height: 490px !important;
-    min-height: 490px !important;
-    max-height: 490px !important;
+  /* Altezza automatica ed integrata per tutte le slide (senza scrollbar interne) */
+  .modifiche-carousel-wrapper .main-carousel-slide .comparison-card-item {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
   }
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-desc,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-desc,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-desc {
-    flex: 1 !important;
-    height: auto !important;
-    padding: 10px 12px !important;
-    font-size: 12px !important;
-    line-height: 1.35 !important;
-    overflow-y: auto !important;
-  }
-
-  /* Slide 4 e Slide 5 (con 1 immagine) hanno altezza dinamica automatica */
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-item,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-item {
+  .modifiche-carousel-wrapper .main-carousel-slide .comparison-card-desc {
+    flex: none !important;
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
+    padding: 12px 14px !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
   }
 
   /* Section Pilot Test & 3 Task Infografica su Mobile */
@@ -2263,36 +2254,38 @@ body {
 
 /* Lightbox Navigation Arrows (Frecce Sinistra / Destra) */
 .lightbox-nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(15, 23, 42, 0.75);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10001;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(4px);
-  user-select: none;
+  position: fixed !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: rgba(15, 23, 42, 0.88) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+  z-index: 10050 !important;
+  transition: all 0.2s ease !important;
+  backdrop-filter: blur(4px) !important;
+  user-select: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+  pointer-events: auto !important;
 }
 .lightbox-nav-btn.prev {
-  left: 24px;
+  left: 16px !important;
 }
 .lightbox-nav-btn.next {
-  right: 24px;
+  right: 16px !important;
 }
 .lightbox-nav-btn:hover {
-  background-color: #0284C7;
-  border-color: #0284C7;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
+  background-color: #0284C7 !important;
+  border-color: #0284C7 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.5) !important;
 }
 
 /* 5-Slide Pages Carousel Component */
