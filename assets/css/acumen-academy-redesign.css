@@ -1565,6 +1565,7 @@ body {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px !important;
     align-items: stretch !important;
+    margin-top: 0 !important;
   }
   .metric-card {
     padding: 14px !important;
@@ -1675,6 +1676,14 @@ body {
     overflow-y: auto !important;
     box-sizing: border-box !important;
   }
+  .modifiche-carousel-wrapper .comparison-card-desc {
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    min-height: 64px !important;
+    height: auto !important;
+    max-height: none !important;
+    box-sizing: border-box !important;
+  }
   .mod-img-container-box {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -1684,6 +1693,27 @@ body {
     height: auto !important;
     min-height: auto !important;
     max-height: 320px !important;
+  }
+  .mod-img-container-box.single-img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+  }
+  .mod-img-container-box.single-img .comparison-img-wrapper {
+    max-width: 580px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .mod-img-container-box.single-img .comparison-card-img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
 
   /* Pilot Test & 3 Task Infografica su Tablet */
@@ -1960,7 +1990,30 @@ body {
     box-sizing: border-box !important;
   }
   
+  .metrics-cards-grid {
+    margin-top: 0 !important;
+  }
+
   /* Section 5 Modifiche su Mobile */
+  .modifiche-carousel-wrapper .main-carousel-tabs,
+  .mod-carousel-tabs-row {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding-bottom: 8px !important;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  .modifiche-carousel-wrapper .main-carousel-tab {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
   .mod-img-container-box {
     display: grid !important;
     grid-template-columns: 1fr !important;
