@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <title>Diana de Jesus | IncluDO - Copywriting & Content Strategy</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  
+  <!-- Case Study CSS -->
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=1.0">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-white">
+    <div class="container-fluid mobile-nav-container">
+      <!-- Diana Logo -->
+      <a class="navbar-brand" href="./">
+        <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links (Centered) -->
+      <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+        <a href="./#lavori" class="nav-link custom-nav-link active">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+
+      <!-- Language Selector Dropdown (Right) -->
+      <div class="language-dropdown-wrapper d-none d-md-block">
+        <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+        <label for="lang-menu-toggle" class="lang-selector">
+          <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">IT</span>
+          <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </label>
+        <div class="lang-dropdown-menu">
+          <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
+          <a href="#" class="lang-item"><strong>EN</strong> <span>English</span></a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <input type="checkbox" id="mobile-menu-toggle" class="d-md-none">
+      <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none" aria-label="Toggle navigation">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </label>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-overlay-menu d-md-none">
+        <div class="mobile-nav-links">
+          <a href="./#lavori" class="custom-nav-link active">I miei lavori</a>
+          <a href="chi-sono.html" class="custom-nav-link">Chi sono</a>
+          <a href="contatti.html" class="custom-nav-link">Contattami</a>
+        </div>
+        <div class="mobile-lang-selector">
+          <button type="button" class="mobile-lang-btn active">
+            <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+          </button>
+          <button type="button" class="mobile-lang-btn">
+            <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Case Study Content -->
+  <main class="case-study-wrapper">
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-nav">
+      <div class="sidebar-lines">
+        <span class="nav-line line-1 active"></span>
+        <span class="nav-line line-2"></span>
+        <span class="nav-line line-3"></span>
+        <span class="nav-line line-4"></span>
+        <span class="nav-line line-5"></span>
+      </div>
+      <div class="sidebar-overlay">
+        <a href="#la-sfida" class="overlay-link active">La Sfida</a>
+        <a href="#strategia" class="overlay-link">Strategia e Scelte</a>
+        <a href="#headline" class="overlay-link" style="padding-left: 20px; font-size: 11.5px;">Headline &amp; Subheadline</a>
+        <a href="#ux-writing" class="overlay-link" style="padding-left: 20px; font-size: 11.5px;">UX Writing e Layout</a>
+        <a href="#cialdini" class="overlay-link" style="padding-left: 20px; font-size: 11.5px;">Leve di Persuasione</a>
+        <a href="#risultati" class="overlay-link">Risultati e Deliverable</a>
+      </div>
+    </div>
+
+    <!-- Copertina Hero (Placeholder) -->
+    <div class="case-study-hero">
+      <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png" alt="IncluDO Copywriting &amp; Content Strategy Copertina Hero" class="hero-img">
+    </div>
+
+    <div class="case-study-container">
+      
+      <!-- Titolo Principale -->
+      <section class="case-study-title-section">
+        <h1 class="main-title"><span class="client-name">IncluDO</span>&nbsp;&nbsp;|&nbsp;&nbsp;Copywriting &amp; Content Strategy</h1>
+      </section>
+
+      <!-- Tabella Metadata (4 Colonne) -->
+      <section class="metadata-section">
+        <div class="metadata-grid">
+          <div class="metadata-column">
+            <h2 class="metadata-heading">PROGETTO</h2>
+            <p class="metadata-text">IncluDO (Concept Project)</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">RUOLO</h2>
+            <p class="metadata-text">Copywriter &amp; Content Designer</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">COMPETENZE</h2>
+            <p class="metadata-text list-text">SEO Copywriting</p>
+            <p class="metadata-text list-text">Persuasive Writing</p>
+            <p class="metadata-text list-text">Storytelling</p>
+            <p class="metadata-text list-text">Content Strategy</p>
+          </div>
+          <div class="metadata-column">
+            <h2 class="metadata-heading">STRUMENTI</h2>
+            <p class="metadata-text list-text">Google Docs</p>
+            <p class="metadata-text list-text">Figma</p>
+            <p class="metadata-text list-text">Canva</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sezioni di Testo Principali -->
+      <div class="content-sections-wrapper">
+        
+        <!-- 1. LA SFIDA -->
+        <section class="case-study-section" id="la-sfida">
+          <h2 class="section-title">LA SFIDA</h2>
+          <p class="section-paragraph">
+            Questo progetto rappresenta l'evoluzione narrativa del lavoro svolto sull'identità visiva di IncluDO. Dopo aver definito il brand, sentivo il bisogno di creare una strategia di contenuti capace di dare voce all'iniziativa e sensibilizzare le persone sul valore del lavoro manuale. Ho voluto esplorare come la scrittura possa diventare un ponte di fiducia per avvicinare il pubblico a tematiche sociali complesse.
+          </p>
+
+          <!-- [INFOGRAFICA - 3 CARD] -->
+          <div class="sfida-cards-grid">
+            <!-- Card 1: Contesto -->
+            <div class="sfida-card">
+              <div class="sfida-card-header">Contesto</div>
+              <div class="sfida-card-body">
+                IncluDO è un ente no-profit nato per contrastare lo spopolamento dei piccoli borghi e la chiusura delle botteghe storiche. L'iniziativa propone corsi gratuiti per tramandare i mestieri tradizionali a giovani, persone migranti e categorie svantaggiate.
+              </div>
+            </div>
+
+            <!-- Card 2: L'Obiettivo Chiave -->
+            <div class="sfida-card">
+              <div class="sfida-card-header">L'Obiettivo Chiave</div>
+              <div class="sfida-card-body">
+                Non bastava spiegare le attività dell'ente in modo istituzionale. Serviva un articolo di blog capace di coinvolgere i lettori e guidarli verso azioni concrete di supporto, come l'iscrizione ai corsi, l'acquisto nello shop solidale o il volontariato.
+              </div>
+            </div>
+
+            <!-- Card 3: Requisiti e Limiti -->
+            <div class="sfida-card">
+              <div class="sfida-card-header">Requisiti e Limiti</div>
+              <div class="sfida-card-body">
+                Il brief richiedeva la stesura di un articolo approfondito (oltre 1.500 parole) con definizione del target, tono di voce, integrazione di fonti autorevoli e applicazione pratica di tecniche di persuasione e Call to Action.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. STRATEGIA E SCELTE DI PROGETTO -->
+        <section class="case-study-section" id="strategia">
+          <h2 class="section-title">STRATEGIA E SCELTE DI PROGETTO</h2>
+          <p class="section-paragraph">
+            Per trasformare un tema complesso in una lettura piacevole, ho strutturato l'articolo combinando tecniche di UX Writing e psicologia comportamentale. Ho curato la gerarchia visiva per non appesantire la pagina e ho integrato i principi di persuasione di Cialdini all'interno della narrazione.
+          </p>
+          <p class="section-paragraph">
+            L'obiettivo era informare con trasparenza e orientarsi verso soluzioni concrete senza mai cadere in toni pietistici o troppo drammatici sulla crisi dei borghi.
+          </p>
+
+          <!-- Il Pubblico di Riferimento -->
+          <h3 class="subsection-title">Il Pubblico di Riferimento</h3>
+          <p class="section-paragraph">
+            L'articolo parla a un pubblico ampio (dai 18 anni in su) sensibile al valore del fatto a mano, al volontariato e all'inclusione sociale, interessato a sostenere iniziative concrete sul territorio.
+          </p>
+
+          <!-- Headline & Subheadline -->
+          <div id="headline" style="scroll-margin-top: 100px;">
+            <h3 class="subsection-title">Headline &amp; Subheadline</h3>
+            <p class="section-paragraph">
+              Per l'apertura ho progettato un titolo pensato per stimolare la curiosità sul valore nascosto dell'artigianato (<em>"Riscoprire il valore dei lavori artigianali: la storia ispiratrice di IncluDO"</em>), affiancato da un sottotitolo esplicativo che anticipa subito l'incontro tra tradizione e inclusione per impostare le giuste aspettative.
+            </p>
+
+            <!-- [IMMAGINE PLACEHOLDER; didascalia] -->
+            <div class="cover-placeholder-wrapper">
+              <div class="cover-img-placeholder-box">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <div class="cover-placeholder-title">[IMMAGINE PLACEHOLDER - COVER DELL'ARTICOLO]</div>
+                <div class="cover-placeholder-desc">Immagine di copertina con Headline e Subheadline strutturate</div>
+              </div>
+              <div class="cover-caption-box">
+                <strong>Didascalia:</strong> Cover dell'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.
+              </div>
+            </div>
+          </div>
+
+          <!-- UX Writing e Layout -->
+          <div id="ux-writing" style="scroll-margin-top: 100px;">
+            <h3 class="subsection-title">UX Writing e Layout</h3>
+            <p class="section-paragraph">
+              Organizzare il testo in modo chiaro è fondamentale per aiutare il lettore a orientarsi senza affaticare la vista. Per questo ho adottato un'impostazione visiva pulita:
+            </p>
+
+            <!-- [CAROSELLO DI IMMAGINI 1 - UX WRITING] -->
+            <div class="main-carousel-wrapper" id="carousel-ux-writing">
+              <!-- Navigation Tabs -->
+              <div class="main-carousel-nav-bar">
+                <div class="main-carousel-tabs">
+                  <button type="button" class="main-carousel-tab active" onclick="switchCarouselSlide('ux', 0)">Indice iniziale</button>
+                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('ux', 1)">Paragrafi brevi &amp; Spazi</button>
+                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('ux', 2)">Elementi ingaggianti</button>
+                </div>
+              </div>
+
+              <!-- Viewport & Track -->
+              <div class="main-carousel-viewport">
+                <div class="main-carousel-track" id="track-ux" style="transform: translateX(0%);">
+                  
+                  <!-- Slide 1 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 1 - SLIDE 1: INDICE INIZIALE]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione layout con Indice dei macro-temi</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Indice iniziale:</strong> Permette a chi legge di orientarsi subito tra i macro-temi e saltare alla sezione di proprio interesse.
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <line x1="7" y1="8" x2="17" y2="8"></line>
+                        <line x1="7" y1="12" x2="17" y2="12"></line>
+                        <line x1="7" y1="16" x2="13" y2="16"></line>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 1 - SLIDE 2: PARAGRAFI BREVI]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione paragrafi brevi e scansionabilità</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Paragrafi brevi e spazi bianchi:</strong> Blocchi di testo di massimo 3-4 righe separati da ampi spazi per garantire una scansionabilità ottimale ed evitare l'effetto muro di testo.
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 1 - SLIDE 3: ELEMENTI INGAGGIANTI]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione domande retoriche e grassetti mirati</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Elementi ingaggianti:</strong> Domande retoriche rivolte direttamente al lettore per stimolare la riflessione, immagini descrittive a supporto dei passaggi chiave e uso strategico del grassetto per guidare l'occhio sui concetti più importanti.
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Navigation Controls -->
+              <button type="button" class="main-carousel-nav-btn prev" onclick="moveCarouselSlide('ux', -1)" aria-label="Slide precedente">&#10094;</button>
+              <button type="button" class="main-carousel-nav-btn next" onclick="moveCarouselSlide('ux', 1)" aria-label="Slide successiva">&#10095;</button>
+
+              <!-- Indicators Dots -->
+              <div class="main-carousel-indicators" id="dots-ux">
+                <span class="carousel-dot active" onclick="switchCarouselSlide('ux', 0)"></span>
+                <span class="carousel-dot" onclick="switchCarouselSlide('ux', 1)"></span>
+                <span class="carousel-dot" onclick="switchCarouselSlide('ux', 2)"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leve di Persuasione (Cialdini) -->
+          <div id="cialdini" style="scroll-margin-top: 100px;">
+            <h3 class="subsection-title">Leve di Persuasione (Cialdini)</h3>
+            <p class="section-paragraph">
+              Una copy efficace non si limita a informare, ma accompagna il pubblico lungo una sequenza logica ed emotiva che lo convince a compiere un'azione concreta. Per guidare il lettore in questo percorso di fidelizzazione, ho integrato nel testo diverse tecniche di persuasione:
+            </p>
+
+            <!-- [CAROSELLO DI IMMAGINI 2 - LEVE DI PERSUASIONE] -->
+            <div class="main-carousel-wrapper" id="carousel-cialdini">
+              <!-- Navigation Tabs -->
+              <div class="main-carousel-nav-bar">
+                <div class="main-carousel-tabs">
+                  <button type="button" class="main-carousel-tab active" onclick="switchCarouselSlide('cialdini', 0)">Autorevolezza</button>
+                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('cialdini', 1)">Scarsità e Urgenza</button>
+                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('cialdini', 2)">Reciprocità</button>
+                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('cialdini', 3)">Riprova Sociale</button>
+                </div>
+              </div>
+
+              <!-- Viewport & Track -->
+              <div class="main-carousel-viewport">
+                <div class="main-carousel-track" id="track-cialdini" style="transform: translateX(0%);">
+                  
+                  <!-- Slide 1 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 2 - SLIDE 1: AUTOREVOLEZZA]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione citazioni dati ufficiali INPS</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Autorevolezza:</strong> Ho citato i dati ufficiali INPS sul calo delle botteghe artigiane per mostrare la gravità reale del problema.
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 2 - SLIDE 2: SCARSITÀ E URGENZA]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione data di scadenza e posti limitati</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Scarsità e Urgenza:</strong> Ho inserito una data di scadenza per la candidatura ai corsi di formazione con posti limitati, incoraggiando un'azione tempestiva.
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                        <rect x="2" y="7" width="20" height="5"></rect>
+                        <line x1="12" y1="22" x2="12" y2="7"></line>
+                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 2 - SLIDE 3: RECIPROCITÀ]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione box sconto 30% per iscrizione newsletter</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Reciprocità:</strong> Ho inserito un box con uno sconto del 30% sui prodotti artigianali riservato a chi si iscrive alla newsletter.
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 -->
+                  <div class="main-carousel-slide">
+                    <div class="carousel-img-placeholder">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 2 - SLIDE 4: RIPROVA SOCIALE]</div>
+                      <div class="cover-placeholder-desc">Visualizzazione interazioni e condivisioni social</div>
+                    </div>
+                    <div class="carousel-card-desc">
+                      • <strong>Riprova Sociale:</strong> Ho mostrato il numero di interazioni e condivisioni social per rassicurare i nuovi lettori sulla qualità del contenuto.
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Navigation Controls -->
+              <button type="button" class="main-carousel-nav-btn prev" onclick="moveCarouselSlide('cialdini', -1)" aria-label="Slide precedente">&#10094;</button>
+              <button type="button" class="main-carousel-nav-btn next" onclick="moveCarouselSlide('cialdini', 1)" aria-label="Slide successiva">&#10095;</button>
+
+              <!-- Indicators Dots -->
+              <div class="main-carousel-indicators" id="dots-cialdini">
+                <span class="carousel-dot active" onclick="switchCarouselSlide('cialdini', 0)"></span>
+                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 1)"></span>
+                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 2)"></span>
+                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 3)"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- La Proposta di Valore -->
+          <h3 class="subsection-title">La Proposta di Valore</h3>
+          <p class="section-paragraph">
+            A differenza di molti articoli che si limitano a denunciare il declino dei mestieri storici, questo pezzo fornisce soluzioni pratiche, mostrando attivamente come coniugare tradizione e strumenti digitali (workshop online, e-commerce) e offrendo percorsi di supporto concreti.
+          </p>
+
+          <!-- Decisioni e Trade-off -->
+          <h3 class="subsection-title">Decisioni e Trade-off</h3>
+          <p class="section-paragraph">
+            Ho scelto di non limitare il pezzo a una semplice lista di consigli SEO, preferendo raccontare storie concrete e mostrare come tradizione e strumenti digitali possano convivere.
+          </p>
+        </section>
+
+        <!-- 3. RISULTATI E DELIVERABLE -->
+        <section class="case-study-section" id="risultati">
+          <h2 class="section-title">RISULTATI E DELIVERABLE</h2>
+          <p class="section-paragraph">
+            La stesura dell'articolo e del documento strategico mi ha permesso di sperimentare come il content design supporti l'esperienza digitale complessiva. Anche se si tratta di un concept project accademico, l'elaborato ha ricevuto la massima valutazione su Start2Impact.
+          </p>
+          <p class="section-paragraph">
+            Questo lavoro rappresenta per me un'occasione importante per capire come le parole possano orientare le decisioni e ridurre l'attrito per l'utente.
+          </p>
+
+          <!-- [INFOGRAFICA 4 CARD DA DUE COLONNE] -->
+          <div class="deliverables-2col-grid">
+            <!-- Card 1 -->
+            <div class="deliverable-card">
+              <div class="deliverable-card-header">L'Articolo di Blog</div>
+              <div class="deliverable-card-body">
+                Un testo completo di 1.554 parole (tempo di lettura stimato: 8 minuti) organizzato con headline, sottotitolo, indice, sezioni dedicate ed elementi di ingaggio visivo.
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="deliverable-card">
+              <div class="deliverable-card-header">Documento di Content Strategy</div>
+              <div class="deliverable-card-body">
+                Analisi dettagliata del pubblico, del tono di voce e della mappatura delle 4 leve di persuasione nel testo.
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="deliverable-card">
+              <div class="deliverable-card-header">Call to Action &amp; Punti di Contatto</div>
+              <div class="deliverable-card-body">
+                6 formati di Call to Action distribuiti organicamente per sostenere corsi, e-commerce solidale e attività di volontariato.
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="deliverable-card">
+              <div class="deliverable-card-header">Cosa Ho Imparato</div>
+              <div class="deliverable-card-body">
+                Questo progetto mi ha confermato che la cura del testo è parte integrante del design: trasformare argomenti complessi in percorsi narrativi chiari ed empatici aiuta le persone a fidarsi e a interagire con naturalezza con il prodotto.
+              </div>
+            </div>
+          </div>
+
+          <!-- Link Box per Leggere l'Intero Articolo -->
+          <div class="external-link-box">
+            <p class="external-link-text">Leggi l'intero articolo su Google Drive:</p>
+            <a href="https://drive.google.com/file/d/1xZiO5KdPjMBUgRo0jyFpsVyJ3ns7FfjN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="external-link-btn">
+              <span>Apri Articolo Completo</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Linea Divisoria -->
+      <div class="divider-line"></div>
+
+      <!-- Guarda i miei altri lavori -->
+      <section class="other-works-section">
+        <h2 class="other-works-title">GUARDA I MIEI ALTRI LAVORI</h2>
+        <div class="other-works-grid">
+          <!-- Card 1: Acumen Academy -->
+          <a href="acumen-academy-redesign.html">
+            <div class="work-card">
+              <div class="work-image-frame">
+                <img src="assets/img/i-miei-lavori/copertine card/Banner - Acumen.png" alt="Acumen Academy Redesign copertina" class="work-image">
+              </div>
+              <h3 class="work-title"><span class="work-client">Acumen Academy</span> | Redesign End-to-End</h3>
+              <p class="work-description">
+                Riprogettazione completa dell'esperienza utente da desktop per un'accademia di e-learning ad alto impatto sociale.
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 2: IncluDO Brand Identity -->
+          <a href="includo-brand-identity.html">
+            <div class="work-card">
+              <div class="work-image-frame">
+                <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png" alt="IncluDO Logo &amp; Brand Identity copertina" class="work-image">
+              </div>
+              <h3 class="work-title"><span class="work-client">IncluDO</span> | Logo &amp; Brand Identity</h3>
+              <p class="work-description">
+                Ideazione di un'identità per un'ente di formazione per migranti e persone svantaggiate.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+      <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
+      <div class="footer-socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-link">GitHub</a>
+        <a href="mailto:diana@example.com" class="footer-social-link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript per Caroselli e Interattività -->
+  <script>
+    var carouselStates = {
+      ux: { current: 0, total: 3 },
+      cialdini: { current: 0, total: 4 }
+    };
+
+    function switchCarouselSlide(carouselKey, slideIndex) {
+      var state = carouselStates[carouselKey];
+      if (!state) return;
+      
+      if (slideIndex < 0) slideIndex = 0;
+      if (slideIndex >= state.total) slideIndex = state.total - 1;
+      
+      state.current = slideIndex;
+
+      var track = document.getElementById('track-' + carouselKey);
+      if (track) {
+        track.style.transform = 'translateX(-' + (slideIndex * 100) + '%)';
+      }
+
+      var wrapper = document.getElementById('carousel-' + carouselKey);
+      if (wrapper) {
+        var tabs = wrapper.querySelectorAll('.main-carousel-tab');
+        tabs.forEach(function(tab, idx) {
+          if (idx === slideIndex) {
+            tab.classList.add('active');
+          } else {
+            tab.classList.remove('active');
+          }
+        });
+
+        var dots = wrapper.querySelectorAll('.carousel-dot');
+        dots.forEach(function(dot, idx) {
+          if (idx === slideIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    function moveCarouselSlide(carouselKey, direction) {
+      var state = carouselStates[carouselKey];
+      if (!state) return;
+      var newIndex = state.current + direction;
+      if (newIndex >= 0 && newIndex < state.total) {
+        switchCarouselSlide(carouselKey, newIndex);
+      }
+    }
+
+    // Highlighting attivo della Sidebar durante lo scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      var observerSections = document.querySelectorAll('.case-study-section, div[id="headline"], div[id="ux-writing"], div[id="cialdini"]');
+      var navLinks = document.querySelectorAll('.overlay-link');
+      var navLines = document.querySelectorAll('.nav-line');
+
+      window.addEventListener('scroll', function() {
+        var fromTop = window.scrollY + 200;
+
+        observerSections.forEach(function(section, index) {
+          if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+            navLinks.forEach(function(link) { link.classList.remove('active'); });
+            navLines.forEach(function(line) { line.classList.remove('active'); });
+
+            var activeId = section.getAttribute('id');
+            var matchingLink = document.querySelector('.overlay-link[href="#' + activeId + '"]');
+            if (matchingLink) {
+              matchingLink.classList.add('active');
+            }
+            if (navLines[index]) {
+              navLines[index].classList.add('active');
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
