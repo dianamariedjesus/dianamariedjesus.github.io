@@ -144,7 +144,10 @@ body {
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 16px 0 4px 0;
+  margin: 24px 0 4px 0 !important;
+}
+.case-study-section .subsection-title + .section-paragraph {
+  margin-top: 0 !important;
 }
 .case-study-section .section-paragraph {
   font-family: 'Poppins', sans-serif;
