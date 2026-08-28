@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=106.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=107.0">
 </head>
 
 <body>
@@ -1594,11 +1594,10 @@
 
   <!-- Modal Lightbox per Ingrandire Media (Video e Foto con Frecce di Navigazione) -->
   <div id="mediaLightboxModal" class="video-lightbox-overlay" onclick="closeMediaModal(event)">
-    <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateLightbox(event, -1)" aria-label="Immagine precedente">&#10094;</button>
-    <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateLightbox(event, 1)" aria-label="Immagine successiva">&#10095;</button>
-    
     <div class="lightbox-modal-content" onclick="event.stopPropagation()">
       <button type="button" class="lightbox-close-btn" onclick="closeMediaModal(event)" aria-label="Chiudi modal">&times;</button>
+      <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateLightbox(event, -1)" aria-label="Immagine precedente">&#10094;</button>
+      <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateLightbox(event, 1)" aria-label="Immagine successiva">&#10095;</button>
       <video id="lightboxVideoPlayer" controls loop muted playsinline class="lightbox-video" style="display: none;"></video>
       <div id="lightboxImageScrollContainer" class="lightbox-img-scroll-container" style="display: none;">
         <img id="lightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
