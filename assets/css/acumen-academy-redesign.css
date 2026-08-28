@@ -1771,6 +1771,9 @@ body {
     flex-direction: row !important;
     gap: 20px !important;
   }
+  .other-works-section .work-image-frame {
+    margin-bottom: 14px !important;
+  }
   .other-works-section .work-title {
     font-size: 15px !important;
     line-height: 1.35 !important;
@@ -2222,6 +2225,9 @@ body {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
+  }
+  .other-works-section .work-image-frame {
+    margin-bottom: 12px !important;
   }
   .other-works-section .work-title {
     font-size: 14px !important;
