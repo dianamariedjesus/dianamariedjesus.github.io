@@ -1543,9 +1543,9 @@ body {
   }
   .persona-card .persona-header,
   .persona-header {
-    min-height: 64px !important;
-    height: 64px !important;
-    max-height: 64px !important;
+    min-height: 72px !important;
+    height: 72px !important;
+    max-height: 72px !important;
     padding: 12px !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -1553,13 +1553,13 @@ body {
     box-sizing: border-box !important;
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 10px !important;
   }
   .persona-avatar-wrapper {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    min-height: 40px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     border-radius: 8px !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
@@ -1571,11 +1571,21 @@ body {
     object-position: center top !important;
     border-radius: 8px !important;
   }
+  .persona-header-text {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
   .persona-name {
     font-size: 13.5px !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
   }
   .persona-meta {
-    font-size: 11px !important;
+    font-size: 10.5px !important;
+    line-height: 1.3 !important;
+    margin-top: 2px !important;
   }
   .persona-block {
     padding: 0 12px !important;
@@ -1591,22 +1601,22 @@ body {
     margin: 0 !important;
   }
   .persona-card .block-profilo {
-    height: 98px !important;
-    min-height: 98px !important;
-    max-height: 98px !important;
-    margin-bottom: 12px !important;
+    height: 94px !important;
+    min-height: 94px !important;
+    max-height: 94px !important;
+    margin-bottom: 8px !important;
   }
   .persona-card .block-needs {
-    height: 85px !important;
-    min-height: 85px !important;
-    max-height: 85px !important;
-    margin-bottom: 12px !important;
+    height: 80px !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
+    margin-bottom: 8px !important;
   }
   .persona-card .block-pains {
-    height: 85px !important;
-    min-height: 85px !important;
-    max-height: 85px !important;
-    margin-bottom: 12px !important;
+    height: 80px !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
+    margin-bottom: 8px !important;
   }
   .persona-card .persona-goal-box {
     flex: 1 1 auto !important;
@@ -2210,7 +2220,7 @@ body {
   }
   .persona-block {
     padding: 0 12px !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important;
     box-sizing: border-box !important;
   }
   .survey-card-header {
