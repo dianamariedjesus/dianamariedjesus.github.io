@@ -64,13 +64,14 @@ body {
   color: #FF452A;
 }
 
-/* Metadata Section (4 Colonne) */
+/* Metadata Section (4 Colonne a Larghezza Content-based) */
 .metadata-section {
   margin-top: 88px;
 }
 .metadata-section .metadata-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 24px;
   width: 100%;
   box-sizing: border-box;
@@ -79,7 +80,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 0;
+  flex: 0 0 auto;
+  width: auto;
 }
 .metadata-section .metadata-heading {
   font-family: 'Poppins', sans-serif;
@@ -882,7 +884,15 @@ body {
     margin-top: 56px;
   }
   .metadata-section .metadata-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 16px;
+    width: 100%;
+  }
+  .metadata-section .metadata-column {
+    flex: 0 0 auto;
+    width: auto;
   }
   .metadata-section .metadata-heading {
     font-size: 16px;
