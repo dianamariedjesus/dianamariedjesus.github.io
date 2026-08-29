@@ -1279,7 +1279,7 @@ body {
   /* Other Works Section su Tablet */
   .other-works-section {
     margin: 0 auto 96px auto !important;
-    padding: 0 32px !important;
+    padding: 0 !important;
   }
   .other-works-section .other-works-title {
     font-size: 15px !important;
@@ -1521,7 +1521,7 @@ body {
   /* Other Works Section su Mobile */
   .other-works-section {
     margin: 0 auto 64px auto !important;
-    padding: 0 16px !important;
+    padding: 0 !important;
   }
   .other-works-section .other-works-title {
     font-size: 13.5px !important;
