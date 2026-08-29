@@ -198,7 +198,7 @@ body {
 .sfida-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
   margin-top: 24px;
   align-items: stretch;
 }
@@ -207,13 +207,13 @@ body {
 .uxwriting-layout-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin-top: 24px;
 }
 .uxwriting-top-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
   align-items: stretch;
 }
 .sfida-card {
@@ -227,7 +227,7 @@ body {
 }
 .sfida-card-header {
   background-color: transparent;
-  padding: 18px 18px 4px 18px !important;
+  padding: 18px 18px 18px 18px !important;
   border-bottom: none;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -339,30 +339,21 @@ body {
   min-width: 100%;
   box-sizing: border-box;
 }
-.carousel-img-placeholder {
+.carousel-slide-img {
   width: 100%;
-  min-height: 320px;
-  background-color: #F8FAFC;
+  max-width: 872px;
+  height: auto;
+  display: block;
   border-bottom: 1px solid #E2E8F0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
-  box-sizing: border-box;
-  text-align: center;
-  color: #64748B;
-}
-.carousel-img-placeholder svg {
-  margin-bottom: 10px;
-  color: #0284C7;
 }
 .carousel-card-desc {
-  padding: 14px 18px;
+  padding: 12px 18px 16px 18px;
   font-family: 'Poppins', sans-serif;
-  font-size: 13.5px;
-  color: #334155;
-  line-height: 1.5;
+  font-size: 13.5px !important;
+  font-weight: 400 !important;
+  color: rgba(38, 38, 38, 0.6) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em;
   background-color: #FFFFFF;
 }
 
