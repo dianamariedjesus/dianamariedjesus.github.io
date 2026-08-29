@@ -1627,15 +1627,22 @@ body {
   .problem-cards-grid .problem-card {
     padding: 0 !important;
     overflow: hidden !important;
-    min-height: auto !important;
-    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
   }
   .problem-card-header {
-    min-height: auto !important;
-    height: auto !important;
+    min-height: 60px !important;
+    height: 60px !important;
+    max-height: 60px !important;
     padding: 12px !important;
     margin-bottom: 0 !important;
     border-bottom: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
   }
   .survey-card-header,
   .survey-body-section {
@@ -1648,17 +1655,20 @@ body {
   .problem-card-title {
     font-size: 13.5px !important;
     line-height: 1.35 !important;
+    text-align: left !important;
   }
   .problem-card-section {
     padding: 0 12px !important;
     box-sizing: border-box !important;
   }
   .problem-section-body {
-    min-height: auto !important;
-    height: auto !important;
+    min-height: 135px !important;
+    height: 135px !important;
+    max-height: 135px !important;
     margin-bottom: 14px !important;
   }
   .impact-section-body {
+    flex: 1 1 auto !important;
     min-height: auto !important;
     height: auto !important;
     margin-bottom: 0 !important;
