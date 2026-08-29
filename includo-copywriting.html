@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=4.3">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=4.4">
 </head>
 
 <body>
@@ -781,8 +781,9 @@
             }
           });
 
+          var headingEl = targetSection.querySelector('.section-title, .section-subtitle, .subsection-title, h2, h3') || targetSection;
           var navbarHeight = navbar ? navbar.offsetHeight : 80;
-          var targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
+          var targetTop = headingEl.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
 
           window.scrollTo({
             top: targetTop,
