@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.2">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.3">
 </head>
 
 <body>
@@ -426,7 +426,7 @@
                   <p class="external-link-desc">Leggi l'elaborato completo di 1.554 parole su Google Drive.</p>
                 </div>
               </div>
-              <a href="https://drive.google.com/file/d/1xZiO5KdPjMBUgRo0jyFpsVyJ3ns7FfjN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="external-link-cta-btn">
+              <a href="https://drive.google.com/file/d/11IgvIqqhkPl_YaVF56tH_t1MWIBAbwXD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="external-link-cta-btn">
                 <span>Apri su Google Drive</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -664,20 +664,20 @@
       function updateLineWidthsFromContent() {
         var lengths = targetElements.map(function(el) {
           if (!el) return 0;
-          var text = el.innerText || '';
+          var clone = el.cloneNode(true);
+          var nestedSubsections = clone.querySelectorAll('div[id="pubblico"], div[id="headline"], div[id="ux-writing"], div[id="cialdini"], div[id="proposta"], div[id="decisioni"]');
+          nestedSubsections.forEach(function(sub) { sub.remove(); });
+          var text = clone.innerText || '';
           return text.trim().length;
         });
 
-        var maxLength = 0;
-        lengths.forEach(function(len) {
-          if (len > maxLength) maxLength = len;
-        });
-
-        if (maxLength === 0) maxLength = 1;
+        var minLength = Math.min.apply(null, lengths);
+        var maxLength = Math.max.apply(null, lengths);
+        if (maxLength === minLength) maxLength = minLength + 1;
 
         lines.forEach(function(line, idx) {
           var len = lengths[idx] || 0;
-          var proportionalWidth = Math.min(30, Math.max(10, Math.round((len / maxLength) * 30)));
+          var proportionalWidth = Math.min(30, Math.max(20, Math.round(20 + ((len - minLength) / (maxLength - minLength)) * 10)));
           line.style.width = proportionalWidth + 'px';
         });
       }
