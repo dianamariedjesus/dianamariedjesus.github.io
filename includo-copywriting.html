@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.0">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.1">
 </head>
 
 <body>
@@ -784,15 +784,21 @@
 
       function updateBackToTopVisibility() {
         var scrollPosition = window.scrollY || window.pageYOffset;
+        var windowHeight = window.innerHeight;
         var isMobileOrTablet = window.innerWidth < 1024;
+        var footerRect = footer ? footer.getBoundingClientRect() : null;
 
-        if (isMobileOrTablet && footer) {
-          var footerRect = footer.getBoundingClientRect();
-          var windowHeight = window.innerHeight;
+        if (isMobileOrTablet) {
           var pageHeight = document.documentElement.scrollHeight;
-          var isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect.top <= windowHeight);
+          var isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect && footerRect.top <= windowHeight);
           if (isAtBottom) {
             backToTopBtn.classList.add('visible');
+            if (footerRect && footerRect.top < windowHeight) {
+              var visibleFooterHeight = windowHeight - footerRect.top;
+              backToTopBtn.style.bottom = (visibleFooterHeight + 16) + 'px';
+            } else {
+              backToTopBtn.style.bottom = '20px';
+            }
           } else {
             backToTopBtn.classList.remove('visible');
           }
@@ -802,10 +808,18 @@
           } else {
             backToTopBtn.classList.remove('visible');
           }
+
+          if (footerRect && footerRect.top < windowHeight) {
+            var visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 24) + 'px';
+          } else {
+            backToTopBtn.style.bottom = '30px';
+          }
         }
       }
 
       window.addEventListener('scroll', updateBackToTopVisibility);
+      window.addEventListener('resize', updateBackToTopVisibility);
       updateBackToTopVisibility();
 
       backToTopBtn.addEventListener('click', function() {
