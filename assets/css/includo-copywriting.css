@@ -790,8 +790,8 @@ body {
 }
 @media (max-width: 1023px) {
   .back-to-top {
-    right: 20px !important;
-    bottom: 20px !important;
+    right: 20px;
+    bottom: 20px;
     width: 46px !important;
     height: 46px !important;
   }

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=5.3">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=5.4">
 </head>
 
 <body>
@@ -827,9 +827,9 @@
             backToTopBtn.classList.add('visible');
             if (footerRect && footerRect.top < windowHeight) {
               var visibleFooterHeight = windowHeight - footerRect.top;
-              backToTopBtn.style.bottom = (visibleFooterHeight + 16) + 'px';
+              backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 16) + 'px', 'important');
             } else {
-              backToTopBtn.style.bottom = '20px';
+              backToTopBtn.style.setProperty('bottom', '20px', 'important');
             }
           } else {
             backToTopBtn.classList.remove('visible');
@@ -843,9 +843,9 @@
 
           if (footerRect && footerRect.top < windowHeight) {
             var visibleFooterHeight = windowHeight - footerRect.top;
-            backToTopBtn.style.bottom = (visibleFooterHeight + 24) + 'px';
+            backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 24) + 'px', 'important');
           } else {
-            backToTopBtn.style.bottom = '30px';
+            backToTopBtn.style.setProperty('bottom', '30px', 'important');
           }
         }
       }
