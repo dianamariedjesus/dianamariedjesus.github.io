@@ -64,8 +64,9 @@ body {
   margin-top: 88px;
 }
 .metadata-section .metadata-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 24px;
   width: 100%;
   box-sizing: border-box;
@@ -74,7 +75,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 0;
+  flex: 0 0 auto;
+  width: auto;
 }
 .metadata-section .metadata-heading {
   font-family: 'Poppins', sans-serif;
@@ -1130,9 +1132,15 @@ body {
     margin-top: 56px;
   }
   .metadata-section .metadata-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 16px;
+    width: 100%;
+  }
+  .metadata-section .metadata-column {
+    flex: 0 0 auto;
+    width: auto;
   }
   .metadata-section .metadata-heading {
     font-size: 16px;
@@ -1339,15 +1347,17 @@ body {
     margin-top: 36px !important;
   }
   .metadata-section .metadata-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 16px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
   .metadata-section .metadata-column {
-    width: 100% !important;
-    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
     box-sizing: border-box !important;
   }
   .metadata-section .metadata-heading {
