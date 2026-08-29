@@ -1820,6 +1820,12 @@ body {
     display: flex !important;
     flex-direction: row !important;
     gap: 20px !important;
+    width: 100% !important;
+  }
+  .other-works-section .other-works-grid > a {
+    flex: 1 1 50% !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .other-works-section .work-image-frame {
     margin-bottom: 14px !important;
@@ -2298,6 +2304,12 @@ body {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
+    width: 100% !important;
+  }
+  .other-works-section .other-works-grid > a {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .other-works-section .work-image-frame {
     margin-bottom: 12px !important;
