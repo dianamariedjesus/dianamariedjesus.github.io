@@ -661,15 +661,15 @@ body {
 /* Sidebar Navigation Fixed Left */
 .sidebar-nav {
   position: fixed;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 32px;
+  top: 180px;
   z-index: 1200;
   width: 215px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 @media (max-width: 1023px) {
   .sidebar-nav {
@@ -688,16 +688,18 @@ body {
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 1px;
   display: block;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, width 0.2s ease;
 }
 .nav-line.active {
   background-color: #5A189A;
 }
-.nav-line.line-1 { width: 20px; }
-.nav-line.line-2 { width: 28px; }
-.nav-line.line-3 { width: 24px; }
-.nav-line.line-4 { width: 22px; }
-.nav-line.line-5 { width: 26px; }
+.nav-line.line-1 { width: 15px; }
+.nav-line.line-2 { width: 30px; }
+.nav-line.line-3 { width: 27px; }
+.nav-line.line-4 { width: 25px; }
+.nav-line.line-5 { width: 22px; }
+.nav-line.line-6 { width: 27px; }
+.nav-line.line-7 { width: 20px; }
 
 .sidebar-overlay {
   position: absolute;

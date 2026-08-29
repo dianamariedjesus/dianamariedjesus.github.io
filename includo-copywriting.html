@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.8">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.9">
 </head>
 
 <body>
@@ -107,6 +107,7 @@
         <span class="nav-line line-4"></span>
         <span class="nav-line line-5"></span>
         <span class="nav-line line-6"></span>
+        <span class="nav-line line-7"></span>
       </div>
       <div class="sidebar-overlay">
         <a href="#la-sfida" class="overlay-link active">La Sfida</a>
@@ -630,28 +631,139 @@
       }
     });
 
-    // Highlighting attivo della Sidebar durante lo scroll
-    document.addEventListener('DOMContentLoaded', function() {
-      var observerSections = document.querySelectorAll('.case-study-section, div[id="headline"], div[id="ux-writing"], div[id="cialdini"], section[id="imparato"]');
+    // Sidebar Navigation Auto-Active & Alignment Script
+    document.addEventListener("DOMContentLoaded", function() {
+      var sidebarNav = document.querySelector('.sidebar-nav');
+      var metadataSection = document.querySelector('.metadata-section');
+      var navbar = document.querySelector('.navbar');
       var navLinks = document.querySelectorAll('.overlay-link');
-      var navLines = document.querySelectorAll('.nav-line');
+      var lines = document.querySelectorAll('.nav-line');
 
-      window.addEventListener('scroll', function() {
-        var fromTop = window.scrollY + 200;
+      if (!sidebarNav || !metadataSection || !navLinks.length) return;
 
-        observerSections.forEach(function(section, index) {
-          if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-            navLinks.forEach(function(link) { link.classList.remove('active'); });
-            navLines.forEach(function(line) { line.classList.remove('active'); });
+      var targetElements = Array.from(navLinks).map(function(link) {
+        var href = link.getAttribute('href');
+        return href ? document.querySelector(href) : null;
+      });
 
-            var activeId = section.getAttribute('id');
-            var matchingLink = document.querySelector('.overlay-link[href="#' + activeId + '"]');
-            if (matchingLink) {
-              matchingLink.classList.add('active');
+      var initialAbsoluteTop = null;
+
+      function updateSidebarPosition() {
+        if (window.innerWidth < 1024) return;
+
+        var navbarHeight = navbar ? navbar.offsetHeight : 80;
+        var metaHeading = document.querySelector('.metadata-heading');
+        
+        if (initialAbsoluteTop === null || window.scrollY === 0) {
+          if (metaHeading) {
+            initialAbsoluteTop = metaHeading.getBoundingClientRect().top + window.scrollY;
+          } else {
+            var metaRect = metadataSection.getBoundingClientRect();
+            initialAbsoluteTop = metaRect.top + window.scrollY;
+          }
+        }
+
+        var stickyThreshold = initialAbsoluteTop - (navbarHeight + 36);
+
+        if (window.scrollY < stickyThreshold) {
+          sidebarNav.style.position = 'absolute';
+          sidebarNav.style.top = initialAbsoluteTop + 'px';
+          sidebarNav.style.transform = 'none';
+        } else {
+          sidebarNav.style.position = 'fixed';
+          sidebarNav.style.top = (navbarHeight + 36) + 'px';
+          sidebarNav.style.transform = 'none';
+        }
+      }
+
+      window.addEventListener('scroll', updateSidebarPosition);
+      window.addEventListener('resize', function() {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      });
+      updateSidebarPosition();
+      
+      setTimeout(function() {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      }, 150);
+
+      var isScrollingManual = false;
+      var manualTimeout;
+
+      function updateActiveLinkAndLine() {
+        if (isScrollingManual) return;
+
+        var navbarHeight = navbar ? navbar.offsetHeight : 80;
+        var currentActiveIdx = 0;
+
+        var scrollPosition = window.scrollY + window.innerHeight;
+        var pageHeight = document.documentElement.scrollHeight;
+
+        if (pageHeight - scrollPosition <= 80) {
+          currentActiveIdx = navLinks.length - 1;
+        } else {
+          targetElements.forEach(function(el, idx) {
+            if (el) {
+              var rect = el.getBoundingClientRect();
+              if (rect.top <= navbarHeight + 140) {
+                currentActiveIdx = idx;
+              }
             }
-            if (navLines[index]) {
-              navLines[index].classList.add('active');
+          });
+        }
+
+        navLinks.forEach(function(link, idx) {
+          if (idx === currentActiveIdx) {
+            link.classList.add("active");
+            if (lines[idx]) lines[idx].classList.add("active");
+          } else {
+            link.classList.remove("active");
+            if (lines[idx]) lines[idx].classList.remove("active");
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveLinkAndLine);
+      window.addEventListener('resize', updateActiveLinkAndLine);
+
+      function handleScrollToSection(targetId, index) {
+        var targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          isScrollingManual = true;
+          clearTimeout(manualTimeout);
+
+          navLinks.forEach(function(l, idx) {
+            if (idx === index) {
+              l.classList.add("active");
+              if (lines[idx]) lines[idx].classList.add("active");
+            } else {
+              l.classList.remove("active");
+              if (lines[idx]) lines[idx].classList.remove("active");
             }
+          });
+
+          var navbarHeight = navbar ? navbar.offsetHeight : 80;
+          var targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
+
+          window.scrollTo({
+            top: targetTop,
+            behavior: 'smooth'
+          });
+
+          manualTimeout = setTimeout(function() {
+            isScrollingManual = false;
+            updateActiveLinkAndLine();
+          }, 1200);
+        }
+      }
+
+      navLinks.forEach(function(link, idx) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var targetId = link.getAttribute('href');
+          if (targetId) {
+            handleScrollToSection(targetId, idx);
           }
         });
       });
