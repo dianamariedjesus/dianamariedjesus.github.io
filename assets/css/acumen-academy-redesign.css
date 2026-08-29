@@ -1713,11 +1713,11 @@ body {
     overflow: hidden !important;
   }
   .survey-card-header {
-    background-color: #F8FAFC !important;
+    background-color: transparent !important;
     min-height: 52px !important;
     height: 52px !important;
     max-height: 52px !important;
-    padding: 12px !important;
+    padding: 12px 12px 6px 12px !important;
     margin-bottom: 0 !important;
     border-bottom: none !important;
     display: flex !important;
@@ -1738,6 +1738,9 @@ body {
     max-height: 145px !important;
     padding: 0 12px !important;
     margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
     box-sizing: border-box !important;
   }
   .survey-body-section .problem-card-text {
@@ -2098,36 +2101,38 @@ body {
     box-sizing: border-box !important;
   }
   .nielsen-card-header {
-    background-color: #F8FAFC !important;
-    padding: 12px !important;
+    background-color: transparent !important;
+    padding: 12px 12px 6px 12px !important;
     margin-bottom: 0 !important;
     border-bottom: none !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    gap: 6px !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
   .nielsen-title {
     font-size: 13px !important;
     line-height: 1.35 !important;
-    text-align: center !important;
+    text-align: left !important;
     margin: 0 !important;
-    width: 100% !important;
+    flex: 1 !important;
+    min-width: 0 !important;
     font-weight: 700 !important;
   }
   .nielsen-score {
     text-align: center !important;
     font-size: 12.5px !important;
-    margin: 0 auto !important;
     white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 2px 8px !important;
+    margin: 0 !important;
   }
   .nielsen-desc {
     padding: 0 12px 12px 12px !important;
-    margin-top: 10px !important;
+    margin-top: 4px !important;
     margin-bottom: 0 !important;
     font-size: 12.5px !important;
     line-height: 1.45 !important;
@@ -2174,10 +2179,10 @@ body {
     border-bottom: none !important;
   }
   .survey-card-header {
-    background-color: #F8FAFC !important;
+    background-color: transparent !important;
     min-height: auto !important;
     height: auto !important;
-    padding: 12px !important;
+    padding: 12px 12px 6px 12px !important;
     margin-bottom: 0 !important;
     border-bottom: none !important;
     box-sizing: border-box !important;
