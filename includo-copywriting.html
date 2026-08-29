@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=5.2">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=5.3">
 </head>
 
 <body>
@@ -808,21 +808,20 @@
       });
     });
 
-    // Back to Top Button Logic
+    // Back to Top Button Logic (Matching Acumen Academy)
     document.addEventListener("DOMContentLoaded", function() {
       var backToTopBtn = document.querySelector('.back-to-top');
-      var footer = document.querySelector('.footer-section');
-      
       if (!backToTopBtn) return;
 
       function updateBackToTopVisibility() {
-        var scrollPosition = window.scrollY || window.pageYOffset;
-        var windowHeight = window.innerHeight;
-        var isMobileOrTablet = window.innerWidth < 1024;
+        var footer = document.querySelector('.footer-section, footer');
         var footerRect = footer ? footer.getBoundingClientRect() : null;
+        var windowHeight = window.innerHeight;
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        var pageHeight = document.documentElement.scrollHeight;
+        var isMobileOrTablet = window.innerWidth < 1024;
 
         if (isMobileOrTablet) {
-          var pageHeight = document.documentElement.scrollHeight;
           var isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect && footerRect.top <= windowHeight);
           if (isAtBottom) {
             backToTopBtn.classList.add('visible');
