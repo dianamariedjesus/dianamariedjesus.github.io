@@ -1624,7 +1624,19 @@ body {
     height: auto !important;
     padding: 20px !important;
   }
-  .problem-card-header,
+  .problem-cards-grid .problem-card {
+    padding: 0 !important;
+    overflow: hidden !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .problem-card-header {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 12px !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+  }
   .survey-card-header,
   .survey-body-section {
     min-height: auto !important;
@@ -1636,6 +1648,21 @@ body {
   .problem-card-title {
     font-size: 13.5px !important;
     line-height: 1.35 !important;
+  }
+  .problem-card-section {
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  .problem-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    margin-bottom: 14px !important;
+  }
+  .impact-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 12px !important;
   }
   .problem-card-text {
     font-size: 12.5px !important;
@@ -2016,7 +2043,12 @@ body {
   }
 
   /* Reset Card Heights on Mobile */
-  .problem-cards-grid .problem-card,
+  .problem-cards-grid .problem-card {
+    padding: 0 !important;
+    overflow: hidden !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
   .survey-cards-grid .survey-card,
   .persona-card,
   .wcag-card,
@@ -2028,7 +2060,13 @@ body {
     height: auto !important;
     padding: 16px !important;
   }
-  .problem-card-header,
+  .problem-card-header {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 12px !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+  }
   .survey-card-header {
     min-height: auto !important;
     height: auto !important;
@@ -2040,16 +2078,24 @@ body {
     font-size: 13px !important;
     line-height: 1.35 !important;
   }
+  .problem-card-section {
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  .problem-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    margin-bottom: 14px !important;
+  }
+  .impact-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 12px !important;
+  }
   .problem-card-text {
     font-size: 12.5px !important;
     line-height: 1.45 !important;
-  }
-  .problem-section-body,
-  .impact-section-body,
-  .survey-body-section {
-    min-height: auto !important;
-    height: auto !important;
-    margin-bottom: 8px !important;
   }
 
   /* Didascalie su Mobile */
