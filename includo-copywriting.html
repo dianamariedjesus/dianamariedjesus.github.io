@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.1">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.2">
 </head>
 
 <body>
@@ -482,9 +482,18 @@
       <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
       <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
       <div class="footer-socials">
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link">LinkedIn</a>
-        <a href="https://github.com" target="_blank" rel="noopener" class="footer-social-link">GitHub</a>
-        <a href="mailto:diana@example.com" class="footer-social-link">Email</a>
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+        </a>
+        <!-- GitHub Link -->
+        <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+        </a>
+        <!-- start2impact Link -->
+        <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+        </a>
       </div>
     </div>
   </footer>
@@ -651,6 +660,29 @@
         var href = link.getAttribute('href');
         return href ? document.querySelector(href) : null;
       });
+
+      function updateLineWidthsFromContent() {
+        var lengths = targetElements.map(function(el) {
+          if (!el) return 0;
+          var text = el.innerText || '';
+          return text.trim().length;
+        });
+
+        var maxLength = 0;
+        lengths.forEach(function(len) {
+          if (len > maxLength) maxLength = len;
+        });
+
+        if (maxLength === 0) maxLength = 1;
+
+        lines.forEach(function(line, idx) {
+          var len = lengths[idx] || 0;
+          var proportionalWidth = Math.min(30, Math.max(10, Math.round((len / maxLength) * 30)));
+          line.style.width = proportionalWidth + 'px';
+        });
+      }
+
+      updateLineWidthsFromContent();
 
       var initialAbsoluteTop = null;
 
