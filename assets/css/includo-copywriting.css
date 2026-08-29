@@ -795,10 +795,6 @@ body {
     width: 46px !important;
     height: 46px !important;
   }
-  .back-to-top svg {
-    width: 20px !important;
-    height: 20px !important;
-  }
 }
 
 .sidebar-nav:hover .sidebar-lines {
