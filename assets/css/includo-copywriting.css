@@ -202,6 +202,20 @@ body {
   margin-top: 24px;
   align-items: stretch;
 }
+
+/* Infografica 2 Colonne per UX Writing e Layout */
+.uxwriting-2col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+  align-items: stretch;
+}
+.uxwriting-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .sfida-card {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
