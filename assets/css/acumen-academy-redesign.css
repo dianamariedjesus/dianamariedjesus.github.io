@@ -1662,9 +1662,9 @@ body {
     box-sizing: border-box !important;
   }
   .problem-section-body {
-    min-height: 135px !important;
-    height: 135px !important;
-    max-height: 135px !important;
+    min-height: 160px !important;
+    height: 160px !important;
+    max-height: 160px !important;
     margin-bottom: 14px !important;
   }
   .impact-section-body {
