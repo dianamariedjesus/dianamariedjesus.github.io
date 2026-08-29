@@ -1205,6 +1205,10 @@ body {
     margin-bottom: 8px !important;
     margin-top: 0 !important;
   }
+  .uxwriting-layout-grid .sfida-card-body p {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
   .sfida-card-body,
   .deliverable-card-body {
     font-size: 12px !important;
