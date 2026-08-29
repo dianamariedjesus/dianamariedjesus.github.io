@@ -738,6 +738,52 @@ body {
   color: #5A189A;
   font-weight: 700;
 }
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #5A189A;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  z-index: 1500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(90, 24, 154, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background-color: #FF452A;
+  color: #FFFFFF;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 69, 42, 0.40);
+}
+.back-to-top:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255, 69, 42, 0.30);
+}
+@media (max-width: 1023px) {
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
 .sidebar-nav:hover .sidebar-lines {
   opacity: 0;
   visibility: hidden;
