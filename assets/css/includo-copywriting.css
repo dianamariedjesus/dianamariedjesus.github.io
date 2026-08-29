@@ -206,15 +206,19 @@ body {
 /* Infografica 2 Colonne per UX Writing e Layout */
 .uxwriting-2col-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
   margin-top: 24px;
   align-items: stretch;
 }
 .uxwriting-col-left {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
+}
+.uxwriting-2col-grid > .sfida-card {
+  height: 100%;
+  box-sizing: border-box;
 }
 .sfida-card {
   background-color: #FFFFFF;
@@ -227,7 +231,7 @@ body {
 }
 .sfida-card-header {
   background-color: transparent;
-  padding: 18px 18px 18px 18px !important;
+  padding: 18px 18px 4px 18px !important;
   border-bottom: none;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -256,7 +260,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   box-sizing: border-box;
 }
 .cover-section-img {
@@ -269,10 +273,12 @@ body {
 }
 .cover-caption-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  color: #334155;
-  line-height: 1.45;
-  margin: 0;
+  font-size: 13.5px !important;
+  font-weight: 400 !important;
+  color: rgba(38, 38, 38, 0.6) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em;
+  margin: 2px 0 0 0;
   padding: 0;
   background-color: transparent;
   border: none;
