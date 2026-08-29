@@ -845,10 +845,10 @@ body {
   .case-study-hero .hero-img {
     width: 520px;
     max-width: 100%;
-    height: 315.859px;
+    height: auto !important;
     display: block;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .case-study-title-section {
@@ -902,12 +902,18 @@ body {
   }
   .case-study-section .subsection-title {
     font-size: 16.5px;
-    margin: 20px 0 4px 0 !important;
+    margin-top: 14px !important;
+    margin-bottom: 4px !important;
   }
   .case-study-section .section-paragraph {
     font-size: 15px;
     line-height: 1.6;
-    margin-bottom: 14px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .case-study-section > div[id] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
   .section-list li {
     font-size: 15px;
@@ -933,7 +939,8 @@ body {
   .deliverable-card-header {
     font-size: 13.5px;
     padding: 14px 14px 8px 14px !important;
-    min-height: 64px !important;
+    min-height: auto !important;
+    height: auto !important;
   }
   .sfida-card-body,
   .deliverable-card-body {
