@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.4">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.5">
 </head>
 
 <body>
@@ -295,33 +295,33 @@
                   
                   <!-- Slide 1: Autorevolezza -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.0" alt="Leve di Persuasione - Autorevolezza" class="carousel-slide-img">
+                    <img src="assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.1" alt="Leve di Persuasione - Autorevolezza" class="carousel-slide-img" onclick="openCialdiniLightbox(0)">
                     <div class="carousel-card-desc">
-                      Ho citato i dati ufficiali INPS sul calo delle botteghe artigiane per mostrare la gravità reale del problema.
+                      <strong>Autorevolezza:</strong> Ho citato i dati ufficiali INPS sul calo delle botteghe artigiane per mostrare la gravità reale del problema.
                     </div>
                   </div>
 
                   <!-- Slide 2: Scarsità e Urgenza -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-scarsita.png?v=1.0" alt="Leve di Persuasione - Scarsità e Urgenza" class="carousel-slide-img">
+                    <img src="assets/img/includo-copywriting/cialdini-scarsita.png?v=1.1" alt="Leve di Persuasione - Scarsità e Urgenza" class="carousel-slide-img" onclick="openCialdiniLightbox(1)">
                     <div class="carousel-card-desc">
-                      Ho inserito una data di scadenza per la candidatura ai corsi di formazione con posti limitati, incoraggiando un'azione tempestiva.
+                      <strong>Scarsità e Urgenza:</strong> Ho inserito una data di scadenza per la candidatura ai corsi di formazione con posti limitati, incoraggiando un'azione tempestiva.
                     </div>
                   </div>
 
                   <!-- Slide 3: Reciprocità -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.0" alt="Leve di Persuasione - Reciprocità" class="carousel-slide-img">
+                    <img src="assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.1" alt="Leve di Persuasione - Reciprocità" class="carousel-slide-img" onclick="openCialdiniLightbox(2)">
                     <div class="carousel-card-desc">
-                      Ho inserito un box con uno sconto del 30% sui prodotti artigianali riservato a chi si iscrive alla newsletter.
+                      <strong>Reciprocità:</strong> Ho inserito un box con uno sconto del 30% sui prodotti artigianali riservato a chi si iscrive alla newsletter.
                     </div>
                   </div>
 
                   <!-- Slide 4: Riprova Sociale -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-riprova.png?v=1.0" alt="Leve di Persuasione - Riprova Sociale" class="carousel-slide-img">
+                    <img src="assets/img/includo-copywriting/cialdini-riprova.png?v=1.1" alt="Leve di Persuasione - Riprova Sociale" class="carousel-slide-img" onclick="openCialdiniLightbox(3)">
                     <div class="carousel-card-desc">
-                      Ho mostrato il numero di interazioni e condivisioni social per rassicurare i nuovi lettori sulla qualità del contenuto.
+                      <strong>Riprova Sociale:</strong> Ho mostrato il numero di interazioni e condivisioni social per rassicurare i nuovi lettori sulla qualità del contenuto.
                     </div>
                   </div>
 
@@ -521,6 +521,89 @@
       }
     }
 
+    // Lightbox Modal per Carosello Cialdini
+    var cialdiniGalleryData = [
+      {
+        src: 'assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.1',
+        caption: '<strong>Autorevolezza:</strong> Ho citato i dati ufficiali INPS sul calo delle botteghe artigiane per mostrare la gravità reale del problema.'
+      },
+      {
+        src: 'assets/img/includo-copywriting/cialdini-scarsita.png?v=1.1',
+        caption: '<strong>Scarsità e Urgenza:</strong> Ho inserito una data di scadenza per la candidatura ai corsi di formazione con posti limitati, incoraggiando un\'azione tempestiva.'
+      },
+      {
+        src: 'assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.1',
+        caption: '<strong>Reciprocità:</strong> Ho inserito un box con uno sconto del 30% sui prodotti artigianali riservato a chi si iscrive alla newsletter.'
+      },
+      {
+        src: 'assets/img/includo-copywriting/cialdini-riprova.png?v=1.1',
+        caption: '<strong>Riprova Sociale:</strong> Ho mostrato il numero di interazioni e condivisioni social per rassicurare i nuovi lettori sulla qualità del contenuto.'
+      }
+    ];
+
+    var currentLightboxIndex = 0;
+
+    function openCialdiniLightbox(index) {
+      currentLightboxIndex = index;
+      switchCarouselSlide('cialdini', index);
+      renderCialdiniLightbox();
+    }
+
+    function renderCialdiniLightbox() {
+      var modal = document.getElementById('cialdiniLightboxModal');
+      var img = document.getElementById('lightboxImageDisplay');
+      var caption = document.getElementById('lightboxCaption');
+      var prevBtn = document.getElementById('lightboxPrevBtn');
+      var nextBtn = document.getElementById('lightboxNextBtn');
+
+      var item = cialdiniGalleryData[currentLightboxIndex];
+      if (!item) return;
+
+      img.src = item.src;
+      caption.innerHTML = item.caption;
+
+      // Regola freccia sinistra: nascosta per prima slide (index 0)
+      if (currentLightboxIndex === 0) {
+        prevBtn.style.display = 'none';
+      } else {
+        prevBtn.style.display = 'flex';
+      }
+
+      // Regola freccia destra: nascosta per ultima slide (index total - 1)
+      if (currentLightboxIndex === cialdiniGalleryData.length - 1) {
+        nextBtn.style.display = 'none';
+      } else {
+        nextBtn.style.display = 'flex';
+      }
+
+      modal.style.display = 'flex';
+    }
+
+    function navigateCialdiniLightbox(e, direction) {
+      if (e) e.stopPropagation();
+      var newIndex = currentLightboxIndex + direction;
+      if (newIndex >= 0 && newIndex < cialdiniGalleryData.length) {
+        currentLightboxIndex = newIndex;
+        switchCarouselSlide('cialdini', newIndex);
+        renderCialdiniLightbox();
+      }
+    }
+
+    function closeCialdiniLightbox(e) {
+      if (e) e.stopPropagation();
+      var modal = document.getElementById('cialdiniLightboxModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      var modal = document.getElementById('cialdiniLightboxModal');
+      if (modal && modal.style.display === 'flex') {
+        if (e.key === 'Escape') closeCialdiniLightbox(e);
+        if (e.key === 'ArrowLeft') navigateCialdiniLightbox(e, -1);
+        if (e.key === 'ArrowRight') navigateCialdiniLightbox(e, 1);
+      }
+    });
+
     // Highlighting attivo della Sidebar durante lo scroll
     document.addEventListener('DOMContentLoaded', function() {
       var observerSections = document.querySelectorAll('.case-study-section, div[id="headline"], div[id="ux-writing"], div[id="cialdini"]');
@@ -548,6 +631,19 @@
       });
     });
   </script>
+
+  <!-- Modal Lightbox per Ingrandire Immagini Carosello Cialdini -->
+  <div id="cialdiniLightboxModal" class="video-lightbox-overlay" onclick="closeCialdiniLightbox(event)">
+    <div class="lightbox-modal-content" onclick="event.stopPropagation()">
+      <button type="button" class="lightbox-close-btn" onclick="closeCialdiniLightbox(event)" aria-label="Chiudi modal">&times;</button>
+      <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateCialdiniLightbox(event, -1)" aria-label="Immagine precedente">&#10094;</button>
+      <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateCialdiniLightbox(event, 1)" aria-label="Immagine successiva">&#10095;</button>
+      <div id="lightboxImageScrollContainer" class="lightbox-img-scroll-container">
+        <img id="lightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
+      </div>
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
 
 </body>
 </html>

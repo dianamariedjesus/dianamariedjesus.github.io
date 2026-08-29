@@ -357,37 +357,139 @@ body {
   background-color: #FFFFFF;
 }
 
-/* Freccette di controllo carosello */
+/* Freccette di controllo carosello - Nascoste in vista normale */
 .main-carousel-nav-btn {
+  display: none !important;
+}
+
+/* Lightbox Modal per Ingrandimento Immagini Carosello Cialdini */
+.video-lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.lightbox-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 872px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-close-btn {
   position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
-  background-color: #FFFFFF;
-  color: #1E293B;
-  border: 1px solid #E2E8F0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+  top: -44px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.lightbox-close-btn:hover {
+  opacity: 1;
+}
+.lightbox-img-scroll-container {
+  width: 100%;
+  max-width: 872px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  background-color: #0F172A;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
-.main-carousel-nav-btn:hover {
-  background-color: #0284C7;
+.lightbox-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.lightbox-caption {
+  margin-top: 14px;
+  color: #F8FAFC;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+}
+.lightbox-caption strong {
+  font-weight: 600;
   color: #FFFFFF;
-  border-color: #0284C7;
-  transform: translateY(-50%) scale(1.08);
 }
-.main-carousel-nav-btn.prev {
-  left: -22px;
+
+/* Lightbox Navigation Arrows (Frecce Ingrandite) */
+.lightbox-nav-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: rgba(15, 23, 42, 0.88) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;
+  cursor: pointer !important;
+  z-index: 10020 !important;
+  transition: all 0.2s ease !important;
+  backdrop-filter: blur(4px) !important;
+  user-select: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
 }
-.main-carousel-nav-btn.next {
-  right: -22px;
+.lightbox-nav-btn.prev {
+  left: -58px !important;
+}
+.lightbox-nav-btn.next {
+  right: -58px !important;
+}
+@media (max-width: 840px) {
+  .lightbox-nav-btn.prev {
+    left: -20px !important;
+  }
+  .lightbox-nav-btn.next {
+    right: -20px !important;
+  }
+}
+.lightbox-nav-btn:hover {
+  background-color: #0284C7 !important;
+  border-color: #0284C7 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+/* Cursor pointer per le immagini cliccabili del carosello */
+.carousel-slide-img {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.carousel-slide-img:hover {
+  opacity: 0.95;
 }
 
 /* Indicatori pallini sotto il carosello */
