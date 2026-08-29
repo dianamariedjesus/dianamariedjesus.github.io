@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.5">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.6">
 </head>
 
 <body>
@@ -225,7 +225,7 @@
 
             <!-- Container Unico Immagine (872x479) e Didascalia -->
             <div class="cover-single-container">
-              <img src="assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Cover dell'articolo con Headline e Subheadline" class="cover-section-img">
+              <img src="assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Cover dell'articolo con Headline e Subheadline" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-copywriting/headline-cover.png?v=1.0', 'Cover dell\'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.')">
               <p class="cover-caption-text">
                 Cover dell'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.
               </p>
@@ -404,12 +404,26 @@
             </p>
           </div>
 
-          <!-- Link Box per Leggere l'Intero Articolo -->
-          <div class="external-link-box">
-            <p class="external-link-text">Leggi l'intero articolo su Google Drive:</p>
-            <a href="https://drive.google.com/file/d/1xZiO5KdPjMBUgRo0jyFpsVyJ3ns7FfjN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="external-link-btn">
-              <span>Apri Articolo Completo</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Link Box per Leggere l'Intero Articolo (Redesigned) -->
+          <div class="external-link-card">
+            <div class="external-link-content">
+              <div class="external-link-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5A189A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="external-link-text-group">
+                <h4 class="external-link-title">Vuoi consultare l'articolo e la Content Strategy completa?</h4>
+                <p class="external-link-desc">Sfoglia l'elaborato originale di 1.554 parole con la mappatura del target e l'analisi dettagliata delle 4 leve di persuasione su Google Drive.</p>
+              </div>
+            </div>
+            <a href="https://drive.google.com/file/d/1xZiO5KdPjMBUgRo0jyFpsVyJ3ns7FfjN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="external-link-cta-btn">
+              <span>Sfoglia Articolo Completo</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
@@ -542,6 +556,20 @@
     ];
 
     var currentLightboxIndex = 0;
+
+    function openSingleImageLightbox(src, captionHtml) {
+      var modal = document.getElementById('cialdiniLightboxModal');
+      var img = document.getElementById('lightboxImageDisplay');
+      var caption = document.getElementById('lightboxCaption');
+      var prevBtn = document.getElementById('lightboxPrevBtn');
+      var nextBtn = document.getElementById('lightboxNextBtn');
+
+      if (img) img.src = src;
+      if (caption) caption.innerHTML = captionHtml;
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      if (modal) modal.style.display = 'flex';
+    }
 
     function openCialdiniLightbox(index) {
       currentLightboxIndex = index;
