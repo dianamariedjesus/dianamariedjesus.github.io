@@ -693,16 +693,16 @@ body {
 .nav-line.active {
   background-color: #5A189A;
 }
-.nav-line.line-1 { width: 15px; }
+.nav-line.line-1 { width: 23px; }
 .nav-line.line-2 { width: 30px; }
-.nav-line.line-3 { width: 28px; }
-.nav-line.line-4 { width: 26px; }
-.nav-line.line-5 { width: 24px; }
-.nav-line.line-6 { width: 22px; }
-.nav-line.line-7 { width: 25px; }
-.nav-line.line-8 { width: 24px; }
-.nav-line.line-9 { width: 26px; }
-.nav-line.line-10 { width: 20px; }
+.nav-line.line-3 { width: 12px; }
+.nav-line.line-4 { width: 16px; }
+.nav-line.line-5 { width: 18px; }
+.nav-line.line-6 { width: 26px; }
+.nav-line.line-7 { width: 14px; }
+.nav-line.line-8 { width: 10px; }
+.nav-line.line-9 { width: 25px; }
+.nav-line.line-10 { width: 15px; }
 
 .sidebar-overlay {
   position: absolute;
