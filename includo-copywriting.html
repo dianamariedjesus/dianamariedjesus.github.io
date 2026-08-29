@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.7">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.8">
 </head>
 
 <body>
@@ -397,7 +397,7 @@
           </div>
 
           <!-- Cosa Ho Imparato (Sezione) -->
-          <section class="case-study-section" id="imparato">
+          <section class="case-study-section" id="imparato" style="scroll-margin-top: 100px; margin-top: 24px !important;">
             <h2 class="section-title">COSA HO IMPARATO</h2>
             <p class="section-paragraph">
               Questo progetto mi ha confermato che <strong>la cura del testo è parte integrante del design</strong>: trasformare argomenti complessi in percorsi narrativi chiari ed empatici <strong>aiuta le persone a fidarsi e a interagire con naturalezza con il prodotto.</strong>
@@ -632,7 +632,7 @@
 
     // Highlighting attivo della Sidebar durante lo scroll
     document.addEventListener('DOMContentLoaded', function() {
-      var observerSections = document.querySelectorAll('.case-study-section, div[id="headline"], div[id="ux-writing"], div[id="cialdini"]');
+      var observerSections = document.querySelectorAll('.case-study-section, div[id="headline"], div[id="ux-writing"], div[id="cialdini"], section[id="imparato"]');
       var navLinks = document.querySelectorAll('.overlay-link');
       var navLines = document.querySelectorAll('.nav-line');
 
@@ -655,21 +655,23 @@
           }
         });
       });
+    });
+
     // Back to Top Button Logic
     document.addEventListener("DOMContentLoaded", function() {
       var backToTopBtn = document.querySelector('.back-to-top');
       var footer = document.querySelector('.footer-section');
       
-      if (!backToTopBtn || !footer) return;
+      if (!backToTopBtn) return;
 
-      window.addEventListener('scroll', function() {
-        var footerRect = footer.getBoundingClientRect();
-        var windowHeight = window.innerHeight;
+      function updateBackToTopVisibility() {
         var scrollPosition = window.scrollY || window.pageYOffset;
-        var pageHeight = document.documentElement.scrollHeight;
         var isMobileOrTablet = window.innerWidth < 1024;
 
-        if (isMobileOrTablet) {
+        if (isMobileOrTablet && footer) {
+          var footerRect = footer.getBoundingClientRect();
+          var windowHeight = window.innerHeight;
+          var pageHeight = document.documentElement.scrollHeight;
           var isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect.top <= windowHeight);
           if (isAtBottom) {
             backToTopBtn.classList.add('visible');
@@ -683,7 +685,10 @@
             backToTopBtn.classList.remove('visible');
           }
         }
-      });
+      }
+
+      window.addEventListener('scroll', updateBackToTopVisibility);
+      updateBackToTopVisibility();
 
       backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
