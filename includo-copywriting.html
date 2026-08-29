@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=1.9">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=2.0">
 </head>
 
 <body>
@@ -223,20 +223,12 @@
               Per l'apertura ho progettato un <strong>titolo</strong> pensato <strong>per stimolare la curiosità sul valore nascosto dell'artigianato</strong> (<em>"Riscoprire il valore dei lavori artigianali: la storia ispiratrice di IncluDO"</em>), affiancato da un <strong>sottotitolo esplicativo</strong> che anticipa subito <strong>l'incontro tra tradizione e inclusione per impostare le giuste aspettative.</strong>
             </p>
 
-            <!-- [IMMAGINE PLACEHOLDER; didascalia] -->
-            <div class="cover-placeholder-wrapper">
-              <div class="cover-img-placeholder-box">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                  <polyline points="21 15 16 10 5 21"></polyline>
-                </svg>
-                <div class="cover-placeholder-title">[IMMAGINE PLACEHOLDER - COVER DELL'ARTICOLO]</div>
-                <div class="cover-placeholder-desc">Immagine di copertina con Headline e Subheadline strutturate</div>
-              </div>
-              <div class="cover-caption-box">
+            <!-- Container Unico Immagine (872x479) e Didascalia -->
+            <div class="cover-single-container">
+              <img src="assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Cover dell'articolo con Headline e Subheadline" class="cover-section-img">
+              <p class="cover-caption-text">
                 <strong>Didascalia:</strong> Cover dell'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.
-              </div>
+              </p>
             </div>
           </div>
 
@@ -247,85 +239,30 @@
               Organizzare il testo in modo chiaro è fondamentale per <strong>aiutare il lettore a orientarsi senza affaticare la vista.</strong> Per questo ho adottato un'impostazione visiva pulita:
             </p>
 
-            <!-- [CAROSELLO DI IMMAGINI 1 - UX WRITING] -->
-            <div class="main-carousel-wrapper" id="carousel-ux-writing">
-              <!-- Navigation Tabs -->
-              <div class="main-carousel-nav-bar">
-                <div class="main-carousel-tabs">
-                  <button type="button" class="main-carousel-tab active" onclick="switchCarouselSlide('ux', 0)">Indice iniziale</button>
-                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('ux', 1)">Paragrafi brevi &amp; Spazi</button>
-                  <button type="button" class="main-carousel-tab" onclick="switchCarouselSlide('ux', 2)">Elementi ingaggianti</button>
+            <!-- Infografica 3 Card (UX Writing e Layout) -->
+            <div class="sfida-cards-grid">
+              <!-- Card 1 -->
+              <div class="sfida-card">
+                <div class="sfida-card-header">Indice iniziale</div>
+                <div class="sfida-card-body">
+                  <p>Permette a chi legge di orientarsi subito tra i macro-temi e saltare alla sezione di proprio interesse.</p>
                 </div>
               </div>
 
-              <!-- Viewport & Track -->
-              <div class="main-carousel-viewport">
-                <div class="main-carousel-track" id="track-ux" style="transform: translateX(0%);">
-                  
-                  <!-- Slide 1 -->
-                  <div class="main-carousel-slide">
-                    <div class="carousel-img-placeholder">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <line x1="8" y1="6" x2="21" y2="6"></line>
-                        <line x1="8" y1="12" x2="21" y2="12"></line>
-                        <line x1="8" y1="18" x2="21" y2="18"></line>
-                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                      </svg>
-                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 1 - SLIDE 1: INDICE INIZIALE]</div>
-                      <div class="cover-placeholder-desc">Visualizzazione layout con Indice dei macro-temi</div>
-                    </div>
-                    <div class="carousel-card-desc">
-                      • <strong>Indice iniziale:</strong> Permette a chi legge di orientarsi subito tra i macro-temi e saltare alla sezione di proprio interesse.
-                    </div>
-                  </div>
-
-                  <!-- Slide 2 -->
-                  <div class="main-carousel-slide">
-                    <div class="carousel-img-placeholder">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                        <line x1="7" y1="8" x2="17" y2="8"></line>
-                        <line x1="7" y1="12" x2="17" y2="12"></line>
-                        <line x1="7" y1="16" x2="13" y2="16"></line>
-                      </svg>
-                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 1 - SLIDE 2: PARAGRAFI BREVI]</div>
-                      <div class="cover-placeholder-desc">Visualizzazione paragrafi brevi e scansionabilità</div>
-                    </div>
-                    <div class="carousel-card-desc">
-                      • <strong>Paragrafi brevi e spazi bianchi:</strong> Blocchi di testo di massimo 3-4 righe separati da ampi spazi per garantire una scansionabilità ottimale ed evitare l'effetto muro di testo.
-                    </div>
-                  </div>
-
-                  <!-- Slide 3 -->
-                  <div class="main-carousel-slide">
-                    <div class="carousel-img-placeholder">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                      </svg>
-                      <div class="cover-placeholder-title">[CAROSELLO IMMAGINI 1 - SLIDE 3: ELEMENTI INGAGGIANTI]</div>
-                      <div class="cover-placeholder-desc">Visualizzazione domande retoriche e grassetti mirati</div>
-                    </div>
-                    <div class="carousel-card-desc">
-                      • <strong>Elementi ingaggianti:</strong> Domande retoriche rivolte direttamente al lettore per stimolare la riflessione, immagini descrittive a supporto dei passaggi chiave e uso strategico del grassetto per guidare l'occhio sui concetti più importanti.
-                    </div>
-                  </div>
-
+              <!-- Card 2 -->
+              <div class="sfida-card">
+                <div class="sfida-card-header">Paragrafi brevi e spazi bianchi</div>
+                <div class="sfida-card-body">
+                  <p>Blocchi di testo di massimo 3-4 righe separati da ampi spazi per garantire una scansionabilità ottimale ed evitare l'effetto muro di testo.</p>
                 </div>
               </div>
 
-              <!-- Navigation Controls -->
-              <button type="button" class="main-carousel-nav-btn prev" onclick="moveCarouselSlide('ux', -1)" aria-label="Slide precedente">&#10094;</button>
-              <button type="button" class="main-carousel-nav-btn next" onclick="moveCarouselSlide('ux', 1)" aria-label="Slide successiva">&#10095;</button>
-
-              <!-- Indicators Dots -->
-              <div class="main-carousel-indicators" id="dots-ux">
-                <span class="carousel-dot active" onclick="switchCarouselSlide('ux', 0)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('ux', 1)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('ux', 2)"></span>
+              <!-- Card 3 -->
+              <div class="sfida-card">
+                <div class="sfida-card-header">Elementi ingaggianti</div>
+                <div class="sfida-card-body">
+                  <p>Domande retoriche rivolte direttamente al lettore per stimolare la riflessione, immagini descrittive a supporto dei passaggi chiave e uso strategico del grassetto per guidare l'occhio sui concetti più importanti.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -565,7 +502,6 @@
   <!-- JavaScript per Caroselli e Interattività -->
   <script>
     var carouselStates = {
-      ux: { current: 0, total: 3 },
       cialdini: { current: 0, total: 4 }
     };
 

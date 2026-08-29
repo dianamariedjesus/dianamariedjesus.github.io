@@ -27,7 +27,7 @@ body {
   align-items: flex-start;
   padding: 0;
   box-sizing: border-box;
-  margin: 37px auto 0 auto;
+  margin: 0 auto;
   overflow: hidden;
 }
 .case-study-hero .hero-img {
@@ -236,53 +236,32 @@ body {
   margin-bottom: 0;
 }
 
-/* Cover Image Placeholder Box with Caption (Headline & Subheadline) */
-.cover-placeholder-wrapper {
+/* Container unico per immagine e didascalia sotto Headline & Subheadline */
+.cover-single-container {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.cover-img-placeholder-box {
   width: 100%;
-  min-height: 340px;
-  background-color: #F1F5F9;
-  border: 1.5px dashed #CBD5E1;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
+  gap: 10px;
   box-sizing: border-box;
-  text-align: center;
-  color: #64748B;
 }
-.cover-img-placeholder-box svg {
-  margin-bottom: 12px;
-  color: #0284C7;
+.cover-section-img {
+  width: 100%;
+  max-width: 872px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
-.cover-placeholder-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #1E293B;
-  margin-bottom: 4px;
-}
-.cover-placeholder-desc {
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  color: #64748B;
-}
-.cover-caption-box {
-  background-color: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  padding: 10px 14px;
+.cover-caption-text {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: #334155;
   line-height: 1.45;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
 /* Componente Carosello Immagini (Placeholder Structure) */
