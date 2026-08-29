@@ -451,10 +451,10 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: #1E293B;
-  text-align: center !important;
+  text-align: left !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   min-height: 72px !important;
   box-sizing: border-box !important;
 }
