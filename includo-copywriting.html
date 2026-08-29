@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=3.9">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=4.0">
 </head>
 
 <body>
@@ -733,6 +733,7 @@
         if (isScrollingManual) return;
 
         var navbarHeight = navbar ? navbar.offsetHeight : 80;
+        var sidebarFixedTop = navbarHeight + 36;
         var currentActiveIdx = 0;
 
         var scrollPosition = window.scrollY + window.innerHeight;
@@ -744,7 +745,8 @@
           targetElements.forEach(function(el, idx) {
             if (el) {
               var rect = el.getBoundingClientRect();
-              if (rect.top <= navbarHeight + 140) {
+              var linkOffset = navLinks[idx] ? navLinks[idx].offsetTop : 0;
+              if (rect.top <= sidebarFixedTop + linkOffset + 24) {
                 currentActiveIdx = idx;
               }
             }
@@ -782,10 +784,14 @@
           });
 
           var navbarHeight = navbar ? navbar.offsetHeight : 80;
-          var targetTop = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight - 36;
+          var sidebarFixedTop = navbarHeight + 36;
+          var clickedLinkOffset = navLinks[index] ? navLinks[index].offsetTop : 0;
+
+          var targetSectionTop = targetSection.getBoundingClientRect().top + window.scrollY;
+          var targetTop = targetSectionTop - (sidebarFixedTop + clickedLinkOffset);
 
           window.scrollTo({
-            top: targetTop,
+            top: Math.max(0, targetTop),
             behavior: 'smooth'
           });
 
