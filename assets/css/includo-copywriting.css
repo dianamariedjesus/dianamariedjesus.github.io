@@ -1088,20 +1088,23 @@ body {
   }
 
   .case-study-hero {
-    margin: 20px 0 0 0 !important;
+    margin: 20px auto 0 auto !important;
     padding: 0 32px !important;
     width: 100% !important;
+    height: 255.109px !important;
+    min-height: 255.109px !important;
+    max-height: 255.109px !important;
     box-sizing: border-box !important;
     display: flex !important;
     justify-content: center !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+    align-items: center !important;
+    overflow: hidden !important;
   }
   .case-study-hero .hero-img {
-    width: 100% !important;
+    width: auto !important;
     max-width: 420px !important;
     height: auto !important;
+    max-height: 255.109px !important;
     margin: 0 auto !important;
     border-radius: 10px !important;
     object-fit: contain !important;
@@ -1173,6 +1176,14 @@ body {
     margin-bottom: 8px !important;
   }
 
+  /* Didascalia Immagine su Tablet */
+  .cover-caption-text {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    color: #64748B !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
   /* Infografiche su Tablet */
   .sfida-cards-grid,
   .deliverables-3col-grid {
@@ -1180,18 +1191,27 @@ body {
     gap: 12px !important;
     margin-top: 16px !important;
   }
-  .sfida-card-header,
-  .deliverable-card-header {
+  .sfida-card-header {
     font-size: 12.5px !important;
-    padding: 12px 12px 6px 12px !important;
+    padding: 12px 12px 12px 12px !important;
     min-height: auto !important;
     height: auto !important;
+  }
+  .sfida-card-body p {
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
   }
   .sfida-card-body,
   .deliverable-card-body {
     font-size: 12px !important;
     padding: 0 12px 12px 12px !important;
     line-height: 1.4 !important;
+  }
+  .deliverable-card-header {
+    font-size: 12.5px !important;
+    padding: 12px 12px 6px 12px !important;
+    min-height: auto !important;
+    height: auto !important;
   }
 
   .uxwriting-layout-grid {
@@ -1266,21 +1286,23 @@ body {
   }
 
   .case-study-hero {
-    margin: 16px 0 0 0 !important;
+    margin: 16px auto 0 auto !important;
     padding: 0 16px !important;
     width: 100% !important;
+    height: 174.938px !important;
+    min-height: 174.938px !important;
+    max-height: 174.938px !important;
     box-sizing: border-box !important;
     display: flex !important;
     justify-content: center !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+    align-items: center !important;
+    overflow: hidden !important;
   }
-  .case-study-hero img,
   .case-study-hero .hero-img {
-    width: 100% !important;
+    width: auto !important;
     max-width: 100% !important;
     height: auto !important;
+    max-height: 174.938px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
     object-fit: contain !important;
@@ -1350,6 +1372,14 @@ body {
     margin-bottom: 6px !important;
   }
 
+  /* Didascalia Immagine su Mobile (Stessa formattazione dei section-paragraph, colore grigio) */
+  .cover-caption-text {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    color: #64748B !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
   /* Infografiche su Mobile (Stack a 1 colonna) */
   .sfida-cards-grid,
   .deliverables-3col-grid,
@@ -1361,7 +1391,16 @@ body {
     width: 100% !important;
     margin-top: 14px !important;
   }
-  .sfida-card-header,
+  .sfida-card-header {
+    font-size: 13px !important;
+    padding: 12px 12px 12px 12px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .sfida-card-body p {
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+  }
   .deliverable-card-header {
     font-size: 13px !important;
     padding: 12px 14px 6px 14px !important;
