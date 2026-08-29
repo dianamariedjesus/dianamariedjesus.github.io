@@ -27,7 +27,7 @@ body {
   align-items: flex-start;
   padding: 0;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 37px auto 0 auto;
   overflow: hidden;
 }
 .case-study-hero .hero-img {
