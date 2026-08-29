@@ -539,10 +539,10 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: #1E293B;
-  text-align: center !important;
+  text-align: left !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   min-height: 56px !important;
   height: 56px !important;
   box-sizing: border-box !important;
@@ -839,20 +839,24 @@ body {
   .case-study-hero {
     width: 100%;
     height: 315.859px !important;
+    min-height: 315.859px !important;
+    max-height: 315.859px !important;
     padding: 0;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: #FFFFFF;
   }
   .case-study-hero .hero-img {
-    width: 520px;
-    max-width: 100%;
-    height: 315.859px !important;
+    max-width: 520px;
+    max-height: 315.859px;
+    width: auto;
+    height: auto;
     display: block;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain !important;
   }
 
   .case-study-title-section {
@@ -947,13 +951,13 @@ body {
   }
   .deliverable-card-header {
     font-size: 13.5px;
-    padding: 10px 12px !important;
+    padding: 10px 14px !important;
     height: 52px !important;
     min-height: 52px !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
   }
   .sfida-card-body,
   .deliverable-card-body {
