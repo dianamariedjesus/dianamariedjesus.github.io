@@ -1430,12 +1430,15 @@ body {
     box-sizing: border-box !important;
   }
   .protocol-questions-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
     padding: 0 14px 14px 14px !important;
     box-sizing: border-box !important;
   }
   .protocol-questions-list .problem-card-text {
     padding: 0 !important;
-    margin: 0 0 6px 0 !important;
+    margin: 0 !important;
     font-size: 13px !important;
     line-height: 1.45 !important;
   }
@@ -2998,24 +3001,26 @@ body {
   margin: 0 auto;
 }
 
-/* Non rendere scrollabili le immagini ingrandite su Laptop (1024px+) */
+/* Immagini ingrandite a tutta larghezza e scrollabili su Laptop (1024px - 1399px) */
 @media (min-width: 1024px) and (max-width: 1399px) {
+  .lightbox-modal-content {
+    width: 90vw !important;
+    max-width: 1200px !important;
+  }
   .lightbox-img-scroll-container {
+    width: 100% !important;
     max-height: 80vh !important;
-    overflow: visible !important;
-    overflow-y: visible !important;
+    overflow-y: auto !important;
     overflow-x: hidden !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: transparent !important;
+    display: block !important;
+    background-color: #0F172A !important;
+    border-radius: 12px !important;
   }
   .lightbox-img {
-    width: auto !important;
+    width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    max-height: 75vh !important;
-    object-fit: contain !important;
+    max-height: none !important;
     display: block !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
@@ -3477,12 +3482,15 @@ body {
     box-sizing: border-box !important;
   }
   .protocol-questions-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
     padding: 0 18px 18px 18px !important;
     box-sizing: border-box !important;
   }
   .protocol-questions-list .problem-card-text {
     padding: 0 !important;
-    margin: 0 0 6px 0 !important;
+    margin: 0 !important;
     font-size: 13.5px !important;
     line-height: 1.45 !important;
   }
