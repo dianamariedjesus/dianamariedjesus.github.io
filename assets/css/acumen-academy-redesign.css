@@ -1917,30 +1917,43 @@ body {
     overflow: visible !important;
     overflow-y: visible !important;
   }
+  .modifiche-carousel-wrapper .mod-img-container-box {
+    height: 323px !important;
+    min-height: 323px !important;
+    max-height: 323px !important;
+    padding: 14px !important;
+    box-sizing: border-box !important;
+  }
   .mod-img-container-box.single-img {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
-    padding: 16px !important;
+    height: 323px !important;
+    min-height: 323px !important;
+    max-height: 323px !important;
+    padding: 14px !important;
     box-sizing: border-box !important;
   }
   .mod-img-container-box.single-img .comparison-img-wrapper {
     max-width: 100% !important;
     width: 100% !important;
+    height: 100% !important;
+    max-height: 295px !important;
     margin: 0 auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    overflow: visible !important;
-    overflow-y: visible !important;
-    max-height: none !important;
+    overflow: hidden !important;
   }
   .mod-img-container-box.single-img .comparison-card-img {
     max-width: 100% !important;
+    max-height: 295px !important;
+    width: auto !important;
     height: auto !important;
-    max-height: none !important;
+    object-fit: contain !important;
     margin: 0 auto !important;
+    border-radius: 6px !important;
   }
 
   /* Pilot Test & 3 Task Infografica su Tablet */
@@ -1949,6 +1962,42 @@ body {
   }
   .protocol-2col-layout {
     margin-top: 0 !important;
+  }
+  .protocol-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+  .protocol-tasks-col {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+  .protocol-tasks-col .protocol-card {
+    margin: 0 !important;
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .protocol-questions-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 14px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+  .protocol-questions-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    padding: 6px 0 0 0 !important;
   }
   .pilot-carousel-wrapper .comparison-img-wrapper {
     height: auto !important;
@@ -2430,11 +2479,12 @@ body {
     overflow: visible !important;
   }
   .modifiche-carousel-wrapper .mod-img-container-box,
+  .pilot-carousel-wrapper .mod-img-container-box,
   .mod-img-container-box {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 6px !important;
-    padding: 6px 8px !important;
+    gap: 16px !important;
+    padding: 10px 12px !important;
     background-color: #F8FAFC !important;
   }
   .modifiche-carousel-wrapper .comparison-img-wrapper,
