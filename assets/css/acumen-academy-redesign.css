@@ -1869,39 +1869,32 @@ body {
     height: 100% !important;
     width: 100% !important;
   }
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-item,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-item,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-item {
+  .modifiche-carousel-wrapper .main-carousel-slide .comparison-card-item {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-    flex: 1 !important;
-    height: 100% !important;
-    min-height: 520px !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
     box-sizing: border-box !important;
   }
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .mod-img-container-box,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .mod-img-container-box,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .mod-img-container-box {
-    flex: 1 !important;
+  .modifiche-carousel-wrapper .main-carousel-slide .mod-img-container-box {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 12px !important;
     align-items: center !important;
     align-content: center !important;
     justify-items: center !important;
-    margin: auto 0 !important;
+    margin: 0 !important;
   }
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(1) .comparison-card-desc,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(2) .comparison-card-desc,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(3) .comparison-card-desc {
-    margin-top: auto !important;
+  .modifiche-carousel-wrapper .main-carousel-slide .comparison-card-desc {
+    margin-top: 0 !important;
     width: 100% !important;
   }
 
   /* Tablet: Slide 4 e 5 senza scrollbar sulle immagini */
   .modifiche-carousel-wrapper .comparison-card-desc {
-    padding: 16px 20px !important;
+    padding: 14px 16px !important;
     margin: 0 !important;
     min-height: auto !important;
     height: auto !important;
@@ -1922,6 +1915,7 @@ body {
     min-height: 323px !important;
     max-height: 323px !important;
     padding: 14px !important;
+    background-color: #F7F3FA !important;
     box-sizing: border-box !important;
   }
   .mod-img-container-box.single-img {
@@ -1933,6 +1927,7 @@ body {
     min-height: 323px !important;
     max-height: 323px !important;
     padding: 14px !important;
+    background-color: #F7F3FA !important;
     box-sizing: border-box !important;
   }
   .mod-img-container-box.single-img .comparison-img-wrapper {
@@ -1978,26 +1973,46 @@ body {
   }
   .protocol-tasks-col .protocol-card {
     margin: 0 !important;
-    padding: 12px !important;
+    padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
     height: 100% !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .protocol-tasks-col .protocol-card .problem-card-title {
+    padding: 12px !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    font-size: 13.5px !important;
+  }
+  .protocol-tasks-col .protocol-card .problem-card-text {
+    padding: 0 12px 12px 12px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
   }
   .protocol-questions-card {
     width: 100% !important;
     margin: 0 !important;
-    padding: 14px 16px !important;
+    padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .protocol-questions-card .problem-card-title {
+    padding: 12px !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    font-size: 13.5px !important;
   }
   .protocol-questions-list {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px !important;
-    padding: 6px 0 0 0 !important;
+    padding: 0 12px 12px 12px !important;
   }
   .pilot-carousel-wrapper .comparison-img-wrapper {
     height: auto !important;
@@ -2485,7 +2500,7 @@ body {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
     padding: 10px 12px !important;
-    background-color: #F8FAFC !important;
+    background-color: #F7F3FA !important;
   }
   .modifiche-carousel-wrapper .comparison-img-wrapper,
   .mod-img-container-box .comparison-img-wrapper {
@@ -2535,9 +2550,10 @@ body {
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-item {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 100% !important;
-    min-height: 480px !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
     box-sizing: border-box !important;
   }
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .mod-img-container-box,
@@ -2550,7 +2566,7 @@ body {
   }
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-desc,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-desc {
-    margin-top: auto !important;
+    margin-top: 0 !important;
   }
 
   /* Section Pilot Test & 3 Task Infografica su Mobile */
@@ -2592,19 +2608,52 @@ body {
     font-size: 12px !important;
   }
 
-  /* 3 Task & Domande Finali su Mobile (1 colonna) */
-  .protocol-2col-layout > div {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+  /* 3 Task & Domande Finali su Mobile (1 colonna con gap 12px e padding 12px) */
+  .protocol-grid {
+    display: flex !important;
+    flex-direction: column !important;
     gap: 12px !important;
   }
-  .protocol-2col-layout div[style*="display: flex; flex-direction: column"] {
-    gap: 10px !important;
+  .protocol-tasks-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
   }
   .protocol-card {
     height: auto !important;
     min-height: auto !important;
-    padding: 12px 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .protocol-card .problem-card-title {
+    padding: 12px !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    font-size: 13.5px !important;
+  }
+  .protocol-card .problem-card-text {
+    padding: 0 12px 12px 12px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+  .protocol-questions-card {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .protocol-questions-card .problem-card-title {
+    padding: 12px !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    font-size: 13.5px !important;
+  }
+  .protocol-questions-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 0 12px 12px 12px !important;
   }
 
   /* Comportamenti Utente & Modelli Mentali Chiave in 1 colonna su Mobile */
@@ -2959,7 +3008,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   padding: 14px;
-  background-color: #F8FAFC;
+  background-color: #F7F3FA;
   box-sizing: border-box;
 }
 .mod-img-container-box.single-img {
@@ -2974,7 +3023,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F8FAFC;
+    background-color: #F7F3FA;
     cursor: pointer;
     box-sizing: border-box;
   }
@@ -3015,7 +3064,7 @@ body {
   }
 }
 .comparison-card-header {
-  background-color: #F8FAFC;
+  background-color: #F7F3FA;
   padding: 10px 14px;
   border-bottom: 1px solid #E2E8F0;
   font-family: 'Poppins', sans-serif;
