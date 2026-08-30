@@ -686,8 +686,8 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  border-bottom: 1px solid #F1F5F9;
-  padding-bottom: 14px;
+  border-bottom: none;
+  padding-bottom: 8px;
   min-height: 124px;
 }
 .persona-avatar-wrapper {
@@ -1371,8 +1371,16 @@ body {
     font-size: 13px;
     line-height: 1.5;
   }
-  .persona-card .persona-meta {
-    font-size: 11.5px !important;
+  .persona-card .persona-header,
+  .persona-header {
+    border-bottom: none !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 0 !important;
+  }
+  .persona-card .persona-meta,
+  .persona-meta {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
   }
   /* 3 Task & Domande Finali su Laptop */
   .protocol-grid {
@@ -3506,6 +3514,17 @@ body {
     margin: 0 !important;
     font-size: 13.5px !important;
     line-height: 1.45 !important;
+  }
+  .persona-card .persona-header,
+  .persona-header {
+    border-bottom: none !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 0 !important;
+  }
+  .persona-card .persona-meta,
+  .persona-meta {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
   }
 }
 .comparison-card-header {
