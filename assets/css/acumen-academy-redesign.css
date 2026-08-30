@@ -1797,6 +1797,9 @@ body {
   }
 
   /* Lightbox Modal su Tablet: immagini a larghezza intera (100% width) e verticale scrollabile */
+  .lightbox-modal-content {
+    position: relative !important;
+  }
   .lightbox-modal-content,
   .lightbox-img-scroll-container {
     width: 90vw !important;
@@ -1818,6 +1821,24 @@ body {
     display: block !important;
     margin: 0 auto !important;
     border-radius: 0 !important;
+  }
+  .lightbox-nav-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 20px !important;
+    z-index: 10080 !important;
+    background-color: rgba(15, 23, 42, 0.92) !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+  }
+  .lightbox-nav-btn.prev {
+    left: 12px !important;
+  }
+  .lightbox-nav-btn.next {
+    right: 12px !important;
   }
 
   /* Didascalie su Tablet */
@@ -2940,12 +2961,18 @@ body {
 .lightbox-nav-btn.next {
   right: -58px !important;
 }
-@media (max-width: 840px) {
+@media (max-width: 1023px) {
+  .lightbox-nav-btn {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 20px !important;
+    z-index: 10080 !important;
+  }
   .lightbox-nav-btn.prev {
-    left: -20px !important;
+    left: 12px !important;
   }
   .lightbox-nav-btn.next {
-    right: -20px !important;
+    right: 12px !important;
   }
 }
 .lightbox-nav-btn:hover {
