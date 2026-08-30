@@ -2733,6 +2733,85 @@ body {
     font-size: 13px !important;
     line-height: 1.45 !important;
   }
+
+  /* Pilot Test 2-tab Carousel su Mobile: 50% / 50% per riempire il 100% del container */
+  .pilot-carousel-wrapper .main-carousel-tabs {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .pilot-carousel-wrapper .main-carousel-tab {
+    flex: 1 1 0 !important;
+    width: 50% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    font-size: 11.5px !important;
+    padding: 8px 10px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Caroselli & Tab Navigation su Viewport 575px - 767px */
+  @media (min-width: 575px) and (max-width: 767px) {
+    .main-carousel-nav-bar,
+    .modifiche-carousel-wrapper .main-carousel-nav-bar,
+    .pilot-carousel-wrapper .main-carousel-nav-bar {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+    .main-carousel-tabs,
+    .modifiche-carousel-wrapper .main-carousel-tabs,
+    .mod-carousel-tabs-row {
+      display: flex !important;
+      width: 100% !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      gap: 4px !important;
+      padding: 4px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+    .main-carousel-tab,
+    .modifiche-carousel-wrapper .main-carousel-tab,
+    .mod-carousel-tabs-row .main-carousel-tab {
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+      width: auto !important;
+      text-align: center !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      font-size: 11px !important;
+      line-height: 1.25 !important;
+      padding: 8px 4px !important;
+      box-sizing: border-box !important;
+    }
+    .pilot-carousel-wrapper .main-carousel-tabs {
+      display: flex !important;
+      width: 100% !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 6px !important;
+      box-sizing: border-box !important;
+    }
+    .pilot-carousel-wrapper .main-carousel-tab {
+      flex: 1 1 0 !important;
+      width: 50% !important;
+      min-width: 0 !important;
+      text-align: center !important;
+      font-size: 11.5px !important;
+      padding: 8px 10px !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      box-sizing: border-box !important;
+    }
+  }
   .modifiche-carousel-wrapper .comparison-card-item {
     height: auto !important;
     min-height: auto !important;
