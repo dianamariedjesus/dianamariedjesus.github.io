@@ -1796,6 +1796,30 @@ body {
     flex-shrink: 0 !important;
   }
 
+  /* Lightbox Modal su Tablet: immagini a larghezza intera (100% width) e verticale scrollabile */
+  .lightbox-modal-content,
+  .lightbox-img-scroll-container {
+    width: 90vw !important;
+    max-width: 90vw !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    display: block !important;
+    background-color: #0F172A !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7) !important;
+  }
+  .lightbox-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: fill !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+  }
+
   /* Didascalie su Tablet */
   .video-caption-text,
   .cover-caption-text,
@@ -2821,8 +2845,8 @@ body {
   margin: 0 auto;
 }
 
-/* Non rendere scrollabili le immagini ingrandite su Laptop (1024px) e Tablet */
-@media (min-width: 768px) and (max-width: 1399px) {
+/* Non rendere scrollabili le immagini ingrandite su Laptop (1024px+) */
+@media (min-width: 1024px) and (max-width: 1399px) {
   .lightbox-img-scroll-container {
     max-height: 80vh !important;
     overflow: visible !important;
