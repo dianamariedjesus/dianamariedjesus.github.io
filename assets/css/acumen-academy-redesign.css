@@ -2333,13 +2333,13 @@ body {
   }
   /* Carosello Wireframe & UI su Mobile con altezza uniforme fissa a 460.25px */
   #mainCarouselTrack .comparison-card-item {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
+    height: 440px !important;
+    min-height: 440px !important;
+    max-height: 440px !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
   }
   .comparison-card-header {
     height: auto !important;
@@ -2350,12 +2350,11 @@ body {
     flex: 0 0 auto !important;
   }
   #mainCarouselTrack .comparison-img-wrapper {
-    height: 250px !important;
-    min-height: 250px !important;
-    max-height: 250px !important;
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 100px !important;
     overflow-y: auto !important;
     box-sizing: border-box !important;
-    flex: 0 0 auto !important;
   }
   #mainCarouselTrack .comparison-card-desc {
     height: auto !important;
