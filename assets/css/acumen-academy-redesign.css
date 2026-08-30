@@ -1344,7 +1344,7 @@ body {
     box-sizing: border-box !important;
   }
   #sondaggio .survey-goal-box {
-    margin: 10px 12px 12px 12px !important;
+    margin: 16px 12px 12px 12px !important;
     padding: 10px 12px !important;
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
@@ -3330,7 +3330,7 @@ body {
     height: 72.5px !important;
     max-height: 72.5px !important;
     margin: 10px 12px 12px 12px !important;
-    padding: 10px 12px !important;
+    padding: 6px 10px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -3341,8 +3341,8 @@ body {
   #sondaggio .survey-goal-box .problem-card-text {
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 12.5px !important;
-    line-height: 1.4 !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
   }
 }
 .comparison-card-header {
