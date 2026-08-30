@@ -2799,10 +2799,10 @@ body {
   }
 }
 .lightbox-nav-btn:hover {
-  background-color: #0284C7 !important;
-  border-color: #0284C7 !important;
+  background-color: #5A189A !important;
+  border-color: #5A189A !important;
   transform: translateY(-50%) scale(1.1) !important;
-  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(90, 24, 154, 0.5) !important;
 }
 
 /* 5-Slide Pages Carousel Component */
@@ -2818,17 +2818,18 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 6px;
-  background-color: #F1F5F9;
+  background-color: #F7F3FA;
   padding: 6px;
   border-radius: 12px;
   width: 100%;
   box-sizing: border-box;
+  border: 1px solid rgba(90, 24, 154, 0.1);
 }
 .main-carousel-tab {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #475569;
+  color: #64748B;
   background: transparent;
   border: none;
   padding: 10px 12px;
@@ -2840,13 +2841,13 @@ body {
   text-align: center;
 }
 .main-carousel-tab:hover {
-  color: #0F172A;
-  background-color: rgba(255, 255, 255, 0.65);
+  color: #5A189A;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .main-carousel-tab.active {
   background-color: #FFFFFF;
-  color: #0F172A;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #5A189A;
+  box-shadow: 0 2px 6px rgba(90, 24, 154, 0.12);
 }
 
 .main-carousel-viewport {
@@ -2882,10 +2883,10 @@ body {
   transition: all 0.2s ease;
 }
 .main-carousel-dot:hover {
-  background-color: #64748B;
+  background-color: #5A189A;
 }
 .main-carousel-dot.active {
-  background-color: #0284C7;
+  background-color: #5A189A;
   width: 24px;
   border-radius: 10px;
 }
