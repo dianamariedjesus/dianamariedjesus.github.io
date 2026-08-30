@@ -1317,7 +1317,7 @@ body {
     padding: 0 12px 12px 12px !important;
     margin-bottom: 0 !important;
   }
-  .survey-cards-grid .survey-card-header {
+  #ricerca-utente .survey-card-header {
     min-height: 48px !important;
     height: 48px !important;
     max-height: 48px !important;
@@ -1331,7 +1331,7 @@ body {
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
   }
-  .survey-cards-grid .survey-body-section {
+  #ricerca-utente .survey-body-section {
     min-height: 165px !important;
     height: 165px !important;
     max-height: 165px !important;
@@ -1343,7 +1343,7 @@ body {
     align-items: flex-start !important;
     box-sizing: border-box !important;
   }
-  .survey-cards-grid .survey-goal-box {
+  #ricerca-utente .survey-goal-box {
     margin: 10px 12px 12px 12px !important;
     padding: 10px 12px !important;
     box-sizing: border-box !important;
@@ -3299,7 +3299,7 @@ body {
     justify-content: flex-start !important;
     box-sizing: border-box !important;
   }
-  .survey-cards-grid .survey-card-header {
+  #ricerca-utente .survey-card-header {
     min-height: 48px !important;
     height: 48px !important;
     max-height: 48px !important;
@@ -3313,7 +3313,7 @@ body {
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
   }
-  .survey-cards-grid .survey-body-section {
+  #ricerca-utente .survey-body-section {
     min-height: 145px !important;
     height: 145px !important;
     max-height: 145px !important;
@@ -3325,7 +3325,7 @@ body {
     align-items: flex-start !important;
     box-sizing: border-box !important;
   }
-  .survey-cards-grid .survey-goal-box {
+  #ricerca-utente .survey-goal-box {
     min-height: 72.5px !important;
     height: 72.5px !important;
     max-height: 72.5px !important;
@@ -3338,7 +3338,7 @@ body {
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
   }
-  .survey-cards-grid .survey-goal-box .problem-card-text {
+  #ricerca-utente .survey-goal-box .problem-card-text {
     margin: 0 !important;
     padding: 0 !important;
     font-size: 12.5px !important;
