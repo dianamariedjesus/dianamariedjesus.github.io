@@ -1543,9 +1543,9 @@ body {
   }
   .persona-card .persona-header,
   .persona-header {
-    min-height: 72px !important;
-    height: 72px !important;
-    max-height: 72px !important;
+    min-height: 84px !important;
+    height: 84px !important;
+    max-height: 84px !important;
     padding: 12px !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -1553,13 +1553,13 @@ body {
     box-sizing: border-box !important;
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
   .persona-avatar-wrapper {
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
     border-radius: 8px !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
@@ -1762,9 +1762,9 @@ body {
     text-align: left !important;
   }
   .survey-body-section {
-    min-height: 145px !important;
-    height: 145px !important;
-    max-height: 145px !important;
+    min-height: 165px !important;
+    height: 165px !important;
+    max-height: 165px !important;
     padding: 0 12px !important;
     margin-bottom: 0 !important;
     display: flex !important;
@@ -2012,9 +2012,9 @@ body {
     font-size: 13.5px !important;
     line-height: 1.35 !important;
     text-align: left !important;
-    min-height: 52px !important;
-    height: 52px !important;
-    max-height: 52px !important;
+    min-height: 64px !important;
+    height: 64px !important;
+    max-height: 64px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
@@ -2591,27 +2591,46 @@ body {
   }
 
   /* Mobile: Ultime 2 slide (Slide 4 e 5) con didascalia in basso e immagine centrata */
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-item,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-item {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    box-sizing: border-box !important;
-  }
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .mod-img-container-box,
-  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .mod-img-container-box {
-    flex: 1 !important;
+  #modifiche-carousel-track .main-carousel-slide:nth-child(4) .mod-img-container-box,
+  #modifiche-carousel-track .main-carousel-slide:nth-child(5) .mod-img-container-box,
+  .modifiche-carousel-wrapper .mod-img-container-box.single-img {
+    height: 365.53px !important;
+    min-height: 365.53px !important;
+    max-height: 365.53px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-img-wrapper,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-img-wrapper,
+  .mod-img-container-box.single-img .comparison-img-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 340px !important;
+    margin: 0 auto !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-img,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-img,
+  .mod-img-container-box.single-img .comparison-card-img {
+    max-height: 340px !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .comparison-card-desc,
   .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .comparison-card-desc {
     margin-top: 0 !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
   }
 
   /* Section Pilot Test & 3 Task Infografica su Mobile */
@@ -2698,7 +2717,7 @@ body {
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
-    padding: 0 12px 12px 34px !important;
+    padding: 0 12px 12px 12px !important;
   }
 
   /* Comportamenti Utente & Modelli Mentali Chiave in 1 colonna su Mobile */
