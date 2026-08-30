@@ -1746,7 +1746,7 @@ body {
     min-height: 52px !important;
     height: 52px !important;
     max-height: 52px !important;
-    padding: 12px 12px 6px 12px !important;
+    padding: 12px !important;
     margin-bottom: 0 !important;
     border-bottom: none !important;
     display: flex !important;
@@ -1783,6 +1783,10 @@ body {
     flex: 1 1 auto !important;
     margin: 10px 12px 12px 12px !important;
     padding: 10px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
     box-sizing: border-box !important;
   }
 
@@ -1918,6 +1922,26 @@ body {
     background-color: #F7F3FA !important;
     box-sizing: border-box !important;
   }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .mod-img-container-box,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .mod-img-container-box {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .mod-img-container-box .comparison-img-wrapper,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .mod-img-container-box .comparison-img-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(4) .mod-img-container-box .comparison-card-img,
+  .modifiche-carousel-wrapper .main-carousel-slide:nth-child(5) .mod-img-container-box .comparison-card-img {
+    margin: 0 auto !important;
+    display: block !important;
+  }
   .mod-img-container-box.single-img {
     display: flex !important;
     justify-content: center !important;
@@ -1986,12 +2010,28 @@ body {
     margin: 0 !important;
     border-bottom: none !important;
     font-size: 13.5px !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    min-height: 52px !important;
+    height: 52px !important;
+    max-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
   }
   .protocol-tasks-col .protocol-card .problem-card-text {
     padding: 0 12px 12px 12px !important;
     margin: 0 !important;
     font-size: 13px !important;
     line-height: 1.45 !important;
+    flex: 1 1 auto !important;
+    min-height: 88px !important;
+    height: 88px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
   }
   .protocol-questions-card {
     width: 100% !important;
@@ -2007,6 +2047,11 @@ body {
     margin: 0 !important;
     border-bottom: none !important;
     font-size: 13.5px !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
   }
   .protocol-questions-list {
     display: grid !important;
@@ -2295,7 +2340,7 @@ body {
     background-color: transparent !important;
     min-height: auto !important;
     height: auto !important;
-    padding: 12px 12px 6px 12px !important;
+    padding: 12px !important;
     margin-bottom: 0 !important;
     border-bottom: none !important;
     box-sizing: border-box !important;
@@ -2315,7 +2360,7 @@ body {
   }
   .survey-body-section {
     padding: 0 12px !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 12px !important;
     min-height: auto !important;
     height: auto !important;
     box-sizing: border-box !important;
