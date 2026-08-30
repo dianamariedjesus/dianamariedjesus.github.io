@@ -1250,12 +1250,14 @@ body {
   /* Section Problema card alignment on laptop */
   .problem-cards-grid .problem-card {
     padding: 0 !important;
-    min-height: 430px;
+    min-height: auto !important;
+    height: auto !important;
     box-sizing: border-box;
     overflow: hidden !important;
   }
   .problem-cards-grid .problem-card-header {
     min-height: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1264,24 +1266,25 @@ body {
     padding: 12px !important;
     border-bottom: none !important;
   }
-  .problem-cards-grid .problem-card-section {
-    padding: 0 12px 12px 12px !important;
-    box-sizing: border-box !important;
-  }
-  .problem-card-title {
+  .problem-cards-grid .problem-card-title {
     font-size: 13.5px;
     line-height: 1.35;
     text-align: left;
     margin: 0;
   }
-  .problem-section-body {
-    min-height: 165px;
-    height: 165px;
-    margin-bottom: 14px;
+  .problem-cards-grid .problem-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 12px !important;
+    margin-bottom: 12px !important;
   }
-  .impact-section-body {
-    min-height: 105px;
-    height: 105px;
+  .problem-cards-grid .impact-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 12px 12px 12px !important;
+    margin-bottom: 0 !important;
   }
   .survey-card-header {
     min-height: 38px;
@@ -3197,6 +3200,57 @@ body {
     height: 476px !important;
     min-height: 476px !important;
     max-height: 476px !important;
+  }
+  .problem-cards-grid .problem-card {
+    padding: 0 !important;
+    height: 100% !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .problem-cards-grid .problem-card-header {
+    min-height: 52px !important;
+    height: 52px !important;
+    max-height: 52px !important;
+    padding: 12px !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+  .problem-cards-grid .problem-card-title {
+    font-size: 14.5px !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+  .problem-cards-grid .problem-section-body {
+    min-height: 110px !important;
+    height: 110px !important;
+    max-height: 110px !important;
+    padding: 0 12px !important;
+    margin-bottom: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+  .problem-cards-grid .impact-section-body {
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 12px 12px 12px !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
   }
 }
 .comparison-card-header {
