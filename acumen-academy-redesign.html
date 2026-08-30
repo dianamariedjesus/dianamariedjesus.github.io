@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=128.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=129.0">
 </head>
 
 <body>
@@ -1023,40 +1023,38 @@
             <div class="main-carousel-dots">
               <button type="button" class="main-carousel-dot active" id="pilot-dot-0" onclick="goToPilotSlide(0)" aria-label="PRIMA"></button>
               <button type="button" class="main-carousel-dot" id="pilot-dot-1" onclick="goToPilotSlide(1)" aria-label="DOPO"></button>
-            </div>
-          </div>
-
-          <ul class="section-list">
-            <li><strong>I 3 Task &amp; Domande Finali:</strong> Protocollo operativo di test e questionario qualitativo post-test.</li>
-          </ul>
-
-          <!-- Protocollo 3 Task (Sinistra) + Survey Domande (Destra) -->
+            </div>          <!-- Protocollo 3 Task + Survey Domande -->
           <div class="protocol-2col-layout" style="margin-top: 12px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch;">
+            <div class="protocol-grid">
               
-              <!-- Colonna Sinistra: 3 Task di Test -->
-              <div style="display: flex; flex-direction: column; gap: 10px; justify-content: space-between; height: 100%;">
-                <div class="protocol-card" style="margin: 0; padding: 12px 16px; flex: 1;">
-                  <h4 class="problem-card-title" style="margin-bottom: 4px; font-size: 14px; padding-bottom: 6px;">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
-                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
+              <!-- 3 Task di Test -->
+              <div class="protocol-tasks-col">
+                <div class="protocol-card">
+                  <h4 class="problem-card-title">🎯 TASK 1 (Credibilità &amp; Brand)</h4>
+                  <p class="problem-card-text">Verificare se l'utente riesce a trovare le informazioni chiave sull'ente per validarne la credibilità.</p>
                 </div>
-                <div class="protocol-card" style="margin: 0; padding: 12px 16px; flex: 1;">
-                  <h4 class="problem-card-title" style="margin-bottom: 4px; font-size: 14px; padding-bottom: 6px;">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
-                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
+                <div class="protocol-card">
+                  <h4 class="problem-card-title">🎯 TASK 2 (Ricerca guidata &amp; Filtri Corsi)</h4>
+                  <p class="problem-card-text">Trovare un corso gratuito di "Business Strategy" sotto le 5 ore di durata, utilizzando esclusivamente i filtri.</p>
                 </div>
-                <div class="protocol-card" style="margin: 0; padding: 12px 16px; flex: 1;">
-                  <h4 class="problem-card-title" style="margin-bottom: 4px; font-size: 14px; padding-bottom: 6px;">🎯 TASK 3 (Supporto Rapido)</h4>
-                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
+                <div class="protocol-card">
+                  <h4 class="problem-card-title">🎯 TASK 3 (Supporto Rapido)</h4>
+                  <p class="problem-card-text">Trovare la via più rapida per contattare l'assistenza in caso di problemi bloccanti.</p>
                 </div>
               </div>
 
-              <!-- Colonna Destra: Domande Finali Post-Test -->
-              <div class="protocol-card" style="margin: 0; padding: 12px 16px; display: flex; flex-direction: column; height: 100%;">
-                <h4 class="problem-card-title" style="margin-bottom: 8px; font-size: 14px; padding-bottom: 6px;">📋 DOMANDE FINALI POST-TEST</h4>
-                <div style="display: flex; flex-direction: column; justify-content: space-around; flex: 1; padding: 4px 0;">
-                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
-                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
-                  <p class="problem-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
+              <!-- Domande Finali Post-Test -->
+              <div class="protocol-card protocol-questions-card">
+                <h4 class="problem-card-title">📋 DOMANDE FINALI POST-TEST</h4>
+                <div class="protocol-questions-list">
+                  <p class="problem-card-text">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
+                  <p class="problem-card-text">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
+                  <p class="problem-card-text">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
+                </div>
+              </div>
+
+            </div>
+          </div>-card-text" style="margin: 0; font-size: 13px; line-height: 1.45;">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
                 </div>
               </div>
 
