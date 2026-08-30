@@ -1762,9 +1762,9 @@ body {
     text-align: left !important;
   }
   .survey-body-section {
-    min-height: 165px !important;
-    height: 165px !important;
-    max-height: 165px !important;
+    min-height: 185px !important;
+    height: 185px !important;
+    max-height: 185px !important;
     padding: 0 12px !important;
     margin-bottom: 0 !important;
     display: flex !important;
@@ -1780,7 +1780,9 @@ body {
     line-height: 1.45 !important;
   }
   .survey-goal-box {
-    flex: 1 1 auto !important;
+    min-height: 84px !important;
+    height: 84px !important;
+    max-height: 84px !important;
     margin: 10px 12px 12px 12px !important;
     padding: 10px 12px !important;
     display: flex !important;
