@@ -456,7 +456,7 @@ body {
 .work-image-frame {
   width: 100%;
   height: auto;
-  aspect-ratio: 420/246.35;
+  aspect-ratio: 420/210; /* Sleeker, reduced height */
   border: 1px solid #D9D9D9; /* Sottile colore chiaro */
   border-radius: 8px; /* 8px corner radius */
   overflow: hidden;
