@@ -327,6 +327,14 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
+.palette-img-clean {
+  max-width: 640px !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 12px auto !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 
@@ -917,6 +925,12 @@ body {
   .cover-caption-text {
     font-size: 12.5px !important;
     line-height: 1.45 !important;
+  }
+
+  /* Palette Colori Laptop - Immagine pulita senza bordi bianchi */
+  .palette-img-clean {
+    max-width: 540px !important;
+    margin: 0 auto 10px auto !important;
   }
 
 
