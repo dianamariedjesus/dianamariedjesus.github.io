@@ -331,6 +331,7 @@ div[id] {
   padding: 0;
   background-color: transparent;
   border: none;
+}
 /* Palette Colori Immagine Centrata & Scalata */
 .palette-img-centered {
   max-width: 480px !important;
