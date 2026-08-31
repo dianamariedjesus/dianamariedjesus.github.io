@@ -866,3 +866,9 @@ body {
     padding: 3px 6px;
   }
 }
+
+.work-image.work-image-contain {
+  object-fit: contain !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+}
