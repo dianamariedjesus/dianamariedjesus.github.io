@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.9">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.0">
 </head>
 
 <body>
@@ -360,11 +360,62 @@
             </div>
           </div>
 
-          <!-- Placeholder Carosello Social -->
-          <div class="placeholder-container">
-            <div class="placeholder-icon">📱</div>
-            <div class="placeholder-title">[ Placeholder Carosello — Kit Grafiche Social ]</div>
-            <div class="placeholder-desc">Cover YouTube e Facebook, post informativi e promozionali Instagram/Facebook</div>
+          <!-- Carosello 4 Slide Kit Grafiche Social -->
+          <div class="social-carousel-wrapper" style="margin-top: 24px;">
+            <div class="main-carousel-nav-bar">
+              <div class="main-carousel-tabs">
+                <button type="button" class="main-carousel-tab active" id="social-tab-0" onclick="goToSocialSlide(0)">Facebook Cover &amp; Profile</button>
+                <button type="button" class="main-carousel-tab" id="social-tab-1" onclick="goToSocialSlide(1)">YouTube Header &amp; Avatar</button>
+                <button type="button" class="main-carousel-tab" id="social-tab-2" onclick="goToSocialSlide(2)">Facebook Post Promozionali</button>
+                <button type="button" class="main-carousel-tab" id="social-tab-3" onclick="goToSocialSlide(3)">Instagram Post Promozionali</button>
+              </div>
+            </div>
+
+            <div class="main-carousel-viewport">
+              <div class="main-carousel-track" id="social-carousel-track">
+                
+                <!-- Slide 1: Facebook — Cover & Profile Picture -->
+                <div class="main-carousel-slide">
+                  <img src="assets/img/includo-brand-identity/social-slide1-facebook.png?v=1.0" alt="Facebook — Cover &amp; Profile Picture" class="carousel-slide-img" onclick="openSocialCarouselLightbox(0)">
+                  <div class="carousel-card-desc">
+                    <strong>Facebook — Cover &amp; Profile Picture</strong>: Immagine di copertina desktop (851x315 px) e avatar profilo (360x360 px) con pittogramma isolato per garantire leggibilità e coerenza visiva del brand.
+                  </div>
+                </div>
+
+                <!-- Slide 2: YouTube — Channel Header & Avatar -->
+                <div class="main-carousel-slide">
+                  <img src="assets/img/includo-brand-identity/social-slide2-youtube.png?v=1.0" alt="YouTube — Channel Header &amp; Avatar" class="carousel-slide-img" onclick="openSocialCarouselLightbox(1)">
+                  <div class="carousel-card-desc">
+                    <strong>YouTube — Channel Header &amp; Avatar</strong>: Banner di canale (2560x1440 px) con miniatura profilo coordinata (800x800 px).
+                  </div>
+                </div>
+
+                <!-- Slide 3: Facebook — Set Post Promozionali -->
+                <div class="main-carousel-slide">
+                  <img src="assets/img/includo-brand-identity/social-slide3-facebook-posts.png?v=1.0" alt="Facebook — Set Post Promozionali" class="carousel-slide-img" onclick="openSocialCarouselLightbox(2)">
+                  <div class="carousel-card-desc">
+                    <strong>Facebook — Set Post Promozionali</strong>: Post in formato verticale (1080x1350 px) per sponsorizzazioni mirate: presentazione azienda, invito all'open day e promozione dei percorsi artigianali.
+                  </div>
+                </div>
+
+                <!-- Slide 4: Instagram — Set Post Promozionali (Mobile-First) -->
+                <div class="main-carousel-slide">
+                  <img src="assets/img/includo-brand-identity/social-slide4-instagram-posts.png?v=1.0" alt="Instagram — Set Post Promozionali (Mobile-First)" class="carousel-slide-img" onclick="openSocialCarouselLightbox(3)">
+                  <div class="carousel-card-desc">
+                    <strong>Instagram — Set Post Promozionali (Mobile-First)</strong>: Grafiche promozionali per feed Instagram (1080x1350 px) strutturate con gerarchia visiva ad alto impatto per il lancio di corsi ed eventi sul territorio.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Indicatori pallini sotto il carosello -->
+            <div class="main-carousel-indicators">
+              <span class="carousel-dot active" id="social-dot-0" onclick="goToSocialSlide(0)"></span>
+              <span class="carousel-dot" id="social-dot-1" onclick="goToSocialSlide(1)"></span>
+              <span class="carousel-dot" id="social-dot-2" onclick="goToSocialSlide(2)"></span>
+              <span class="carousel-dot" id="social-dot-3" onclick="goToSocialSlide(3)"></span>
+            </div>
           </div>
         </section>
 
@@ -451,8 +502,8 @@
       <button type="button" class="lightbox-close-btn" onclick="closeSingleLightbox(event)" aria-label="Chiudi modal">&times;</button>
       
       <!-- Frecce di navigazione Lightbox (visibili solo per i caroselli) -->
-      <button type="button" id="brandLightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateMarchioLightbox(event, -1)" aria-label="Immagine precedente">&lsaquo;</button>
-      <button type="button" id="brandLightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateMarchioLightbox(event, 1)" aria-label="Immagine successiva">&rsaquo;</button>
+      <button type="button" id="brandLightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateCarouselLightbox(event, -1)" aria-label="Immagine precedente">&lsaquo;</button>
+      <button type="button" id="brandLightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateCarouselLightbox(event, 1)" aria-label="Immagine successiva">&rsaquo;</button>
 
       <div id="singleLightboxImageScrollContainer" class="lightbox-img-scroll-container">
         <img id="singleLightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
@@ -474,8 +525,27 @@
       }
     ];
 
-    var currentMarchioLightboxIndex = 0;
-    var isMarchioCarouselOpen = false;
+    var socialCarouselData = [
+      {
+        src: 'assets/img/includo-brand-identity/social-slide1-facebook.png?v=1.0',
+        caption: '<strong>Facebook — Cover &amp; Profile Picture</strong>: Immagine di copertina desktop (851x315 px) e avatar profilo (360x360 px) con pittogramma isolato per garantire leggibilità e coerenza visiva del brand.'
+      },
+      {
+        src: 'assets/img/includo-brand-identity/social-slide2-youtube.png?v=1.0',
+        caption: '<strong>YouTube — Channel Header &amp; Avatar</strong>: Banner di canale (2560x1440 px) con miniatura profilo coordinata (800x800 px).'
+      },
+      {
+        src: 'assets/img/includo-brand-identity/social-slide3-facebook-posts.png?v=1.0',
+        caption: '<strong>Facebook — Set Post Promozionali</strong>: Post in formato verticale (1080x1350 px) per sponsorizzazioni mirate: presentazione azienda, invito all\'open day e promozione dei percorsi artigianali.'
+      },
+      {
+        src: 'assets/img/includo-brand-identity/social-slide4-instagram-posts.png?v=1.0',
+        caption: '<strong>Instagram — Set Post Promozionali (Mobile-First)</strong>: Grafiche promozionali per feed Instagram (1080x1350 px) strutturate con gerarchia visiva ad alto impatto per il lancio di corsi ed eventi sul territorio.'
+      }
+    ];
+
+    var activeCarouselType = null; // 'marchio' | 'social' | null
+    var currentCarouselLightboxIndex = 0;
 
     function goToMarchioSlide(index) {
       var track = document.getElementById('marchio-carousel-track');
@@ -497,35 +567,77 @@
       }
     }
 
-    function openMarchioCarouselLightbox(index) {
-      if (index < 0 || index >= marchioCarouselData.length) return;
-      currentMarchioLightboxIndex = index;
-      isMarchioCarouselOpen = true;
-      goToMarchioSlide(index);
-      renderMarchioLightbox();
+    function goToSocialSlide(index) {
+      var track = document.getElementById('social-carousel-track');
+      var tabs = [
+        document.getElementById('social-tab-0'),
+        document.getElementById('social-tab-1'),
+        document.getElementById('social-tab-2'),
+        document.getElementById('social-tab-3')
+      ];
+      var dots = [
+        document.getElementById('social-dot-0'),
+        document.getElementById('social-dot-1'),
+        document.getElementById('social-dot-2'),
+        document.getElementById('social-dot-3')
+      ];
+
+      if (!track) return;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+
+      tabs.forEach(function(tab, i) {
+        if (tab) tab.classList.toggle('active', i === index);
+      });
+      dots.forEach(function(dot, i) {
+        if (dot) dot.classList.toggle('active', i === index);
+      });
     }
 
-    function renderMarchioLightbox() {
+    function openMarchioCarouselLightbox(index) {
+      if (index < 0 || index >= marchioCarouselData.length) return;
+      currentCarouselLightboxIndex = index;
+      activeCarouselType = 'marchio';
+      goToMarchioSlide(index);
+      renderCarouselLightbox();
+    }
+
+    function openSocialCarouselLightbox(index) {
+      if (index < 0 || index >= socialCarouselData.length) return;
+      currentCarouselLightboxIndex = index;
+      activeCarouselType = 'social';
+      goToSocialSlide(index);
+      renderCarouselLightbox();
+    }
+
+    function renderCarouselLightbox() {
       var modal = document.getElementById('singleLightboxModal');
       var img = document.getElementById('singleLightboxImageDisplay');
       var caption = document.getElementById('singleLightboxCaption');
       var prevBtn = document.getElementById('brandLightboxPrevBtn');
       var nextBtn = document.getElementById('brandLightboxNextBtn');
 
-      var item = marchioCarouselData[currentMarchioLightboxIndex];
+      var dataSet = null;
+      if (activeCarouselType === 'marchio') {
+        dataSet = marchioCarouselData;
+      } else if (activeCarouselType === 'social') {
+        dataSet = socialCarouselData;
+      }
+
+      if (!dataSet) return;
+      var item = dataSet[currentCarouselLightboxIndex];
       if (!item) return;
 
       if (img) img.src = item.src;
       if (caption) caption.innerHTML = item.caption;
 
-      // Carosello: Niente freccia a sinistra per la prima slide (index 0)
+      // Niente freccia a sinistra per la prima slide (index 0)
       if (prevBtn) {
-        prevBtn.style.display = (currentMarchioLightboxIndex === 0) ? 'none' : 'flex';
+        prevBtn.style.display = (currentCarouselLightboxIndex === 0) ? 'none' : 'flex';
       }
 
-      // Carosello: Niente freccia a destra per l'ultima slide (index 1)
+      // Niente freccia a destra per l'ultima slide (index dataSet.length - 1)
       if (nextBtn) {
-        nextBtn.style.display = (currentMarchioLightboxIndex === marchioCarouselData.length - 1) ? 'none' : 'flex';
+        nextBtn.style.display = (currentCarouselLightboxIndex === dataSet.length - 1) ? 'none' : 'flex';
       }
 
       if (modal) {
@@ -534,12 +646,17 @@
       }
     }
 
-    function navigateMarchioLightbox(e, direction) {
+    function navigateCarouselLightbox(e, direction) {
       if (e) e.stopPropagation();
-      if (!isMarchioCarouselOpen) return;
-      var newIndex = currentMarchioLightboxIndex + direction;
-      if (newIndex >= 0 && newIndex < marchioCarouselData.length) {
-        openMarchioCarouselLightbox(newIndex);
+      if (!activeCarouselType) return;
+      var dataSet = (activeCarouselType === 'marchio') ? marchioCarouselData : socialCarouselData;
+      var newIndex = currentCarouselLightboxIndex + direction;
+      if (newIndex >= 0 && newIndex < dataSet.length) {
+        if (activeCarouselType === 'marchio') {
+          openMarchioCarouselLightbox(newIndex);
+        } else if (activeCarouselType === 'social') {
+          openSocialCarouselLightbox(newIndex);
+        }
       }
     }
 
@@ -550,7 +667,7 @@
       var prevBtn = document.getElementById('brandLightboxPrevBtn');
       var nextBtn = document.getElementById('brandLightboxNextBtn');
 
-      isMarchioCarouselOpen = false;
+      activeCarouselType = null;
 
       if (img) img.src = src;
       if (caption) caption.innerHTML = captionHtml;
@@ -578,11 +695,11 @@
     document.addEventListener('keydown', function(e) {
       var modal = document.getElementById('singleLightboxModal');
       if (modal && modal.style.display === 'flex') {
-        if (isMarchioCarouselOpen) {
+        if (activeCarouselType) {
           if (e.key === 'ArrowLeft') {
-            navigateMarchioLightbox(e, -1);
+            navigateCarouselLightbox(e, -1);
           } else if (e.key === 'ArrowRight') {
-            navigateMarchioLightbox(e, 1);
+            navigateCarouselLightbox(e, 1);
           }
         }
         if (e.key === 'Escape') {
