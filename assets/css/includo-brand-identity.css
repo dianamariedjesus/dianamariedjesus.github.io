@@ -393,6 +393,9 @@ body {
   line-height: 1.5;
   flex: 1;
 }
+.deliverable-card-body p {
+  margin-bottom: 0 !important;
+}
 
 /* Linea Divisoria */
 .divider-line {
@@ -640,7 +643,7 @@ body {
   background-color: #FFFFFF;
   display: block;
   margin: 0 auto;
-  border-bottom: 1px solid #E2E8F0;
+  border: none;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
