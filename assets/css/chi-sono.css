@@ -1124,10 +1124,37 @@ html, body {
 }
 
 /* ===================================
-   UNIFIED NAVBAR & FOOTER FINE-TUNINGS
+   UNIFIED NAVBAR & FOOTER FINE-TUNINGS (ALL VIEWPORTS)
    =================================== */
 
-/* Laptop Viewports (1024px - 1399px) */
+/* 1. Desktop Large Viewports (1400px+) */
+@media (min-width: 1400px) {
+  .navbar .container-fluid,
+  .navbar-expand-md .mobile-nav-container {
+    padding: 0 60px !important;
+  }
+  .custom-nav-link {
+    font-size: 16px !important;
+    padding: 8px 16px !important;
+  }
+  .language-dropdown-wrapper .lang-selector {
+    font-size: 16px !important;
+    padding: 8px 16px !important;
+  }
+  .footer-container {
+    padding: 24px 60px !important;
+  }
+  .footer-copyright,
+  .footer-message {
+    font-size: 16px !important;
+  }
+  .footer-social-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* 2. Laptop Viewports (1024px - 1399px) */
 @media (min-width: 1024px) and (max-width: 1399px) {
   .navbar .container-fluid,
   .navbar-expand-md .mobile-nav-container {
@@ -1156,7 +1183,7 @@ html, body {
   }
 }
 
-/* Tablet Viewports (768px - 1023px) */
+/* 3. Tablet Viewports (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar .container-fluid,
   .navbar-expand-md .mobile-nav-container {
@@ -1188,7 +1215,7 @@ html, body {
   }
 }
 
-/* Mobile Viewports (320px - 767px) */
+/* 4. Mobile Viewports (320px - 767px) */
 @media (max-width: 767px) {
   .footer-container {
     flex-direction: column !important;
