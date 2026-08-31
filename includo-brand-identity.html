@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css?v=2.0">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=7.0">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=8.0">
 </head>
 
 <body>
@@ -548,7 +548,11 @@
     var activeCarouselType = null; // 'marchio' | 'social' | null
     var currentCarouselLightboxIndex = 0;
 
+    var currentMarchioSlide = 0;
+    var currentSocialSlide = 0;
+
     function goToMarchioSlide(index) {
+      currentMarchioSlide = index;
       var track = document.getElementById('marchio-carousel-track');
       var tab0 = document.getElementById('marchio-tab-0');
       var tab1 = document.getElementById('marchio-tab-1');
@@ -569,6 +573,7 @@
     }
 
     function goToSocialSlide(index) {
+      currentSocialSlide = index;
       var track = document.getElementById('social-carousel-track');
       var tabs = [
         document.getElementById('social-tab-0'),
@@ -593,6 +598,57 @@
         if (dot) dot.classList.toggle('active', i === index);
       });
     }
+
+    function enableTouchSwipe(element, onSwipeLeft, onSwipeRight) {
+      if (!element) return;
+      var startX = 0;
+      var startY = 0;
+      var isSwiping = false;
+
+      element.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          isSwiping = true;
+        }
+      }, { passive: true });
+
+      element.addEventListener('touchend', function(e) {
+        if (!isSwiping || !e.changedTouches || e.changedTouches.length === 0) return;
+        isSwiping = false;
+        var endX = e.changedTouches[0].clientX;
+        var endY = e.changedTouches[0].clientY;
+        var diffX = startX - endX;
+        var diffY = startY - endY;
+        if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) {
+            if (typeof onSwipeLeft === 'function') onSwipeLeft();
+          } else {
+            if (typeof onSwipeRight === 'function') onSwipeRight();
+          }
+        }
+      }, { passive: true });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var marchioWrap = document.querySelector('.marchio-carousel-wrapper');
+      if (marchioWrap) {
+        enableTouchSwipe(marchioWrap, function() {
+          if (currentMarchioSlide < 1) goToMarchioSlide(currentMarchioSlide + 1);
+        }, function() {
+          if (currentMarchioSlide > 0) goToMarchioSlide(currentMarchioSlide - 1);
+        });
+      }
+
+      var socialWrap = document.querySelector('.social-carousel-wrapper');
+      if (socialWrap) {
+        enableTouchSwipe(socialWrap, function() {
+          if (currentSocialSlide < 3) goToSocialSlide(currentSocialSlide + 1);
+        }, function() {
+          if (currentSocialSlide > 0) goToSocialSlide(currentSocialSlide - 1);
+        });
+      }
+    });
 
     function openMarchioCarouselLightbox(index) {
       if (index < 0 || index >= marchioCarouselData.length) return;
@@ -927,18 +983,36 @@
         var footerRect = footer ? footer.getBoundingClientRect() : null;
         var windowHeight = window.innerHeight;
         var scrollPosition = window.scrollY || window.pageYOffset;
+        var isMobileOrTablet = window.innerWidth < 1024;
 
-        if (scrollPosition > 300) {
-          backToTopBtn.classList.add('visible');
-        } else {
-          backToTopBtn.classList.remove('visible');
-        }
+        if (isMobileOrTablet) {
+          var docHeight = document.documentElement.scrollHeight;
+          var distanceFromBottom = docHeight - (scrollPosition + windowHeight);
+          if (distanceFromBottom < 1200 || (footerRect && footerRect.top < windowHeight + 200)) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
 
-        if (footerRect && footerRect.top < windowHeight) {
-          var visibleFooterHeight = windowHeight - footerRect.top;
-          backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 24) + 'px', 'important');
+          if (footerRect && footerRect.top < windowHeight) {
+            var visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 16) + 'px', 'important');
+          } else {
+            backToTopBtn.style.setProperty('bottom', '20px', 'important');
+          }
         } else {
-          backToTopBtn.style.setProperty('bottom', '30px', 'important');
+          if (scrollPosition > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+
+          if (footerRect && footerRect.top < windowHeight) {
+            var visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 24) + 'px', 'important');
+          } else {
+            backToTopBtn.style.setProperty('bottom', '30px', 'important');
+          }
         }
       }
 

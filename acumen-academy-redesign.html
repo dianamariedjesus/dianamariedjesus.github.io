@@ -1943,7 +1943,11 @@
       });
     }
 
+    var currentPilotSlide = 0;
+    var currentModSlide = 0;
+
     function goToPilotSlide(index) {
+      currentPilotSlide = index;
       var track = document.getElementById('pilot-carousel-track');
       if (track) {
         track.style.transform = 'translateX(-' + (index * 100) + '%)';
@@ -1957,6 +1961,7 @@
     }
 
     function goToModSlide(index) {
+      currentModSlide = index;
       var track = document.getElementById('modifiche-carousel-track');
       if (track) {
         track.style.transform = 'translateX(-' + (index * 100) + '%)';
@@ -1972,6 +1977,68 @@
     function moveMainSlide(direction) {
       goToMainSlide(currentMainSlide + direction);
     }
+
+    function enableTouchSwipe(element, onSwipeLeft, onSwipeRight) {
+      if (!element) return;
+      var startX = 0;
+      var startY = 0;
+      var isSwiping = false;
+
+      element.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          isSwiping = true;
+        }
+      }, { passive: true });
+
+      element.addEventListener('touchend', function(e) {
+        if (!isSwiping || !e.changedTouches || e.changedTouches.length === 0) return;
+        isSwiping = false;
+        var endX = e.changedTouches[0].clientX;
+        var endY = e.changedTouches[0].clientY;
+        var diffX = startX - endX;
+        var diffY = startY - endY;
+        if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) {
+            if (typeof onSwipeLeft === 'function') onSwipeLeft();
+          } else {
+            if (typeof onSwipeRight === 'function') onSwipeRight();
+          }
+        }
+      }, { passive: true });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var mainWrap = document.querySelector('.main-carousel-wrapper');
+      if (mainWrap) {
+        enableTouchSwipe(mainWrap, function() {
+          moveMainSlide(1);
+        }, function() {
+          moveMainSlide(-1);
+        });
+      }
+
+      var pilotTrack = document.getElementById('pilot-carousel-track');
+      var pilotWrap = pilotTrack ? (pilotTrack.closest('.main-carousel-wrapper') || pilotTrack.parentElement) : null;
+      if (pilotWrap) {
+        enableTouchSwipe(pilotWrap, function() {
+          if (currentPilotSlide < 1) goToPilotSlide(currentPilotSlide + 1);
+        }, function() {
+          if (currentPilotSlide > 0) goToPilotSlide(currentPilotSlide - 1);
+        });
+      }
+
+      var modTrack = document.getElementById('modifiche-carousel-track');
+      var modWrap = modTrack ? (modTrack.closest('.main-carousel-wrapper') || modTrack.parentElement) : null;
+      if (modWrap) {
+        enableTouchSwipe(modWrap, function() {
+          if (currentModSlide < 4) goToModSlide(currentModSlide + 1);
+        }, function() {
+          if (currentModSlide > 0) goToModSlide(currentModSlide - 1);
+        });
+      }
+    });
 
     document.addEventListener('keydown', function(e) {
       var modal = document.getElementById('mediaLightboxModal');

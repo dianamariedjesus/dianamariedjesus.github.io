@@ -528,6 +528,14 @@ div[id] {
   transform: translateY(-1px);
   box-shadow: 0 3px 10px rgba(255, 69, 42, 0.30);
 }
+@media (max-width: 1023px) {
+  .back-to-top {
+    right: 20px !important;
+    bottom: 20px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
 
 /* Other Works Section */
 .other-works-section {
