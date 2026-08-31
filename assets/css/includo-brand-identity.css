@@ -853,6 +853,198 @@ body {
   }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
+  .case-study-hero {
+    width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: 315.859px !important;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #FFFFFF;
+  }
+  .case-study-hero .hero-img {
+    max-width: 674px;
+    max-height: 315.859px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain !important;
+  }
+
+  .case-study-title-section {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+  .case-study-title-section .main-title {
+    font-size: 24.5px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .case-study-container {
+    width: 674px;
+    max-width: 674px;
+    padding: 0 175px;
+    margin: 0 auto;
+    box-sizing: content-box;
+  }
+
+  .metadata-section {
+    margin-top: 56px;
+  }
+  .metadata-section .metadata-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+  .metadata-section .metadata-column {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .metadata-section .metadata-heading {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .metadata-section .metadata-text {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .content-sections-wrapper {
+    margin-top: 56px !important;
+    gap: 40px;
+  }
+
+  .case-study-section {
+    gap: 10px;
+  }
+  .case-study-section .section-title {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+  .case-study-section .section-subtitle {
+    font-size: 16.5px;
+  }
+  .case-study-section .subsection-title {
+    font-size: 16.5px;
+    margin-top: 14px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .section-paragraph {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .case-study-section > div[id] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .section-list li {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+
+  .cover-single-container {
+    margin-top: 14px;
+  }
+  .cover-caption-text {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Infografiche su Laptop */
+  .sfida-cards-grid,
+  .deliverables-3col-grid {
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .sfida-card-header,
+  .deliverable-card-header {
+    font-size: 13.5px;
+    padding: 14px 14px !important;
+    min-height: auto !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  .sfida-card-body,
+  .deliverable-card-body {
+    font-size: 12.5px;
+    padding: 0 14px 14px 14px !important;
+    line-height: 1.45;
+  }
+
+  /* Carosello Immagini su Laptop */
+  .main-carousel-wrapper {
+    margin-top: 18px;
+  }
+  .main-carousel-tabs {
+    padding: 5px;
+    gap: 4px;
+    border-radius: 10px;
+  }
+  .main-carousel-tab {
+    font-size: 11.5px;
+    padding: 7px 8px;
+    line-height: 1.25;
+  }
+  .carousel-card-desc {
+    padding: 10px 14px 12px 14px;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Lightbox Modal su Laptop */
+  .lightbox-modal-content {
+    max-width: 720px;
+  }
+  .lightbox-img-scroll-container {
+    max-height: 75vh !important;
+    overflow: visible !important;
+  }
+  .lightbox-img {
+    max-height: 70vh !important;
+    object-fit: contain !important;
+  }
+  .lightbox-caption {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  /* External Link Card su Laptop */
+  .external-link-card {
+    margin-top: 28px;
+    padding: 20px 22px;
+    gap: 16px;
+    border-radius: 12px;
+  }
+  .external-link-icon-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+  .external-link-title {
+    font-size: 15px;
+  }
+  .external-link-desc {
+    font-size: 12.5px;
+  }
+  .external-link-cta-btn {
+    font-size: 13px;
+    padding: 11px 18px;
+    border-radius: 8px;
+  }
+
+  /* Sidebar Navigation Overlay su Laptop */
   .sidebar-nav {
     left: 20px;
     width: 190px;
@@ -864,6 +1056,24 @@ body {
   .overlay-link {
     font-size: 11px;
     padding: 3px 6px;
+  }
+
+  /* Other Works Section su Laptop */
+  .other-works-section {
+    margin: 0 auto 120px auto;
+  }
+  .other-works-section .other-works-title {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .other-works-section .other-works-grid {
+    gap: 20px;
+  }
+  .work-title {
+    font-size: 14.5px;
+  }
+  .work-description {
+    font-size: 12.5px;
   }
 }
 
