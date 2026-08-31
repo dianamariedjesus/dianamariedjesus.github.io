@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css?v=2.0">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=8.0">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=9.0">
 </head>
 
 <body>
@@ -986,19 +986,18 @@
         var isMobileOrTablet = window.innerWidth < 1024;
 
         if (isMobileOrTablet) {
-          var docHeight = document.documentElement.scrollHeight;
-          var distanceFromBottom = docHeight - (scrollPosition + windowHeight);
-          if (distanceFromBottom < 1200 || (footerRect && footerRect.top < windowHeight + 200)) {
+          var pageHeight = document.documentElement.scrollHeight;
+          var isAtFooter = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect && footerRect.top <= windowHeight);
+          if (isAtFooter) {
             backToTopBtn.classList.add('visible');
+            if (footerRect && footerRect.top < windowHeight) {
+              var visibleFooterHeight = windowHeight - footerRect.top;
+              backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 16) + 'px', 'important');
+            } else {
+              backToTopBtn.style.setProperty('bottom', '20px', 'important');
+            }
           } else {
             backToTopBtn.classList.remove('visible');
-          }
-
-          if (footerRect && footerRect.top < windowHeight) {
-            var visibleFooterHeight = windowHeight - footerRect.top;
-            backToTopBtn.style.setProperty('bottom', (visibleFooterHeight + 16) + 'px', 'important');
-          } else {
-            backToTopBtn.style.setProperty('bottom', '20px', 'important');
           }
         } else {
           if (scrollPosition > 300) {
