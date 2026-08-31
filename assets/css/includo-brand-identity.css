@@ -358,6 +358,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: opacity 0.2s ease;
+  height: 100%;
 }
 .palette-img-col:hover {
   opacity: 0.92;
@@ -366,7 +367,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   width: auto;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   object-position: right center;
   display: block;
@@ -854,25 +855,25 @@ body {
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
   .case-study-hero {
-    width: 100%;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: 315.859px !important;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #FFFFFF;
+    width: 100% !important;
+    height: 315.844px !important;
+    min-height: 315.844px !important;
+    max-height: 315.844px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    background-color: #FFFFFF !important;
   }
   .case-study-hero .hero-img {
-    max-width: 674px;
-    max-height: 315.859px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 520px !important;
+    max-width: 520px !important;
+    min-width: 520px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
     object-fit: contain !important;
   }
 
@@ -960,6 +961,37 @@ body {
   .cover-caption-text {
     font-size: 12.5px !important;
     line-height: 1.45 !important;
+  }
+
+  /* Palette Colori Laptop - Flessibile ad altezza colonna sinistra */
+  .palette-2col-layout {
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+    margin-top: 14px !important;
+    width: 100% !important;
+  }
+  .palette-text-col {
+    flex: 1 1 52% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .palette-img-col {
+    flex: 1 1 48% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    height: 100% !important;
+  }
+  .palette-img {
+    height: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: right center !important;
+    display: block !important;
   }
 
   /* Infografiche su Laptop */
