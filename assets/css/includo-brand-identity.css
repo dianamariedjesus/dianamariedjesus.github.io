@@ -329,10 +329,11 @@ body {
   border: none;
 }
 
-/* Palette Colori 2-Column Layout (Senza bordo esterno, flessibile a pari altezza) */
+/* Palette Colori 2-Column Layout (Perfetta parità di altezza) */
 .palette-2col-layout {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-between;
   gap: 24px;
   margin-top: 12px;
   width: 100%;
@@ -347,7 +348,7 @@ body {
   margin: 0;
 }
 .palette-img-col {
-  flex: 1 1 50%;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -358,16 +359,15 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: opacity 0.2s ease;
-  height: 100%;
 }
 .palette-img-col:hover {
   opacity: 0.92;
 }
 .palette-img {
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 215px;
+  height: auto;
   width: auto;
-  height: 100%;
+  max-width: 100%;
   object-fit: contain;
   object-position: right center;
   display: block;
@@ -963,35 +963,36 @@ body {
     line-height: 1.45 !important;
   }
 
-  /* Palette Colori Laptop - Flessibile ad altezza colonna sinistra */
+  /* Palette Colori Laptop - Ridimensionata per perfetta parità di altezza con la colonna testo */
   .palette-2col-layout {
     display: flex !important;
-    align-items: stretch !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     gap: 20px !important;
     margin-top: 14px !important;
     width: 100% !important;
   }
   .palette-text-col {
-    flex: 1 1 52% !important;
+    flex: 1 1 auto !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
   }
   .palette-img-col {
-    flex: 1 1 48% !important;
+    flex: 0 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    height: 100% !important;
   }
   .palette-img {
-    height: 100% !important;
-    max-height: 100% !important;
+    max-height: 205px !important;
+    height: auto !important;
     width: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
     object-position: right center !important;
     display: block !important;
+    border-radius: 12px !important;
   }
 
   /* Infografiche su Laptop */
