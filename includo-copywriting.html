@@ -547,6 +547,48 @@
       }
     }
 
+    function enableTouchSwipe(element, onSwipeLeft, onSwipeRight) {
+      if (!element) return;
+      var startX = 0;
+      var startY = 0;
+      var isSwiping = false;
+
+      element.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          isSwiping = true;
+        }
+      }, { passive: true });
+
+      element.addEventListener('touchend', function(e) {
+        if (!isSwiping || !e.changedTouches || e.changedTouches.length === 0) return;
+        isSwiping = false;
+        var endX = e.changedTouches[0].clientX;
+        var endY = e.changedTouches[0].clientY;
+        var diffX = startX - endX;
+        var diffY = startY - endY;
+        if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) {
+            if (typeof onSwipeLeft === 'function') onSwipeLeft();
+          } else {
+            if (typeof onSwipeRight === 'function') onSwipeRight();
+          }
+        }
+      }, { passive: true });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var cialdiniWrap = document.getElementById('carousel-cialdini');
+      if (cialdiniWrap) {
+        enableTouchSwipe(cialdiniWrap, function() {
+          moveCarouselSlide('cialdini', 1);
+        }, function() {
+          moveCarouselSlide('cialdini', -1);
+        });
+      }
+    });
+
     // Lightbox Modal per Carosello Cialdini
     var cialdiniGalleryData = [
       {
