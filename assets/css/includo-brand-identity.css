@@ -288,24 +288,41 @@ body {
   margin-bottom: 0;
 }
 
-/* Tipografia Immagine Container (Senza bordo esterno, con corner radius) */
-.tipografia-img-container {
+/* Container unico per immagini individuali e didascalia (con corner radius 10px e shadow) */
+.cover-single-container {
   margin-top: 16px;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
 }
-.tipografia-img {
+.cover-section-img {
   width: 100%;
   max-width: 872px;
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.cover-section-img:hover {
+  opacity: 0.95;
+}
+.cover-caption-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px !important;
+  font-weight: 400 !important;
+  color: rgba(38, 38, 38, 0.6) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em;
+  margin: 2px 0 0 0;
+  padding: 0;
+  background-color: transparent;
   border: none;
-  border-radius: 12px;
-  box-shadow: none;
 }
 
 /* Palette Colori 2-Column Layout (Senza bordo esterno, flessibile a pari altezza) */
@@ -752,6 +769,13 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+.lightbox-img.zoomed {
+  cursor: zoom-out;
+  transform: scale(1.75);
 }
 .lightbox-caption {
   margin-top: 14px;
