@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=154.0">
+  <link rel="stylesheet" href="assets/css/acumen-academy-redesign.css?v=155.0">
 </head>
 
 <body>
@@ -94,6 +94,7 @@
           </button>
         </div>
       </div>
+      <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none"></label>
     </div>
   </nav>
 
@@ -2046,6 +2047,17 @@
         if (e.key === 'Escape') closeMediaModal(e);
         if (e.key === 'ArrowLeft') navigateLightbox(e, -1);
         if (e.key === 'ArrowRight') navigateLightbox(e, 1);
+      }
+    });
+
+    // Close language dropdown menu when clicking anywhere outside
+    document.addEventListener('click', function(e) {
+      const langWrapper = document.querySelector('.language-dropdown-wrapper');
+      if (langWrapper) {
+        const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');
+        if (langToggle && langToggle.checked && !langWrapper.contains(e.target)) {
+          langToggle.checked = false;
+        }
       }
     });
   </script>

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=7.0">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=8.0">
 </head>
 
 <body>
@@ -92,6 +92,7 @@
           </button>
         </div>
       </div>
+      <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none"></label>
     </div>
   </nav>
 
@@ -901,6 +902,17 @@
           top: 0,
           behavior: 'smooth'
         });
+      });
+
+      // Close language dropdown menu when clicking anywhere outside
+      document.addEventListener('click', function(e) {
+        const langWrapper = document.querySelector('.language-dropdown-wrapper');
+        if (langWrapper) {
+          const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');
+          if (langToggle && langToggle.checked && !langWrapper.contains(e.target)) {
+            langToggle.checked = false;
+          }
+        }
       });
     });
   </script>

@@ -20,7 +20,7 @@
 
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/homepage.css?v=7.0">
+  <link rel="stylesheet" href="assets/css/homepage.css?v=8.0">
 </head>
 <body>
 
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Background Dimmer for Overlay -->
-    <div id="overlay-dimmer" class="d-md-none"></div>
+    <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none"></label>
   </div>
 </nav>
 
@@ -272,10 +272,14 @@
       worksLink.classList.add('active');
     }
 
-    // Handle scroll to remove active class when the user scrolls away
-    window.addEventListener("scroll", () => {
-      if (!isClickScrolling && worksLink.classList.contains('active')) {
-        worksLink.classList.remove('active');
+    // Close language dropdown menu when clicking anywhere outside
+    document.addEventListener('click', function(e) {
+      const langWrapper = document.querySelector('.language-dropdown-wrapper');
+      if (langWrapper) {
+        const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');
+        if (langToggle && langToggle.checked && !langWrapper.contains(e.target)) {
+          langToggle.checked = false;
+        }
       }
     });
   });
