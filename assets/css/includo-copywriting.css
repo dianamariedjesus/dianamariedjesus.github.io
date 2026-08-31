@@ -1587,3 +1587,110 @@ body {
   padding: 16px !important;
   box-sizing: border-box !important;
 }
+
+/* ===================================
+   UNIFIED NAVBAR & FOOTER FINE-TUNINGS
+   =================================== */
+
+/* Laptop Viewports (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .navbar .container-fluid,
+  .navbar-expand-md .mobile-nav-container {
+    padding: 0 40px !important;
+  }
+  .custom-nav-link {
+    font-size: 15px !important;
+    padding: 8px 14px !important;
+  }
+  .language-dropdown-wrapper .lang-selector {
+    font-size: 15px !important;
+    padding: 8px 14px !important;
+  }
+  .footer-container {
+    padding: 24px 40px !important;
+  }
+  .footer-copyright {
+    font-size: 15px !important;
+  }
+  .footer-message {
+    font-size: 15px !important;
+  }
+  .footer-social-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* Tablet Viewports (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar .container-fluid,
+  .navbar-expand-md .mobile-nav-container {
+    padding: 0 32px !important;
+  }
+  .custom-nav-link {
+    font-size: 14.5px !important;
+    padding: 6px 12px !important;
+  }
+  .language-dropdown-wrapper .lang-selector {
+    font-size: 14.5px !important;
+    padding: 6px 12px !important;
+  }
+  .footer-container {
+    padding: 20px 32px !important;
+  }
+  .footer-copyright {
+    font-size: 14px !important;
+  }
+  .footer-message {
+    font-size: 14.5px !important;
+  }
+  .footer-socials {
+    gap: 20px !important;
+  }
+  .footer-social-icon {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+/* Mobile Viewports (320px - 767px) */
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column !important;
+    padding: 20px 16px !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  .footer-copyright {
+    font-size: 13.5px !important;
+    line-height: 1.34 !important;
+    order: 3 !important;
+  }
+  .footer-message {
+    font-size: 15.5px !important;
+    line-height: 1.34 !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    order: 1 !important;
+  }
+  .footer-socials {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    order: 2 !important;
+  }
+  .footer-socials a {
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+  }
+  .footer-social-icon {
+    width: 36px !important;
+    height: 36px !important;
+    object-fit: cover !important;
+  }
+}
