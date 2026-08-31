@@ -327,6 +327,11 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
+.palette-single-container {
+  margin-top: 20px !important;
+  max-width: 520px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* Palette Colori 2-Column Layout (HTML Responsive Pure Component) */
@@ -1012,27 +1017,11 @@ body {
     gap: 20px !important;
     margin-top: 14px !important;
     width: 100% !important;
-  }
-  .palette-text-col {
-    flex: 1 1 50% !important;
-    max-width: 50% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-  }
-  .palette-swatches-container {
-    flex: 1 1 50% !important;
-    max-width: 50% !important;
-    display: flex !important;
-    align-items: stretch !important;
-    height: 100% !important;
-    min-height: 180px !important;
-  }
-  .palette-swatch {
-    padding: 12px 4px !important;
-  }
-  .swatch-text {
-    font-size: 10px !important;
+  .palette-single-container {
+    margin-top: 16px !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* Infografiche su Laptop */
