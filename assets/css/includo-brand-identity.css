@@ -331,9 +331,15 @@ body {
 
 .palette-single-container {
   margin-top: 20px !important;
-  max-width: 520px !important;
+  max-width: 440px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.palette-single-container .cover-section-img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Icon Pack Immagine Container */
@@ -925,10 +931,10 @@ body {
     line-height: 1.45 !important;
   }
 
-  /* Palette Colori Laptop - Container centrato a larghezza ridotta */
+  /* Palette Colori Laptop - Container centrato e compatto */
   .palette-single-container {
     margin-top: 16px !important;
-    max-width: 500px !important;
+    max-width: 400px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
