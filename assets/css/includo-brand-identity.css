@@ -1525,6 +1525,7 @@ div[id] {
   }
   .other-works-section .work-image-frame {
     margin-bottom: 12px !important;
+    max-height: 220px !important;
   }
   .other-works-section .work-title {
     font-size: 14px !important;
