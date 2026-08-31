@@ -104,42 +104,61 @@ html, body {
           user-select: none;
 }
 .language-dropdown-wrapper .lang-selector:hover {
-  background-color: #f7f3fa;
+  color: #FF452A;
 }
-.language-dropdown-wrapper .globe-icon, .language-dropdown-wrapper .chevron-icon {
-  stroke: #5A189A;
-  transition: stroke 0.2s ease;
+.language-dropdown-wrapper .lang-toggle-checkbox:checked + .lang-selector {
+  background-color: #efe8f5;
+  color: #5A189A;
+}
+.language-dropdown-wrapper .lang-toggle-checkbox:checked + .lang-selector .icon-chevron {
+  transform: rotate(180deg);
 }
 .language-dropdown-wrapper .lang-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 4px);
-  right: 0;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 8px 24px rgba(90, 24, 154, 0.12);
-  padding: 8px;
   display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  box-shadow: 0px 16px 74px -30px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  z-index: 1010;
   flex-direction: column;
   gap: 4px;
-  min-width: 80px;
-  z-index: 1050;
+  min-width: 160px;
 }
-.language-dropdown-wrapper .lang-dropdown-menu .lang-option {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #5A189A;
+.language-dropdown-wrapper .lang-dropdown-menu .lang-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
+  color: #5A189A;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.2s ease, font-weight 0.2s ease;
 }
-.language-dropdown-wrapper .lang-dropdown-menu .lang-option:hover {
+.language-dropdown-wrapper .lang-dropdown-menu .lang-item strong {
+  font-weight: 700;
+}
+.language-dropdown-wrapper .lang-dropdown-menu .lang-item span {
+  font-weight: 400;
+}
+.language-dropdown-wrapper .lang-dropdown-menu .lang-item:hover {
   background-color: #f7f3fa;
+  color: #5A189A;
 }
-.language-dropdown-wrapper .lang-dropdown-menu .lang-option.active {
-  color: #FF452A;
-  font-weight: 600;
+.language-dropdown-wrapper .lang-dropdown-menu .lang-item:active {
+  background-color: #efe8f5;
+  color: #5A189A;
+  font-weight: 700;
+}
+.language-dropdown-wrapper .lang-dropdown-menu .lang-item.active {
+  background-color: transparent;
+  color: #5A189A;
 }
 .language-dropdown-wrapper .lang-toggle-checkbox:checked ~ .lang-dropdown-menu {
   display: flex;
