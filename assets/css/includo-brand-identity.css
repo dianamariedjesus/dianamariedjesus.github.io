@@ -329,17 +329,14 @@ body {
   border: none;
 }
 
-.palette-single-container {
-  margin-top: 20px !important;
-  max-width: 440px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.palette-single-container .cover-section-img {
+.palette-img-scaled {
+  max-width: 520px !important;
   width: 100% !important;
   height: auto !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  display: block !important;
+  margin: 0 auto 12px auto !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
 }
 
 /* Icon Pack Immagine Container */
@@ -931,12 +928,10 @@ body {
     line-height: 1.45 !important;
   }
 
-  /* Palette Colori Laptop - Container centrato e compatto */
-  .palette-single-container {
-    margin-top: 16px !important;
-    max-width: 400px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  /* Palette Colori Laptop - Immagine centrata e ridimensionata */
+  .palette-img-scaled {
+    max-width: 480px !important;
+    margin: 0 auto 10px auto !important;
   }
 
   /* Infografiche su Laptop */
