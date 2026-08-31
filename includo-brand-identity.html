@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.7">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.8">
 </head>
 
 <body>
@@ -242,17 +242,17 @@
                   
                   <!-- Slide 1: Marchio, Logotipo & Pittogramma -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0', 'Architettura del marchio: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.')">
+                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img" onclick="openBrandLightbox(0)">
                     <div class="carousel-card-desc">
-                      Architettura del marchio: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.
+                      <strong>Architettura del marchio</strong>: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.
                     </div>
                   </div>
 
                   <!-- Slide 2: Varianti Colore & Test Scalabilità -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0', 'Sistema di scalabilità e varianti colore: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.')">
+                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img" onclick="openBrandLightbox(1)">
                     <div class="carousel-card-desc">
-                      Sistema di scalabilità e varianti colore: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.
+                      <strong>Sistema di scalabilità e varianti colore</strong>: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.
                     </div>
                   </div>
 
@@ -274,9 +274,12 @@
               Ho scelto la famiglia di font sans-serif <strong>Raleway</strong> per garantire <strong>una lettura pulita su ogni schermo</strong>, sfruttando <strong>pesi diversi</strong> (Black per i titoli principali e pesi più leggeri per sottotitoli e testi) <strong>per creare una gerarchia ordinata.</strong>
             </p>
 
-            <!-- Immagine Tipografia e Gerarchia -->
-            <div class="tipografia-img-container" style="margin-top: 16px; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background-color: #FFFFFF; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); cursor: pointer;" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0', 'Campionario caratteri e gerarchia tipografica Raleway.')">
-              <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" style="width: 100%; max-width: 872px; height: auto; display: block; margin: 0 auto;">
+            <!-- Immagine Tipografia e Gerarchia (Senza bordo esterno, con didascalia) -->
+            <div class="tipografia-img-container" onclick="openBrandLightbox(2)">
+              <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" class="tipografia-img">
+              <div class="carousel-card-desc" style="margin-top: 8px; border: none; padding: 12px 0 0 0; background: transparent;">
+                <strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.
+              </div>
             </div>
           </div>
 
@@ -292,7 +295,7 @@
                   <li><strong>Giallo tenue</strong> <em>(#F9EFC5)</em>: Aggiunge <strong>luce e dinamismo</strong>, trasmettendo <strong>apertura e fiducia.</strong></li>
                 </ul>
               </div>
-              <div class="palette-img-col" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/palette-colori.png?v=1.0', 'Palette Colori IncluDO con codici HEX, RGB e CMYK.')">
+              <div class="palette-img-col" onclick="openBrandLightbox(3)">
                 <img src="assets/img/includo-brand-identity/palette-colori.png?v=1.0" alt="Palette Colori IncluDO" class="palette-img">
               </div>
             </div>
@@ -441,10 +444,15 @@
     </svg>
   </button>
 
-  <!-- Lightbox Modal per Ingrandire Immagini -->
+  <!-- Lightbox Modal per Ingrandire Immagini (con frecce di navigazione) -->
   <div id="singleLightboxModal" class="video-lightbox-overlay" onclick="closeSingleLightbox(event)">
     <div class="lightbox-modal-content" onclick="event.stopPropagation()">
       <button type="button" class="lightbox-close-btn" onclick="closeSingleLightbox(event)" aria-label="Chiudi modal">&times;</button>
+      
+      <!-- Frecce di navigazione Lightbox -->
+      <button type="button" id="brandLightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateBrandLightbox(event, -1)" aria-label="Immagine precedente">&lsaquo;</button>
+      <button type="button" id="brandLightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateBrandLightbox(event, 1)" aria-label="Immagine successiva">&rsaquo;</button>
+
       <div id="singleLightboxImageScrollContainer" class="lightbox-img-scroll-container">
         <img id="singleLightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
       </div>
@@ -454,6 +462,29 @@
 
   <!-- JavaScript per Caroselli e Lightbox -->
   <script>
+    var brandGalleryData = [
+      {
+        src: 'assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0',
+        caption: '<strong>Architettura del marchio</strong>: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.',
+        carouselIndex: 0
+      },
+      {
+        src: 'assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0',
+        caption: '<strong>Sistema di scalabilità e varianti colore</strong>: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.',
+        carouselIndex: 1
+      },
+      {
+        src: 'assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0',
+        caption: '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.'
+      },
+      {
+        src: 'assets/img/includo-brand-identity/palette-colori.png?v=1.0',
+        caption: 'Palette Colori IncluDO con codici HEX, RGB e CMYK.'
+      }
+    ];
+
+    var currentBrandLightboxIndex = 0;
+
     function goToMarchioSlide(index) {
       var track = document.getElementById('marchio-carousel-track');
       var tab0 = document.getElementById('marchio-tab-0');
@@ -474,15 +505,52 @@
       }
     }
 
-    function openSingleImageLightbox(src, caption) {
+    function openBrandLightbox(index) {
+      if (index < 0 || index >= brandGalleryData.length) return;
+      currentBrandLightboxIndex = index;
+
+      var item = brandGalleryData[index];
+      if (item && item.carouselIndex !== undefined) {
+        goToMarchioSlide(item.carouselIndex);
+      }
+
+      renderBrandLightbox();
+    }
+
+    function renderBrandLightbox() {
       var modal = document.getElementById('singleLightboxModal');
       var img = document.getElementById('singleLightboxImageDisplay');
-      var cap = document.getElementById('singleLightboxCaption');
-      if (modal && img && cap) {
-        img.src = src;
-        cap.innerHTML = caption;
+      var caption = document.getElementById('singleLightboxCaption');
+      var prevBtn = document.getElementById('brandLightboxPrevBtn');
+      var nextBtn = document.getElementById('brandLightboxNextBtn');
+
+      var item = brandGalleryData[currentBrandLightboxIndex];
+      if (!item) return;
+
+      if (img) img.src = item.src;
+      if (caption) caption.innerHTML = item.caption;
+
+      // Niente freccia a sinistra per la prima slide (index 0)
+      if (prevBtn) {
+        prevBtn.style.display = (currentBrandLightboxIndex === 0) ? 'none' : 'flex';
+      }
+
+      // Niente freccia a destra per l'ultima slide (index brandGalleryData.length - 1)
+      if (nextBtn) {
+        nextBtn.style.display = (currentBrandLightboxIndex === brandGalleryData.length - 1) ? 'none' : 'flex';
+      }
+
+      if (modal) {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function navigateBrandLightbox(e, direction) {
+      if (e) e.stopPropagation();
+      var newIndex = currentBrandLightboxIndex + direction;
+      if (newIndex >= 0 && newIndex < brandGalleryData.length) {
+        openBrandLightbox(newIndex);
       }
     }
 
@@ -494,6 +562,20 @@
         document.body.style.overflow = '';
       }
     }
+
+    // Navigazione tastiera (Frecce Sinistra / Destra e ESC)
+    document.addEventListener('keydown', function(e) {
+      var modal = document.getElementById('singleLightboxModal');
+      if (modal && modal.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') {
+          navigateBrandLightbox(e, -1);
+        } else if (e.key === 'ArrowRight') {
+          navigateBrandLightbox(e, 1);
+        } else if (e.key === 'Escape') {
+          closeSingleLightbox(e);
+        }
+      }
+    });
   </script>
 
   <!-- JavaScript for Scrollspy, Sidebar Overlay & Back to Top -->
