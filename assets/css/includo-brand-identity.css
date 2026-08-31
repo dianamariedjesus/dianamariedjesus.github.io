@@ -1207,6 +1207,11 @@ div[id] {
     font-size: 11px !important;
     padding: 6px 6px !important;
   }
+  .marchio-carousel-wrapper .main-carousel-tab {
+    flex: 1 1 0% !important;
+    width: 50% !important;
+    text-align: center !important;
+  }
   .carousel-card-desc {
     padding: 10px 12px !important;
     font-size: 12px !important;
@@ -1445,6 +1450,12 @@ div[id] {
     padding: 6px 8px !important;
     white-space: nowrap !important;
     flex: 0 0 auto !important;
+  }
+  .marchio-carousel-wrapper .main-carousel-tab {
+    flex: 1 1 0% !important;
+    width: 50% !important;
+    text-align: center !important;
+    white-space: normal !important;
   }
   .carousel-card-desc {
     font-size: 12px !important;
