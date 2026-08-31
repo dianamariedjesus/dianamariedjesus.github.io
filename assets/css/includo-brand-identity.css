@@ -1039,6 +1039,485 @@ div[id] {
   }
 }
 
+/* ==========================================================================
+   Media Query per Viewport Tablet (768px - 1023px) - Formattazione Acumen & IncluDO Copywriting
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .case-study-container {
+    padding: 0 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .case-study-hero {
+    margin: 20px auto 0 auto !important;
+    padding: 0 32px !important;
+    width: 100% !important;
+    height: 255.109px !important;
+    min-height: 255.109px !important;
+    max-height: 255.109px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+  .case-study-hero .hero-img {
+    width: auto !important;
+    max-width: 420px !important;
+    height: auto !important;
+    max-height: 255.109px !important;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+    object-fit: contain !important;
+  }
+
+  .case-study-title-section {
+    margin-top: 24px !important;
+  }
+  .case-study-title-section .main-title {
+    font-size: 24px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    white-space: normal !important;
+  }
+
+  .metadata-section {
+    margin-top: 36px !important;
+  }
+  .metadata-section .metadata-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .metadata-section .metadata-column {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+  .metadata-section .metadata-heading {
+    font-size: 13.5px !important;
+    margin-bottom: 8px !important;
+  }
+  .metadata-section .metadata-text br {
+    display: none !important;
+  }
+  .metadata-section .metadata-text {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+  }
+
+  .content-sections-wrapper {
+    margin-top: 64px !important;
+    gap: 40px !important;
+  }
+
+  .case-study-section {
+    gap: 8px !important;
+  }
+  .case-study-section .section-title {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+  .case-study-section .section-subtitle {
+    font-size: 16.5px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .subsection-title {
+    font-size: 16px !important;
+    margin-top: 14px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .section-paragraph,
+  .section-list li {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Didascalia Immagine su Tablet */
+  .cover-caption-text {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    color: #64748B !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  /* Infografiche su Tablet */
+  .sfida-cards-grid,
+  .deliverables-3col-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    margin-top: 16px !important;
+  }
+  .sfida-card-header {
+    font-size: 12.5px !important;
+    padding: 12px 12px 12px 12px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .sfida-card-body p {
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+  }
+  .sfida-card-body,
+  .deliverable-card-body {
+    font-size: 12px !important;
+    padding: 0 12px 12px 12px !important;
+    line-height: 1.4 !important;
+  }
+  .deliverable-card-header {
+    font-size: 12.5px !important;
+    padding: 12px 12px !important;
+    min-height: 60px !important;
+    height: 60px !important;
+    max-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Carosello su Tablet */
+  .main-carousel-wrapper {
+    margin-top: 16px !important;
+  }
+  .main-carousel-tabs {
+    padding: 4px !important;
+    gap: 3px !important;
+  }
+  .main-carousel-tab {
+    font-size: 11px !important;
+    padding: 6px 6px !important;
+  }
+  .carousel-card-desc {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* External Link Card su Tablet */
+  .external-link-card {
+    margin-top: 24px !important;
+    padding: 16px 18px !important;
+    gap: 14px !important;
+  }
+  .external-link-title {
+    font-size: 14px !important;
+  }
+  .external-link-desc {
+    font-size: 12px !important;
+  }
+  .external-link-cta-btn {
+    font-size: 12.5px !important;
+    padding: 10px 16px !important;
+  }
+
+  /* Linea Divisoria su Tablet */
+  .divider-line {
+    margin: 44px auto !important;
+  }
+
+  /* Other Works Section su Tablet */
+  .other-works-section {
+    margin: 0 auto 96px auto !important;
+    padding: 0 !important;
+  }
+  .other-works-section .other-works-title {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    color: rgba(38, 38, 38, 0.5) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 24px !important;
+    text-align: left !important;
+  }
+  .other-works-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+  .other-works-section .other-works-grid > a {
+    flex: 1 1 50% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .other-works-section .work-image-frame {
+    margin-bottom: 14px !important;
+  }
+  .other-works-section .work-title {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+  .other-works-section .work-description {
+    font-size: 13.5px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* ==========================================================================
+   Media Query per Viewport Mobile (320px - 767px) - Formattazione Acumen & IncluDO Copywriting
+   ========================================================================== */
+@media (max-width: 767px) {
+  .case-study-container {
+    padding: 0 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .case-study-hero {
+    margin: 16px auto 0 auto !important;
+    padding: 0 16px !important;
+    width: 100% !important;
+    height: 174.938px !important;
+    min-height: 174.938px !important;
+    max-height: 174.938px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+  .case-study-hero .hero-img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 174.938px !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+  }
+
+  .case-study-title-section {
+    margin-top: 16px !important;
+  }
+  .case-study-title-section .main-title {
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    white-space: normal !important;
+  }
+
+  .metadata-section {
+    margin-top: 36px !important;
+  }
+  .metadata-section .metadata-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .metadata-section .metadata-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .metadata-section .metadata-heading {
+    font-size: 14.5px !important;
+    margin-bottom: 6px !important;
+  }
+  .metadata-section .metadata-text br {
+    display: none !important;
+  }
+  .metadata-section .metadata-text {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+  }
+
+  .content-sections-wrapper {
+    margin-top: 48px !important;
+    gap: 32px !important;
+  }
+
+  .case-study-section {
+    gap: 6px !important;
+  }
+  .case-study-section .section-title {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .section-subtitle {
+    font-size: 15.5px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .subsection-title {
+    font-size: 15px !important;
+    margin-top: 12px !important;
+    margin-bottom: 4px !important;
+  }
+  .case-study-section .section-paragraph,
+  .section-list li {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 6px !important;
+  }
+  .section-paragraph strong,
+  .section-paragraph b {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    font-weight: 700 !important;
+  }
+
+  /* Didascalia Immagine su Mobile */
+  .cover-caption-text {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    color: #64748B !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  /* Infografiche su Mobile (Stack a 1 colonna) */
+  .sfida-cards-grid,
+  .deliverables-3col-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+  }
+  .sfida-card-header {
+    font-size: 13px !important;
+    padding: 12px 12px 12px 12px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .sfida-card-body p {
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+  }
+  .deliverable-card-header {
+    font-size: 13px !important;
+    padding: 12px 14px 6px 14px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .sfida-card-body,
+  .deliverable-card-body {
+    font-size: 12.5px !important;
+    padding: 0 14px 14px 14px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Carosello su Mobile */
+  .main-carousel-wrapper {
+    margin-top: 14px !important;
+  }
+  .main-carousel-nav-bar {
+    overflow-x: auto !important;
+  }
+  .main-carousel-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+    padding: 4px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .main-carousel-tab {
+    font-size: 11px !important;
+    padding: 6px 8px !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+  }
+  .carousel-card-desc {
+    font-size: 12px !important;
+    padding: 10px 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* External Link Card su Mobile */
+  .external-link-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 16px !important;
+    margin-top: 20px !important;
+    gap: 12px !important;
+  }
+  .external-link-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .external-link-icon-badge {
+    margin: 0 auto 8px auto !important;
+  }
+  .external-link-title {
+    font-size: 14px !important;
+    text-align: center !important;
+  }
+  .external-link-desc {
+    font-size: 12px !important;
+    text-align: center !important;
+  }
+  .external-link-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 13px !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Linea Divisoria su Mobile */
+  .divider-line {
+    margin: 32px auto !important;
+  }
+
+  /* Other Works Section su Mobile */
+  .other-works-section {
+    margin: 0 auto 64px auto !important;
+    padding: 0 !important;
+  }
+  .other-works-section .other-works-title {
+    font-size: 13.5px !important;
+    letter-spacing: 0.15em !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
+  }
+  .other-works-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+  .other-works-section .other-works-grid > a {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .other-works-section .work-image-frame {
+    margin-bottom: 12px !important;
+  }
+  .other-works-section .work-title {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+  .other-works-section .work-description {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+}
+
 .work-image.work-image-contain {
   object-fit: contain !important;
   padding: 16px !important;
