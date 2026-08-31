@@ -573,7 +573,11 @@ body {
   width: 100%;
   max-width: 872px;
   height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  background-color: #FFFFFF;
   display: block;
+  margin: 0 auto;
   border-bottom: 1px solid #E2E8F0;
   cursor: pointer;
   transition: opacity 0.2s ease;
