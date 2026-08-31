@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.2">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.3">
 </head>
 
 <body>
@@ -274,12 +274,12 @@
               Ho scelto la famiglia di font sans-serif <strong>Raleway</strong> per garantire <strong>una lettura pulita su ogni schermo</strong>, sfruttando <strong>pesi diversi</strong> (Black per i titoli principali e pesi più leggeri per sottotitoli e testi) <strong>per creare una gerarchia ordinata.</strong>
             </p>
 
-            <!-- Immagine Tipografia e Gerarchia (Senza bordo esterno, gap: 8px) -->
-            <div class="tipografia-img-container" style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; cursor: pointer;" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0', '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.')">
-              <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" class="tipografia-img">
-              <div class="carousel-card-desc" style="margin: 0; border: none; padding: 0; background: transparent;">
+            <!-- Immagine Tipografia e Gerarchia -->
+            <div class="cover-single-container">
+              <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0', '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.')">
+              <p class="cover-caption-text">
                 <strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.
-              </div>
+              </p>
             </div>
           </div>
 
@@ -309,11 +309,11 @@
             </p>
 
             <!-- Immagine Icon Pack su Misura -->
-            <div class="icon-pack-img-container" style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; cursor: pointer;" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/icon-pack.png?v=1.0', '<strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.')">
-              <img src="assets/img/includo-brand-identity/icon-pack.png?v=1.0" alt="Set di 8 icone vettoriali per gli 8 percorsi artigianali" style="width: 100%; max-width: 872px; height: auto; display: block; margin: 0 auto; border: none;">
-              <div class="carousel-card-desc" style="margin: 0; border: none; padding: 0; background: transparent;">
+            <div class="cover-single-container">
+              <img src="assets/img/includo-brand-identity/icon-pack.png?v=1.0" alt="Set di 8 icone vettoriali per gli 8 percorsi artigianali" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/icon-pack.png?v=1.0', '<strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.')">
+              <p class="cover-caption-text">
                 <strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.
-              </div>
+              </p>
             </div>
           </div>
 
@@ -627,7 +627,10 @@
       var item = dataSet[currentCarouselLightboxIndex];
       if (!item) return;
 
-      if (img) img.src = item.src;
+      if (img) {
+        img.src = item.src;
+        img.classList.remove('zoomed');
+      }
       if (caption) caption.innerHTML = item.caption;
 
       // Niente freccia a sinistra per la prima slide (index 0)
@@ -669,7 +672,10 @@
 
       activeCarouselType = null;
 
-      if (img) img.src = src;
+      if (img) {
+        img.src = src;
+        img.classList.remove('zoomed');
+      }
       if (caption) caption.innerHTML = captionHtml;
 
       // Immagini individuali: NESSUNA freccia di controllo (entrambe nascoste)
@@ -685,13 +691,26 @@
     function closeSingleLightbox(e) {
       if (e) e.stopPropagation();
       var modal = document.getElementById('singleLightboxModal');
+      var img = document.getElementById('singleLightboxImageDisplay');
+      if (img) img.classList.remove('zoomed');
       if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = '';
       }
     }
 
-    // Navigazione tastiera
+    // Toggle Zoom al Clic sull'Immagine del Lightbox
+    document.addEventListener("DOMContentLoaded", function() {
+      var lightboxImg = document.getElementById('singleLightboxImageDisplay');
+      if (lightboxImg) {
+        lightboxImg.addEventListener('click', function(e) {
+          e.stopPropagation();
+          this.classList.toggle('zoomed');
+        });
+      }
+    });
+
+    // Navigazione tastiera (Frecce Sinistra / Destra e ESC)
     document.addEventListener('keydown', function(e) {
       var modal = document.getElementById('singleLightboxModal');
       if (modal && modal.style.display === 'flex') {
@@ -709,66 +728,172 @@
     });
   </script>
 
-  <!-- JavaScript for Scrollspy, Sidebar Overlay & Back to Top -->
+  <!-- JavaScript for Sidebar Positioning, Alignment & Back to Top -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var sections = [
-        document.getElementById('la-sfida'),
-        document.getElementById('processo'),
-        document.getElementById('naming'),
-        document.getElementById('marchio'),
-        document.getElementById('tipografia'),
-        document.getElementById('palette'),
-        document.getElementById('icon-pack'),
-        document.getElementById('decisioni'),
-        document.getElementById('deliverable'),
-        document.getElementById('valore')
-      ];
+      var sidebarNav = document.querySelector('.sidebar-nav');
+      var metadataSection = document.querySelector('.metadata-section');
+      var navbar = document.querySelector('.navbar');
+      var navLinks = document.querySelectorAll('.overlay-link');
+      var lines = document.querySelectorAll('.nav-line');
 
-      var navLines = document.querySelectorAll('.sidebar-lines .nav-line');
-      var navLinks = document.querySelectorAll('.sidebar-overlay .overlay-link');
+      if (!sidebarNav || !metadataSection || !navLinks.length) return;
 
-      function updateActiveNav() {
-        var scrollPosition = window.scrollY + 220;
+      var targetElements = Array.from(navLinks).map(function(link) {
+        var href = link.getAttribute('href');
+        return href ? document.querySelector(href) : null;
+      });
 
-        sections.forEach(function(section, index) {
-          if (!section) return;
-          var top = section.offsetTop;
-          var height = section.offsetHeight;
+      function updateLineWidthsFromContent() {
+        var lengths = targetElements.map(function(el) {
+          if (!el) return 0;
+          var clone = el.cloneNode(true);
+          var nestedSubsections = clone.querySelectorAll('div[id="naming"], div[id="marchio"], div[id="tipografia"], div[id="palette"], div[id="icon-pack"], div[id="decisioni"]');
+          nestedSubsections.forEach(function(sub) { sub.remove(); });
+          var text = clone.innerText || '';
+          return text.trim().length;
+        });
 
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            navLines.forEach(function(line) { line.classList.remove('active'); });
-            navLinks.forEach(function(link) { link.classList.remove('active'); });
+        var minLength = Math.min.apply(null, lengths);
+        var maxLength = Math.max.apply(null, lengths);
+        if (maxLength === minLength) maxLength = minLength + 1;
 
-            if (navLines[index]) navLines[index].classList.add('active');
-            if (navLinks[index]) navLinks[index].classList.add('active');
+        lines.forEach(function(line, idx) {
+          var len = lengths[idx] || 0;
+          var proportionalWidth = Math.min(30, Math.max(20, Math.round(20 + ((len - minLength) / (maxLength - minLength)) * 10)));
+          line.style.width = proportionalWidth + 'px';
+        });
+      }
+
+      updateLineWidthsFromContent();
+
+      var initialAbsoluteTop = null;
+
+      function updateSidebarPosition() {
+        if (window.innerWidth < 1024) return;
+
+        var navbarHeight = navbar ? navbar.offsetHeight : 80;
+        var metaHeading = document.querySelector('.metadata-heading');
+        
+        if (initialAbsoluteTop === null || window.scrollY === 0) {
+          if (metaHeading) {
+            initialAbsoluteTop = metaHeading.getBoundingClientRect().top + window.scrollY;
+          } else {
+            var metaRect = metadataSection.getBoundingClientRect();
+            initialAbsoluteTop = metaRect.top + window.scrollY;
+          }
+        }
+
+        var stickyThreshold = initialAbsoluteTop - (navbarHeight + 36);
+
+        if (window.scrollY < stickyThreshold) {
+          sidebarNav.style.position = 'absolute';
+          sidebarNav.style.top = initialAbsoluteTop + 'px';
+          sidebarNav.style.transform = 'none';
+        } else {
+          sidebarNav.style.position = 'fixed';
+          sidebarNav.style.top = (navbarHeight + 36) + 'px';
+          sidebarNav.style.transform = 'none';
+        }
+      }
+
+      window.addEventListener('scroll', updateSidebarPosition);
+      window.addEventListener('resize', function() {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      });
+      updateSidebarPosition();
+      
+      setTimeout(function() {
+        initialAbsoluteTop = null;
+        updateSidebarPosition();
+      }, 150);
+
+      var isScrollingManual = false;
+      var manualTimeout;
+
+      function updateActiveLinkAndLine() {
+        if (isScrollingManual) return;
+
+        var navbarHeight = navbar ? navbar.offsetHeight : 80;
+        var sidebarFixedTop = navbarHeight + 36;
+        var currentActiveIdx = 0;
+
+        var scrollPosition = window.scrollY + window.innerHeight;
+        var pageHeight = document.documentElement.scrollHeight;
+
+        if (pageHeight - scrollPosition <= 80) {
+          currentActiveIdx = navLinks.length - 1;
+        } else {
+          targetElements.forEach(function(el, idx) {
+            if (el) {
+              var rect = el.getBoundingClientRect();
+              var linkOffset = navLinks[idx] ? navLinks[idx].offsetTop : 0;
+              if (rect.top <= sidebarFixedTop + linkOffset + 24) {
+                currentActiveIdx = idx;
+              }
+            }
+          });
+        }
+
+        navLinks.forEach(function(link, idx) {
+          if (idx === currentActiveIdx) {
+            link.classList.add("active");
+            if (lines[idx]) lines[idx].classList.add("active");
+          } else {
+            link.classList.remove("active");
+            if (lines[idx]) lines[idx].classList.remove("active");
           }
         });
       }
 
-      window.addEventListener('scroll', updateActiveNav);
-      updateActiveNav();
+      window.addEventListener('scroll', updateActiveLinkAndLine);
+      window.addEventListener('resize', updateActiveLinkAndLine);
 
-      function handleScrollToSection(targetId, idx) {
+      function handleScrollToSection(targetId, index) {
         var targetSection = document.querySelector(targetId);
         if (targetSection) {
-          var targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - 100;
+          isScrollingManual = true;
+          clearTimeout(manualTimeout);
+
+          navLinks.forEach(function(l, idx) {
+            if (idx === index) {
+              l.classList.add("active");
+              if (lines[idx]) lines[idx].classList.add("active");
+            } else {
+              l.classList.remove("active");
+              if (lines[idx]) lines[idx].classList.remove("active");
+            }
+          });
+
+          var headingEl = targetSection.querySelector('.section-title, .section-subtitle, .subsection-title, h2, h3') || targetSection;
+          var navbarHeight = navbar ? navbar.offsetHeight : 80;
+          var linkOffset = navLinks[index] ? navLinks[index].offsetTop : 0;
+          var targetTop = headingEl.getBoundingClientRect().top + window.scrollY - (navbarHeight + 36) - linkOffset;
+
           window.scrollTo({
-            top: targetPosition,
+            top: targetTop,
             behavior: 'smooth'
           });
+
+          manualTimeout = setTimeout(function() {
+            isScrollingManual = false;
+            updateActiveLinkAndLine();
+          }, 1200);
         }
       }
 
       navLinks.forEach(function(link, idx) {
         link.addEventListener('click', function(e) {
           e.preventDefault();
-          var targetId = link.getAttribute('href');
-          if (targetId) {
+          var targetId = this.getAttribute('href');
+          if (targetId && targetId.startsWith('#')) {
             handleScrollToSection(targetId, idx);
           }
         });
       });
+
+      updateActiveLinkAndLine();
     });
 
     // Back to Top Button Logic
