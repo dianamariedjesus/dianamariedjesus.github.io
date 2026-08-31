@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.8">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.9">
 </head>
 
 <body>
@@ -242,7 +242,7 @@
                   
                   <!-- Slide 1: Marchio, Logotipo & Pittogramma -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img" onclick="openBrandLightbox(0)">
+                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img" onclick="openMarchioCarouselLightbox(0)">
                     <div class="carousel-card-desc">
                       <strong>Architettura del marchio</strong>: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.
                     </div>
@@ -250,7 +250,7 @@
 
                   <!-- Slide 2: Varianti Colore & Test Scalabilità -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img" onclick="openBrandLightbox(1)">
+                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img" onclick="openMarchioCarouselLightbox(1)">
                     <div class="carousel-card-desc">
                       <strong>Sistema di scalabilità e varianti colore</strong>: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.
                     </div>
@@ -274,10 +274,10 @@
               Ho scelto la famiglia di font sans-serif <strong>Raleway</strong> per garantire <strong>una lettura pulita su ogni schermo</strong>, sfruttando <strong>pesi diversi</strong> (Black per i titoli principali e pesi più leggeri per sottotitoli e testi) <strong>per creare una gerarchia ordinata.</strong>
             </p>
 
-            <!-- Immagine Tipografia e Gerarchia (Senza bordo esterno, con didascalia) -->
-            <div class="tipografia-img-container" onclick="openBrandLightbox(2)">
+            <!-- Immagine Tipografia e Gerarchia (Senza bordo esterno, gap: 8px) -->
+            <div class="tipografia-img-container" style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; cursor: pointer;" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0', '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.')">
               <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" class="tipografia-img">
-              <div class="carousel-card-desc" style="margin-top: 8px; border: none; padding: 12px 0 0 0; background: transparent;">
+              <div class="carousel-card-desc" style="margin: 0; border: none; padding: 0; background: transparent;">
                 <strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.
               </div>
             </div>
@@ -295,7 +295,7 @@
                   <li><strong>Giallo tenue</strong> <em>(#F9EFC5)</em>: Aggiunge <strong>luce e dinamismo</strong>, trasmettendo <strong>apertura e fiducia.</strong></li>
                 </ul>
               </div>
-              <div class="palette-img-col" onclick="openBrandLightbox(3)">
+              <div class="palette-img-col" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/palette-colori.png?v=1.0', '<strong>Palette cromatica di brand</strong>: sistema di colori primari, secondari e d\'accento con specifiche cromatiche (HEX, RGB, CMYK) studiate per unire calore terroso, natura ed energia.')">
                 <img src="assets/img/includo-brand-identity/palette-colori.png?v=1.0" alt="Palette Colori IncluDO" class="palette-img">
               </div>
             </div>
@@ -308,11 +308,12 @@
               Ho disegnato <strong>8 icone personalizzate</strong> con tratto lineare <strong>per rappresentare i laboratori formativi</strong>: <em>Oreficeria, Ceramica, Cucito, Tessitura, Attività Alimentarista, Agroalimentare, Calzoleria, Lavorazione Ferro e Legno.</em>
             </p>
 
-            <!-- Placeholder Immagine Icon Pack -->
-            <div class="placeholder-container">
-              <div class="placeholder-icon">✨</div>
-              <div class="placeholder-title">[ Placeholder Immagine — Icon Pack su Misura ]</div>
-              <div class="placeholder-desc">Set completo delle 8 icone dei percorsi formativi</div>
+            <!-- Immagine Icon Pack su Misura -->
+            <div class="icon-pack-img-container" style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; cursor: pointer;" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/icon-pack.png?v=1.0', '<strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.')">
+              <img src="assets/img/includo-brand-identity/icon-pack.png?v=1.0" alt="Set di 8 icone vettoriali per gli 8 percorsi artigianali" style="width: 100%; max-width: 872px; height: auto; display: block; margin: 0 auto; border: none;">
+              <div class="carousel-card-desc" style="margin: 0; border: none; padding: 0; background: transparent;">
+                <strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.
+              </div>
             </div>
           </div>
 
@@ -449,9 +450,9 @@
     <div class="lightbox-modal-content" onclick="event.stopPropagation()">
       <button type="button" class="lightbox-close-btn" onclick="closeSingleLightbox(event)" aria-label="Chiudi modal">&times;</button>
       
-      <!-- Frecce di navigazione Lightbox -->
-      <button type="button" id="brandLightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateBrandLightbox(event, -1)" aria-label="Immagine precedente">&lsaquo;</button>
-      <button type="button" id="brandLightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateBrandLightbox(event, 1)" aria-label="Immagine successiva">&rsaquo;</button>
+      <!-- Frecce di navigazione Lightbox (visibili solo per i caroselli) -->
+      <button type="button" id="brandLightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateMarchioLightbox(event, -1)" aria-label="Immagine precedente">&lsaquo;</button>
+      <button type="button" id="brandLightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateMarchioLightbox(event, 1)" aria-label="Immagine successiva">&rsaquo;</button>
 
       <div id="singleLightboxImageScrollContainer" class="lightbox-img-scroll-container">
         <img id="singleLightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
@@ -462,28 +463,19 @@
 
   <!-- JavaScript per Caroselli e Lightbox -->
   <script>
-    var brandGalleryData = [
+    var marchioCarouselData = [
       {
         src: 'assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0',
-        caption: '<strong>Architettura del marchio</strong>: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.',
-        carouselIndex: 0
+        caption: '<strong>Architettura del marchio</strong>: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.'
       },
       {
         src: 'assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0',
-        caption: '<strong>Sistema di scalabilità e varianti colore</strong>: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.',
-        carouselIndex: 1
-      },
-      {
-        src: 'assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0',
-        caption: '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.'
-      },
-      {
-        src: 'assets/img/includo-brand-identity/palette-colori.png?v=1.0',
-        caption: 'Palette Colori IncluDO con codici HEX, RGB e CMYK.'
+        caption: '<strong>Sistema di scalabilità e varianti colore</strong>: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.'
       }
     ];
 
-    var currentBrandLightboxIndex = 0;
+    var currentMarchioLightboxIndex = 0;
+    var isMarchioCarouselOpen = false;
 
     function goToMarchioSlide(index) {
       var track = document.getElementById('marchio-carousel-track');
@@ -505,39 +497,35 @@
       }
     }
 
-    function openBrandLightbox(index) {
-      if (index < 0 || index >= brandGalleryData.length) return;
-      currentBrandLightboxIndex = index;
-
-      var item = brandGalleryData[index];
-      if (item && item.carouselIndex !== undefined) {
-        goToMarchioSlide(item.carouselIndex);
-      }
-
-      renderBrandLightbox();
+    function openMarchioCarouselLightbox(index) {
+      if (index < 0 || index >= marchioCarouselData.length) return;
+      currentMarchioLightboxIndex = index;
+      isMarchioCarouselOpen = true;
+      goToMarchioSlide(index);
+      renderMarchioLightbox();
     }
 
-    function renderBrandLightbox() {
+    function renderMarchioLightbox() {
       var modal = document.getElementById('singleLightboxModal');
       var img = document.getElementById('singleLightboxImageDisplay');
       var caption = document.getElementById('singleLightboxCaption');
       var prevBtn = document.getElementById('brandLightboxPrevBtn');
       var nextBtn = document.getElementById('brandLightboxNextBtn');
 
-      var item = brandGalleryData[currentBrandLightboxIndex];
+      var item = marchioCarouselData[currentMarchioLightboxIndex];
       if (!item) return;
 
       if (img) img.src = item.src;
       if (caption) caption.innerHTML = item.caption;
 
-      // Niente freccia a sinistra per la prima slide (index 0)
+      // Carosello: Niente freccia a sinistra per la prima slide (index 0)
       if (prevBtn) {
-        prevBtn.style.display = (currentBrandLightboxIndex === 0) ? 'none' : 'flex';
+        prevBtn.style.display = (currentMarchioLightboxIndex === 0) ? 'none' : 'flex';
       }
 
-      // Niente freccia a destra per l'ultima slide (index brandGalleryData.length - 1)
+      // Carosello: Niente freccia a destra per l'ultima slide (index 1)
       if (nextBtn) {
-        nextBtn.style.display = (currentBrandLightboxIndex === brandGalleryData.length - 1) ? 'none' : 'flex';
+        nextBtn.style.display = (currentMarchioLightboxIndex === marchioCarouselData.length - 1) ? 'none' : 'flex';
       }
 
       if (modal) {
@@ -546,11 +534,34 @@
       }
     }
 
-    function navigateBrandLightbox(e, direction) {
+    function navigateMarchioLightbox(e, direction) {
       if (e) e.stopPropagation();
-      var newIndex = currentBrandLightboxIndex + direction;
-      if (newIndex >= 0 && newIndex < brandGalleryData.length) {
-        openBrandLightbox(newIndex);
+      if (!isMarchioCarouselOpen) return;
+      var newIndex = currentMarchioLightboxIndex + direction;
+      if (newIndex >= 0 && newIndex < marchioCarouselData.length) {
+        openMarchioCarouselLightbox(newIndex);
+      }
+    }
+
+    function openSingleImageLightbox(src, captionHtml) {
+      var modal = document.getElementById('singleLightboxModal');
+      var img = document.getElementById('singleLightboxImageDisplay');
+      var caption = document.getElementById('singleLightboxCaption');
+      var prevBtn = document.getElementById('brandLightboxPrevBtn');
+      var nextBtn = document.getElementById('brandLightboxNextBtn');
+
+      isMarchioCarouselOpen = false;
+
+      if (img) img.src = src;
+      if (caption) caption.innerHTML = captionHtml;
+
+      // Immagini individuali: NESSUNA freccia di controllo (entrambe nascoste)
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
       }
     }
 
@@ -563,15 +574,18 @@
       }
     }
 
-    // Navigazione tastiera (Frecce Sinistra / Destra e ESC)
+    // Navigazione tastiera
     document.addEventListener('keydown', function(e) {
       var modal = document.getElementById('singleLightboxModal');
       if (modal && modal.style.display === 'flex') {
-        if (e.key === 'ArrowLeft') {
-          navigateBrandLightbox(e, -1);
-        } else if (e.key === 'ArrowRight') {
-          navigateBrandLightbox(e, 1);
-        } else if (e.key === 'Escape') {
+        if (isMarchioCarouselOpen) {
+          if (e.key === 'ArrowLeft') {
+            navigateMarchioLightbox(e, -1);
+          } else if (e.key === 'ArrowRight') {
+            navigateMarchioLightbox(e, 1);
+          }
+        }
+        if (e.key === 'Escape') {
           closeSingleLightbox(e);
         }
       }
