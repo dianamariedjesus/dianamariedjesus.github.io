@@ -329,15 +329,6 @@ body {
   border: none;
 }
 
-.palette-img-scaled {
-  max-width: 520px !important;
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 0 auto 12px auto !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
-}
 
 /* Icon Pack Immagine Container */
 .icon-pack-img-container img {
@@ -928,11 +919,6 @@ body {
     line-height: 1.45 !important;
   }
 
-  /* Palette Colori Laptop - Immagine centrata e ridimensionata */
-  .palette-img-scaled {
-    max-width: 480px !important;
-    margin: 0 auto 10px auto !important;
-  }
 
   /* Infografiche su Laptop */
   .sfida-cards-grid,
