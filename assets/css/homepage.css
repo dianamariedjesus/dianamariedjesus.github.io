@@ -1504,8 +1504,8 @@ body {
     align-self: center;
   }
 }
-/* Tablet Large: 768px - 1025px (Image 3) */
-@media (min-width: 768px) and (max-width: 1025px) {
+/* Tablet Large: 768px - 1023px (Image 3) */
+@media (min-width: 768px) and (max-width: 1023px) {
   .hamburger-menu, #overlay-dimmer {
     display: none !important;
   }
@@ -1674,7 +1674,7 @@ body {
     -o-object-fit: cover !important;
        object-fit: cover !important;
   }
-  /* About Section - Tablet (768px - 1025px) */
+  /* About Section - Tablet (768px - 1023px) */
   .about-section {
     margin: 0 auto 11rem auto;
     max-width: calc(100% - 64px);
@@ -1692,8 +1692,8 @@ body {
     height: 240px !important;
   }
 }
-/* Desktop Medium / Laptop: 1026px - 1399px */
-@media (min-width: 1026px) and (max-width: 1399px) {
+/* Desktop Medium / Laptop: 1024px - 1399px */
+@media (min-width: 1024px) and (max-width: 1399px) {
   /* Navbar */
   .navbar {
     height: 64px !important;
