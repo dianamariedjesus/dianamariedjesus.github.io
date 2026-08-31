@@ -173,6 +173,10 @@ body {
   gap: 56px;
 }
 
+div[id] {
+  scroll-margin-top: 100px;
+}
+
 .case-study-section {
   display: flex;
   flex-direction: column;
