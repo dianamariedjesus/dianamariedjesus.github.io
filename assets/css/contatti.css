@@ -352,10 +352,6 @@ textarea {
 .footer-section {
   background: #ECE8EF;
   width: 100%;
-  min-height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-sizing: border-box;
 }
 
@@ -514,22 +510,7 @@ textarea {
     font-size: 16px;
     text-align: left;
   }
-  .footer-container {
-    padding: 24px 40px !important;
-    width: 100% !important;
-    max-width: none !important;
-  }
-  .footer-copyright {
-    font-size: 14px;
-    white-space: nowrap;
-  }
-  .footer-message {
-    font-size: 15px;
-    padding: 0 12px;
-  }
-  .footer-socials {
-    gap: 16px;
-  }
+  /* Footer handled in unified 4-viewport block */
 }
 /* --- Mobile viewports (< 768px) --- */
 @media (max-width: 767px) {
