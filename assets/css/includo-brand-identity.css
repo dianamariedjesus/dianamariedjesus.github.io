@@ -288,7 +288,7 @@ body {
   margin-bottom: 0;
 }
 
-/* Container unico per immagini individuali e didascalia (con corner radius 10px e shadow) */
+/* Container unico per immagini individuali e didascalia (con corner radius 12px e shadow) */
 .cover-single-container {
   margin-top: 16px;
   width: 100%;
@@ -296,6 +296,9 @@ body {
   flex-direction: column;
   gap: 8px;
   box-sizing: border-box;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 .cover-section-img {
   width: 100%;
@@ -303,11 +306,12 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+  border: none !important;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 .cover-section-img:hover {
   opacity: 0.95;
@@ -751,8 +755,7 @@ body {
   width: 100%;
   max-width: 872px;
   max-height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
   background-color: #0F172A;
@@ -762,6 +765,7 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  position: relative;
 }
 .lightbox-img {
   width: 100%;
@@ -770,12 +774,13 @@ body {
   display: block;
   margin: 0 auto;
   cursor: zoom-in;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease-out, transform-origin 0.05s linear;
   transform-origin: center center;
+  user-select: none;
 }
 .lightbox-img.zoomed {
   cursor: zoom-out;
-  transform: scale(1.75);
+  transform: scale(2.2);
 }
 .lightbox-caption {
   margin-top: 14px;

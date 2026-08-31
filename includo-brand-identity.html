@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.4">
 </head>
 
 <body>
@@ -699,13 +699,31 @@
       }
     }
 
-    // Toggle Zoom al Clic sull'Immagine del Lightbox
+    // Toggle & MouseMove Pan Zoom al Clic sull'Immagine del Lightbox
     document.addEventListener("DOMContentLoaded", function() {
       var lightboxImg = document.getElementById('singleLightboxImageDisplay');
-      if (lightboxImg) {
+      var container = document.getElementById('singleLightboxImageScrollContainer');
+
+      if (lightboxImg && container) {
         lightboxImg.addEventListener('click', function(e) {
           e.stopPropagation();
-          this.classList.toggle('zoomed');
+          var isZoomed = this.classList.toggle('zoomed');
+          if (isZoomed) {
+            var rect = container.getBoundingClientRect();
+            var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            var py = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+            this.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
+          } else {
+            this.style.transformOrigin = 'center center';
+          }
+        });
+
+        container.addEventListener('mousemove', function(e) {
+          if (!lightboxImg.classList.contains('zoomed')) return;
+          var rect = container.getBoundingClientRect();
+          var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+          var py = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+          lightboxImg.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
         });
       }
     });
@@ -867,9 +885,9 @@
           });
 
           var headingEl = targetSection.querySelector('.section-title, .section-subtitle, .subsection-title, h2, h3') || targetSection;
-          var navbarHeight = navbar ? navbar.offsetHeight : 80;
+          var sidebarNavTop = sidebarNav.getBoundingClientRect().top;
           var linkOffset = navLinks[index] ? navLinks[index].offsetTop : 0;
-          var targetTop = headingEl.getBoundingClientRect().top + window.scrollY - (navbarHeight + 36) - linkOffset;
+          var targetTop = headingEl.getBoundingClientRect().top + window.scrollY - (sidebarNavTop + 12 + linkOffset);
 
           window.scrollTo({
             top: targetTop,
