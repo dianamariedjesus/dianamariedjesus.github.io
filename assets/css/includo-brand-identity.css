@@ -843,6 +843,14 @@ body {
   .sidebar-nav {
     display: none !important;
   }
+  .lightbox-img-scroll-container {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .lightbox-img {
+    cursor: default !important;
+    touch-action: manipulation !important;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
   .sidebar-nav {

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.4">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=2.5">
 </head>
 
 <body>
@@ -699,13 +699,14 @@
       }
     }
 
-    // Toggle & MouseMove Pan Zoom al Clic sull'Immagine del Lightbox
+    // Toggle & MouseMove Pan Zoom al Clic sull'Immagine del Lightbox (solo Desktop/Laptop >= 1024px)
     document.addEventListener("DOMContentLoaded", function() {
       var lightboxImg = document.getElementById('singleLightboxImageDisplay');
       var container = document.getElementById('singleLightboxImageScrollContainer');
 
       if (lightboxImg && container) {
         lightboxImg.addEventListener('click', function(e) {
+          if (window.innerWidth < 1024) return; // Su Mobile e Tablet gli utenti zoomano con i gesti touch nativi
           e.stopPropagation();
           var isZoomed = this.classList.toggle('zoomed');
           if (isZoomed) {
@@ -719,6 +720,7 @@
         });
 
         container.addEventListener('mousemove', function(e) {
+          if (window.innerWidth < 1024) return;
           if (!lightboxImg.classList.contains('zoomed')) return;
           var rect = container.getBoundingClientRect();
           var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
@@ -885,9 +887,9 @@
           });
 
           var headingEl = targetSection.querySelector('.section-title, .section-subtitle, .subsection-title, h2, h3') || targetSection;
-          var sidebarNavTop = sidebarNav.getBoundingClientRect().top;
-          var linkOffset = navLinks[index] ? navLinks[index].offsetTop : 0;
-          var targetTop = headingEl.getBoundingClientRect().top + window.scrollY - (sidebarNavTop + 12 + linkOffset);
+          var navbarHeight = navbar ? navbar.offsetHeight : 80;
+          var sidebarNavTop = (initialAbsoluteTop !== null && window.scrollY < (initialAbsoluteTop - (navbarHeight + 36))) ? initialAbsoluteTop : (navbarHeight + 36);
+          var targetTop = headingEl.getBoundingClientRect().top + window.scrollY - sidebarNavTop;
 
           window.scrollTo({
             top: targetTop,
