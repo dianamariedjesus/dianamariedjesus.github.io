@@ -1580,3 +1580,9 @@ body {
     line-height: 1.4 !important;
   }
 }
+
+.work-image.work-image-contain {
+  object-fit: contain !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+}
