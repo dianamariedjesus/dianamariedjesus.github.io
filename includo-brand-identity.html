@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.4">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=1.5">
 </head>
 
 <body>
@@ -128,13 +128,9 @@
       </div>
     </div>
 
-    <!-- Copertina Hero (Placeholder) -->
+    <!-- Copertina Hero -->
     <div class="case-study-hero">
-      <div class="hero-placeholder">
-        <div class="placeholder-icon">🖼️</div>
-        <div class="placeholder-title">[ Copertina Hero — IncluDO Logo &amp; Brand Identity ]</div>
-        <div class="placeholder-desc">Immagine di copertina in formato 406.78px</div>
-      </div>
+      <img src="assets/img/includo-brand-identity/hero-cover.png?v=1.0" alt="IncluDO Logo &amp; Brand Identity Copertina Hero" class="hero-img">
     </div>
 
     <div class="case-study-container">
@@ -232,11 +228,42 @@
               Ho personalizzato <strong>l'ultima lettera "O"</strong> trasformandola <strong>in due mani che si intrecciano dentro un cerchio.</strong> Rappresenta <strong>l'incontro tra persone e culture diverse e l'atto pratico di lavorare la materia prima</strong>, funzionando anche come pittogramma autonomo per gli avatar social.
             </p>
 
-            <!-- Placeholder Carosello Logo System -->
-            <div class="placeholder-container">
-              <div class="placeholder-icon">🎠</div>
-              <div class="placeholder-title">[ Placeholder Carosello — Marchio &amp; Simbolo ]</div>
-              <div class="placeholder-desc">Versioni primaria, secondaria, varianti colore e versione B/N con test di scalabilità</div>
+            <!-- Carosello 2 Slide Marchio & Simbolo -->
+            <div class="marchio-carousel-wrapper" style="margin-top: 20px;">
+              <div class="main-carousel-nav-bar">
+                <div class="main-carousel-tabs">
+                  <button type="button" class="main-carousel-tab active" id="marchio-tab-0" onclick="goToMarchioSlide(0)">Marchio, Logotipo &amp; Pittogramma</button>
+                  <button type="button" class="main-carousel-tab" id="marchio-tab-1" onclick="goToMarchioSlide(1)">Varianti Colore &amp; Test Scalabilità</button>
+                </div>
+              </div>
+
+              <div class="main-carousel-viewport">
+                <div class="main-carousel-track" id="marchio-carousel-track">
+                  
+                  <!-- Slide 1: Marchio, Logotipo & Pittogramma -->
+                  <div class="main-carousel-slide">
+                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0', 'Marchio (testo + simbolo + payoff), Logotipo (solo testo) e Pittogramma (solo simbolo).')">
+                    <div class="carousel-card-desc">
+                      Struttura visiva del sistema di brand: Marchio (testo + simbolo + payoff), Logotipo (solo testo) e Pittogramma (solo simbolo).
+                    </div>
+                  </div>
+
+                  <!-- Slide 2: Varianti Colore & Test Scalabilità -->
+                  <div class="main-carousel-slide">
+                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0', 'Versioni primaria, secondaria, varianti colore e versione B/N con test di scalabilità.')">
+                    <div class="carousel-card-desc">
+                      Versioni primaria, secondaria, varianti colore e versione B/N con test di scalabilità.
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Indicatori pallini sotto il carosello -->
+              <div class="main-carousel-indicators">
+                <span class="carousel-dot active" id="marchio-dot-0" onclick="goToMarchioSlide(0)"></span>
+                <span class="carousel-dot" id="marchio-dot-1" onclick="goToMarchioSlide(1)"></span>
+              </div>
             </div>
           </div>
 
@@ -324,7 +351,7 @@
 
             <!-- Card 3: Kit Grafiche Social -->
             <div class="deliverable-card">
-              <div class="deliverable-card-header">Kit Grafiche Social (FB, IG, YT)</div>
+              <div class="deliverable-card-header">Kit Grafiche Social</div>
               <div class="deliverable-card-body">
                 <p>Copertine e immagini profilo ottimizzate per Facebook e YouTube, insieme a 6 post promozionali (per Facebook e Instagram).</p>
               </div>
@@ -415,6 +442,61 @@
       <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
   </button>
+
+  <!-- Lightbox Modal per Ingrandire Immagini -->
+  <div id="singleLightboxModal" class="video-lightbox-overlay" onclick="closeSingleLightbox(event)">
+    <div class="lightbox-modal-content" onclick="event.stopPropagation()">
+      <button type="button" class="lightbox-close-btn" onclick="closeSingleLightbox(event)" aria-label="Chiudi modal">&times;</button>
+      <div id="singleLightboxImageScrollContainer" class="lightbox-img-scroll-container">
+        <img id="singleLightboxImageDisplay" src="" alt="Foto Ingrandita" class="lightbox-img">
+      </div>
+      <div id="singleLightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript per Caroselli e Lightbox -->
+  <script>
+    function goToMarchioSlide(index) {
+      var track = document.getElementById('marchio-carousel-track');
+      var tab0 = document.getElementById('marchio-tab-0');
+      var tab1 = document.getElementById('marchio-tab-1');
+      var dot0 = document.getElementById('marchio-dot-0');
+      var dot1 = document.getElementById('marchio-dot-1');
+
+      if (!track) return;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+
+      if (tab0 && tab1) {
+        tab0.classList.toggle('active', index === 0);
+        tab1.classList.toggle('active', index === 1);
+      }
+      if (dot0 && dot1) {
+        dot0.classList.toggle('active', index === 0);
+        dot1.classList.toggle('active', index === 1);
+      }
+    }
+
+    function openSingleImageLightbox(src, caption) {
+      var modal = document.getElementById('singleLightboxModal');
+      var img = document.getElementById('singleLightboxImageDisplay');
+      var cap = document.getElementById('singleLightboxCaption');
+      if (modal && img && cap) {
+        img.src = src;
+        cap.innerHTML = caption;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSingleLightbox(e) {
+      if (e) e.stopPropagation();
+      var modal = document.getElementById('singleLightboxModal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
 
   <!-- JavaScript for Scrollspy, Sidebar Overlay & Back to Top -->
   <script>
