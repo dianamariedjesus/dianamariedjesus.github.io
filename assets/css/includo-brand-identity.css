@@ -1589,18 +1589,52 @@ div[id] {
     font-size: 15px !important;
     padding: 8px 14px !important;
   }
+  .footer-section {
+    background: #ECE8EF !important;
+    width: 100% !important;
+  }
   .footer-container {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     padding: 24px 40px !important;
+    box-sizing: border-box !important;
   }
   .footer-copyright {
     font-size: 15px !important;
+    line-height: 1.34 !important;
+    font-weight: 400 !important;
+    color: #262626 !important;
+    white-space: nowrap !important;
+    order: 1 !important;
+    text-align: left !important;
   }
   .footer-message {
     font-size: 15px !important;
+    line-height: 1.34 !important;
+    font-weight: 600 !important;
+    color: #262626 !important;
+    text-align: center !important;
+    flex: 1 !important;
+    order: 2 !important;
+    white-space: nowrap !important;
+  }
+  .footer-socials {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 24px !important;
+    order: 3 !important;
+    flex-shrink: 0 !important;
   }
   .footer-social-icon {
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: cover !important;
   }
 }
 

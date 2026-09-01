@@ -1204,8 +1204,8 @@ html, body {
     flex-shrink: 0 !important;
   }
   .footer-social-icon {
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
     object-fit: cover !important;
   }
 }
