@@ -21,7 +21,7 @@
   <!-- Base Navbar & Footer CSS -->
   <link rel="stylesheet" href="assets/css/homepage.css?v=13.0">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=1.0">
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=2.0">
 </head>
 <body class="homepage-v2-wrapper">
 
@@ -108,23 +108,35 @@
       <span class="badge-dot">✦</span> Junior Product &amp; UX/UI Designer
     </div>
     
-    <h1 class="hero-v2-title">
-      Progetto esperienze digitali umane e accessibili per prodotti complessi.
-    </h1>
-    
+    <div class="hero-title-wrapper">
+      <img src="assets/img/homepage/hero/icona-thumbs-down.svg" class="hero-deco hero-deco-thumbs" alt="" />
+      <h1 class="hero-v2-title">Basta esperienze frustranti.</h1>
+      <img src="assets/img/homepage/hero/icona-sad-face.svg" class="hero-deco hero-deco-sad" alt="" />
+      <img src="assets/img/homepage/hero/icona-scribble.svg" class="hero-deco hero-deco-scribble" alt="" />
+    </div>
+
     <p class="hero-v2-subtitle">
-      Unisco ricerca utente rigorosa, sensibilità visiva e ascolto empatico per trasformare la complessità in interfacce semplici, inclusive ed efficaci.
+      Progetto soluzioni digitali accessibili, intuitive e orientate alle persone, risolvendo problemi reali con ascolto empatico e cura dei dettagli.
     </p>
 
     <div class="hero-v2-highlights">
-      <span class="hero-v2-pill">✦ Human-Centered UX</span>
-      <span class="hero-v2-pill">✦ Accessibilità (WCAG)</span>
-      <span class="hero-v2-pill">✦ UI &amp; Design Systems</span>
+      <span class="hero-v2-pill">
+        <img src="assets/img/homepage/hero/icona-accessibilita.svg" class="badge-icon" alt="" />
+        accessibili
+      </span>
+      <span class="hero-v2-pill">
+        <img src="assets/img/homepage/hero/icona-stella.svg" class="badge-icon" alt="" />
+        intuitive
+      </span>
+      <span class="hero-v2-pill">
+        <img src="assets/img/homepage/hero/icona-cuore.svg" class="badge-icon" alt="" />
+        orientate alle persone
+      </span>
     </div>
 
     <div class="hero-v2-actions">
       <a href="#lavori-v2" class="btn-v2-primary">
-        Esplora i progetti
+        Esplora i lavori
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="12" y1="5" x2="12" y2="19"></line>
           <polyline points="19 12 12 19 5 12"></polyline>
@@ -137,38 +149,45 @@
 
 
 <!-- ==========================================
-     2. ABOUT ME SECTION (SU DI ME)
+     2. ABOUT ME SECTION (CHI SONO)
      ========================================== -->
 <section class="about-v2-section">
   <div class="container-v2">
     <div class="about-v2-card">
       <div class="about-v2-image-frame">
-        <img src="assets/img/chi-sono/diana-chi-sono.png" alt="Diana de Jesus" class="about-v2-image">
+        <img src="assets/img/chi-sono/foto-profilo/io.png" alt="Diana de Jesus" class="about-v2-image">
       </div>
       
       <div class="about-v2-content">
-        <span class="section-v2-label">Chi sono</span>
-        <h2 class="about-v2-heading">Trasformo problemi complessi in soluzioni etiche ed intuitive.</h2>
+        <span class="section-v2-label">CHI SONO</span>
+        <h2 class="about-v2-heading">Prima l'empatia, poi l'estetica.</h2>
         
         <p class="about-v2-text">
-          Ciao! Sono Diana, Junior Product &amp; UX/UI Designer con una forte passione per l'accessibilità digitale e l'impatto sociale. Il mio obiettivo è creare prodotti in cui ogni persona si senta accolta e guidata, senza barriere visive o di navigazione.
+          Mi chiamo Diana e sono una Junior UX/UI Designer.
         </p>
 
         <p class="about-v2-text">
-          Credo nel valore della ricerca sul campo, nei test continui con gli utenti e nella cura dei dettagli. Mi piace coniugare la teoria con l'esecuzione pratica, trasformando le esigenze degli utenti in architetture chiare ed eleganti.
+          Il mio obiettivo &egrave; creare <strong>esperienze accessibili per persone vere</strong>, risolvendo problemi reali.
+        </p>
+
+        <p class="about-v2-text">
+          La mia filosofia &egrave; semplice: <strong>prima l'empatia, poi l'estetica</strong>. Credo che il design inclusivo non sia un "optional", ma una responsabilit&agrave;.
         </p>
 
         <div class="about-v2-skills">
           <span class="skill-tag">Figma</span>
           <span class="skill-tag">UX Research</span>
           <span class="skill-tag">Design Systems</span>
-          <span class="skill-tag">Accessibilità (WCAG)</span>
+          <span class="skill-tag">Accessibilit&agrave; (WCAG)</span>
           <span class="skill-tag">UX Writing</span>
           <span class="skill-tag">User Testing</span>
         </div>
 
         <a href="chi-sono.html" class="about-v2-cta">
-          Scopri di più sul mio percorso e valori <span class="arrow">→</span>
+          Scopri di pi&ugrave; su di me
+          <svg class="cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.5924 19L13.3979 17.7532L17.7264 13.3623H4V11.6377H17.7264L13.3979 7.24683L14.5924 6L21 12.5L14.5924 19Z" fill="currentColor"/>
+          </svg>
         </a>
       </div>
     </div>
@@ -182,10 +201,10 @@
 <section id="lavori-v2" class="works-v2-section">
   <div class="container-v2">
     <div class="works-v2-header">
-      <span class="section-v2-label">I miei lavori</span>
-      <h2 class="works-v2-heading">Progetti selezionati con approccio strategico ed end-to-end</h2>
+      <span class="section-v2-label">PROGETTI SELEZIONATI</span>
+      <h2 class="works-v2-heading">I MIEI LAVORI</h2>
       <p class="works-v2-subtitle">
-        Dalla ricerca con gli utenti alla definizione del sistema visivo e alla scrittura dei contenuti.
+        Una selezione di progetti focalizzati su ricerca utente, accessibilità ed esperienza visiva.
       </p>
     </div>
 
@@ -193,16 +212,16 @@
       <!-- Work Card 1: Acumen Academy -->
       <a href="acumen-academy-redesign.html" class="work-v2-card">
         <div class="work-v2-image-wrapper">
-          <img src="assets/img/i-miei-lavori/copertine card/Banner - Acumen.png?v=6.0" alt="Acumen Academy Redesign" class="work-v2-image">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - User Interface.png?v=6.0" alt="Acumen Academy Redesign completo copertina" class="work-v2-image">
         </div>
         <div class="work-v2-body">
-          <span class="work-v2-tag">HERO PROJECT • UX/UI &amp; ACCESSIBILITÀ</span>
-          <h3 class="work-v2-title">Acumen Academy | Redesign completo</h3>
+          <span class="work-v2-tag">CASE STUDY #1 • UX/UI &amp; RESEARCH</span>
+          <h3 class="work-v2-title"><span class="work-client">Acumen Academy</span> | Redesign completo</h3>
           <p class="work-v2-desc">
-            Ridisegno end-to-end orientato alla fruibilità, all'accessibilità (WCAG AA) e alla semplificazione dei percorsi formativi per una piattaforma internazionale.
+            Riprogettazione del sito web per una scuola di imprenditori sociali. Processo end-to-end: Discovery, Wireframe, UI Design e User Test.
           </p>
           <div class="work-v2-footer">
-            <span class="work-v2-impact">✦ 100% End-to-End Method</span>
+            <span class="work-v2-impact">✦ End-to-End Method</span>
             <span class="work-v2-link">Vedi case study <span class="arrow">→</span></span>
           </div>
         </div>
@@ -211,16 +230,16 @@
       <!-- Work Card 2: IncluDO Brand Identity -->
       <a href="includo-brand-identity.html" class="work-v2-card">
         <div class="work-v2-image-wrapper">
-          <img src="assets/img/i-miei-lavori/copertine card/Banner - Brand Identity.png?v=6.0" alt="IncluDO Brand Identity" class="work-v2-image">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png?v=6.0" alt="IncluDO Logo &amp; Brand Identity copertina" class="work-v2-image">
         </div>
         <div class="work-v2-body">
-          <span class="work-v2-tag">T-SHAPED UI • BRAND &amp; DESIGN SYSTEM</span>
-          <h3 class="work-v2-title">IncluDO | Logo &amp; Brand Identity</h3>
+          <span class="work-v2-tag">CASE STUDY #2 • BRAND &amp; UI SYSTEM</span>
+          <h3 class="work-v2-title"><span class="work-client">IncluDO</span> | Logo &amp; Brand Identity</h3>
           <p class="work-v2-desc">
-            Sistema visivo coordinato, palette cromatiche accessibili ad alto contrasto e UI Design System ideato per un'organizzazione inclusiva.
+            Ideazione di un'identità per un'ente di formazione per migranti e persone svantaggiate.
           </p>
           <div class="work-v2-footer">
-            <span class="work-v2-impact">✦ Visual &amp; UI Excellence</span>
+            <span class="work-v2-impact">✦ UI &amp; Visual Care</span>
             <span class="work-v2-link">Vedi case study <span class="arrow">→</span></span>
           </div>
         </div>
@@ -229,16 +248,16 @@
       <!-- Work Card 3: IncluDO Copywriting -->
       <a href="includo-copywriting.html" class="work-v2-card">
         <div class="work-v2-image-wrapper">
-          <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png?v=6.0" alt="IncluDO Copywriting" class="work-v2-image">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png?v=6.0" alt="IncluDO Copywriting &amp; Content Strategy copertina" class="work-v2-image">
         </div>
         <div class="work-v2-body">
-          <span class="work-v2-tag">UX WRITING • STORYTELLING STRATEGICO</span>
-          <h3 class="work-v2-title">IncluDO | Copywriting &amp; Content</h3>
+          <span class="work-v2-tag">CASE STUDY #3 • UX WRITING</span>
+          <h3 class="work-v2-title"><span class="work-client">IncluDO</span> | Copywriting &amp; Content Strategy</h3>
           <p class="work-v2-desc">
-            Scrittura di un articolo web e micro-copia ad alto impatto emotivo progettati con analisi del target e leve di persuasione etica.
+            Scrittura di un articolo web ad alto impatto emotivo per un'azienda contro le disuguaglianze.
           </p>
           <div class="work-v2-footer">
-            <span class="work-v2-impact">✦ Strategic Content</span>
+            <span class="work-v2-impact">✦ Strategic Copy</span>
             <span class="work-v2-link">Vedi case study <span class="arrow">→</span></span>
           </div>
         </div>
