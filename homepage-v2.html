@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <title>Diana de Jesus | Portfolio V2</title>
+
+  <!-- Base Navbar & Footer CSS -->
+  <link rel="stylesheet" href="assets/css/homepage.css?v=13.0">
+  <!-- Homepage V2 Custom CSS -->
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=1.0">
+</head>
+<body class="homepage-v2-wrapper">
+
+<!-- Navbar (Frozen Component) -->
+<nav class="navbar navbar-expand-md bg-white">
+  <div class="container-fluid mobile-nav-container">
+    <!-- Diana Logo -->
+    <a class="navbar-brand" href="./">
+      <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+    </a>
+
+    <!-- Desktop Navigation Links (Centered) -->
+    <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+      <a href="#lavori-v2" class="nav-link custom-nav-link">I miei lavori</a>
+      <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+      <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+    </div>
+
+    <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
+    <div class="language-dropdown-wrapper d-none d-md-block">
+      <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+      <label for="lang-menu-toggle" class="lang-selector">
+        <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+          <path d="M2 12h20"></path>
+        </svg>
+        <span class="lang-text">IT</span>
+        <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </label>
+      <div class="lang-dropdown-menu">
+        <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
+        <a href="#" class="lang-item"><strong>EN</strong> <span>English</span></a>
+      </div>
+    </div>
+
+    <!-- Hidden Checkbox for Mobile Menu Toggle -->
+    <input type="checkbox" id="mobile-menu-toggle" class="d-md-none" />
+
+    <!-- Hamburger & Close Icons (Visible on Mobile/Tablet) -->
+    <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </label>
+
+    <!-- Overlay Menu for Mobile -->
+    <div class="mobile-overlay-menu d-md-none">
+      <div class="mobile-nav-links">
+        <a href="#lavori-v2" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">I miei lavori</a>
+        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      </div>
+      <div class="mobile-lang-selector">
+        <button type="button" class="mobile-lang-btn active">
+          <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+        </button>
+        <button type="button" class="mobile-lang-btn">
+          <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Background Dimmer for Overlay -->
+    <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none"></label>
+  </div>
+</nav>
+
+
+<!-- ==========================================
+     1. HERO SECTION
+     ========================================== -->
+<section class="hero-v2-section">
+  <div class="container-v2">
+    <div class="hero-v2-badge">
+      <span class="badge-dot">✦</span> Junior Product &amp; UX/UI Designer
+    </div>
+    
+    <h1 class="hero-v2-title">
+      Progetto esperienze digitali umane e accessibili per prodotti complessi.
+    </h1>
+    
+    <p class="hero-v2-subtitle">
+      Unisco ricerca utente rigorosa, sensibilità visiva e ascolto empatico per trasformare la complessità in interfacce semplici, inclusive ed efficaci.
+    </p>
+
+    <div class="hero-v2-highlights">
+      <span class="hero-v2-pill">✦ Human-Centered UX</span>
+      <span class="hero-v2-pill">✦ Accessibilità (WCAG)</span>
+      <span class="hero-v2-pill">✦ UI &amp; Design Systems</span>
+    </div>
+
+    <div class="hero-v2-actions">
+      <a href="#lavori-v2" class="btn-v2-primary">
+        Esplora i progetti
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </a>
+      <a href="contatti.html" class="btn-v2-secondary">Parliamo del tuo progetto</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================
+     2. ABOUT ME SECTION (SU DI ME)
+     ========================================== -->
+<section class="about-v2-section">
+  <div class="container-v2">
+    <div class="about-v2-card">
+      <div class="about-v2-image-frame">
+        <img src="assets/img/chi-sono/diana-chi-sono.png" alt="Diana de Jesus" class="about-v2-image">
+      </div>
+      
+      <div class="about-v2-content">
+        <span class="section-v2-label">Chi sono</span>
+        <h2 class="about-v2-heading">Trasformo problemi complessi in soluzioni etiche ed intuitive.</h2>
+        
+        <p class="about-v2-text">
+          Ciao! Sono Diana, Junior Product &amp; UX/UI Designer con una forte passione per l'accessibilità digitale e l'impatto sociale. Il mio obiettivo è creare prodotti in cui ogni persona si senta accolta e guidata, senza barriere visive o di navigazione.
+        </p>
+
+        <p class="about-v2-text">
+          Credo nel valore della ricerca sul campo, nei test continui con gli utenti e nella cura dei dettagli. Mi piace coniugare la teoria con l'esecuzione pratica, trasformando le esigenze degli utenti in architetture chiare ed eleganti.
+        </p>
+
+        <div class="about-v2-skills">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">UX Research</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">Accessibilità (WCAG)</span>
+          <span class="skill-tag">UX Writing</span>
+          <span class="skill-tag">User Testing</span>
+        </div>
+
+        <a href="chi-sono.html" class="about-v2-cta">
+          Scopri di più sul mio percorso e valori <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================
+     3. FEATURED WORKS GRID SECTION (I MIEI LAVORI)
+     ========================================== -->
+<section id="lavori-v2" class="works-v2-section">
+  <div class="container-v2">
+    <div class="works-v2-header">
+      <span class="section-v2-label">I miei lavori</span>
+      <h2 class="works-v2-heading">Progetti selezionati con approccio strategico ed end-to-end</h2>
+      <p class="works-v2-subtitle">
+        Dalla ricerca con gli utenti alla definizione del sistema visivo e alla scrittura dei contenuti.
+      </p>
+    </div>
+
+    <div class="works-v2-grid">
+      <!-- Work Card 1: Acumen Academy -->
+      <a href="acumen-academy-redesign.html" class="work-v2-card">
+        <div class="work-v2-image-wrapper">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Acumen.png?v=6.0" alt="Acumen Academy Redesign" class="work-v2-image">
+        </div>
+        <div class="work-v2-body">
+          <span class="work-v2-tag">HERO PROJECT • UX/UI &amp; ACCESSIBILITÀ</span>
+          <h3 class="work-v2-title">Acumen Academy | Redesign completo</h3>
+          <p class="work-v2-desc">
+            Ridisegno end-to-end orientato alla fruibilità, all'accessibilità (WCAG AA) e alla semplificazione dei percorsi formativi per una piattaforma internazionale.
+          </p>
+          <div class="work-v2-footer">
+            <span class="work-v2-impact">✦ 100% End-to-End Method</span>
+            <span class="work-v2-link">Vedi case study <span class="arrow">→</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Work Card 2: IncluDO Brand Identity -->
+      <a href="includo-brand-identity.html" class="work-v2-card">
+        <div class="work-v2-image-wrapper">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Brand Identity.png?v=6.0" alt="IncluDO Brand Identity" class="work-v2-image">
+        </div>
+        <div class="work-v2-body">
+          <span class="work-v2-tag">T-SHAPED UI • BRAND &amp; DESIGN SYSTEM</span>
+          <h3 class="work-v2-title">IncluDO | Logo &amp; Brand Identity</h3>
+          <p class="work-v2-desc">
+            Sistema visivo coordinato, palette cromatiche accessibili ad alto contrasto e UI Design System ideato per un'organizzazione inclusiva.
+          </p>
+          <div class="work-v2-footer">
+            <span class="work-v2-impact">✦ Visual &amp; UI Excellence</span>
+            <span class="work-v2-link">Vedi case study <span class="arrow">→</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Work Card 3: IncluDO Copywriting -->
+      <a href="includo-copywriting.html" class="work-v2-card">
+        <div class="work-v2-image-wrapper">
+          <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png?v=6.0" alt="IncluDO Copywriting" class="work-v2-image">
+        </div>
+        <div class="work-v2-body">
+          <span class="work-v2-tag">UX WRITING • STORYTELLING STRATEGICO</span>
+          <h3 class="work-v2-title">IncluDO | Copywriting &amp; Content</h3>
+          <p class="work-v2-desc">
+            Scrittura di un articolo web e micro-copia ad alto impatto emotivo progettati con analisi del target e leve di persuasione etica.
+          </p>
+          <div class="work-v2-footer">
+            <span class="work-v2-impact">✦ Strategic Content</span>
+            <span class="work-v2-link">Vedi case study <span class="arrow">→</span></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer (Frozen Component) -->
+<footer class="footer-section">
+  <div class="footer-container">
+    <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+    <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
+    <div class="footer-socials">
+      <!-- LinkedIn Link -->
+      <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+      </a>
+      <!-- GitHub Link -->
+      <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+      </a>
+      <!-- start2impact Link -->
+      <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Navigation Indicator JavaScript Logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const worksLink = document.querySelector('.custom-nav-link[href="#lavori-v2"]');
+    if (!worksLink) return;
+
+    let isClickScrolling = false;
+    let clickScrollTimeout;
+
+    worksLink.addEventListener("click", () => {
+      if (window.innerWidth >= 1026) {
+        document.querySelectorAll('.custom-nav-link').forEach(link => {
+          link.classList.remove('active');
+        });
+        worksLink.classList.add('active');
+        isClickScrolling = true;
+        clearTimeout(clickScrollTimeout);
+        clickScrollTimeout = setTimeout(() => {
+          isClickScrolling = false;
+        }, 1000);
+      }
+    });
+
+    // Close language dropdown menu when clicking anywhere outside
+    document.addEventListener('click', function(e) {
+      const langWrapper = document.querySelector('.language-dropdown-wrapper');
+      if (langWrapper) {
+        const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');
+        if (langToggle && langToggle.checked && !langWrapper.contains(e.target)) {
+          langToggle.checked = false;
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
