@@ -1459,8 +1459,8 @@ body {
     text-decoration: none;
   }
   .footer-social-icon {
-    width: 40px !important; /* 40x40 px icon size */
-    height: 40px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
   /* About Section Mobile (426px - 767px) */
   .about-section {
