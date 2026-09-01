@@ -3941,13 +3941,13 @@ body {
     order: 3 !important;
   }
   .footer-message {
-    font-size: 15.5px !important;
+    font-size: 14.5px !important;
     line-height: 1.34 !important;
     font-weight: 600 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    max-width: 100% !important;
+    color: #262626 !important;
+    text-align: center !important;
     order: 1 !important;
+    white-space: nowrap !important;
   }
   .footer-socials {
     display: flex !important;
@@ -3968,5 +3968,14 @@ body {
     width: 36px !important;
     height: 36px !important;
     object-fit: cover !important;
+  }
+}
+
+@media (max-width: 374px) {
+  .footer-message {
+    font-size: 13.5px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
   }
 }

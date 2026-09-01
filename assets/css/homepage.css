@@ -623,8 +623,8 @@ body {
     height: 34px !important;
   }
 }
-/* Mobile Devices: 320px - 425px (Image 1) */
-@media (min-width: 320px) and (max-width: 425px) {
+/* Mobile Devices: max-width 767px */
+@media (max-width: 767px) {
   /* 1. OVERRIDE BOOTSTRAP'S EXPAND BEHAVIOR */
   /* This is the key fix. It forces the desktop links to remain hidden
    and the hamburger menu to remain visible at the 768px breakpoint. */
@@ -994,12 +994,10 @@ body {
     order: 3 !important;
   }
   .footer-message {
-    font-size: 15.5px !important;
+    font-size: 14.5px !important;
     line-height: 1.34 !important;
     font-weight: 600 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    max-width: 100% !important;
+    white-space: nowrap !important;
     order: 1 !important;
   }
   .footer-socials {
@@ -1836,6 +1834,9 @@ body {
 }
 @media (max-width: 374px) {
   .footer-message {
+    font-size: 13.5px !important;
     white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
   }
 }/*# sourceMappingURL=homepage.css.map */
