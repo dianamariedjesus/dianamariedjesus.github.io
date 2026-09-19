@@ -17,26 +17,20 @@
   overflow-x: hidden;
 }
 
+/* Ensure sticky navbar on scroll */
+.homepage-v2-wrapper .navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2000 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0px 4px 20px rgba(90, 24, 154, 0.08) !important;
+}
+
 /* Common Container for Desktop 1440px */
 .container-v2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
-}
-
-/* Section Labels & Badges */
-.section-v2-label {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #5A189A;
-  background: #F7F3FA;
-  padding: 6px 14px;
-  border: 1px solid #E2D9EC;
-  border-radius: 100px;
-  margin-bottom: 16px;
 }
 
 /* Buttons */
@@ -48,7 +42,7 @@
   color: #FFFFFF !important;
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 100px;
   text-decoration: none !important;
   box-shadow: 0 8px 20px -6px rgba(90, 24, 154, 0.35);
@@ -61,104 +55,55 @@
   box-shadow: 0 12px 24px -6px rgba(255, 69, 42, 0.4);
 }
 
-.btn-v2-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #FFFFFF;
-  color: #5A189A !important;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 100px;
-  border: 1.5px solid #5A189A;
-  text-decoration: none !important;
-  transition: all 0.25s ease-in-out;
-}
-.btn-v2-secondary:hover {
-  background-color: #F7F3FA;
-  border-color: #FF452A;
-  color: #FF452A !important;
-  transform: translateY(-2px);
+/* Common Headings Style across Chi Sono, I Miei Lavori, Cosa Dicono di Me */
+.v2-section-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #1A0B2E;
+  margin-bottom: 24px;
 }
 
 /* ==========================================
    1. HERO SECTION
    ========================================== */
 .hero-v2-section {
-  padding: 6.5rem 0 5.5rem 0;
+  padding: 6rem 0 5rem 0;
   text-align: center;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F7F3FA 100%);
+  background-color: #FFFFFF;
   border-bottom: 1px solid #E2D9EC;
-  position: relative;
 }
 
+/* Custom Hero Pill Badge */
 .hero-v2-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: #5A189A;
-  background-color: #FFFFFF;
-  border: 1px solid #FF9488;
-  padding: 8px 20px;
+  background-color: #F7F3FA;
+  border: 1.5px solid #5A189A;
+  padding: 7px 20px;
   border-radius: 100px;
   margin-bottom: 28px;
-  box-shadow: 0 4px 14px rgba(255, 69, 42, 0.08);
-}
-
-.hero-v2-badge .badge-dot {
-  color: #FF452A;
-  font-size: 16px;
-}
-
-/* Decorative Doodles */
-.hero-title-wrapper {
-  position: relative;
-  display: inline-block;
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-.hero-deco-thumbs {
-  position: absolute;
-  left: -48px;
-  top: -32px;
-  width: 38px;
-  height: 34px;
-  transform: rotate(-12deg);
-}
-
-.hero-deco-sad {
-  position: absolute;
-  right: -42px;
-  top: -28px;
-  width: 42px;
-  height: 38px;
-  transform: rotate(14deg);
-}
-
-.hero-deco-scribble {
-  position: absolute;
-  right: 18%;
-  bottom: -24px;
-  width: 24px;
-  height: 32px;
 }
 
 .hero-v2-title {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.25;
   color: #1A0B2E;
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
   letter-spacing: -0.02em;
 }
 
+.hero-v2-title .highlight-purple {
+  color: #5A189A;
+}
+
 .hero-v2-subtitle {
-  font-size: 18.5px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
   color: #4A4A4A;
@@ -166,176 +111,73 @@
   margin: 0 auto 36px auto;
 }
 
-.hero-v2-highlights {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 40px;
-}
-
-.hero-v2-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: #5A189A;
-  background-color: #FFFFFF;
-  padding: 9px 20px;
-  border-radius: 100px;
-  border: 1px solid #E2D9EC;
-  box-shadow: 0 4px 12px rgba(90, 24, 154, 0.05);
-}
-
-.hero-v2-pill .badge-icon {
-  width: 18px;
-  height: 18px;
-}
-
 .hero-v2-actions {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
 }
 
 
 /* ==========================================
-   2. ABOUT ME SECTION
+   2. ABOUT ME SECTION (CHI SONO)
    ========================================== */
 .about-v2-section {
-  padding: 6rem 0;
+  padding: 5.5rem 0;
   background-color: #FFFFFF;
 }
 
-.about-v2-card {
-  background-color: #F7F3FA;
-  border: 1px solid #E2D9EC;
-  border-radius: 28px;
-  padding: 48px;
+.about-v2-grid {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 340px;
+  gap: 56px;
   align-items: center;
-  box-shadow: 0 16px 40px -20px rgba(90, 24, 154, 0.1);
+}
+
+.about-v2-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-v2-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.about-v2-text strong {
+  color: #262626;
+  font-weight: 700;
 }
 
 .about-v2-image-frame {
-  position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px -10px rgba(90, 24, 154, 0.15);
-  border: 4px solid #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-v2-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 340px;
+  height: auto;
+  border-radius: 20px;
   display: block;
-}
-
-.about-v2-heading {
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 1.3;
-  color: #1A0B2E;
-  margin-bottom: 20px;
-}
-
-.about-v2-text {
-  font-size: 15.5px;
-  line-height: 1.68;
-  color: #333333;
-  margin-bottom: 14px;
-}
-
-.about-v2-text strong {
-  color: #5A189A;
-  font-weight: 600;
-}
-
-.about-v2-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 22px 0 30px 0;
-}
-
-.skill-tag {
-  font-size: 13px;
-  font-weight: 600;
-  color: #5A189A;
-  background-color: #FFFFFF;
-  border: 1px solid #E2D9EC;
-  padding: 6px 14px;
-  border-radius: 8px;
-}
-
-.about-v2-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #FFFFFF !important;
-  background-color: #5A189A;
-  padding: 12px 26px;
-  border-radius: 100px;
-  text-decoration: none !important;
-  transition: all 0.25s ease;
-  box-shadow: 0 6px 16px -4px rgba(90, 24, 154, 0.3);
-}
-
-.about-v2-cta:hover {
-  background-color: #FF452A;
-  color: #FFFFFF !important;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -4px rgba(255, 69, 42, 0.35);
-}
-
-.about-v2-cta .cta-arrow {
-  fill: currentColor;
-  transition: transform 0.2s ease;
-}
-
-.about-v2-cta:hover .cta-arrow {
-  transform: translateX(4px);
 }
 
 
 /* ==========================================
-   3. FEATURED WORKS GRID SECTION
+   3. FEATURED WORKS GRID SECTION (I MIEI LAVORI)
    ========================================== */
 .works-v2-section {
   padding: 5.5rem 0 6.5rem 0;
-  background-color: #F7F3FA;
+  background-color: #FFFFFF;
   border-top: 1px solid #E2D9EC;
 }
 
 .works-v2-header {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 52px auto;
-}
-
-.works-v2-heading {
-  font-size: 34px;
-  font-weight: 800;
-  line-height: 1.28;
-  color: #1A0B2E;
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
-}
-
-.works-v2-subtitle {
-  font-size: 16.5px;
-  color: #555555;
-  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .works-v2-grid {
@@ -347,7 +189,7 @@
 .work-v2-card {
   background: #FFFFFF;
   border: 1px solid #E2D9EC;
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -361,7 +203,7 @@
 .work-v2-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px -16px rgba(90, 24, 154, 0.2);
-  border-color: #FF9488;
+  border-color: #5A189A;
 }
 
 .work-v2-image-wrapper {
@@ -390,15 +232,6 @@
   flex-grow: 1;
 }
 
-.work-v2-tag {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #FF452A;
-  margin-bottom: 10px;
-}
-
 .work-v2-title {
   font-size: 18.5px;
   font-weight: 700;
@@ -409,18 +242,14 @@
 }
 
 .work-v2-title .work-client {
-  color: #5A189A;
-}
-
-.work-v2-card:hover .work-v2-title {
-  color: #5A189A;
+  color: #FF452A;
 }
 
 .work-v2-desc {
-  font-size: 14px;
+  font-size: 14.5px;
   line-height: 1.58;
   color: #555555;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   flex-grow: 1;
 }
 
@@ -429,75 +258,45 @@
   padding-top: 16px;
   border-top: 1px solid #F7F3FA;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.work-v2-impact {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #FF452A;
-}
-
-.work-v2-link {
-  font-size: 14px;
-  font-weight: 600;
+.work-v2-footer .work-v2-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #5A189A;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease;
-}
-
-.work-v2-card:hover .work-v2-link {
-  color: #FF452A;
-}
-
-.work-v2-card:hover .work-v2-link .arrow {
-  transform: translateX(4px);
+  margin: 0;
 }
 
 
 /* ==========================================
-   4. SOCIAL PROOF SECTION (RIPROVA SOCIALE)
+   4. SOCIAL PROOF SECTION (COSA DICONO DI ME)
    ========================================== */
 .social-proof-v2-section {
-  padding: 6rem 0;
+  padding: 5.5rem 0 6.5rem 0;
   background-color: #FFFFFF;
   border-top: 1px solid #E2D9EC;
 }
 
 .social-proof-v2-header {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 48px auto;
-}
-
-.social-proof-v2-heading {
-  font-size: 32px;
-  font-weight: 800;
-  color: #1A0B2E;
-  margin-bottom: 12px;
-}
-
-.social-proof-v2-subtitle {
-  font-size: 16px;
-  color: #666666;
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .social-proof-v2-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin-bottom: 44px;
+  margin-bottom: 48px;
 }
 
 .proof-v2-card {
-  background-color: #F7F3FA;
+  background-color: #FFFFFF;
   border: 1px solid #E2D9EC;
   border-radius: 20px;
   padding: 32px;
-  position: relative;
   box-shadow: 0 8px 24px -12px rgba(90, 24, 154, 0.06);
   display: flex;
   flex-direction: column;
@@ -505,10 +304,11 @@
 }
 
 .proof-v2-quote-icon {
-  color: #FF452A;
-  font-size: 28px;
+  color: #5A189A;
+  font-size: 32px;
   margin-bottom: 14px;
   line-height: 1;
+  font-weight: 700;
 }
 
 .proof-v2-text {
@@ -529,8 +329,9 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #5A189A;
-  color: #FFFFFF;
+  background-color: #F7F3FA;
+  border: 1.5px solid #5A189A;
+  color: #5A189A;
   display: flex;
   align-items: center;
   justify-content: center;
