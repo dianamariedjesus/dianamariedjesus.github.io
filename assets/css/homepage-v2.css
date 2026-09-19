@@ -97,12 +97,13 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   color: #5A189A;
   background-color: #FFFFFF;
   border: 1px solid #FF9488;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 100px;
   margin-bottom: 28px;
   box-shadow: 0 4px 14px rgba(255, 69, 42, 0.08);
@@ -117,7 +118,7 @@
 .hero-title-wrapper {
   position: relative;
   display: inline-block;
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -141,7 +142,7 @@
 
 .hero-deco-scribble {
   position: absolute;
-  right: 20%;
+  right: 18%;
   bottom: -24px;
   width: 24px;
   height: 32px;
@@ -157,11 +158,11 @@
 }
 
 .hero-v2-subtitle {
-  font-size: 20px;
+  font-size: 18.5px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.6;
   color: #4A4A4A;
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto 36px auto;
 }
 
@@ -215,7 +216,7 @@
   border-radius: 28px;
   padding: 48px;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 48px;
   align-items: center;
   box-shadow: 0 16px 40px -20px rgba(90, 24, 154, 0.1);
@@ -239,16 +240,16 @@
 }
 
 .about-v2-heading {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 800;
   line-height: 1.3;
   color: #1A0B2E;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .about-v2-text {
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15.5px;
+  line-height: 1.68;
   color: #333333;
   margin-bottom: 14px;
 }
@@ -283,7 +284,7 @@
   font-weight: 600;
   color: #FFFFFF !important;
   background-color: #5A189A;
-  padding: 12px 24px;
+  padding: 12px 26px;
   border-radius: 100px;
   text-decoration: none !important;
   transition: all 0.25s ease;
@@ -311,7 +312,7 @@
    3. FEATURED WORKS GRID SECTION
    ========================================== */
 .works-v2-section {
-  padding: 5.5rem 0 7.5rem 0;
+  padding: 5.5rem 0 6.5rem 0;
   background-color: #F7F3FA;
   border-top: 1px solid #E2D9EC;
 }
@@ -399,7 +400,7 @@
 }
 
 .work-v2-title {
-  font-size: 19px;
+  font-size: 18.5px;
   font-weight: 700;
   line-height: 1.35;
   color: #1A0B2E;
@@ -416,8 +417,8 @@
 }
 
 .work-v2-desc {
-  font-size: 14.5px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.58;
   color: #555555;
   margin-bottom: 20px;
   flex-grow: 1;
@@ -454,4 +455,105 @@
 
 .work-v2-card:hover .work-v2-link .arrow {
   transform: translateX(4px);
+}
+
+
+/* ==========================================
+   4. SOCIAL PROOF SECTION (RIPROVA SOCIALE)
+   ========================================== */
+.social-proof-v2-section {
+  padding: 6rem 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid #E2D9EC;
+}
+
+.social-proof-v2-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px auto;
+}
+
+.social-proof-v2-heading {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1A0B2E;
+  margin-bottom: 12px;
+}
+
+.social-proof-v2-subtitle {
+  font-size: 16px;
+  color: #666666;
+}
+
+.social-proof-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 44px;
+}
+
+.proof-v2-card {
+  background-color: #F7F3FA;
+  border: 1px solid #E2D9EC;
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 8px 24px -12px rgba(90, 24, 154, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proof-v2-quote-icon {
+  color: #FF452A;
+  font-size: 28px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.proof-v2-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333333;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.proof-v2-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.proof-v2-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #5A189A;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.proof-v2-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.proof-v2-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A0B2E;
+}
+
+.proof-v2-role {
+  font-size: 13px;
+  color: #666666;
+}
+
+.social-proof-v2-cta {
+  text-align: center;
 }
