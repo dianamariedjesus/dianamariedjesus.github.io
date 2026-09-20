@@ -21,7 +21,7 @@
   <!-- Base Navbar & Footer CSS -->
   <link rel="stylesheet" href="assets/css/homepage.css?v=13.0">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=5.0">
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=6.0">
 </head>
 <body class="homepage-v2-wrapper">
 
@@ -111,7 +111,7 @@
     <div class="hero-title-wrapper">
       <h1 class="hero-v2-title">
         Trasformiamo le idee complesse<br>
-        <span class="highlight-purple">in esperienze digitali accessibili a tutti.</span>
+        <span class="highlight-orange">in esperienze digitali accessibili a tutti.</span>
       </h1>
     </div>
 
@@ -121,7 +121,7 @@
 
     <div class="hero-v2-actions">
       <a href="contatti.html" class="btn-v2-primary">
-        Fissiamo una chiamata
+        Scrivimi un messaggio
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
@@ -148,16 +148,26 @@
         <h2 class="v2-section-title">Il design senza empatia è solo decorazione.</h2>
         
         <p class="about-v2-text">
-          Mi chiamo <strong>Diana de Jesus</strong>. La mia passione per il design non nasce dalla voglia di creare siti "carini", ma dalla <strong>curiosità profonda di capire come funzionano le cose e come le persone interagiscono con la tecnologia</strong>. Su start2impact University ho trasformato questa attitudine in competenze solide in UX/UI Design, ricerca e architettura dell'informazione.
+          Mi chiamo Diana de Jesus. La mia passione per il design non nasce dalla voglia di creare siti "carini", ma dalla <strong>curiosità profonda di capire come funzionano le cose e come le persone interagiscono con la tecnologia</strong>. Su start2impact University ho trasformato questa attitudine in competenze solide in UX/UI Design, ricerca e architettura dell'informazione.
         </p>
 
         <p class="about-v2-text">
-          So esattamente cosa significa imbattersi in piattaforme lente, confuse o progettate male. Invece di rassegnarmi a tecnologie frustranti, ho scelto di essere io a progettarle meglio — mettendo <strong>l'usabilità e l'accessibilità al centro di ogni decisione</strong>.
+          So esattamente cosa significa imbattersi in <strong>piattaforme lente, confuse o progettate male</strong>. Invece di rassegnarmi a tecnologie frustranti, ho scelto di essere io a progettarle meglio — mettendo <strong>l'usabilità e l'accessibilità al centro di ogni decisione</strong>.
         </p>
 
         <p class="about-v2-text">
-          Non mi limito a disegnare schermate su Figma: curo l'intero processo visivo ed esperienziale del tuo prodotto. Scavo nei bisogni reali degli utenti per costruire interfacce semplici, inclusive e umane, azzerando la frustrazione di navigazione.
+          Non mi limito a disegnare schermate su Figma: <strong>curo l'intero processo visivo ed esperienziale del tuo prodotto</strong>. Scavo nei bisogni reali degli utenti per costruire interfacce semplici, inclusive e umane, <strong>azzerando la frustrazione di navigazione</strong>.
         </p>
+
+        <div>
+          <a href="#" class="btn-v2-outline">
+            Guarda il mio CV online
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -292,28 +302,35 @@
   </div>
 </footer>
 
-<!-- Navigation Indicator JavaScript Logic -->
+<!-- Back to Top Button (Desktop) -->
+<button class="back-to-top" aria-label="Torna in alto">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<!-- Navigation & Interaction JavaScript Logic -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const worksLink = document.querySelector('.custom-nav-link[href="#lavori-v2"]');
-    if (!worksLink) return;
+    if (worksLink) {
+      let isClickScrolling = false;
+      let clickScrollTimeout;
 
-    let isClickScrolling = false;
-    let clickScrollTimeout;
-
-    worksLink.addEventListener("click", () => {
-      if (window.innerWidth >= 1026) {
-        document.querySelectorAll('.custom-nav-link').forEach(link => {
-          link.classList.remove('active');
-        });
-        worksLink.classList.add('active');
-        isClickScrolling = true;
-        clearTimeout(clickScrollTimeout);
-        clickScrollTimeout = setTimeout(() => {
-          isClickScrolling = false;
-        }, 1000);
-      }
-    });
+      worksLink.addEventListener("click", () => {
+        if (window.innerWidth >= 1026) {
+          document.querySelectorAll('.custom-nav-link').forEach(link => {
+            link.classList.remove('active');
+          });
+          worksLink.classList.add('active');
+          isClickScrolling = true;
+          clearTimeout(clickScrollTimeout);
+          clickScrollTimeout = setTimeout(() => {
+            isClickScrolling = false;
+          }, 1000);
+        }
+      });
+    }
 
     // Close language dropdown menu when clicking anywhere outside
     document.addEventListener('click', function(e) {
@@ -325,6 +342,21 @@
         }
       }
     });
+
+    // Back to Top Button Logic
+    const backToTopBtn = document.querySelector('.back-to-top');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      });
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   });
 </script>
 

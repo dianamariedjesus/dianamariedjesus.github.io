@@ -39,26 +39,51 @@ html {
   padding: 0 32px;
 }
 
-/* Buttons (Orange Secondary Color #FF452A) */
+/* Primary CTA Button (Purple #5A189A, Hover Orange #FF452A) */
 .btn-v2-primary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #FF452A;
+  background-color: #5A189A;
   color: #FFFFFF !important;
   font-size: 16px;
   font-weight: 600;
   padding: 14px 30px;
   border-radius: 100px;
   text-decoration: none !important;
-  box-shadow: 0 8px 20px -6px rgba(255, 69, 42, 0.35);
+  box-shadow: 0 8px 20px -6px rgba(90, 24, 154, 0.35);
   transition: all 0.25s ease-in-out;
 }
 .btn-v2-primary:hover {
-  background-color: #5A189A;
+  background-color: #FF452A;
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px -6px rgba(90, 24, 154, 0.4);
+  box-shadow: 0 12px 24px -6px rgba(255, 69, 42, 0.4);
+}
+
+/* Secondary CTA Button (Outlined Purple) */
+.btn-v2-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #FFFFFF;
+  color: #5A189A !important;
+  font-size: 15.5px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 100px;
+  border: 1.5px solid #5A189A;
+  text-decoration: none !important;
+  margin-top: 20px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(90, 24, 154, 0.06);
+}
+.btn-v2-outline:hover {
+  background-color: #FF452A;
+  border-color: #FF452A;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(255, 69, 42, 0.35);
 }
 
 /* Common Headings Style across Chi Sono, I Miei Lavori, Cosa Dicono di Me */
@@ -103,8 +128,8 @@ html {
   letter-spacing: -0.02em;
 }
 
-.hero-v2-title .highlight-purple {
-  color: #5A189A;
+.hero-v2-title .highlight-orange {
+  color: #FF452A;
 }
 
 .hero-v2-subtitle {
@@ -354,4 +379,51 @@ html {
 .proof-v2-role {
   font-size: 13px;
   color: #666666;
+}
+
+
+/* ==========================================
+   5. BACK TO TOP BUTTON (DESKTOP)
+   ========================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #5A189A;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  z-index: 1500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(90, 24, 154, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background-color: #FF452A;
+  color: #FFFFFF;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 69, 42, 0.40);
+}
+.back-to-top:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255, 69, 42, 0.30);
+}
+@media (max-width: 1023px) {
+  .back-to-top {
+    display: none !important;
+  }
 }
