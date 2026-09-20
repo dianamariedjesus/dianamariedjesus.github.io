@@ -509,7 +509,7 @@
         if (currentIndex < 0) currentIndex = 0;
 
         const cardWidth = cards[0].offsetWidth;
-        const gap = 32;
+        const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
         const offset = currentIndex * (cardWidth + gap);
         track.style.transform = `translateX(-${offset}px)`;
 

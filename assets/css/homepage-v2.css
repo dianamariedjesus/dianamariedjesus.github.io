@@ -571,3 +571,166 @@ html {
     display: none !important;
   }
 }
+
+/* ==========================================
+   6. LAPTOP VIEWPORT RESPONSIVE (1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+  /* Container & Section Padding */
+  .container-v2 {
+    max-width: 940px;
+    padding: 0 32px;
+  }
+
+  .v2-section-title {
+    font-size: 26px;
+  }
+
+  /* 1. Hero Section Laptop */
+  .hero-v2-section {
+    padding: 3.5rem 0 4.5rem 0;
+  }
+
+  .hero-v2-badge {
+    font-size: 12px;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero-v2-title {
+    font-size: 34px;
+    line-height: 1.28;
+    margin-bottom: 18px;
+    max-width: 760px;
+  }
+
+  .hero-v2-subtitle {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 28px;
+    max-width: 720px;
+  }
+
+  .hero-v2-actions .btn-v2-primary {
+    font-size: 15px;
+    padding: 12px 28px;
+  }
+
+  /* 2. Chi Sono Section Laptop */
+  .about-v2-section {
+    padding: 4rem 0;
+  }
+
+  .about-v2-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+  }
+
+  .about-v2-image-frame {
+    width: 240px;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  .about-v2-text {
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+
+  .about-v2-content .btn-v2-outline {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 6px;
+  }
+
+  /* 3. Works Section Laptop */
+  .works-v2-section {
+    padding: 4rem 0 4.5rem 0;
+  }
+
+  .works-v2-grid {
+    gap: 24px;
+  }
+
+  .work-v2-body {
+    padding: 20px;
+  }
+
+  .work-v2-title {
+    font-size: 16.5px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .work-v2-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .work-v2-tag {
+    font-size: 11px;
+  }
+
+  /* 4. Social Proof Section & Carousel Laptop */
+  .social-proof-v2-section {
+    padding: 4rem 0 4.5rem 0;
+  }
+
+  .social-proof-v2-header {
+    margin-bottom: 24px;
+  }
+
+  .proof-carousel-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .proof-carousel-track {
+    gap: 24px;
+  }
+
+  .proof-v2-card {
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .proof-v2-quote-icon {
+    font-size: 26px;
+  }
+
+  .proof-v2-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .proof-v2-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .proof-v2-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .proof-v2-name {
+    font-size: 14px;
+  }
+
+  .proof-v2-role {
+    font-size: 12px;
+  }
+
+  .proof-v2-subrole {
+    font-size: 11px;
+  }
+
+  .proof-carousel-dots {
+    margin-top: 24px;
+  }
+}
