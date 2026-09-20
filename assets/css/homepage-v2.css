@@ -576,170 +576,165 @@ html {
    6. LAPTOP VIEWPORT RESPONSIVE (1024px)
    ========================================== */
 @media (max-width: 1024px) {
-  /* Container & Section Padding - Increased padding (0 190px) to clear Back to Top button */
+  /* Container & Section Padding - 876px Content Width with 74px Side Padding */
   .container-v2 {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0 190px;
-  }
-
-  /* Back to Top Button positioning for Laptop viewport */
-  .back-to-top {
-    right: 48px;
-    width: 48px;
-    height: 48px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 74px;
   }
 
   .v2-section-title {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   /* 1. Hero Section Laptop */
   .hero-v2-section {
-    padding: 3rem 0 3.5rem 0;
+    padding: 3.5rem 0 4.5rem 0;
   }
 
   .hero-v2-badge {
-    font-size: 11.5px;
+    font-size: 12px;
     padding: 5px 14px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .hero-v2-title {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.28;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    max-width: 760px;
   }
 
   .hero-v2-subtitle {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.55;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    max-width: 720px;
   }
 
   .hero-v2-actions .btn-v2-primary {
-    font-size: 14.5px;
-    padding: 12px 26px;
+    font-size: 15px;
+    padding: 12px 28px;
   }
 
   /* 2. Chi Sono Section Laptop */
   .about-v2-section {
-    padding: 3.5rem 0;
+    padding: 4rem 0;
   }
 
   .about-v2-grid {
-    grid-template-columns: 190px 1fr;
-    gap: 24px;
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
   }
 
   .about-v2-image-frame {
-    width: 190px;
-    height: 250px;
-    border-radius: 18px;
+    width: 240px;
+    height: 300px;
+    border-radius: 20px;
   }
 
   .about-v2-text {
-    font-size: 13.5px;
-    line-height: 1.6;
-    margin-bottom: 12px;
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 14px;
   }
 
   .about-v2-content .btn-v2-outline {
-    font-size: 13.5px;
-    padding: 9px 18px;
-    margin-top: 4px;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 6px;
   }
 
   /* 3. Works Section Laptop */
   .works-v2-section {
-    padding: 3.5rem 0 4rem 0;
+    padding: 4rem 0 4.5rem 0;
   }
 
   .works-v2-grid {
-    gap: 18px;
+    gap: 24px;
   }
 
   .work-v2-body {
-    padding: 16px 14px;
+    padding: 20px;
   }
 
   .work-v2-title {
-    font-size: 14.5px;
+    font-size: 16.5px;
     line-height: 1.35;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .work-v2-desc {
-    font-size: 12.5px;
-    line-height: 1.5;
-    margin-bottom: 12px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
   }
 
   .work-v2-tag {
-    font-size: 9.5px;
+    font-size: 10.5px;
     white-space: nowrap;
     letter-spacing: -0.01em;
   }
 
   /* 4. Social Proof Section & Carousel Laptop */
   .social-proof-v2-section {
-    padding: 3.5rem 0 4rem 0;
+    padding: 4rem 0 4.5rem 0;
   }
 
   .social-proof-v2-header {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   .proof-carousel-btn {
-    width: 36px;
-    height: 36px;
-  }
-
-  .proof-carousel-track {
-    gap: 18px;
-  }
-
-  .proof-v2-card {
-    flex: 0 0 calc(50% - 9px);
-    max-width: calc(50% - 9px);
-    padding: 18px 16px;
-    border-radius: 16px;
-  }
-
-  .proof-v2-quote-icon {
-    font-size: 24px;
-  }
-
-  .proof-v2-tag {
-    font-size: 9.5px;
-    padding: 3px 7px;
-  }
-
-  .proof-v2-text {
-    font-size: 12.5px;
-    line-height: 1.55;
-    margin-bottom: 14px;
-  }
-
-  .proof-v2-avatar {
     width: 38px;
     height: 38px;
   }
 
+  .proof-carousel-track {
+    gap: 24px;
+  }
+
+  .proof-v2-card {
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .proof-v2-quote-icon {
+    font-size: 26px;
+  }
+
+  .proof-v2-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .proof-v2-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .proof-v2-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
   .proof-v2-name {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .proof-v2-role {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .proof-v2-subrole {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .proof-carousel-dots {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 }
