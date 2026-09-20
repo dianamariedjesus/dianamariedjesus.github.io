@@ -439,8 +439,8 @@ html {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: #F7F3FA;
-  border: 1.5px solid #5A189A;
+  background-color: transparent;
+  border: none;
   color: #5A189A;
   position: relative;
   overflow: hidden;
