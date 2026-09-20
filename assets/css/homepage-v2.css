@@ -308,17 +308,76 @@ html {
 }
 
 .social-proof-v2-header {
-  text-align: left;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
 }
 
-.social-proof-v2-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.proof-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.proof-carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #E2D9EC;
+  background-color: #FFFFFF;
+  color: #5A189A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(90, 24, 154, 0.05);
+}
+
+.proof-carousel-btn:hover:not(:disabled) {
+  background-color: #5A189A;
+  color: #FFFFFF;
+  border-color: #5A189A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(90, 24, 154, 0.20);
+}
+
+.proof-carousel-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.proof-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: #E2D9EC;
+  color: #AAAAAA;
+  box-shadow: none;
+}
+
+.proof-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 12px 6px 20px 6px;
+  margin: -12px -6px -20px -6px;
+  cursor: grab;
+}
+
+.proof-carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+.proof-carousel-track {
+  display: flex;
   gap: 32px;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
 }
 
 .proof-v2-card {
+  flex: 0 0 calc(50% - 16px);
+  max-width: calc(50% - 16px);
+  box-sizing: border-box;
   background-color: #FFFFFF;
   border: 1px solid #E2D9EC;
   border-radius: 20px;
@@ -377,8 +436,8 @@ html {
 }
 
 .proof-v2-avatar {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background-color: #F7F3FA;
   border: 1.5px solid #5A189A;
@@ -429,9 +488,39 @@ html {
   margin-top: 1px;
 }
 
+.proof-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.proof-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #E2D9EC;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.proof-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background-color: #5A189A;
+}
+
+.proof-dot:hover:not(.active) {
+  background-color: #FF9488;
+}
+
 @media (max-width: 991px) {
-  .social-proof-v2-grid {
-    grid-template-columns: 1fr;
+  .proof-v2-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
