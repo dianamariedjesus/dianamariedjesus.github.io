@@ -716,3 +716,350 @@ html {
     margin-top: 24px;
   }
 }
+
+/* ==========================================
+   7. TABLET VIEWPORT RESPONSIVE (768px - 991px)
+   ========================================== */
+@media (max-width: 991px) {
+  .container-v2 {
+    max-width: 100%;
+    padding: 0 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .v2-section-title {
+    font-size: 23px;
+  }
+
+  /* 1. Hero Section Tablet */
+  .hero-v2-section {
+    padding: 3rem 0 3.5rem 0;
+  }
+
+  .hero-v2-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+  }
+
+  .hero-v2-title {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .hero-v2-subtitle {
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+
+  .hero-v2-actions .btn-v2-primary {
+    font-size: 14px;
+    padding: 11px 24px;
+  }
+
+  /* 2. Chi Sono Section Tablet */
+  .about-v2-section {
+    padding: 3rem 0;
+  }
+
+  .about-v2-grid {
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+  }
+
+  .about-v2-image-frame {
+    width: 180px;
+    height: 230px;
+    border-radius: 16px;
+  }
+
+  .about-v2-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .about-v2-content .btn-v2-outline {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+
+  /* 3. Works Section Tablet */
+  .works-v2-section {
+    padding: 3rem 0 3.5rem 0;
+  }
+
+  .works-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .work-v2-body {
+    padding: 20px 18px;
+  }
+
+  .work-v2-title {
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .work-v2-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  /* 4. Social Proof Section & Carousel Tablet */
+  .social-proof-v2-section {
+    padding: 3rem 0 3.5rem 0;
+  }
+
+  .social-proof-v2-header {
+    margin-bottom: 20px;
+  }
+
+  .proof-carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .proof-carousel-track {
+    gap: 16px;
+  }
+
+  .proof-v2-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+
+  .proof-v2-quote-icon {
+    font-size: 24px;
+  }
+
+  .proof-v2-tag {
+    font-size: 9.5px;
+    padding: 3px 8px;
+  }
+
+  .proof-v2-text {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .proof-v2-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .proof-v2-name {
+    font-size: 13.5px;
+  }
+
+  .proof-v2-role {
+    font-size: 11.5px;
+  }
+
+  .proof-v2-subrole {
+    font-size: 10px;
+  }
+
+  .proof-carousel-dots {
+    margin-top: 20px;
+  }
+}
+
+/* ==========================================
+   8. MOBILE VIEWPORT RESPONSIVE (320px - 575px)
+   ========================================== */
+@media (max-width: 575px) {
+  .container-v2 {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .v2-section-title {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  /* 1. Hero Section Mobile */
+  .hero-v2-section {
+    padding: 2.2rem 0 2.8rem 0;
+  }
+
+  .hero-v2-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+  }
+
+  .hero-v2-title {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero-v2-subtitle {
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .hero-v2-actions .btn-v2-primary {
+    font-size: 13.5px;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  /* 2. Chi Sono Section Mobile */
+  .about-v2-section {
+    padding: 2.5rem 0;
+  }
+
+  .about-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-v2-image-frame {
+    width: 160px;
+    height: 200px;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .about-v2-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .about-v2-content {
+    align-items: center;
+    text-align: left;
+  }
+
+  .about-v2-content .v2-section-title {
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .about-v2-content .btn-v2-outline {
+    font-size: 13px;
+    padding: 9px 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* 3. Works Section Mobile */
+  .works-v2-section {
+    padding: 2.5rem 0 3rem 0;
+  }
+
+  .works-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .work-v2-body {
+    padding: 16px 14px;
+  }
+
+  .work-v2-title {
+    font-size: 15px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .work-v2-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* 4. Social Proof Section & Carousel Mobile */
+  .social-proof-v2-section {
+    padding: 2.5rem 0 3rem 0;
+  }
+
+  .social-proof-v2-header {
+    margin-bottom: 16px;
+  }
+
+  .proof-carousel-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .proof-carousel-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .proof-carousel-track {
+    gap: 12px;
+  }
+
+  .proof-v2-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+
+  .proof-v2-quote-icon {
+    font-size: 20px;
+  }
+
+  .proof-v2-tag {
+    font-size: 9px;
+    padding: 2px 7px;
+  }
+
+  .proof-v2-text {
+    font-size: 12px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  .proof-v2-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .proof-v2-name {
+    font-size: 12.5px;
+  }
+
+  .proof-v2-role {
+    font-size: 11px;
+  }
+
+  .proof-v2-subrole {
+    font-size: 10px;
+  }
+
+  .proof-carousel-dots {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .proof-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .proof-dot.active {
+    width: 22px;
+  }
+}
