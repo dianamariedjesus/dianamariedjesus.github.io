@@ -576,161 +576,163 @@ html {
    6. LAPTOP VIEWPORT RESPONSIVE (1024px)
    ========================================== */
 @media (max-width: 1024px) {
-  /* Container & Section Padding */
+  /* Container & Section Padding - Match Case Study Laptop Layout (0 175px) */
   .container-v2 {
-    max-width: 940px;
-    padding: 0 32px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 175px;
   }
 
   .v2-section-title {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   /* 1. Hero Section Laptop */
   .hero-v2-section {
-    padding: 3.5rem 0 4.5rem 0;
+    padding: 3rem 0 3.5rem 0;
   }
 
   .hero-v2-badge {
-    font-size: 12px;
+    font-size: 11.5px;
     padding: 5px 14px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .hero-v2-title {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.28;
-    margin-bottom: 18px;
-    max-width: 760px;
+    margin-bottom: 16px;
   }
 
   .hero-v2-subtitle {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.55;
-    margin-bottom: 28px;
-    max-width: 720px;
+    margin-bottom: 24px;
   }
 
   .hero-v2-actions .btn-v2-primary {
-    font-size: 15px;
-    padding: 12px 28px;
+    font-size: 14.5px;
+    padding: 12px 26px;
   }
 
   /* 2. Chi Sono Section Laptop */
   .about-v2-section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 
   .about-v2-grid {
-    grid-template-columns: 240px 1fr;
-    gap: 36px;
+    grid-template-columns: 200px 1fr;
+    gap: 28px;
   }
 
   .about-v2-image-frame {
-    width: 240px;
-    height: 300px;
-    border-radius: 20px;
+    width: 200px;
+    height: 260px;
+    border-radius: 18px;
   }
 
   .about-v2-text {
-    font-size: 14.5px;
-    line-height: 1.65;
-    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
   }
 
   .about-v2-content .btn-v2-outline {
-    font-size: 14px;
-    padding: 10px 20px;
-    margin-top: 6px;
+    font-size: 13.5px;
+    padding: 9px 18px;
+    margin-top: 4px;
   }
 
   /* 3. Works Section Laptop */
   .works-v2-section {
-    padding: 4rem 0 4.5rem 0;
+    padding: 3.5rem 0 4rem 0;
   }
 
   .works-v2-grid {
-    gap: 24px;
+    gap: 20px;
   }
 
   .work-v2-body {
-    padding: 20px;
+    padding: 18px 16px;
   }
 
   .work-v2-title {
-    font-size: 16.5px;
+    font-size: 15px;
     line-height: 1.35;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .work-v2-desc {
-    font-size: 13.5px;
-    line-height: 1.55;
-    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 14px;
   }
 
   .work-v2-tag {
-    font-size: 11px;
+    font-size: 10px;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
   }
 
   /* 4. Social Proof Section & Carousel Laptop */
   .social-proof-v2-section {
-    padding: 4rem 0 4.5rem 0;
+    padding: 3.5rem 0 4rem 0;
   }
 
   .social-proof-v2-header {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .proof-carousel-btn {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
   }
 
   .proof-carousel-track {
-    gap: 24px;
+    gap: 20px;
   }
 
   .proof-v2-card {
-    flex: 0 0 calc(50% - 12px);
-    max-width: calc(50% - 12px);
-    padding: 24px;
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    padding: 20px 18px;
     border-radius: 16px;
   }
 
   .proof-v2-quote-icon {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .proof-v2-tag {
-    font-size: 11px;
-    padding: 4px 10px;
+    font-size: 10px;
+    padding: 3px 8px;
   }
 
   .proof-v2-text {
-    font-size: 13.5px;
-    line-height: 1.6;
-    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 16px;
   }
 
   .proof-v2-avatar {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
 
   .proof-v2-name {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 
   .proof-v2-role {
-    font-size: 12px;
+    font-size: 11.5px;
   }
 
   .proof-v2-subrole {
-    font-size: 11px;
+    font-size: 10.5px;
   }
 
   .proof-carousel-dots {
-    margin-top: 24px;
+    margin-top: 20px;
   }
 }
