@@ -186,13 +186,13 @@ html {
 .about-v2-text {
   font-size: 16px;
   line-height: 1.7;
-  color: #333333;
+  color: #4A4A4A;
   margin-bottom: 16px;
 }
 
 .about-v2-text strong {
-  color: #262626;
-  font-weight: 700;
+  color: #1A0B2E;
+  font-weight: 600;
 }
 
 
@@ -277,7 +277,7 @@ html {
 .work-v2-desc {
   font-size: 14.5px;
   line-height: 1.58;
-  color: #555555;
+  color: #4A4A4A;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -424,7 +424,7 @@ html {
 .proof-v2-text {
   font-size: 15px;
   line-height: 1.65;
-  color: #333333;
+  color: #4A4A4A;
   font-style: italic;
   margin-bottom: 24px;
 }
