@@ -181,48 +181,61 @@
   <div class="container-v2">
     <div class="works-v2-header">
       <h2 class="v2-section-title">I miei lavori</h2>
+      <div class="works-carousel-controls">
+        <button class="proof-carousel-btn works-carousel-prev" aria-label="Lavoro precedente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="proof-carousel-btn works-carousel-next" aria-label="Lavoro successivo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
     </div>
 
-    <div class="works-v2-grid">
-      <!-- Work Card 1: Acumen Academy -->
-      <a href="acumen-academy-redesign.html" class="work-v2-card">
-        <div class="work-v2-image-wrapper">
-          <img src="assets/img/i-miei-lavori/copertine card/Banner - User Interface.png?v=6.0" alt="Acumen Academy Redesign completo copertina" class="work-v2-image">
-        </div>
-        <div class="work-v2-body">
-          <h3 class="work-v2-title"><span class="work-client">Acumen Academy</span> | Redesign completo per l'impatto sociale</h3>
-          <p class="work-v2-desc">
-            Riprogettazione end-to-end del sito web per migliorare la fruibilità dei corsi online, dall'analisi dei bisogni utente alla prototipazione e test di usabilità.
-          </p>
-        </div>
-      </a>
+    <div class="works-carousel-wrapper">
+      <div class="works-v2-grid">
+        <!-- Work Card 1: Acumen Academy -->
+        <a href="acumen-academy-redesign.html" class="work-v2-card">
+          <div class="work-v2-image-wrapper">
+            <img src="assets/img/i-miei-lavori/copertine card/Banner - User Interface.png?v=6.0" alt="Acumen Academy Redesign completo copertina" class="work-v2-image">
+          </div>
+          <div class="work-v2-body">
+            <h3 class="work-v2-title"><span class="work-client">Acumen Academy</span> | Redesign completo per l'impatto sociale</h3>
+            <p class="work-v2-desc">
+              Riprogettazione end-to-end del sito web per migliorare la fruibilità dei corsi online, dall'analisi dei bisogni utente alla prototipazione e test di usabilità.
+            </p>
+          </div>
+        </a>
 
-      <!-- Work Card 2: IncluDO Brand Identity -->
-      <a href="includo-brand-identity.html" class="work-v2-card">
-        <div class="work-v2-image-wrapper">
-          <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png?v=6.0" alt="IncluDO Logo &amp; Brand Identity copertina" class="work-v2-image">
-        </div>
-        <div class="work-v2-body">
-          <h3 class="work-v2-title"><span class="work-client">IncluDO</span> | Logo &amp; Brand Identity per la formazione inclusiva</h3>
-          <p class="work-v2-desc">
-            Ideazione dell'identità visiva attraverso creazione di logo, palette cromatiche e componenti grafici per garantire un'immagine di brand inclusiva e coerente.
-          </p>
-        </div>
-      </a>
+        <!-- Work Card 2: IncluDO Brand Identity -->
+        <a href="includo-brand-identity.html" class="work-v2-card">
+          <div class="work-v2-image-wrapper">
+            <img src="assets/img/i-miei-lavori/copertine card/Banner - Grafica.png?v=6.0" alt="IncluDO Logo &amp; Brand Identity copertina" class="work-v2-image">
+          </div>
+          <div class="work-v2-body">
+            <h3 class="work-v2-title"><span class="work-client">IncluDO</span> | Logo &amp; Brand Identity per la formazione inclusiva</h3>
+            <p class="work-v2-desc">
+              Ideazione dell'identità visiva attraverso creazione di logo, palette cromatiche e componenti grafici per garantire un'immagine di brand inclusiva e coerente.
+            </p>
+          </div>
+        </a>
 
-      <!-- Work Card 3: IncluDO Copywriting -->
-      <a href="includo-copywriting.html" class="work-v2-card">
-        <div class="work-v2-image-wrapper">
-          <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png?v=6.0" alt="IncluDO Copywriting &amp; Content Strategy copertina" class="work-v2-image">
-        </div>
-        <div class="work-v2-body">
-          <h3 class="work-v2-title"><span class="work-client">IncluDO</span> | Content Strategy e UX Writing ad impatto emotivo</h3>
-          <p class="work-v2-desc">
-            Scrittura dell'articolo web per raccontare l'inclusione sociale e connettere il target ideale attraverso leve di comunicazione etica e persuasiva.
-          </p>
-        </div>
-      </a>
+        <!-- Work Card 3: IncluDO Copywriting -->
+        <a href="includo-copywriting.html" class="work-v2-card">
+          <div class="work-v2-image-wrapper">
+            <img src="assets/img/i-miei-lavori/copertine card/Banner - Copywriting.png?v=6.0" alt="IncluDO Copywriting &amp; Content Strategy copertina" class="work-v2-image">
+          </div>
+          <div class="work-v2-body">
+            <h3 class="work-v2-title"><span class="work-client">IncluDO</span> | Content Strategy e UX Writing ad impatto emotivo</h3>
+            <p class="work-v2-desc">
+              Scrittura dell'articolo web per raccontare l'inclusione sociale e connettere il target ideale attraverso leve di comunicazione etica e persuasiva.
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
+
+    <!-- Works Carousel Dots -->
+    <div class="works-carousel-dots"></div>
   </div>
 </section>
 
@@ -578,6 +591,135 @@
       // Initialize
       createDots();
       updateCarousel();
+    }
+
+    // Works Carousel Logic (Tablet & Mobile)
+    const worksTrack = document.querySelector('.works-v2-grid');
+    const worksWrapper = document.querySelector('.works-carousel-wrapper');
+    const worksCards = document.querySelectorAll('.works-v2-grid .work-v2-card');
+    const worksPrevBtn = document.querySelector('.works-carousel-prev');
+    const worksNextBtn = document.querySelector('.works-carousel-next');
+    const worksDotsContainer = document.querySelector('.works-carousel-dots');
+
+    if (worksTrack && worksWrapper && worksCards.length > 0) {
+      let worksIndex = 0;
+
+      function getWorksVisibleCount() {
+        return window.innerWidth >= 992 ? 3 : (window.innerWidth >= 576 ? 2 : 1);
+      }
+
+      function getWorksMaxIndex() {
+        const visible = getWorksVisibleCount();
+        return Math.max(0, worksCards.length - visible);
+      }
+
+      function createWorksDots() {
+        if (!worksDotsContainer) return;
+        worksDotsContainer.innerHTML = '';
+        if (window.innerWidth >= 992) return;
+
+        const maxIdx = getWorksMaxIndex();
+        const totalDots = maxIdx + 1;
+
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement('button');
+          dot.className = `proof-dot ${i === worksIndex ? 'active' : ''}`;
+          dot.setAttribute('aria-label', `Vai a lavoro ${i + 1}`);
+          dot.addEventListener('click', () => {
+            worksIndex = i;
+            updateWorksCarousel();
+          });
+          worksDotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateWorksCarousel() {
+        if (window.innerWidth >= 992) {
+          worksTrack.style.transform = 'none';
+          if (worksDotsContainer) worksDotsContainer.innerHTML = '';
+          return;
+        }
+        const maxIdx = getWorksMaxIndex();
+        if (worksIndex > maxIdx) worksIndex = maxIdx;
+        if (worksIndex < 0) worksIndex = 0;
+
+        const cardWidth = worksCards[0].offsetWidth;
+        const gap = parseFloat(window.getComputedStyle(worksTrack).gap) || 20;
+        const offset = worksIndex * (cardWidth + gap);
+        worksTrack.style.transform = `translateX(-${offset}px)`;
+
+        if (worksPrevBtn) worksPrevBtn.disabled = (worksIndex === 0);
+        if (worksNextBtn) worksNextBtn.disabled = (worksIndex === maxIdx);
+
+        if (worksDotsContainer) {
+          const dots = worksDotsContainer.querySelectorAll('.proof-dot');
+          dots.forEach((dot, idx) => {
+            if (idx === worksIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+      }
+
+      if (worksPrevBtn) {
+        worksPrevBtn.addEventListener('click', () => {
+          if (worksIndex > 0) {
+            worksIndex--;
+            updateWorksCarousel();
+          }
+        });
+      }
+
+      if (worksNextBtn) {
+        worksNextBtn.addEventListener('click', () => {
+          if (worksIndex < getWorksMaxIndex()) {
+            worksIndex++;
+            updateWorksCarousel();
+          }
+        });
+      }
+
+      let worksTouchStartX = 0;
+      let worksTouchCurrentX = 0;
+      let worksIsDragging = false;
+
+      worksWrapper.addEventListener('touchstart', (e) => {
+        if (window.innerWidth >= 992) return;
+        worksTouchStartX = e.touches[0].clientX;
+        worksTouchCurrentX = e.touches[0].clientX;
+        worksIsDragging = true;
+      }, { passive: true });
+
+      worksWrapper.addEventListener('touchmove', (e) => {
+        if (!worksIsDragging || window.innerWidth >= 992) return;
+        worksTouchCurrentX = e.touches[0].clientX;
+      }, { passive: true });
+
+      worksWrapper.addEventListener('touchend', () => {
+        if (!worksIsDragging || window.innerWidth >= 992) return;
+        const diff = worksTouchStartX - worksTouchCurrentX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0 && worksIndex < getWorksMaxIndex()) {
+            worksIndex++;
+          } else if (diff < 0 && worksIndex > 0) {
+            worksIndex--;
+          }
+          updateWorksCarousel();
+        }
+        worksIsDragging = false;
+        worksTouchStartX = 0;
+        worksTouchCurrentX = 0;
+      });
+
+      window.addEventListener('resize', () => {
+        createWorksDots();
+        updateWorksCarousel();
+      });
+
+      createWorksDots();
+      updateWorksCarousel();
     }
   });
 </script>
