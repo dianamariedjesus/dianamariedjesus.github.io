@@ -200,19 +200,13 @@ body.cv-page-wrapper {
   line-height: 1.35;
 }
 
-.cv-item-subtitle {
+.cv-item-subtitle,
+.cv-item-meta {
   font-size: 13.5px;
   font-style: italic; /* Corsivo normale */
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
   margin: 0 0 6px 0;
-}
-
-.cv-item-meta {
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(38, 38, 38, 0.7);
-  margin: 0 0 8px 0;
 }
 
 .cv-item-desc {
