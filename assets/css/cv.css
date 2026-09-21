@@ -1,0 +1,291 @@
+/* ==========================================
+   CV Page Styles (Matching PDF Layout)
+   ========================================== */
+
+body.cv-page-wrapper {
+  background-color: #F4F5F7;
+  color: #1A1A1A;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Action Bar (Download Button) --- */
+.cv-action-container {
+  max-width: 920px;
+  margin: 32px auto 16px auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cv-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5A189A;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.cv-back-link:hover {
+  color: #FF452A;
+  transform: translateX(-3px);
+}
+
+.btn-cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #5A189A;
+  color: #FFFFFF !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(90, 24, 154, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cv-download:hover {
+  background-color: #FF452A;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 69, 42, 0.3);
+}
+
+/* --- CV Paper Sheet Document --- */
+.cv-paper {
+  max-width: 920px;
+  margin: 0 auto 64px auto;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  padding: 56px 64px;
+  box-sizing: border-box;
+}
+
+/* --- Header Section --- */
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.cv-header-left {
+  flex: 1;
+}
+
+.cv-name {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 0 4px 0;
+  line-height: 1.1;
+}
+
+.cv-role {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  margin: 0 0 16px 0;
+}
+
+.cv-summary {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 540px;
+}
+
+.cv-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font-size: 13.5px;
+  color: #333333;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.cv-contact-link {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.cv-contact-link:hover {
+  color: #5A189A;
+  text-decoration: underline;
+}
+
+/* --- Main Grid Layout (2 Columns) --- */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 48px;
+}
+
+/* --- Section Headings --- */
+.cv-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #000000;
+  margin: 0 0 16px 0;
+  padding-bottom: 4px;
+}
+
+/* --- Block & Item Styles --- */
+.cv-block {
+  margin-bottom: 32px;
+}
+
+.cv-block:last-child {
+  margin-bottom: 0;
+}
+
+.cv-item {
+  margin-bottom: 24px;
+}
+
+.cv-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-item-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 4px 0;
+  line-height: 1.35;
+}
+
+.cv-item-subtitle {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #262626;
+  margin: 0 0 6px 0;
+}
+
+.cv-item-meta {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+  margin: 0 0 8px 0;
+}
+
+.cv-item-desc {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.cv-bullet-list {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.cv-bullet-list li {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.cv-bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Right Column Text / Content --- */
+.cv-text-block {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.55;
+  margin: 0 0 24px 0;
+}
+
+.cv-text-block:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Disclaimer Footer --- */
+.cv-disclaimer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+/* ==========================================
+   Responsive Viewports
+   ========================================== */
+@media (max-width: 868px) {
+  .cv-paper {
+    padding: 36px 28px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cv-header-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ==========================================
+   Print Styles (Clean A4 Print Out)
+   ========================================== */
+@media print {
+  body.cv-page-wrapper {
+    background-color: #FFFFFF !important;
+  }
+
+  .navbar,
+  .footer-section,
+  .back-to-top,
+  .cv-action-container {
+    display: none !important;
+  }
+
+  .cv-paper {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+  }
+}
