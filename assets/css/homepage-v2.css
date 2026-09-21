@@ -32,6 +32,22 @@ html {
   box-shadow: 0px 4px 20px rgba(90, 24, 154, 0.08) !important;
 }
 
+/* Scroll margin offset for sticky navbar */
+#lavori-v2,
+#chi-sono-v2,
+.about-v2-section,
+.works-v2-section {
+  scroll-margin-top: 85px;
+}
+
+/* Active navigation link styling */
+.custom-nav-link.active,
+.mobile-overlay-menu .custom-nav-link.active {
+  color: #FF452A !important;
+  font-weight: 600 !important;
+  background-color: transparent !important;
+}
+
 /* Common Container for Desktop 1440px */
 .container-v2 {
   max-width: 1200px;
