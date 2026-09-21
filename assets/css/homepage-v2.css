@@ -1036,15 +1036,17 @@ html {
     margin-bottom: 12px;
   }
 
+  .about-v2-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 6px;
+  }
+
   .about-v2-content .btn-v2-outline {
     font-size: 13px;
     padding: 9px 18px;
-    width: max-content;
-    max-width: 100%;
-    margin: 16px auto 0 auto;
-    align-self: center;
-    display: inline-flex;
-    justify-content: center;
+    margin-top: 0;
   }
 
   /* 3. Works Section Mobile */
