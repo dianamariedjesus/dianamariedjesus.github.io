@@ -577,9 +577,9 @@ html {
 }
 
 /* ==========================================
-   6. LAPTOP VIEWPORT RESPONSIVE (1024px)
+   6. LAPTOP VIEWPORT RESPONSIVE (1024px - 1439px)
    ========================================== */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   /* Container & Section Padding - 794px Content Width with 115px Side Padding for Back to Top clearance */
   .container-v2 {
     max-width: 1024px;
@@ -738,15 +738,14 @@ html {
 }
 
 /* ==========================================
-   7. TABLET VIEWPORT RESPONSIVE (768px - 991px)
+   7. TABLET VIEWPORT RESPONSIVE (768px - 1023px)
    ========================================== */
-/* ==========================================
-   7. TABLET VIEWPORT RESPONSIVE (768px - 991px)
-   ========================================== */
-@media (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .container-v2 {
-    max-width: 100%;
-    padding: 0 32px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
     margin-left: auto;
     margin-right: auto;
   }
@@ -847,6 +846,7 @@ html {
   .works-v2-grid {
     display: flex;
     gap: 20px;
+    align-items: stretch;
     transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
     grid-template-columns: none;
@@ -856,10 +856,16 @@ html {
     flex: 0 0 calc(50% - 10px);
     max-width: calc(50% - 10px);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 
   .work-v2-body {
     padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
   }
 
   .work-v2-title {
@@ -872,6 +878,7 @@ html {
     font-size: 13.5px;
     line-height: 1.55;
     margin-bottom: 0;
+    flex-grow: 1;
   }
 
   .works-carousel-dots {
@@ -952,12 +959,16 @@ html {
 }
 
 /* ==========================================
-   8. MOBILE VIEWPORT RESPONSIVE (320px - 575px)
+   8. MOBILE & SMALL VIEWPORTS (0px - 767px)
    ========================================== */
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .container-v2 {
-    width: 100%;
-    padding: 0 16px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .v2-section-title {
@@ -1049,7 +1060,7 @@ html {
     margin-top: 0;
   }
 
-  /* 3. Works Section Mobile */
+  /* 3. Works Section Mobile / Medium Carousel */
   .works-v2-section {
     padding: 2.5rem 0 3rem 0;
   }
@@ -1082,19 +1093,26 @@ html {
   .works-v2-grid {
     display: flex;
     gap: 16px;
+    align-items: stretch;
     transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
     grid-template-columns: none;
   }
 
   .work-v2-card {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 
   .work-v2-body {
     padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
   }
 
   .work-v2-title {
@@ -1107,6 +1125,7 @@ html {
     font-size: 12.5px;
     line-height: 1.5;
     margin-bottom: 0;
+    flex-grow: 1;
   }
 
   .works-carousel-dots {
@@ -1198,5 +1217,20 @@ html {
 
   .proof-dot.active {
     width: 22px;
+  }
+}
+
+/* ==========================================
+   9. STRICT MOBILE PORTRAIT (320px - 575px)
+   ========================================== */
+@media (max-width: 575px) {
+  .work-v2-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .proof-v2-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
