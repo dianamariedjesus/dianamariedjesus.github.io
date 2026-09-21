@@ -208,8 +208,27 @@ html {
 }
 
 .works-v2-header {
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
+}
+
+.works-v2-header .v2-section-title {
+  margin-bottom: 0 !important;
+}
+
+.works-carousel-controls {
+  display: none !important;
+}
+
+.works-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.works-carousel-dots {
+  display: none !important;
 }
 
 .works-v2-grid {
@@ -299,6 +318,10 @@ html {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+}
+
+.social-proof-v2-header .v2-section-title {
+  margin-bottom: 0 !important;
 }
 
 .proof-carousel-controls {
@@ -717,6 +740,9 @@ html {
 /* ==========================================
    7. TABLET VIEWPORT RESPONSIVE (768px - 991px)
    ========================================== */
+/* ==========================================
+   7. TABLET VIEWPORT RESPONSIVE (768px - 991px)
+   ========================================== */
 @media (max-width: 991px) {
   .container-v2 {
     max-width: 100%;
@@ -789,15 +815,46 @@ html {
     padding: 3rem 0 3.5rem 0;
   }
 
-  .works-v2-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .works-v2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
-  .works-v2-grid .work-v2-card:nth-child(3) {
-    grid-column: 1 / -1;
+  .works-v2-header .v2-section-title {
+    margin-bottom: 0 !important;
+  }
+
+  .works-carousel-controls {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .works-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 12px 6px 20px 6px;
+    margin: -12px -6px -20px -6px;
+    cursor: grab;
+  }
+
+  .works-carousel-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .works-v2-grid {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+    grid-template-columns: none;
+  }
+
+  .work-v2-card {
+    flex: 0 0 calc(50% - 10px);
     max-width: calc(50% - 10px);
-    justify-self: center;
     width: 100%;
   }
 
@@ -817,6 +874,14 @@ html {
     margin-bottom: 0;
   }
 
+  .works-carousel-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
   /* 4. Social Proof Section & Carousel Tablet */
   .social-proof-v2-section {
     padding: 3rem 0 3.5rem 0;
@@ -827,6 +892,10 @@ html {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+  }
+
+  .social-proof-v2-header .v2-section-title {
+    margin-bottom: 0 !important;
   }
 
   .proof-carousel-btn {
@@ -944,6 +1013,8 @@ html {
     order: 1;
     align-items: flex-start;
     text-align: left;
+    display: flex;
+    flex-direction: column;
   }
 
   .about-v2-content .v2-section-title {
@@ -967,8 +1038,12 @@ html {
 
   .about-v2-content .btn-v2-outline {
     font-size: 13px;
-    padding: 9px 16px;
-    width: 100%;
+    padding: 9px 18px;
+    width: max-content;
+    max-width: 100%;
+    margin: 16px auto 0 auto;
+    align-self: center;
+    display: inline-flex;
     justify-content: center;
   }
 
@@ -978,12 +1053,42 @@ html {
   }
 
   .works-v2-header {
-    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .works-v2-header .v2-section-title {
+    margin-bottom: 0 !important;
+  }
+
+  .works-carousel-controls {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .works-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 12px 6px 20px 6px;
+    margin: -12px -6px -20px -6px;
+    cursor: grab;
   }
 
   .works-v2-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+    grid-template-columns: none;
+  }
+
+  .work-v2-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .work-v2-body {
@@ -1002,6 +1107,14 @@ html {
     margin-bottom: 0;
   }
 
+  .works-carousel-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
   /* 4. Social Proof Section & Carousel Mobile */
   .social-proof-v2-section {
     padding: 2.5rem 0 3rem 0;
@@ -1012,6 +1125,10 @@ html {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
+  }
+
+  .social-proof-v2-header .v2-section-title {
+    margin-bottom: 0 !important;
   }
 
   .proof-carousel-btn {
