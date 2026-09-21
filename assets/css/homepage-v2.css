@@ -1035,10 +1035,10 @@ html {
 
   .about-v2-image-frame {
     order: 2;
-    width: 160px;
-    height: 200px;
+    width: 200px;
+    height: 250px;
     border-radius: 16px;
-    margin: 10px auto 0 auto;
+    margin: 14px auto 0 auto;
   }
 
   .about-v2-text {
@@ -1189,8 +1189,8 @@ html {
   }
 
   .proof-v2-avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 
   .proof-v2-name {
@@ -1224,6 +1224,16 @@ html {
    9. STRICT MOBILE PORTRAIT (320px - 575px)
    ========================================== */
 @media (max-width: 575px) {
+  .about-v2-image-frame {
+    width: 160px;
+    height: 200px;
+  }
+
+  .proof-v2-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
   .work-v2-card {
     flex: 0 0 100%;
     max-width: 100%;
