@@ -342,6 +342,28 @@ body.cv-page-wrapper {
     margin: 24px auto 16px auto;
   }
 
+  .cv-back-link {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .cv-back-link svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .btn-cv-download {
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    gap: 8px;
+  }
+
+  .btn-cv-download svg {
+    width: 17px;
+    height: 17px;
+  }
+
   .cv-paper {
     max-width: calc(100% - 64px);
     margin: 0 auto 40px auto;
@@ -414,22 +436,36 @@ body.cv-page-wrapper {
   .cv-action-container {
     max-width: 100%;
     padding: 0 16px;
-    margin: 20px auto 16px auto;
-    flex-direction: column-reverse;
-    gap: 12px;
-    align-items: stretch;
-  }
-
-  .btn-cv-download {
-    width: 100%;
-    justify-content: center;
-    padding: 12px 16px;
-    font-size: 14px;
+    margin: 18px auto 14px auto;
+    flex-direction: column; /* cv back link TOP, btn cv download BELOW */
+    gap: 10px;
+    align-items: center;
   }
 
   .cv-back-link {
     justify-content: center;
-    font-size: 14px;
+    font-size: 13.5px;
+    gap: 6px;
+  }
+
+  .cv-back-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .btn-cv-download {
+    width: auto;
+    max-width: 100%;
+    justify-content: center;
+    padding: 9px 18px;
+    font-size: 13.5px;
+    border-radius: 10px;
+    gap: 8px;
+  }
+
+  .btn-cv-download svg {
+    width: 16px;
+    height: 16px;
   }
 
   .cv-paper {
