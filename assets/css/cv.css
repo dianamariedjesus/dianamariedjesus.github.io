@@ -1,10 +1,10 @@
 /* ==========================================
-   CV Page Styles (Matching PDF Layout)
+   CV Page Styles (Matching PDF Layout & Homepage Aesthetics)
    ========================================== */
 
 body.cv-page-wrapper {
   background-color: #F4F5F7;
-  color: #1A1A1A;
+  color: rgba(38, 38, 38, 0.9);
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -75,7 +75,7 @@ body.cv-page-wrapper {
 .cv-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end; /* Align bottom row of contacts with bottom line of summary */
   gap: 32px;
   margin-bottom: 32px;
 }
@@ -89,7 +89,7 @@ body.cv-page-wrapper {
   font-weight: 800;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #000000;
+  color: #262626;
   margin: 0 0 4px 0;
   line-height: 1.1;
 }
@@ -104,7 +104,7 @@ body.cv-page-wrapper {
 .cv-summary {
   font-size: 14px;
   font-weight: 400;
-  color: #333333;
+  color: rgba(38, 38, 38, 0.9);
   line-height: 1.55;
   margin: 0;
   max-width: 540px;
@@ -116,13 +116,14 @@ body.cv-page-wrapper {
   align-items: flex-end;
   gap: 6px;
   font-size: 13.5px;
-  color: #333333;
+  color: rgba(38, 38, 38, 0.9);
   text-align: right;
   white-space: nowrap;
+  line-height: 1.55;
 }
 
 .cv-contact-link {
-  color: #333333;
+  color: rgba(38, 38, 38, 0.9);
   text-decoration: none;
   font-weight: 400;
   transition: color 0.2s ease;
@@ -138,6 +139,19 @@ body.cv-page-wrapper {
   display: grid;
   grid-template-columns: 1.65fr 1fr;
   gap: 48px;
+  align-items: stretch;
+}
+
+/* Right column flex distribution to align bottom of LINGUE with ESPERIENZE LAVORATIVE */
+@media (min-width: 869px) {
+  .cv-right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cv-right-col .cv-block {
+    margin-bottom: 0;
+  }
 }
 
 /* --- Section Headings --- */
@@ -146,7 +160,7 @@ body.cv-page-wrapper {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #000000;
+  color: #262626;
   margin: 0 0 16px 0;
   padding-bottom: 4px;
 }
@@ -156,50 +170,61 @@ body.cv-page-wrapper {
   margin-bottom: 32px;
 }
 
-.cv-block:last-child {
+.cv-left-col .cv-block:last-child {
   margin-bottom: 0;
 }
 
 .cv-item {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .cv-item:last-child {
   margin-bottom: 0;
 }
 
+/* EDUCAZIONE items override: removal of 24px bottom margin */
+.cv-block-education .cv-item {
+  margin-bottom: 8px;
+}
+
+.cv-block-education .cv-item:last-child {
+  margin-bottom: 0;
+}
+
 .cv-item-title {
   font-size: 15px;
-  font-weight: 700;
-  color: #000000;
+  font-weight: 600; /* SemiBold */
+  color: #262626;
   margin: 0 0 4px 0;
   line-height: 1.35;
 }
 
 .cv-item-subtitle {
   font-size: 13.5px;
-  font-weight: 600;
-  color: #262626;
+  font-style: italic; /* Corsivo normale */
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.9);
   margin: 0 0 6px 0;
 }
 
 .cv-item-meta {
   font-size: 13px;
   font-weight: 500;
-  color: #666666;
+  color: rgba(38, 38, 38, 0.7);
   margin: 0 0 8px 0;
 }
 
 .cv-item-desc {
   font-size: 13.5px;
   font-weight: 400;
-  color: #333333;
+  color: rgba(38, 38, 38, 0.9);
   line-height: 1.5;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
+/* Bullet list margin reduction */
 .cv-bullet-list {
-  margin: 8px 0 0 0;
+  margin: 6px 0 0 0;
   padding-left: 18px;
   list-style-type: disc;
 }
@@ -207,9 +232,9 @@ body.cv-page-wrapper {
 .cv-bullet-list li {
   font-size: 13.5px;
   font-weight: 400;
-  color: #333333;
-  line-height: 1.5;
-  margin-bottom: 8px;
+  color: rgba(38, 38, 38, 0.9);
+  line-height: 1.45;
+  margin-bottom: 4px;
 }
 
 .cv-bullet-list li:last-child {
@@ -220,7 +245,7 @@ body.cv-page-wrapper {
 .cv-text-block {
   font-size: 13.5px;
   font-weight: 400;
-  color: #333333;
+  color: rgba(38, 38, 38, 0.9);
   line-height: 1.55;
   margin: 0 0 24px 0;
 }
@@ -231,13 +256,13 @@ body.cv-page-wrapper {
 
 /* --- Disclaimer Footer --- */
 .cv-disclaimer {
-  margin-top: 40px;
-  padding-top: 16px;
-  border-top: 1px solid #E5E7EB;
+  margin-top: 32px;
+  padding-top: 0;
+  border-top: none; /* Removed 1px border */
   font-size: 11px;
-  color: #666666;
+  color: rgba(38, 38, 38, 0.85);
   line-height: 1.45;
-  text-align: justify;
+  text-align: center; /* Centered alignment */
 }
 
 /* ==========================================
@@ -252,6 +277,7 @@ body.cv-page-wrapper {
 
   .cv-header {
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
   }
 
@@ -263,6 +289,10 @@ body.cv-page-wrapper {
   .cv-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .cv-right-col {
+    display: block;
   }
 }
 
