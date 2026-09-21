@@ -605,7 +605,7 @@
       let worksIndex = 0;
 
       function getWorksVisibleCount() {
-        return window.innerWidth >= 992 ? 3 : (window.innerWidth >= 576 ? 2 : 1);
+        return window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 576 ? 2 : 1);
       }
 
       function getWorksMaxIndex() {
@@ -616,7 +616,7 @@
       function createWorksDots() {
         if (!worksDotsContainer) return;
         worksDotsContainer.innerHTML = '';
-        if (window.innerWidth >= 992) return;
+        if (window.innerWidth >= 1024) return;
 
         const maxIdx = getWorksMaxIndex();
         const totalDots = maxIdx + 1;
@@ -634,7 +634,7 @@
       }
 
       function updateWorksCarousel() {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth >= 1024) {
           worksTrack.style.transform = 'none';
           if (worksDotsContainer) worksDotsContainer.innerHTML = '';
           return;
@@ -686,19 +686,19 @@
       let worksIsDragging = false;
 
       worksWrapper.addEventListener('touchstart', (e) => {
-        if (window.innerWidth >= 992) return;
+        if (window.innerWidth >= 1024) return;
         worksTouchStartX = e.touches[0].clientX;
         worksTouchCurrentX = e.touches[0].clientX;
         worksIsDragging = true;
       }, { passive: true });
 
       worksWrapper.addEventListener('touchmove', (e) => {
-        if (!worksIsDragging || window.innerWidth >= 992) return;
+        if (!worksIsDragging || window.innerWidth >= 1024) return;
         worksTouchCurrentX = e.touches[0].clientX;
       }, { passive: true });
 
       worksWrapper.addEventListener('touchend', () => {
-        if (!worksIsDragging || window.innerWidth >= 992) return;
+        if (!worksIsDragging || window.innerWidth >= 1024) return;
         const diff = worksTouchStartX - worksTouchCurrentX;
         if (Math.abs(diff) > 40) {
           if (diff > 0 && worksIndex < getWorksMaxIndex()) {
