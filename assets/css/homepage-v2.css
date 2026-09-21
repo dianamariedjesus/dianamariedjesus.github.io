@@ -136,7 +136,7 @@ html {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  color: #4A4A4A;
+  color: rgba(38, 38, 38, 0.9);
   max-width: 820px;
   margin: 0 auto 36px auto;
 }
@@ -184,14 +184,17 @@ html {
 }
 
 .about-v2-text {
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  line-height: 1.7;
-  color: #4A4A4A;
-  margin-bottom: 16px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.9);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
 }
 
 .about-v2-text strong {
-  color: #1A0B2E;
+  color: rgba(38, 38, 38, 0.9);
   font-weight: 600;
 }
 
@@ -255,14 +258,14 @@ html {
 }
 
 .work-v2-body {
-  padding: 24px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .work-v2-title {
-  font-size: 18.5px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.35;
   color: #1A0B2E;
@@ -277,7 +280,7 @@ html {
 .work-v2-desc {
   font-size: 14.5px;
   line-height: 1.58;
-  color: #4A4A4A;
+  color: rgba(38, 38, 38, 0.9);
   margin-bottom: 0;
   flex-grow: 1;
 }
@@ -408,7 +411,7 @@ html {
 .proof-v2-text {
   font-size: 15px;
   line-height: 1.65;
-  color: #4A4A4A;
+  color: rgba(38, 38, 38, 0.9);
   font-style: italic;
   margin-bottom: 24px;
 }
@@ -501,15 +504,6 @@ html {
   background-color: #FF9488;
 }
 
-@media (max-width: 991px) {
-  .proof-v2-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-
-
 /* ==========================================
    5. BACK TO TOP BUTTON (DESKTOP)
    ========================================== */
@@ -552,7 +546,10 @@ html {
 }
 @media (max-width: 1023px) {
   .back-to-top {
-    display: none !important;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
   }
 }
 
@@ -723,7 +720,7 @@ html {
 @media (max-width: 991px) {
   .container-v2 {
     max-width: 100%;
-    padding: 0 24px;
+    padding: 0 32px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -793,8 +790,15 @@ html {
   }
 
   .works-v2-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .works-v2-grid .work-v2-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 10px);
+    justify-self: center;
+    width: 100%;
   }
 
   .work-v2-body {
@@ -819,6 +823,9 @@ html {
   }
 
   .social-proof-v2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
 
@@ -832,8 +839,8 @@ html {
   }
 
   .proof-v2-card {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
     padding: 20px 18px;
     border-radius: 16px;
   }
@@ -915,9 +922,10 @@ html {
 
   .hero-v2-actions .btn-v2-primary {
     font-size: 13.5px;
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 280px;
+    padding: 10px 22px;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
     justify-content: center;
   }
 
@@ -927,31 +935,34 @@ html {
   }
 
   .about-v2-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
 
+  .about-v2-content {
+    order: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about-v2-content .v2-section-title {
+    text-align: left;
+    font-size: 19px;
+  }
+
   .about-v2-image-frame {
+    order: 2;
     width: 160px;
     height: 200px;
     border-radius: 16px;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
   }
 
   .about-v2-text {
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 12px;
-  }
-
-  .about-v2-content {
-    align-items: center;
-    text-align: left;
-  }
-
-  .about-v2-content .v2-section-title {
-    text-align: center;
-    font-size: 19px;
   }
 
   .about-v2-content .btn-v2-outline {
@@ -964,6 +975,10 @@ html {
   /* 3. Works Section Mobile */
   .works-v2-section {
     padding: 2.5rem 0 3rem 0;
+  }
+
+  .works-v2-header {
+    margin-bottom: 0;
   }
 
   .works-v2-grid {
@@ -993,6 +1008,9 @@ html {
   }
 
   .social-proof-v2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 16px;
   }
 
