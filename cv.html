@@ -23,7 +23,7 @@
   <!-- Homepage V2 Custom CSS -->
   <link rel="stylesheet" href="assets/css/homepage-v2.css?v=7.0">
   <!-- Dedicated CV Page CSS -->
-  <link rel="stylesheet" href="assets/css/cv.css?v=2.0">
+  <link rel="stylesheet" href="assets/css/cv.css?v=3.0">
 </head>
 
 <body class="homepage-v2-wrapper cv-page-wrapper">
@@ -139,7 +139,7 @@
       <div class="cv-header-right">
         <a href="tel:+393711308590" class="cv-contact-link">+39 3711308590</a>
         <a href="mailto:dianamarie.djesus@gmail.com" class="cv-contact-link">dianamarie.djesus@gmail.com</a>
-        <a href="https://dianamariedjesus.github.io" target="_blank" class="cv-contact-link">dianamariedjesus.github.io</a>
+        <a href="https://github.com/dianamariedjesus/dianamariedjesus.github.io" target="_blank" class="cv-contact-link">dianamariedjesus.github.io</a>
         <a href="https://www.linkedin.com/in/diana-de-jesus" target="_blank" class="cv-contact-link">linkedin.com/in/diana-de-jesus</a>
       </div>
     </header>
@@ -335,6 +335,13 @@
               backToTopBtn.classList.add('visible');
             } else {
               backToTopBtn.classList.remove('visible');
+            }
+
+            if (footerRect.top < windowHeight) {
+              const visibleFooterHeight = windowHeight - footerRect.top;
+              backToTopBtn.style.bottom = (visibleFooterHeight + 24) + 'px';
+            } else {
+              backToTopBtn.style.bottom = '30px';
             }
           }
         });
