@@ -1035,10 +1035,20 @@ html {
 
   .about-v2-image-frame {
     order: 2;
-    width: 200px;
-    height: 250px;
+    width: 45%;
+    max-width: 280px;
+    min-width: 160px;
+    aspect-ratio: 4 / 5;
+    height: auto;
     border-radius: 16px;
-    margin: 14px auto 0 auto;
+    margin: 16px auto 0 auto;
+    overflow: hidden;
+  }
+
+  .about-v2-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .about-v2-text {
@@ -1224,11 +1234,6 @@ html {
    9. STRICT MOBILE PORTRAIT (320px - 575px)
    ========================================== */
 @media (max-width: 575px) {
-  .about-v2-image-frame {
-    width: 160px;
-    height: 200px;
-  }
-
   .proof-v2-avatar {
     width: 36px;
     height: 36px;
