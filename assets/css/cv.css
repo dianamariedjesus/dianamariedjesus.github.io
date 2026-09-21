@@ -263,7 +263,75 @@ body.cv-page-wrapper {
 /* ==========================================
    Responsive Viewports
    ========================================== */
-@media (max-width: 868px) {
+
+/* Laptop Viewport (1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cv-action-container {
+    max-width: 100%;
+    padding: 0 32px;
+    margin: 28px auto 16px auto;
+  }
+
+  .cv-paper {
+    max-width: calc(100% - 64px);
+    margin: 0 auto 48px auto;
+    padding: 44px 48px;
+    border-radius: 14px;
+  }
+
+  .cv-header {
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .cv-name {
+    font-size: 30px;
+  }
+
+  .cv-role {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .cv-summary {
+    width: 100%;
+    max-width: 440px;
+    font-size: 13.5px;
+  }
+
+  .cv-header-right {
+    font-size: 13px;
+    gap: 3px;
+  }
+
+  .cv-grid {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 36px;
+  }
+
+  .cv-section-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .cv-item-title {
+    font-size: 14.5px;
+  }
+
+  .cv-item-subtitle,
+  .cv-item-meta {
+    font-size: 13px;
+  }
+
+  .cv-item-desc,
+  .cv-bullet-list li,
+  .cv-text-block {
+    font-size: 13px;
+  }
+}
+
+/* Tablet & Mobile Viewports */
+@media (max-width: 767px) {
   .cv-paper {
     padding: 36px 28px;
     margin-bottom: 40px;
