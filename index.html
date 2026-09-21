@@ -36,7 +36,7 @@
     <!-- Desktop Navigation Links (Centered) -->
     <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
       <a href="#lavori-v2" class="nav-link custom-nav-link">I miei lavori</a>
-      <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+      <a href="#chi-sono-v2" class="nav-link custom-nav-link">Chi sono</a>
       <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
     </div>
 
@@ -79,8 +79,8 @@
     <!-- Overlay Menu for Mobile -->
     <div class="mobile-overlay-menu d-md-none">
       <div class="mobile-nav-links">
-        <a href="#lavori-v2" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">I miei lavori</a>
-        <a href="chi-sono.html" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="#lavori-v2" class="nav-link custom-nav-link">I miei lavori</a>
+        <a href="#chi-sono-v2" class="nav-link custom-nav-link">Chi sono</a>
         <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
       </div>
       <div class="mobile-lang-selector">
@@ -135,7 +135,7 @@
 <!-- ==========================================
      2. ABOUT ME SECTION (CHI SONO)
      ========================================== -->
-<section class="about-v2-section">
+<section id="chi-sono-v2" class="about-v2-section">
   <div class="container-v2">
     <div class="about-v2-grid">
       <!-- Left Column: Avatar Photo -->
@@ -387,25 +387,55 @@
 <!-- Navigation & Interaction JavaScript Logic -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const worksLink = document.querySelector('.custom-nav-link[href="#lavori-v2"]');
-    if (worksLink) {
-      let isClickScrolling = false;
-      let clickScrollTimeout;
+    const navLinks = document.querySelectorAll('.custom-nav-link');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 
-      worksLink.addEventListener("click", () => {
-        if (window.innerWidth >= 1026) {
-          document.querySelectorAll('.custom-nav-link').forEach(link => {
-            link.classList.remove('active');
-          });
-          worksLink.classList.add('active');
-          isClickScrolling = true;
-          clearTimeout(clickScrollTimeout);
-          clickScrollTimeout = setTimeout(() => {
-            isClickScrolling = false;
-          }, 1000);
+    function setActiveLinkByHref(targetHref) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === targetHref) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
         }
       });
     }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          if (mobileMenuToggle) {
+            mobileMenuToggle.checked = false;
+          }
+          setActiveLinkByHref(href);
+        }
+      });
+    });
+
+    if (window.location.hash) {
+      setActiveLinkByHref(window.location.hash);
+    }
+
+    // ScrollSpy to update active state while scrolling
+    const targetSections = ['chi-sono-v2', 'lavori-v2'];
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -50% 0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveLinkByHref('#' + entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    targetSections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
     // Close language dropdown menu when clicking anywhere outside
     document.addEventListener('click', function(e) {
