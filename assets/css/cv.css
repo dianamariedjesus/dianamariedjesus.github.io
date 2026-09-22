@@ -556,7 +556,7 @@ body.cv-page-wrapper {
 
   .cv-disclaimer {
     font-size: 9.5px;
-    margin-top: 24px;
+    margin-top: 0;
     line-height: 1.4;
     text-align: center;
   }
