@@ -19,9 +19,9 @@
   <title>Diana de Jesus | Portfolio</title>
 
   <!-- Base Navbar & Footer CSS -->
-  <link rel="stylesheet" href="assets/css/homepage.css?v=14.0">
+  <link rel="stylesheet" href="assets/css/homepage.css?v=15.0">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=7.0">
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.0">
 </head>
 <body class="homepage-v2-wrapper">
 
@@ -35,9 +35,11 @@
 
     <!-- Desktop Navigation Links (Centered) -->
     <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
-      <a href="#lavori" class="nav-link custom-nav-link">I miei lavori</a>
+      <a href="#lavori" class="nav-link custom-nav-link">Lavori</a>
       <a href="#chi-sono" class="nav-link custom-nav-link">Chi sono</a>
-      <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+      <a href="cv.html" class="nav-link custom-nav-link">CV</a>
+      <a href="#testimonianze" class="nav-link custom-nav-link">Testimonianze</a>
+      <a href="contatti.html" class="nav-link custom-nav-link">Contatti</a>
     </div>
 
     <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
@@ -79,9 +81,11 @@
     <!-- Overlay Menu for Mobile -->
     <div class="mobile-overlay-menu d-md-none">
       <div class="mobile-nav-links">
-        <a href="#lavori" class="nav-link custom-nav-link">I miei lavori</a>
-        <a href="#chi-sono" class="nav-link custom-nav-link">Chi sono</a>
-        <a href="contatti.html" class="nav-link custom-nav-link">Contattami</a>
+        <a href="#lavori" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Lavori</a>
+        <a href="#chi-sono" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Chi sono</a>
+        <a href="cv.html" class="nav-link custom-nav-link">CV</a>
+        <a href="#testimonianze" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Testimonianze</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contatti</a>
       </div>
       <div class="mobile-lang-selector">
         <button type="button" class="mobile-lang-btn active">
@@ -241,9 +245,9 @@
 
 
 <!-- ==========================================
-     4. SOCIAL PROOF SECTION (COSA DICONO DI ME)
+     4. SOCIAL PROOF SECTION (COSA DICONO DI ME / TESTIMONIANZE)
      ========================================== -->
-<section class="social-proof-v2-section">
+<section id="testimonianze" class="social-proof-v2-section">
   <div class="container-v2">
     <div class="social-proof-v2-header">
       <h2 class="v2-section-title">Cosa dicono di me</h2>
