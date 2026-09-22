@@ -917,8 +917,8 @@ body {
   .form-privacy-note {
     font-size: 11.5px;
     margin-top: 4px;
-    text-align: left;
-    justify-content: flex-start;
+    align-self: center;
+    max-width: 355.44px;
   }
 
   .contact-success-box {
