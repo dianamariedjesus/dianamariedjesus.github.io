@@ -19,9 +19,9 @@
   <title>Diana de Jesus | Portfolio</title>
 
   <!-- Base Navbar & Footer CSS -->
-  <link rel="stylesheet" href="assets/css/homepage.css?v=15.2">
+  <link rel="stylesheet" href="assets/css/homepage.css?v=15.3">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.2">
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.3">
 </head>
 <body class="homepage-v2-wrapper">
 
@@ -409,22 +409,40 @@
     let clickScrollTimeout = null;
 
     navLinks.forEach(link => {
-      link.addEventListener('click', function() {
+      link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href && (href.startsWith('#') || href.startsWith('./#'))) {
-          if (mobileMenuToggle) {
-            mobileMenuToggle.checked = false;
-          }
           const targetId = href.replace('./#', '#');
-          setActiveLinkByHref(targetId);
-          isClickScrolling = true;
-          if (clickScrollTimeout) clearTimeout(clickScrollTimeout);
-          clickScrollTimeout = setTimeout(() => {
-            isClickScrolling = false;
-          }, 1000);
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            if (mobileMenuToggle) {
+              mobileMenuToggle.checked = false;
+            }
+            setActiveLinkByHref(targetId);
+            history.pushState(null, '', targetId);
+
+            isClickScrolling = true;
+            if (clickScrollTimeout) clearTimeout(clickScrollTimeout);
+            clickScrollTimeout = setTimeout(() => {
+              isClickScrolling = false;
+            }, 1800);
+
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       });
     });
+
+    if ('onscrollend' in window) {
+      window.addEventListener('scrollend', () => {
+        if (isClickScrolling) {
+          isClickScrolling = false;
+          if (clickScrollTimeout) clearTimeout(clickScrollTimeout);
+          updateActiveOnScroll();
+        }
+      });
+    }
 
     function updateActiveOnScroll() {
       if (isClickScrolling) return;
@@ -433,20 +451,30 @@
       const chiSonoEl = document.getElementById('chi-sono');
       const testimonianzeEl = document.getElementById('testimonianze');
 
-      // 140px offset to account for sticky navbar
-      const scrollPos = window.scrollY + 140;
-
-      if (lavoriEl && scrollPos < lavoriEl.offsetTop) {
-        // User is at top of page / Hero section -> No active link
+      // 1. If at top of page (Hero section), no link is active
+      const heroThreshold = lavoriEl ? (lavoriEl.offsetTop - 160) : 300;
+      if (window.scrollY < heroThreshold) {
         setActiveLinkByHref('');
         return;
       }
 
-      if (testimonianzeEl && scrollPos >= testimonianzeEl.offsetTop) {
+      // 2. If scrolled to or near bottom of page, Testimonianze (bottom section) is active
+      const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 70);
+      if (isAtBottom && testimonianzeEl) {
         setActiveLinkByHref('#testimonianze');
-      } else if (chiSonoEl && scrollPos >= chiSonoEl.offsetTop) {
+        return;
+      }
+
+      // 3. Section checks using viewport bounding rects
+      const testRect = testimonianzeEl ? testimonianzeEl.getBoundingClientRect() : null;
+      const chiRect = chiSonoEl ? chiSonoEl.getBoundingClientRect() : null;
+      const lavRect = lavoriEl ? lavoriEl.getBoundingClientRect() : null;
+
+      if (testRect && testRect.top <= (window.innerHeight * 0.55)) {
+        setActiveLinkByHref('#testimonianze');
+      } else if (chiRect && chiRect.top <= 160) {
         setActiveLinkByHref('#chi-sono');
-      } else if (lavoriEl && scrollPos >= lavoriEl.offsetTop) {
+      } else if (lavRect && lavRect.top <= 160) {
         setActiveLinkByHref('#lavori');
       } else {
         setActiveLinkByHref('');
@@ -456,7 +484,13 @@
     window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
 
     if (window.location.hash) {
-      setActiveLinkByHref(window.location.hash);
+      const hashTarget = window.location.hash;
+      setActiveLinkByHref(hashTarget);
+      isClickScrolling = true;
+      if (clickScrollTimeout) clearTimeout(clickScrollTimeout);
+      clickScrollTimeout = setTimeout(() => {
+        isClickScrolling = false;
+      }, 1800);
     } else {
       updateActiveOnScroll();
     }
