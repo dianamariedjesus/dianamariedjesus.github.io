@@ -74,7 +74,7 @@ body.cv-page-wrapper {
 /* --- Header Section --- */
 .cv-header {
   display: grid;
-  grid-template-columns: 1.65fr 1fr;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
   gap: 48px;
   align-items: flex-end; /* Align bottom row of contacts with bottom line of summary */
   margin-bottom: 40px;
@@ -138,7 +138,7 @@ body.cv-page-wrapper {
 /* --- Main Grid Layout (2 Columns) --- */
 .cv-grid {
   display: grid;
-  grid-template-columns: 1.65fr 1fr;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
   gap: 48px;
   align-items: stretch;
 }
@@ -285,7 +285,7 @@ body.cv-page-wrapper {
 
   .cv-header {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: 36px;
     margin-bottom: 36px;
     align-items: flex-end;
@@ -302,7 +302,7 @@ body.cv-page-wrapper {
 
   .cv-summary {
     width: 100%;
-    max-width: 440px;
+    max-width: 100%;
     font-size: 13.5px;
   }
 
@@ -312,7 +312,7 @@ body.cv-page-wrapper {
   }
 
   .cv-grid {
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: 36px;
   }
 
@@ -376,7 +376,7 @@ body.cv-page-wrapper {
 
   .cv-header {
     display: grid;
-    grid-template-columns: 1.55fr 1fr;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
     gap: 28px;
     margin-bottom: 32px;
     align-items: flex-end;
@@ -405,7 +405,7 @@ body.cv-page-wrapper {
   }
 
   .cv-grid {
-    grid-template-columns: 1.55fr 1fr;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
     gap: 28px;
   }
 
