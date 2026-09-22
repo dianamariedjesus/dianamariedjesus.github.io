@@ -144,7 +144,7 @@ body.cv-page-wrapper {
 }
 
 /* Right column flex distribution to align bottom of LINGUE with ESPERIENZE LAVORATIVE */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cv-right-col {
     display: flex;
     flex-direction: column;
@@ -409,22 +409,8 @@ body.cv-page-wrapper {
     gap: 28px;
   }
 
-  .cv-right-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .cv-right-col .cv-block {
-    margin-bottom: 0;
-  }
-
-  .cv-left-col .cv-block {
+  .cv-block {
     margin-bottom: 32px;
-  }
-
-  .cv-left-col .cv-block:last-child {
-    margin-bottom: 0;
   }
 
   .cv-section-title {
