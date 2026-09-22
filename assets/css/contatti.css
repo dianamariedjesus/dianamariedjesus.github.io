@@ -1324,6 +1324,11 @@ body {
     font-weight: 600 !important;
     color: #5A189A !important;
   }
+  .mobile-overlay-menu .custom-nav-link.active {
+    color: #FF452A !important;
+    font-weight: 600 !important;
+    background-color: transparent !important;
+  }
   #mobile-menu-toggle:checked ~ .mobile-overlay-menu {
     transform: translateY(0);
   }
