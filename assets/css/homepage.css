@@ -596,15 +596,18 @@ body {
 /* Tablet Viewports (768px - 1023px) - Fine-tuning Navbar & Footer */
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar .container-fluid {
-    padding: 0 32px !important;
+    padding: 0 24px !important;
+  }
+  .nav-links-center {
+    gap: 4px !important;
   }
   .custom-nav-link {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   .language-dropdown-wrapper .lang-selector {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   .footer-container {
     padding: 20px 32px !important;
@@ -729,7 +732,9 @@ body {
     top: 56px;
     left: 0;
     width: 100%;
-    height: 348px !important;
+    height: auto !important;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
     background-color: white;
     padding: 24px 16px !important;
     box-shadow: none;
@@ -753,7 +758,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 48px;
+    margin-top: 24px;
     width: 100%;
   }
   button.mobile-lang-btn,
@@ -1174,7 +1179,9 @@ body {
     top: 56px;
     left: 0;
     width: 100%;
-    height: 348px !important;
+    height: auto !important;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
     background-color: white;
     padding: 24px 16px !important;
     box-shadow: none;
@@ -1198,7 +1205,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 48px;
+    margin-top: 24px;
     width: 100%;
   }
   button.mobile-lang-btn,
@@ -1515,31 +1522,32 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 32px !important;
+    padding: 0 24px !important;
   }
   .navbar {
     padding: 0 !important;
     height: 64px !important;
     margin: 0;
   }
-  .navbar-nav {
-    gap: 8px;
+  .navbar-nav,
+  .nav-links-center {
+    gap: 4px !important;
   }
   .navbar-brand img {
-    width: 77.59px !important;
+    width: 70px !important;
     height: 36px !important;
     padding-top: 0;
     padding-bottom: 0;
   }
   .custom-nav-link {
     font-family: "Poppins", sans-serif;
-    font-size: 14.5px !important;
+    font-size: 13.5px !important;
     font-weight: 400;
-    padding: 6px 12px !important;
+    padding: 6px 8px !important;
   }
   .language-dropdown-wrapper .lang-selector {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   /* Hero Section */
   .hero-section {

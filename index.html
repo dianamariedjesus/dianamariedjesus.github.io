@@ -19,9 +19,9 @@
   <title>Diana de Jesus | Portfolio</title>
 
   <!-- Base Navbar & Footer CSS -->
-  <link rel="stylesheet" href="assets/css/homepage.css?v=15.0">
+  <link rel="stylesheet" href="assets/css/homepage.css?v=15.1">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.0">
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.1">
 </head>
 <body class="homepage-v2-wrapper">
 
@@ -396,7 +396,8 @@
 
     function setActiveLinkByHref(targetHref) {
       navLinks.forEach(link => {
-        if (link.getAttribute('href') === targetHref) {
+        const href = link.getAttribute('href');
+        if (href === targetHref || (targetHref && targetHref.startsWith('#') && (href === targetHref || href === './' + targetHref))) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
@@ -404,14 +405,23 @@
       });
     }
 
+    let isClickScrolling = false;
+    let clickScrollTimeout = null;
+
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
         const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
+        if (href && (href.startsWith('#') || href.startsWith('./#'))) {
           if (mobileMenuToggle) {
             mobileMenuToggle.checked = false;
           }
-          setActiveLinkByHref(href);
+          const targetId = href.replace('./#', '#');
+          setActiveLinkByHref(targetId);
+          isClickScrolling = true;
+          if (clickScrollTimeout) clearTimeout(clickScrollTimeout);
+          clickScrollTimeout = setTimeout(() => {
+            isClickScrolling = false;
+          }, 1000);
         }
       });
     });
@@ -421,7 +431,7 @@
     }
 
     // ScrollSpy to update active state while scrolling
-    const targetSections = ['chi-sono', 'lavori'];
+    const targetSections = ['lavori', 'chi-sono', 'testimonianze'];
     const observerOptions = {
       root: null,
       rootMargin: '-20% 0px -50% 0px',
@@ -429,6 +439,7 @@
     };
 
     const observer = new IntersectionObserver((entries) => {
+      if (isClickScrolling) return;
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveLinkByHref('#' + entry.target.id);

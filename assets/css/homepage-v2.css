@@ -37,8 +37,10 @@ html {
 #lavori-v2,
 #chi-sono,
 #chi-sono-v2,
+#testimonianze,
 .about-v2-section,
-.works-v2-section {
+.works-v2-section,
+.social-proof-v2-section {
   scroll-margin-top: 85px;
 }
 

@@ -1686,15 +1686,22 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar .container-fluid,
   .navbar-expand-md .mobile-nav-container {
-    padding: 0 32px !important;
+    padding: 0 24px !important;
+  }
+  .nav-links-center,
+  .navbar-nav {
+    gap: 4px !important;
+  }
+  .navbar-brand img {
+    width: 70px !important;
   }
   .custom-nav-link {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   .language-dropdown-wrapper .lang-selector {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   .footer-container {
     padding: 20px 32px !important;
