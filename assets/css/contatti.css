@@ -358,17 +358,18 @@ body {
   height: 24px;
   object-fit: contain;
   display: block;
+  transition: transform 0.25s ease-in-out;
 }
 
 .contact-social-btn:hover {
   transform: translateY(-3px);
-  background-color: #5A189A;
+  background-color: #f3ebf9;
   border-color: #5A189A;
-  box-shadow: 0 8px 20px rgba(90, 24, 154, 0.25);
+  box-shadow: 0 8px 20px rgba(90, 24, 154, 0.18);
 }
 
 .contact-social-btn:hover img {
-  filter: brightness(0) invert(1);
+  transform: scale(1.08);
 }
 
 /* --- Right Column Form Card --- */
