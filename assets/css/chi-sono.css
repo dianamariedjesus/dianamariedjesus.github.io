@@ -667,7 +667,9 @@ html, body {
     top: 56px;
     left: 0;
     width: 100%;
-    height: 348px !important;
+    height: auto !important;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
     background-color: white;
     padding: 24px 16px !important;
     transform: translateY(-200%);
@@ -692,7 +694,7 @@ html, body {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 48px;
+    margin-top: 24px;
     width: 100%;
   }
 
@@ -759,7 +761,9 @@ html, body {
     font-weight: 600 !important;
   }
   .mobile-overlay-menu .custom-nav-link.active {
-    color: #5A189A !important;
+    color: #FF452A !important;
+    font-weight: 600 !important;
+    background-color: transparent !important;
   }
 
   #mobile-menu-toggle:checked ~ .mobile-overlay-menu {
@@ -1214,15 +1218,22 @@ html, body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar .container-fluid,
   .navbar-expand-md .mobile-nav-container {
-    padding: 0 32px !important;
+    padding: 0 24px !important;
+  }
+  .nav-links-center,
+  .navbar-nav {
+    gap: 4px !important;
+  }
+  .navbar-brand img {
+    width: 70px !important;
   }
   .custom-nav-link {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   .language-dropdown-wrapper .lang-selector {
-    font-size: 14.5px !important;
-    padding: 6px 12px !important;
+    font-size: 13.5px !important;
+    padding: 6px 8px !important;
   }
   .footer-section {
     background: #ECE8EF !important;
