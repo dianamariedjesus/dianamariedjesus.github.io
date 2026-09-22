@@ -291,7 +291,7 @@ body {
   font-size: 16.5px;
   line-height: 1.6;
   color: rgba(38, 38, 38, 0.85);
-  margin: 0 0 24px 0;
+  margin: 0 0 32px 0;
 }
 .paragraph strong {
   font-weight: 600;
@@ -732,7 +732,7 @@ body {
   .paragraph {
     font-size: 14.5px;
     line-height: 1.55;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 
   .availability-badge {
@@ -907,7 +907,7 @@ body {
   .paragraph {
     font-size: 13.5px;
     line-height: 1.55;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
 
   .availability-badge {
@@ -1280,7 +1280,8 @@ body {
 
   .title-container {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
     margin-bottom: 12px;
     gap: 0;
   }
@@ -1289,22 +1290,30 @@ body {
     font-size: 24px;
     line-height: 1.25;
     letter-spacing: -0.015em;
-    text-align: left;
+    text-align: center;
     margin: 0;
   }
 
   .paragraph {
     font-size: 13.5px;
     line-height: 1.55;
-    margin: 0 0 18px 0;
-    text-align: left;
+    margin: 0 0 24px 0;
+    text-align: center;
   }
 
   .availability-badge {
     padding: 10px 14px;
     border-radius: 12px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
     gap: 4px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .badge-header {
+    justify-content: center;
+    width: 100%;
   }
 
   .status-title {
@@ -1319,7 +1328,9 @@ body {
   .badge-subtitle {
     font-size: 11px;
     line-height: 1.4;
-    padding-left: 18px;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
   }
 
   .contact-direct-details {
@@ -1327,22 +1338,28 @@ body {
     padding-top: 0;
     gap: 12px;
     border-top: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-social-icons {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2px;
+    width: 100%;
   }
 
   .direct-detail-item {
     font-size: 12.5px;
     gap: 8px;
     line-height: 1.4;
+    justify-content: center;
+    text-align: center;
   }
 
   .detail-icon {
     width: 18px;
     height: 18px;
-  }
-
-  .contact-social-icons {
-    gap: 10px;
-    margin-top: 2px;
   }
 
   .contact-social-btn {
