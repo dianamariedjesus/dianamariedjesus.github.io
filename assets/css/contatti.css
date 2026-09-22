@@ -712,34 +712,165 @@ body {
   }
 }
 
-/* --- Small Desktop viewports (1026px - 1280px) --- */
-@media (min-width: 1026px) and (max-width: 1280px) {
+/* --- Laptop viewports (1024px - 1399px) --- */
+@media (min-width: 1024px) and (max-width: 1399px) {
   .contact-section {
-    margin: 160px auto 140px auto;
-    padding: 0 50px !important;
-    gap: clamp(48px, 6vw, 105px);
+    max-width: 1024px;
+    margin: 48px auto 80px auto;
+    padding: 0 115px !important;
+    gap: 36px;
   }
 
-  .title-container {
-    gap: clamp(16px, 2vw, 34.5px);
-    margin-bottom: 18.73px;
-  }
-
+  /* Left Column Laptop Styles */
   .title {
-    font-size: clamp(38px, 3.2vw, 48px);
-    line-height: 120%;
-    width: clamp(280px, 26vw, 352px);
-    height: auto;
+    font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
   }
 
-  .contact-chat-icon {
-    width: clamp(56px, 5vw, 75.2px);
-    height: clamp(48px, 4.3vw, 64.43px);
-    opacity: 0.6;
-    transform: rotate(-9.84deg);
-    margin-left: 0;
-    margin-top: clamp(8px, 1.2vw, 20.94px);
-    flex-shrink: 0;
+  .paragraph {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .availability-badge {
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    gap: 4px;
+  }
+
+  .status-title {
+    font-size: 13px;
+  }
+
+  .status-pulse {
+    width: 8px;
+    height: 8px;
+  }
+
+  .badge-subtitle {
+    font-size: 11.5px;
+    line-height: 1.4;
+    padding-left: 18px;
+  }
+
+  .contact-direct-details {
+    padding-top: 16px;
+    gap: 14px;
+  }
+
+  .direct-detail-item {
+    font-size: 13.5px;
+    gap: 8px;
+  }
+
+  .contact-social-icons {
+    gap: 10px;
+    margin-top: 2px;
+  }
+
+  .contact-social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .contact-social-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Right Column Form Card Laptop Styles */
+  .contact-form-wrapper {
+    padding: 26px 24px;
+    border-radius: 18px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-label {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .label-optional {
+    font-size: 11.5px;
+  }
+
+  .topic-chips-container {
+    gap: 6px;
+  }
+
+  .chip-content {
+    font-size: 11.5px;
+    padding: 6px 12px;
+    gap: 5px;
+  }
+
+  .contact-form input[type=text],
+  .contact-form input[type=email] {
+    height: 42px;
+    font-size: 13.5px;
+    padding: 0 14px;
+    border-radius: 10px;
+  }
+
+  .contact-form textarea {
+    min-height: 105px;
+    font-size: 13.5px;
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+
+  .contact-form input[type=text]::placeholder,
+  .contact-form input[type=email]::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 13px;
+  }
+
+  .btn-submit-v2 {
+    font-size: 14.5px;
+    padding: 12px 24px;
+    margin-top: 4px;
+  }
+
+  .form-privacy-note {
+    font-size: 11.5px;
+    margin-top: 4px;
+  }
+
+  .contact-success-box {
+    padding: 20px 8px;
+  }
+
+  .success-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .success-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .success-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .success-message {
+    font-size: 13.5px;
+    margin-bottom: 18px;
+  }
+
+  .btn-reset-form {
+    font-size: 13.5px;
+    padding: 8px 20px;
   }
 }
 
