@@ -196,22 +196,41 @@ body {
   width: 100%;
 }
 
-/* Availability Badge */
+/* Availability Badge (2 Rows) */
 .availability-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   background-color: #f3ebf9;
   color: #5A189A;
   font-family: 'Poppins', sans-serif;
-  font-size: 13.5px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 16px rgba(90, 24, 154, 0.06);
+  border: 1px solid rgba(90, 24, 154, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-title {
+  font-size: 14px;
   font-weight: 600;
-  padding: 8px 18px;
-  border-radius: 100px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 10px rgba(90, 24, 154, 0.08);
-  width: -moz-fit-content;
-  width: fit-content;
+  color: #5A189A;
+}
+
+.badge-subtitle {
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(90, 24, 154, 0.85);
+  padding-left: 19px;
 }
 
 .status-pulse {
@@ -221,6 +240,7 @@ body {
   border-radius: 50%;
   position: relative;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .status-pulse::after {
@@ -256,26 +276,12 @@ body {
 
 .title {
   font-family: "Poppins", sans-serif;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
   color: #262626;
   margin: 0;
-}
-
-.contact-chat-icon {
-  width: 56px;
-  height: auto;
-  opacity: 0.85;
-  transform: rotate(-6deg);
-  flex-shrink: 0;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.contact-chat-icon:hover {
-  transform: rotate(4deg) scale(1.08);
 }
 
 .paragraph {
@@ -284,7 +290,7 @@ body {
   font-size: 16.5px;
   line-height: 1.6;
   color: rgba(38, 38, 38, 0.85);
-  margin: 0 0 28px 0;
+  margin: 0 0 24px 0;
 }
 .paragraph strong {
   font-weight: 600;
@@ -306,7 +312,18 @@ body {
   gap: 10px;
   font-size: 15px;
   font-weight: 500;
-  color: rgba(38, 38, 38, 0.85);
+  color: #262626;
+  line-height: 1.4;
+}
+
+.timezone-text {
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.7);
+}
+
+.timezone-text strong {
+  font-weight: 600;
+  color: #5A189A;
 }
 
 .detail-icon {
@@ -337,16 +354,10 @@ body {
 }
 
 .contact-social-btn img {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
-}
-
-.contact-social-btn svg {
-  width: 22px;
-  height: 22px;
-  fill: #5A189A;
-  transition: fill 0.25s ease;
+  display: block;
 }
 
 .contact-social-btn:hover {
@@ -358,10 +369,6 @@ body {
 
 .contact-social-btn:hover img {
   filter: brightness(0) invert(1);
-}
-
-.contact-social-btn:hover svg {
-  fill: #FFFFFF;
 }
 
 /* --- Right Column Form Card --- */
