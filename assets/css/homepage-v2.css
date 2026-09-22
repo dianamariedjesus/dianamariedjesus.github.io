@@ -33,7 +33,9 @@ html {
 }
 
 /* Scroll margin offset for sticky navbar */
+#lavori,
 #lavori-v2,
+#chi-sono,
 #chi-sono-v2,
 .about-v2-section,
 .works-v2-section {
