@@ -566,13 +566,13 @@ body {
   font-size: 12.5px;
   line-height: 1.5;
   color: rgba(38, 38, 38, 0.6);
-  margin: 4px auto 0 auto;
-  text-align: left;
-  display: inline-flex;
+  margin: 4px 0 0 0;
+  text-align: center;
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 6px;
-  max-width: 100%;
+  width: 100%;
 }
 
 .privacy-lock-icon {
@@ -580,11 +580,11 @@ body {
   flex-shrink: 0;
   width: 14px;
   height: 14px;
-  margin-top: 2px;
+  margin-top: 2.5px;
 }
 
 .privacy-note-text {
-  text-align: left;
+  text-align: center;
 }
 
 /* Success State Box */
@@ -918,7 +918,9 @@ body {
     font-size: 11.5px;
     margin-top: 4px;
     align-self: center;
-    max-width: 355.44px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .contact-success-box {
@@ -1105,7 +1107,9 @@ body {
     font-size: 11px;
     margin-top: 4px;
     align-self: center;
-    max-width: 355.44px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .contact-success-box {
@@ -1527,7 +1531,9 @@ body {
     font-size: 11px;
     margin-top: 4px;
     align-self: center;
-    max-width: 355.44px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .contact-success-box {
