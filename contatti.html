@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/contatti.css?v=16.0">
+  <link rel="stylesheet" href="assets/css/contatti.css?v=17.0">
 </head>
 <body>
 
@@ -114,7 +114,7 @@
         <span class="status-title">Disponibile per nuove opportunità</span>
       </div>
       <div class="badge-subtitle">
-        (Stage, Tirocini &amp; Ruoli Junior UX/UI Designer • In sede, ibrido o da remoto in Italia &amp; Europa)
+        <span>(Stage, Tirocini &amp; Ruoli Junior UX/UI Designer • </span><br class="badge-line-break"><span>In sede, ibrido o da remoto in Italia &amp; Europa)</span>
       </div>
     </div>
 
@@ -246,6 +246,13 @@
   </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Torna in alto">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
 <!-- EmailJS SDK Integration -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -348,44 +355,89 @@
 
     // ── Navigation Indicator Logic ──
     const worksLink = document.querySelector('.custom-nav-link[href="./#lavori"]');
-    if (!worksLink) return;
+    if (worksLink) {
+      let isClickScrolling = false;
+      let clickScrollTimeout;
 
-    let isClickScrolling = false;
-    let clickScrollTimeout;
+      // Handle click on the "I miei lavori" link
+      worksLink.addEventListener("click", (e) => {
+        const isHomepage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+        if (isHomepage && window.innerWidth >= 1026) {
+          e.preventDefault();
+          
+          document.querySelectorAll('.custom-nav-link').forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          worksLink.classList.add('active');
 
-    // Handle click on the "I miei lavori" link
-    worksLink.addEventListener("click", (e) => {
-      // Only apply active state logic if we are already on index.html
-      const isHomepage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
-      if (isHomepage && window.innerWidth >= 1026) {
-        e.preventDefault();
-        
-        // Remove active class from all other nav links
-        document.querySelectorAll('.custom-nav-link').forEach(link => {
-          link.classList.remove('active');
-        });
-        
-        // Set the active class on "I miei lavori"
-        worksLink.classList.add('active');
+          isClickScrolling = true;
+          clearTimeout(clickScrollTimeout);
+          clickScrollTimeout = setTimeout(() => {
+            isClickScrolling = false;
+          }, 1000);
 
-        // Prevent scroll handler from instantly removing the active class during smooth scroll transition
-        isClickScrolling = true;
-        clearTimeout(clickScrollTimeout);
-        clickScrollTimeout = setTimeout(() => {
-          isClickScrolling = false;
-        }, 1000);
-
-        // Smooth scroll to works section
-        const worksSection = document.getElementById('lavori');
-        if (worksSection) {
-          worksSection.scrollIntoView({ behavior: 'smooth' });
+          const worksSection = document.getElementById('lavori');
+          if (worksSection) {
+            worksSection.scrollIntoView({ behavior: 'smooth' });
+          }
         }
-      }
-    });
+      });
 
-    // Handle page load with #lavori hash (for redirection from other pages)
-    if (window.location.hash === '#lavori' && window.innerWidth >= 1026) {
-      worksLink.classList.add('active');
+      if (window.location.hash === '#lavori' && window.innerWidth >= 1026) {
+        worksLink.classList.add('active');
+      }
+    }
+
+    // ── Back to Top Button Logic (Matching Homepage / Case Studies Behavior) ──
+    const backToTopBtn = document.querySelector('.back-to-top');
+    const footer = document.querySelector('.footer-section');
+    
+    if (backToTopBtn && footer) {
+      window.addEventListener('scroll', function() {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const pageHeight = document.documentElement.scrollHeight;
+        const isMobileOrTablet = window.innerWidth < 1024;
+
+        if (isMobileOrTablet) {
+          const isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect.top <= windowHeight);
+          if (isAtBottom) {
+            backToTopBtn.classList.add('visible');
+            if (footerRect.top < windowHeight) {
+              const visibleFooterHeight = windowHeight - footerRect.top;
+              backToTopBtn.style.bottom = (visibleFooterHeight + 16) + 'px';
+            } else {
+              backToTopBtn.style.bottom = '20px';
+            }
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        } else {
+          // Laptop e Desktop: visibile quando si scrolla (scrollY > 300)
+          if (scrollPosition > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+
+          // Si ferma subito sopra il footer quando entra nel viewport
+          if (footerRect.top < windowHeight) {
+            const visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 24) + 'px';
+          } else {
+            backToTopBtn.style.bottom = '30px';
+          }
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
     }
 
     // Close language dropdown menu when clicking anywhere outside
