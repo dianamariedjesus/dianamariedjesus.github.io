@@ -243,8 +243,10 @@ html {
 }
 
 .works-carousel-wrapper {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
+  padding: 12px 0;
+  margin: -12px 0;
 }
 
 .works-carousel-dots {
@@ -388,8 +390,8 @@ html {
 .proof-carousel-wrapper {
   overflow: hidden;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 12px 4px;
+  margin: -12px -4px;
   cursor: grab;
 }
 
@@ -854,8 +856,8 @@ html {
   .works-carousel-wrapper {
     overflow: hidden;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 12px 4px;
+    margin: -12px -4px;
     cursor: grab;
   }
 
@@ -1115,8 +1117,8 @@ html {
   .works-carousel-wrapper {
     overflow: hidden;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 12px 4px;
+    margin: -12px -4px;
     cursor: grab;
   }
 
