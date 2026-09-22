@@ -532,7 +532,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .btn-submit-v2:hover {
@@ -565,10 +565,10 @@ body {
   font-size: 12.5px;
   color: rgba(38, 38, 38, 0.6);
   margin: 4px 0 0 0;
-  text-align: left;
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 6px;
 }
 
@@ -902,14 +902,14 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .form-privacy-note {
     font-size: 11.5px;
     margin-top: 4px;
-    text-align: left;
-    justify-content: flex-start;
+    text-align: center;
+    justify-content: center;
   }
 
   .contact-success-box {
@@ -1090,14 +1090,14 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .form-privacy-note {
     font-size: 11px;
     margin-top: 4px;
-    text-align: left;
-    justify-content: flex-start;
+    text-align: center;
+    justify-content: center;
   }
 
   .contact-success-box {
@@ -1509,14 +1509,14 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .form-privacy-note {
     font-size: 11px;
     margin-top: 4px;
-    text-align: left;
-    justify-content: flex-start;
+    text-align: center;
+    justify-content: center;
   }
 
   .contact-success-box {
