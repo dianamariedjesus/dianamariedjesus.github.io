@@ -19,9 +19,9 @@
   <title>Diana de Jesus | Portfolio</title>
 
   <!-- Base Navbar & Footer CSS -->
-  <link rel="stylesheet" href="assets/css/homepage.css?v=15.1">
+  <link rel="stylesheet" href="assets/css/homepage.css?v=15.2">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.1">
+  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.2">
 </head>
 <body class="homepage-v2-wrapper">
 
@@ -426,31 +426,40 @@
       });
     });
 
-    if (window.location.hash) {
-      setActiveLinkByHref(window.location.hash);
+    function updateActiveOnScroll() {
+      if (isClickScrolling) return;
+
+      const lavoriEl = document.getElementById('lavori');
+      const chiSonoEl = document.getElementById('chi-sono');
+      const testimonianzeEl = document.getElementById('testimonianze');
+
+      // 140px offset to account for sticky navbar
+      const scrollPos = window.scrollY + 140;
+
+      if (lavoriEl && scrollPos < lavoriEl.offsetTop) {
+        // User is at top of page / Hero section -> No active link
+        setActiveLinkByHref('');
+        return;
+      }
+
+      if (testimonianzeEl && scrollPos >= testimonianzeEl.offsetTop) {
+        setActiveLinkByHref('#testimonianze');
+      } else if (chiSonoEl && scrollPos >= chiSonoEl.offsetTop) {
+        setActiveLinkByHref('#chi-sono');
+      } else if (lavoriEl && scrollPos >= lavoriEl.offsetTop) {
+        setActiveLinkByHref('#lavori');
+      } else {
+        setActiveLinkByHref('');
+      }
     }
 
-    // ScrollSpy to update active state while scrolling
-    const targetSections = ['lavori', 'chi-sono', 'testimonianze'];
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -50% 0px',
-      threshold: 0.1
-    };
+    window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
 
-    const observer = new IntersectionObserver((entries) => {
-      if (isClickScrolling) return;
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveLinkByHref('#' + entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    targetSections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    if (window.location.hash) {
+      setActiveLinkByHref(window.location.hash);
+    } else {
+      updateActiveOnScroll();
+    }
 
     // Close language dropdown menu when clicking anywhere outside
     document.addEventListener('click', function(e) {
