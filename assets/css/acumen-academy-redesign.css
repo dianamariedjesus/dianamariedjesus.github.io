@@ -2600,7 +2600,7 @@ strong, b, .highlight-bold {
     padding: 16px !important;
   }
   .wcag-card {
-    border: none !important;
+    border: 1px solid #E2E8F0 !important;
     padding: 12px !important;
     gap: 10px !important;
     min-height: auto !important;
