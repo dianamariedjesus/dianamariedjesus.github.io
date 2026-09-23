@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css?v=2.0">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=23.0">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=24.0">
 </head>
 
 <body>
@@ -692,6 +692,12 @@
       if (img) {
         img.src = item.src;
         img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      }
+      var scrollContainer = document.getElementById('singleLightboxImageScrollContainer');
+      if (scrollContainer) {
+        scrollContainer.classList.remove('is-zoomed');
+        scrollContainer.scrollTop = 0;
       }
       if (caption) caption.innerHTML = item.caption;
 
@@ -731,12 +737,18 @@
       var caption = document.getElementById('singleLightboxCaption');
       var prevBtn = document.getElementById('brandLightboxPrevBtn');
       var nextBtn = document.getElementById('brandLightboxNextBtn');
+      var scrollContainer = document.getElementById('singleLightboxImageScrollContainer');
 
       activeCarouselType = null;
 
       if (img) {
         img.src = src;
         img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      }
+      if (scrollContainer) {
+        scrollContainer.classList.remove('is-zoomed');
+        scrollContainer.scrollTop = 0;
       }
       if (caption) caption.innerHTML = captionHtml;
 
@@ -754,7 +766,14 @@
       if (e) e.stopPropagation();
       var modal = document.getElementById('singleLightboxModal');
       var img = document.getElementById('singleLightboxImageDisplay');
-      if (img) img.classList.remove('zoomed');
+      var scrollContainer = document.getElementById('singleLightboxImageScrollContainer');
+      if (img) {
+        img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      }
+      if (scrollContainer) {
+        scrollContainer.classList.remove('is-zoomed');
+      }
       if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = '';
@@ -771,6 +790,7 @@
           if (window.innerWidth < 1024) return; // Su Mobile e Tablet gli utenti zoomano con i gesti touch nativi
           e.stopPropagation();
           var isZoomed = this.classList.toggle('zoomed');
+          container.classList.toggle('is-zoomed', isZoomed);
           if (isZoomed) {
             var rect = container.getBoundingClientRect();
             var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));

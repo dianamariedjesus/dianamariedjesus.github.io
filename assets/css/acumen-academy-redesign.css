@@ -3299,6 +3299,17 @@ strong, b, .highlight-bold {
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
+  .lightbox-nav-btn {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 20px !important;
+  }
+  .lightbox-nav-btn.prev {
+    left: -52px !important;
+  }
+  .lightbox-nav-btn.next {
+    right: -52px !important;
+  }
 }
 .lightbox-caption {
   margin-top: 14px;

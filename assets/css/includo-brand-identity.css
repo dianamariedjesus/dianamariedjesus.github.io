@@ -777,17 +777,20 @@ div[id] {
   width: 100%;
   max-width: 872px;
   max-height: 80vh;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
   background-color: #0F172A;
   border: 1px solid rgba(255, 255, 255, 0.2);
   line-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   box-sizing: border-box;
   position: relative;
+  scrollbar-width: thin;
+}
+.lightbox-img-scroll-container.is-zoomed {
+  overflow: hidden !important;
 }
 .lightbox-img {
   width: 100%;
@@ -1028,15 +1031,26 @@ div[id] {
 
   /* Lightbox Modal su Laptop */
   .lightbox-modal-content {
-    max-width: 720px;
+    max-width: 872px !important;
+    width: 100% !important;
   }
   .lightbox-img-scroll-container {
-    max-height: 75vh !important;
-    overflow: visible !important;
+    width: 100% !important;
+    max-width: 872px !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    display: block !important;
+  }
+  .lightbox-img-scroll-container.is-zoomed {
+    overflow: hidden !important;
   }
   .lightbox-img {
-    max-height: 70vh !important;
-    object-fit: contain !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: initial !important;
   }
   .lightbox-caption {
     font-size: 13px;

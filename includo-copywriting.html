@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=17.0">
+  <link rel="stylesheet" href="assets/css/includo-copywriting.css?v=18.0">
 </head>
 
 <body>
@@ -622,12 +622,24 @@
       var caption = document.getElementById('lightboxCaption');
       var prevBtn = document.getElementById('lightboxPrevBtn');
       var nextBtn = document.getElementById('lightboxNextBtn');
+      var scrollContainer = document.getElementById('lightboxImageScrollContainer');
 
-      if (img) img.src = src;
+      if (img) {
+        img.src = src;
+        img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      }
+      if (scrollContainer) {
+        scrollContainer.classList.remove('is-zoomed');
+        scrollContainer.scrollTop = 0;
+      }
       if (caption) caption.innerHTML = captionHtml;
       if (prevBtn) prevBtn.style.display = 'none';
       if (nextBtn) nextBtn.style.display = 'none';
-      if (modal) modal.style.display = 'flex';
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function openCialdiniLightbox(index) {
@@ -642,12 +654,21 @@
       var caption = document.getElementById('lightboxCaption');
       var prevBtn = document.getElementById('lightboxPrevBtn');
       var nextBtn = document.getElementById('lightboxNextBtn');
+      var scrollContainer = document.getElementById('lightboxImageScrollContainer');
 
       var item = cialdiniGalleryData[currentLightboxIndex];
       if (!item) return;
 
-      img.src = item.src;
-      caption.innerHTML = item.caption;
+      if (img) {
+        img.src = item.src;
+        img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      }
+      if (scrollContainer) {
+        scrollContainer.classList.remove('is-zoomed');
+        scrollContainer.scrollTop = 0;
+      }
+      if (caption) caption.innerHTML = item.caption;
 
       // Regola freccia sinistra: nascosta per prima slide (index 0)
       if (currentLightboxIndex === 0) {
@@ -663,7 +684,10 @@
         nextBtn.style.display = 'flex';
       }
 
-      modal.style.display = 'flex';
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function navigateCialdiniLightbox(e, direction) {
@@ -679,8 +703,51 @@
     function closeCialdiniLightbox(e) {
       if (e) e.stopPropagation();
       var modal = document.getElementById('cialdiniLightboxModal');
-      if (modal) modal.style.display = 'none';
+      var img = document.getElementById('lightboxImageDisplay');
+      var scrollContainer = document.getElementById('lightboxImageScrollContainer');
+      if (img) {
+        img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      }
+      if (scrollContainer) {
+        scrollContainer.classList.remove('is-zoomed');
+      }
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var lightboxImg = document.getElementById('lightboxImageDisplay');
+      var container = document.getElementById('lightboxImageScrollContainer');
+
+      if (lightboxImg && container) {
+        lightboxImg.addEventListener('click', function(e) {
+          if (window.innerWidth < 1024) return;
+          e.stopPropagation();
+          var isZoomed = this.classList.toggle('zoomed');
+          container.classList.toggle('is-zoomed', isZoomed);
+          if (isZoomed) {
+            var rect = container.getBoundingClientRect();
+            var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            var py = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+            this.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
+          } else {
+            this.style.transformOrigin = 'center center';
+          }
+        });
+
+        container.addEventListener('mousemove', function(e) {
+          if (window.innerWidth < 1024) return;
+          if (!lightboxImg.classList.contains('zoomed')) return;
+          var rect = container.getBoundingClientRect();
+          var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+          var py = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+          lightboxImg.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
+        });
+      }
+    });
 
     document.addEventListener('keydown', function(e) {
       var modal = document.getElementById('cialdiniLightboxModal');
