@@ -788,9 +788,11 @@ div[id] {
   box-sizing: border-box;
   position: relative;
   scrollbar-width: thin;
+  cursor: zoom-in;
 }
 .lightbox-img-scroll-container.is-zoomed {
   overflow: hidden !important;
+  cursor: zoom-out !important;
 }
 .lightbox-img {
   width: 100%;
@@ -799,13 +801,13 @@ div[id] {
   display: block;
   margin: 0 auto;
   cursor: zoom-in;
-  transition: transform 0.25s ease-out, transform-origin 0.05s linear;
+  transition: transform 0.25s ease-out;
   transform-origin: center center;
   user-select: none;
 }
 .lightbox-img.zoomed {
-  cursor: zoom-out;
-  transform: scale(2.2);
+  cursor: zoom-out !important;
+  transform: scale(2.2) !important;
 }
 .lightbox-caption {
   margin-top: 14px;
@@ -1042,15 +1044,24 @@ div[id] {
     overflow-x: hidden !important;
     display: block !important;
   }
-  .lightbox-img-scroll-container.is-zoomed {
-    overflow: hidden !important;
-  }
   .lightbox-img {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
     max-height: none !important;
     object-fit: initial !important;
+    cursor: zoom-in;
+    transition: transform 0.25s ease-out;
+    transform-origin: center center;
+    user-select: none;
+  }
+  .lightbox-img.zoomed {
+    cursor: zoom-out !important;
+    transform: scale(2.2) !important;
+  }
+  .lightbox-img-scroll-container.is-zoomed {
+    overflow: hidden !important;
+    cursor: zoom-out !important;
   }
   .lightbox-caption {
     font-size: 13px;

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/homepage.css?v=2.0">
   
   <!-- Case Study CSS -->
-  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=25.0">
+  <link rel="stylesheet" href="assets/css/includo-brand-identity.css?v=26.0">
 </head>
 
 <body>
@@ -786,28 +786,37 @@
       var container = document.getElementById('singleLightboxImageScrollContainer');
 
       if (lightboxImg && container) {
-        lightboxImg.addEventListener('click', function(e) {
-          if (window.innerWidth < 1024) return; // Su Mobile e Tablet gli utenti zoomano con i gesti touch nativi
-          e.stopPropagation();
-          var isZoomed = this.classList.toggle('zoomed');
+        function toggleZoom(e) {
+          if (window.innerWidth < 1024) return;
+          if (e) e.stopPropagation();
+          var isZoomed = lightboxImg.classList.toggle('zoomed');
           container.classList.toggle('is-zoomed', isZoomed);
           if (isZoomed) {
             var rect = container.getBoundingClientRect();
             var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
             var py = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
-            this.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
+            lightboxImg.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
           } else {
-            this.style.transformOrigin = 'center center';
+            lightboxImg.style.transformOrigin = 'center center';
           }
-        });
+        }
+
+        container.addEventListener('click', toggleZoom);
 
         container.addEventListener('mousemove', function(e) {
           if (window.innerWidth < 1024) return;
           if (!lightboxImg.classList.contains('zoomed')) return;
           var rect = container.getBoundingClientRect();
+          if (!rect.width || !rect.height) return;
           var px = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
           var py = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
           lightboxImg.style.transformOrigin = (px * 100) + '% ' + (py * 100) + '%';
+        });
+
+        container.addEventListener('mouseleave', function() {
+          if (lightboxImg.classList.contains('zoomed')) {
+            lightboxImg.style.transformOrigin = 'center center';
+          }
         });
       }
     });
