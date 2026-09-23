@@ -976,6 +976,7 @@ strong, b, .highlight-bold {
 }
 .work-v2-title .work-client {
   color: #FF452A;
+  font-weight: inherit !important;
 }
 .work-v2-desc {
   font-family: 'Poppins', sans-serif;
@@ -1181,7 +1182,7 @@ strong, b, .highlight-bold {
 }
 
 /* Media Queries per Contenitore */
-@media (min-width: 1024px) and (max-width: 1399px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .case-study-hero {
     padding: 0;
     margin: 0 auto;
@@ -1365,7 +1366,7 @@ strong, b, .highlight-bold {
     padding: 0 !important;
     min-height: auto !important;
     height: auto !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     overflow: hidden !important;
   }
   .problem-cards-grid .problem-card-header {
@@ -1377,7 +1378,7 @@ strong, b, .highlight-bold {
     justify-content: flex-start !important;
     text-align: left !important;
     margin-bottom: 0 !important;
-    padding: 12px !important;
+    padding: 14px !important;
     border-bottom: none !important;
     box-sizing: border-box !important;
   }
@@ -1391,17 +1392,19 @@ strong, b, .highlight-bold {
     min-height: auto !important;
     height: auto !important;
     max-height: none !important;
-    padding: 0 12px !important;
+    padding: 0 14px !important;
     margin-bottom: 12px !important;
   }
   .problem-cards-grid .impact-section-body {
     min-height: auto !important;
     height: auto !important;
     max-height: none !important;
-    padding: 0 12px 12px 12px !important;
+    padding: 0 14px 14px 14px !important;
     margin-bottom: 0 !important;
   }
-  #sondaggio .problem-card {
+  #sondaggio .problem-card,
+  .survey-cards-grid .survey-card,
+  .survey-card {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -1410,7 +1413,8 @@ strong, b, .highlight-bold {
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
-  #sondaggio .survey-card-header {
+  #sondaggio .survey-card-header,
+  .survey-card-header {
     min-height: 48px !important;
     height: 48px !important;
     max-height: 48px !important;
@@ -1419,16 +1423,17 @@ strong, b, .highlight-bold {
     justify-content: flex-start !important;
     text-align: left !important;
     margin-bottom: 0 !important;
-    padding: 12px !important;
+    padding: 14px !important;
     border-bottom: none !important;
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
   }
-  #sondaggio .survey-body-section {
+  #sondaggio .survey-body-section,
+  .survey-body-section {
     min-height: auto !important;
     height: auto !important;
     max-height: none !important;
-    padding: 0 12px !important;
+    padding: 0 14px !important;
     margin-bottom: 0 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1437,27 +1442,73 @@ strong, b, .highlight-bold {
     box-sizing: border-box !important;
     flex: 1 1 auto !important;
   }
-  #sondaggio .survey-goal-box {
-    margin: 16px 12px 12px 12px !important;
-    padding: 10px 12px !important;
+  #sondaggio .survey-goal-box,
+  .survey-goal-box {
+    margin: 16px 14px 14px 14px !important;
+    padding: 10px 14px !important;
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
   }
+  /* Nielsen card & WCAG card on laptop */
+  .nielsen-card,
+  .nielsen-card-full {
+    padding: 14px !important;
+    box-sizing: border-box !important;
+  }
+  .nielsen-title {
+    font-size: 14.5px !important;
+  }
+  .nielsen-desc {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+  .wcag-card {
+    padding: 14px !important;
+    box-sizing: border-box !important;
+    gap: 10px !important;
+  }
+  .wcag-card-title {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+  }
+  .wcag-asis-box,
+  .wcag-tobe-box {
+    padding: 10px 12px !important;
+  }
+  .wcag-label {
+    font-size: 11px !important;
+  }
+  .wcag-text {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
   /* Metric cards alignment on laptop */
+  .metric-card {
+    padding: 14px !important;
+    box-sizing: border-box !important;
+  }
   .metric-task-name {
-    font-size: 12px;
-    min-height: 36px;
-    display: flex;
-    align-items: flex-start;
+    font-size: 12px !important;
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    line-height: 1.35 !important;
   }
   .metric-value {
-    font-size: 17.5px;
-    white-space: nowrap;
-    margin-bottom: 8px;
+    font-size: 17.5px !important;
+    white-space: nowrap !important;
+    margin-bottom: 6px !important;
   }
   .metric-desc {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+  }
+  /* User Personas card on laptop */
+  .persona-card {
+    padding: 14px !important;
+    box-sizing: border-box !important;
   }
   .persona-card .persona-header,
   .persona-header {
@@ -3224,8 +3275,8 @@ strong, b, .highlight-bold {
   margin: 0 auto;
 }
 
-/* Immagini ingrandite a tutta larghezza e scrollabili su Laptop (1024px - 1399px) */
-@media (min-width: 1024px) and (max-width: 1399px) {
+/* Immagini ingrandite a tutta larghezza e scrollabili su Laptop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
   .lightbox-modal-content {
     width: 90vw !important;
     max-width: 1200px !important;
@@ -3544,7 +3595,7 @@ strong, b, .highlight-bold {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   #mainCarouselTrack .comparison-card-item {
     height: 476px !important;
     min-height: 476px !important;
@@ -3792,7 +3843,7 @@ strong, b, .highlight-bold {
   margin-top: 0 !important;
   box-sizing: border-box;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   #mainCarouselTrack .comparison-card-desc {
     height: 168px !important;
     min-height: 168px !important;
@@ -3927,8 +3978,8 @@ strong, b, .highlight-bold {
    UNIFIED NAVBAR & FOOTER FINE-TUNINGS (ALL VIEWPORTS)
    =================================== */
 
-/* 1. Desktop Large Viewports (1400px+) */
-@media (min-width: 1400px) {
+/* 1. Desktop Large Viewports (1440px+) */
+@media (min-width: 1440px) {
   .navbar .container-fluid,
   .navbar-expand-md .mobile-nav-container {
     padding: 0 60px !important;
@@ -3954,8 +4005,8 @@ strong, b, .highlight-bold {
   }
 }
 
-/* 2. Laptop Viewports (1024px - 1399px) */
-@media (min-width: 1024px) and (max-width: 1399px) {
+/* 2. Laptop Viewports (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
   .navbar .container-fluid,
   .navbar-expand-md .mobile-nav-container {
     padding: 0 40px !important;
