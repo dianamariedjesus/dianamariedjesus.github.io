@@ -316,6 +316,7 @@ html {
 
 .work-v2-title .work-client {
   color: #FF452A;
+  font-weight: inherit !important;
 }
 
 .work-v2-desc {
