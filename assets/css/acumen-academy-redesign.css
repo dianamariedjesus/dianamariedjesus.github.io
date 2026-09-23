@@ -978,10 +978,12 @@ strong, b, .highlight-bold {
   color: #FF452A;
 }
 .work-v2-desc {
+  font-family: 'Poppins', sans-serif;
   font-size: 14.5px;
-  line-height: 1.6;
-  color: rgba(38, 38, 38, 0.85);
-  margin: 0;
+  line-height: 1.58;
+  color: rgba(38, 38, 38, 0.9);
+  margin-bottom: 0;
+  flex-grow: 1;
 }
 .problem-icon-bg {
   background-color: #FFE4E6;
@@ -1205,16 +1207,24 @@ strong, b, .highlight-bold {
     padding: 0 115px;
   }
   .other-works-grid {
-    gap: 24px;
+    gap: 20px;
   }
   .work-v2-body {
-    padding: 24px 20px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
   .work-v2-title {
-    font-size: 17.5px;
+    font-size: 15.5px;
+    line-height: 1.35;
+    margin-bottom: 8px;
   }
   .work-v2-desc {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 0;
+    flex-grow: 1;
   }
   .section-paragraph {
     font-size: 16px;
@@ -2375,15 +2385,20 @@ strong, b, .highlight-bold {
   }
   .work-v2-body {
     padding: 20px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
   }
   .work-v2-title {
-    font-size: 16.5px !important;
+    font-size: 16px !important;
     line-height: 1.35 !important;
     margin-bottom: 8px !important;
   }
   .work-v2-desc {
     font-size: 13.5px !important;
-    line-height: 1.5 !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0 !important;
+    flex-grow: 1 !important;
   }
 }
 
@@ -3105,20 +3120,25 @@ strong, b, .highlight-bold {
   .other-works-grid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 24px !important;
+    gap: 20px !important;
     width: 100% !important;
   }
   .work-v2-body {
-    padding: 18px 16px !important;
+    padding: 16px 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
   }
   .work-v2-title {
-    font-size: 15.5px !important;
+    font-size: 15px !important;
     line-height: 1.35 !important;
     margin-bottom: 6px !important;
   }
   .work-v2-desc {
-    font-size: 13px !important;
+    font-size: 12.5px !important;
     line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    flex-grow: 1 !important;
   }
 
   /* Modal Lightbox su Mobile */
