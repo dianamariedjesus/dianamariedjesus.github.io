@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diana Marie de Jesus - CV (English)</title>
+  
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #262626;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .cv-page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 14mm 16.5mm 11mm 16.5mm;
+      margin: 0 auto;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    /* --- HEADER --- */
+    .cv-header {
+      display: grid;
+      grid-template-columns: 114mm 1fr;
+      gap: 8mm;
+      align-items: flex-end;
+      margin-bottom: 7.5mm;
+    }
+
+    .cv-header-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cv-name {
+      font-size: 26.5px;
+      font-weight: 800;
+      letter-spacing: 0.015em;
+      text-transform: uppercase;
+      color: #111111;
+      margin: 0 0 2px 0;
+      line-height: 1.1;
+    }
+
+    .cv-role {
+      font-size: 15px;
+      font-weight: 600;
+      color: #111111;
+      margin: 0 0 7.5px 0;
+      line-height: 1.2;
+    }
+
+    .cv-summary {
+      font-size: 11.2px;
+      font-weight: 400;
+      color: #2b2b2b;
+      line-height: 1.48;
+      margin: 0;
+    }
+
+    .cv-header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 2.5px;
+      font-size: 11px;
+      color: #262626;
+      text-align: right;
+      white-space: nowrap;
+      line-height: 1.35;
+      padding-bottom: 1px;
+    }
+
+    .cv-header-right a {
+      color: #262626;
+      text-decoration: underline;
+      text-underline-offset: 2.5px;
+    }
+
+    .cv-header-right span {
+      color: #262626;
+    }
+
+    /* --- MAIN 2-COLUMN GRID --- */
+    .cv-main-grid {
+      display: grid;
+      grid-template-columns: 104mm 1fr;
+      gap: 9.5mm;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    .cv-left-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cv-right-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* --- SECTION STYLING --- */
+    .cv-section {
+      margin-bottom: 5.2mm;
+    }
+
+    .cv-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-section-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #111111;
+      margin: 0 0 6.5px 0;
+      line-height: 1.2;
+    }
+
+    /* --- PROJECTS & ITEMS --- */
+    .cv-project-item {
+      margin-bottom: 4.5mm;
+    }
+
+    .cv-project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-item-title {
+      font-size: 12.3px;
+      font-weight: 700;
+      color: #111111;
+      margin: 0 0 2px 0;
+      line-height: 1.3;
+    }
+
+    .cv-item-intro {
+      font-size: 10.7px;
+      font-weight: 400;
+      color: #333333;
+      line-height: 1.42;
+      margin: 0 0 3.5px 0;
+    }
+
+    .cv-item-meta {
+      font-size: 10.7px;
+      font-style: italic;
+      color: #444444;
+      margin: 0 0 3px 0;
+      line-height: 1.3;
+    }
+
+    .cv-bullets {
+      margin: 0;
+      padding-left: 14px;
+      list-style-type: disc;
+    }
+
+    .cv-bullets li {
+      font-size: 10.5px;
+      font-weight: 400;
+      color: #2b2b2b;
+      line-height: 1.38;
+      margin-bottom: 2.8px;
+    }
+
+    .cv-bullets li:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-bullets li strong {
+      font-weight: 600;
+      color: #111111;
+    }
+
+    /* --- RIGHT COLUMN CONTENT --- */
+    .cv-skill-group {
+      font-size: 10.7px;
+      line-height: 1.42;
+      color: #2b2b2b;
+      margin-bottom: 4px;
+    }
+
+    .cv-skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-skill-group strong {
+      font-weight: 700;
+      color: #111111;
+    }
+
+    .cv-edu-item {
+      margin-bottom: 2.2mm;
+    }
+
+    .cv-edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-edu-school {
+      font-size: 12.3px;
+      font-weight: 700;
+      color: #111111;
+      margin: 0 0 1px 0;
+      line-height: 1.25;
+    }
+
+    .cv-edu-degree {
+      font-size: 10.7px;
+      font-style: italic;
+      color: #333333;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .cv-lang-list {
+      margin: 0;
+      padding-left: 14px;
+      list-style-type: disc;
+    }
+
+    .cv-lang-list li {
+      font-size: 10.7px;
+      color: #2b2b2b;
+      line-height: 1.42;
+      margin-bottom: 1.5px;
+    }
+
+    .cv-lang-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* --- FOOTER / DISCLAIMER --- */
+    .cv-footer {
+      font-size: 7.6px;
+      color: #555555;
+      line-height: 1.35;
+      text-align: center;
+      margin-top: 2.5mm;
+      padding-top: 1.5mm;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-page">
+    
+    <!-- HEADER -->
+    <header class="cv-header">
+      <div class="cv-header-left">
+        <h1 class="cv-name">DIANA MARIE DE JESUS</h1>
+        <div class="cv-role">Junior UX/UI Designer</div>
+        <p class="cv-summary">
+          A "full-time curious learner" driven by empathetic listening and a passion for accessibility. I bring to digital design the same human-centered care and interpersonal skills cultivated daily in customer-facing roles.
+        </p>
+      </div>
+
+      <div class="cv-header-right">
+        <span>+39 3711308590</span>
+        <span>dianamarie.djesus@gmail.com</span>
+        <a href="https://dianamariedjesus.github.io" target="_blank">dianamariedjesus.github.io</a>
+        <a href="https://linkedin.com/in/diana-de-jesus" target="_blank">linkedin.com/in/diana-de-jesus</a>
+      </div>
+    </header>
+
+    <!-- MAIN BODY GRID (2 COLUMNS) -->
+    <div class="cv-main-grid">
+      
+      <!-- LEFT COLUMN -->
+      <div class="cv-left-col">
+        
+        <!-- PROJECTS -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">PROJECTS</h2>
+
+          <!-- Acumen Academy -->
+          <article class="cv-project-item">
+            <h3 class="cv-item-title">Acumen Academy | Website Redesign</h3>
+            <p class="cv-item-intro">
+              End-to-end website redesign for Acumen Academy, a school for social entrepreneurs, aimed at delivering a clearer, more intuitive navigation experience for end users.
+            </p>
+            <ul class="cv-bullets">
+              <li>Conducted quantitative and qualitative research (heuristic evaluation and surveys), developing 3 User Personas and User Journey maps to identify navigation pain points and conversion opportunities.</li>
+              <li>Restructured Information Architecture by producing 12+ mid-fi wireframes and an interactive Figma prototype of 40+ screens featuring responsive components and a scalable Design System.</li>
+              <li>Performed a WCAG accessibility audit (resolving 10+ barriers) and validated the prototype through 5 remote Think-Aloud usability test sessions, delivering 5 key iterations on navigation and live support.</li>
+            </ul>
+          </article>
+
+          <!-- IncluDO -->
+          <article class="cv-project-item">
+            <h3 class="cv-item-title">IncluDO | Logo &amp; Brand Identity + Copywriting Blog Post</h3>
+            <p class="cv-item-intro">
+              Brand identity creation for IncluDO, a fictional social impact venture combating inequality, positioning it as a go-to benchmark in traditional craft vocational training.
+            </p>
+            <ul class="cv-bullets">
+              <li>Designed the complete visual identity: logo, custom icon set (5+ icons), color palette, and 8+ social assets to establish a consistent, credible brand presence.</li>
+              <li>Defined the UX Writing strategy and authored a blog post leveraging Cialdini's persuasion principles to maximize reader emotional engagement and customer loyalty.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">WORK EXPERIENCE</h2>
+
+          <article class="cv-project-item">
+            <h3 class="cv-item-title">Sales &amp; Food Service Assistant | Primark &amp; McDonald's</h3>
+            <div class="cv-item-meta">2022, 2024/2025 | Bologna, Lucca (IT)</div>
+            <p class="cv-item-intro">
+              Part-time customer-facing roles held alongside UX/UI Design studies, with a focus on customer support.
+            </p>
+            <ul class="cv-bullets">
+              <li><strong>Active listening &amp; empathy:</strong> Quickly understanding customer and team needs in fast-paced, high-volume environments.</li>
+              <li><strong>Flexibility &amp; teamwork:</strong> Adaptability and team collaboration in sales floor organization and service optimization during peak rush hours.</li>
+            </ul>
+          </article>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="cv-right-col">
+        
+        <!-- SKILLS -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">SKILLS</h2>
+          <div class="cv-skill-group">
+            <strong>UX Research &amp; Design:</strong> User Research, Quantitative &amp; Qualitative Analysis, Competitor Analysis, Usability Testing, User Personas &amp; User Journey Mapping, Information Architecture, Wireframing (Low/Mid/Hi-Fi).
+          </div>
+          <div class="cv-skill-group">
+            <strong>UI &amp; Visual:</strong> Design Systems, Interactive Prototyping (Figma), Responsive Web Design, Design Handoff.
+          </div>
+          <div class="cv-skill-group">
+            <strong>Methodologies &amp; Standards:</strong> WCAG 2.1 Guidelines (A11y), Heuristic Evaluation (Nielsen), UX Writing, Semantic HTML5 &amp; CSS3.
+          </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">TOOLS</h2>
+          <div class="cv-skill-group">
+            <strong>Design &amp; Prototyping:</strong> Figma, Adobe Creative Cloud (Illustrator, Photoshop, InDesign).
+          </div>
+          <div class="cv-skill-group">
+            <strong>Testing &amp; Accessibility:</strong> UXArmy, Stark, Color Contrast Checker.
+          </div>
+          <div class="cv-skill-group">
+            <strong>Code &amp; AI:</strong> VS Code, GitHub, HTML/CSS, Google Antigravity, Generative AI Tools (ChatGPT, Claude, Gemini).
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">EDUCATION</h2>
+          <div class="cv-edu-item">
+            <div class="cv-edu-school">start2impact University</div>
+            <div class="cv-edu-degree">Master in UX/UI Design &amp; AI Agents</div>
+          </div>
+          <div class="cv-edu-item">
+            <div class="cv-edu-school">University of Ferrara</div>
+            <div class="cv-edu-degree">Bachelor's Degree in Business Administration and Management</div>
+          </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">LANGUAGES</h2>
+          <ul class="cv-lang-list">
+            <li>Italian: Native (C2)</li>
+            <li>Tagalog: Native</li>
+            <li>English: Full Professional Proficiency (C1)</li>
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+
+    <!-- GDPR FOOTER -->
+    <footer class="cv-footer">
+      In compliance with GDPR (EU Regulation 2016/679) and Italian Legislative Decree 196/2003, I hereby authorize the processing of my personal data for recruitment and selection purposes.
+    </footer>
+
+  </div>
+
+</body>
+</html>
