@@ -237,16 +237,23 @@ body.cv-page-wrapper {
 }
 
 /* --- Right Column Text / Content --- */
-.cv-text-block {
+.cv-text-block,
+.cv-skill-group {
   font-size: 13.5px;
   font-weight: 400;
   color: rgba(38, 38, 38, 0.9);
-  line-height: 1.55;
-  margin: 0 0 24px 0;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
 }
 
-.cv-text-block:last-child {
+.cv-text-block:last-child,
+.cv-skill-group:last-child {
   margin-bottom: 0;
+}
+
+.cv-skill-group strong {
+  font-weight: 600;
+  color: #262626;
 }
 
 /* --- Disclaimer Footer --- */
@@ -332,7 +339,8 @@ body.cv-page-wrapper {
 
   .cv-item-desc,
   .cv-bullet-list li,
-  .cv-text-block {
+  .cv-text-block,
+  .cv-skill-group {
     font-size: 13px;
   }
 }
@@ -429,9 +437,14 @@ body.cv-page-wrapper {
 
   .cv-item-desc,
   .cv-bullet-list li,
-  .cv-text-block {
+  .cv-text-block,
+  .cv-skill-group {
     font-size: 12.5px;
     line-height: 1.45;
+  }
+
+  .cv-skill-group {
+    margin-bottom: 8px;
   }
 
   .cv-disclaimer {
@@ -552,9 +565,14 @@ body.cv-page-wrapper {
 
   .cv-item-desc,
   .cv-bullet-list li,
-  .cv-text-block {
+  .cv-text-block,
+  .cv-skill-group {
     font-size: 12.5px;
     line-height: 1.45;
+  }
+
+  .cv-skill-group {
+    margin-bottom: 8px;
   }
 
   .cv-bullet-list {
