@@ -27,8 +27,3 @@ Il portfolio è completamente bilingue (**Italiano** e **Inglese**) e comprende:
 * **Vanilla JavaScript** (interattività e switch lingua IT/EN)
 * **Design 100% Responsive** (ottimizzato per Mobile, Tablet, Laptop e Desktop)
 
-## Contatti
-
-* **LinkedIn**: [linkedin.com/in/dianamariedjesus](https://www.linkedin.com/in/dianamariedjesus)
-* **start2impact**: [Profilo Studente](https://account.start2impact.it/profile/dianamarie-dejesus)
-
