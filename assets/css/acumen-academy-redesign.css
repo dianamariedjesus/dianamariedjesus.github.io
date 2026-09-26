@@ -1405,11 +1405,15 @@ strong, b, .highlight-bold {
     margin: 0 !important;
   }
   .problem-cards-grid .problem-section-body {
-    min-height: auto !important;
-    height: auto !important;
-    max-height: none !important;
+    min-height: 150px !important;
+    height: 150px !important;
+    max-height: 150px !important;
     padding: 0 14px !important;
     margin-bottom: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
   }
   .problem-cards-grid .impact-section-body {
     min-height: auto !important;
@@ -1722,11 +1726,16 @@ strong, b, .highlight-bold {
     line-height: 1.35 !important;
   }
   .problem-cards-grid .problem-section-body {
-    min-height: auto !important;
-    height: auto !important;
+    min-height: 165px !important;
+    height: 165px !important;
+    max-height: 165px !important;
     font-size: 12px !important;
     line-height: 1.4 !important;
     margin-bottom: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
   }
   .problem-cards-grid .impact-section-body {
     min-height: auto !important;
@@ -3659,9 +3668,9 @@ strong, b, .highlight-bold {
     margin: 0 !important;
   }
   .problem-cards-grid .problem-section-body {
-    min-height: 110px !important;
-    height: 110px !important;
-    max-height: 110px !important;
+    min-height: 130px !important;
+    height: 130px !important;
+    max-height: 130px !important;
     padding: 0 18px !important;
     margin-bottom: 12px !important;
     display: flex !important;
