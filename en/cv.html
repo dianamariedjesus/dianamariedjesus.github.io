@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg">
 
   <!-- Poppins Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,11 +19,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   <!-- Base Navbar & Footer CSS -->
-  <link rel="stylesheet" href="assets/css/homepage.css?v=15.1">
+  <link rel="stylesheet" href="../assets/css/homepage.css?v=15.1">
   <!-- Homepage V2 Custom CSS -->
-  <link rel="stylesheet" href="assets/css/homepage-v2.css?v=8.4">
+  <link rel="stylesheet" href="../assets/css/homepage-v2.css?v=8.4">
   <!-- Dedicated CV Page CSS -->
-  <link rel="stylesheet" href="assets/css/cv.css?v=13.0">
+  <link rel="stylesheet" href="../assets/css/cv.css?v=13.0">
 </head>
 
 <body class="homepage-v2-wrapper cv-page-wrapper">
@@ -33,16 +33,16 @@
     <div class="container-fluid mobile-nav-container">
       <!-- Diana Logo -->
       <a class="navbar-brand" href="./">
-        <img src="assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+        <img src="../assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
       </a>
 
       <!-- Desktop Navigation Links (Centered) -->
       <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
-        <a href="./#lavori" class="nav-link custom-nav-link">Lavori</a>
-        <a href="./#chi-sono" class="nav-link custom-nav-link">Chi sono</a>
+        <a href="./#works" class="nav-link custom-nav-link">Works</a>
+        <a href="./#about-me" class="nav-link custom-nav-link">About me</a>
         <a href="cv.html" class="nav-link custom-nav-link active">CV</a>
-        <a href="./#testimonianze" class="nav-link custom-nav-link">Testimonianze</a>
-        <a href="contatti.html" class="nav-link custom-nav-link">Contatti</a>
+        <a href="./#testimonials" class="nav-link custom-nav-link">Testimonials</a>
+        <a href="contatti.html" class="nav-link custom-nav-link">Contact</a>
       </div>
 
       <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
@@ -54,14 +54,14 @@
             <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
             <path d="M2 12h20"></path>
           </svg>
-          <span class="lang-text">IT</span>
+          <span class="lang-text">EN</span>
           <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </label>
         <div class="lang-dropdown-menu">
-          <a href="#" class="lang-item active"><strong>IT</strong> <span>Italiano</span></a>
-          <a href="en/cv.html" class="lang-item"><strong>EN</strong> <span>English</span></a>
+          <a href="../cv.html" class="lang-item"><strong>IT</strong> <span>Italiano</span></a>
+          <a href="#" class="lang-item active"><strong>EN</strong> <span>English</span></a>
         </div>
       </div>
 
@@ -84,17 +84,17 @@
       <!-- Overlay Menu for Mobile -->
       <div class="mobile-overlay-menu d-md-none">
         <div class="mobile-nav-links">
-          <a href="./#lavori" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Lavori</a>
-          <a href="./#chi-sono" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Chi sono</a>
+          <a href="./#works" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Works</a>
+          <a href="./#about-me" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">About me</a>
           <a href="cv.html" class="nav-link custom-nav-link active">CV</a>
-          <a href="./#testimonianze" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Testimonianze</a>
-          <a href="contatti.html" class="nav-link custom-nav-link">Contatti</a>
+          <a href="./#testimonials" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Testimonials</a>
+          <a href="contatti.html" class="nav-link custom-nav-link">Contact</a>
         </div>
         <div class="mobile-lang-selector">
-          <a href="#" class="mobile-lang-btn active">
+          <a href="../cv.html" class="mobile-lang-btn">
             <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
           </a>
-          <a href="en/cv.html" class="mobile-lang-btn">
+          <a href="#" class="mobile-lang-btn active">
             <span class="lang-code">ENG</span> <span class="lang-name">English</span>
           </a>
         </div>
@@ -113,16 +113,16 @@
         <line x1="19" y1="12" x2="5" y2="12"></line>
         <polyline points="12 19 5 12 12 5"></polyline>
       </svg>
-      Torna alla Homepage
+      Back to Homepage
     </a>
 
-    <a href="assets/file-pdf/CV_DianaDeJesus.pdf" download="CV_DianaDeJesus.pdf" class="btn-cv-download">
+    <a href="../assets/file-pdf/CV_DianaDeJesus_EN.pdf" download="CV_DianaDeJesus_EN.pdf" class="btn-cv-download">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
         <polyline points="7 10 12 15 17 10"></polyline>
         <line x1="12" y1="15" x2="12" y2="3"></line>
       </svg>
-      Scarica CV (PDF)
+      Download CV (PDF)
     </a>
   </div>
 
@@ -136,7 +136,7 @@
         <h1 class="cv-name">DIANA MARIE DE JESUS</h1>
         <div class="cv-role">Junior UX/UI Designer</div>
         <p class="cv-summary">
-          Una "curiosa a tempo pieno" guidata dall'ascolto empatico e dalla passione per l'accessibilità. Porto nel design digitale la stessa attenzione umana e capacità relazionale che ho coltivato ogni giorno a contatto con il pubblico.
+          A naturally curious mind driven by empathetic listening and a passion for accessibility. I bring to digital product design the same human-centered care and interpersonal skills cultivated daily in customer-facing roles.
         </p>
       </div>
 
@@ -152,23 +152,23 @@
     <!-- Main Body Grid (2 Columns) -->
     <div class="cv-grid">
 
-      <!-- Left Column (Progetti & Esperienze Lavorative) -->
+      <!-- Left Column (Projects & Work Experience) -->
       <div class="cv-left-col">
 
-        <!-- PROGETTI -->
+        <!-- PROJECTS -->
         <section class="cv-block">
-          <h2 class="cv-section-title">PROGETTI</h2>
+          <h2 class="cv-section-title">PROJECTS</h2>
 
           <!-- Item 1: Acumen Academy -->
           <article class="cv-item">
             <h3 class="cv-item-title">Acumen Academy | Website Redesign</h3>
             <p class="cv-item-desc">
-              Riprogettazione end-to-end del sito di Acumen Academy, una scuola per imprenditori sociali, con l'obiettivo di rendere la navigazione più chiara e intuitiva per gli utenti finali.
+              End-to-end website redesign for Acumen Academy, a school for social entrepreneurs, focused on making navigation clearer and more intuitive for prospective students and users.
             </p>
             <ul class="cv-bullet-list">
-              <li>Condotta ricerca quantitativa e qualitativa (analisi euristica e sondaggi), sviluppando 3 User Personas e User Journey per mappare i pain point di navigazione e le opportunità di conversione.</li>
-              <li>Ristrutturata l'Information Architecture realizzando 12+ wireframe (Mid-Fi) e un prototipo interattivo (Hi-Fi) di 40+ schermate su Figma con componenti responsive e Design System scalabile.</li>
-              <li>Eseguito audit di accessibilità WCAG (10+ barriere risolte) e validato il prototipo con 5 sessioni di User Testing da remoto (Think Aloud), implementando 5 iterazioni chiave su navigazione e supporto live.</li>
+              <li>Conducted quantitative and qualitative research (heuristic evaluation and user surveys), developing 3 User Personas and User Journey maps to uncover navigation pain points and conversion opportunities.</li>
+              <li>Restructured the Information Architecture, producing 12+ mid-fi wireframes and an interactive 40+ screen Figma prototype powered by responsive components and a scalable design system.</li>
+              <li>Performed a WCAG accessibility audit (resolving 10+ barriers) and validated the solution through 5 remote usability test sessions (Think-Aloud protocol), driving 5 key iterations on navigation and live support.</li>
             </ul>
           </article>
 
@@ -176,29 +176,29 @@
           <article class="cv-item">
             <h3 class="cv-item-title">IncluDO | Logo &amp; Brand Identity + Copywriting Blog Post</h3>
             <p class="cv-item-desc">
-              Ideazione dell'identità del brand IncluDO, una realtà fittizia a impatto sociale che combatte le disuguaglianze, per aiutarla a posizionarsi come punto di riferimento nella formazione di mestieri tradizionali.
+              Brand identity and content design for IncluDO, a social impact venture addressing inequality, positioning it as a trusted benchmark in traditional vocational craft training.
             </p>
             <ul class="cv-bullet-list">
-              <li>Progettata l'identità visiva completa: logo, set di iconografia su misura (5+ icone), palette colori e 8+ grafiche social per stabilire una presenza del brand coerente e affidabile.</li>
-              <li>Definita la strategia di UX Writing e redatto un blog post applicando i principi di persuasione di Cialdini per massimizzare l'engagement emotivo dei lettori e la fidelizzazione dei clienti.</li>
+              <li>Crafted the complete visual identity: designed the logo, a custom 5+ icon set, color palette, and 8+ social media assets to establish a cohesive and trustworthy brand presence.</li>
+              <li>Defined the UX writing strategy and authored a long-form blog post applying Cialdini's principles of persuasion to maximize reader engagement and brand loyalty.</li>
             </ul>
           </article>
         </section>
 
 
-        <!-- ESPERIENZE LAVORATIVE -->
+        <!-- WORK EXPERIENCE -->
         <section class="cv-block">
-          <h2 class="cv-section-title">ESPERIENZE LAVORATIVE</h2>
+          <h2 class="cv-section-title">WORK EXPERIENCE</h2>
 
           <article class="cv-item">
-            <h3 class="cv-item-title">Addetta Vendite &amp; Ristorazione | Primark &amp; McDonald's</h3>
+            <h3 class="cv-item-title">Customer Service &amp; Operations | Primark &amp; McDonald's</h3>
             <div class="cv-item-meta">2022, 2024/2025 | Bologna, Lucca (IT)</div>
             <p class="cv-item-desc">
-              Ruoli part-time svolti durante gli studi di UX/UI Design, con focus sul supporto clienti.
+              Part-time customer-facing roles held alongside UX/UI Design studies, focused on client support and fast-paced team operations.
             </p>
             <ul class="cv-bullet-list">
-              <li><strong>Ascolto attivo ed empatia:</strong> Comprensione rapida delle necessità di clienti e colleghi in contesti dinamici e ad alto volume.</li>
-              <li><strong>Flessibilità e spirito di squadra:</strong> Flessibilità e lavoro di squadra nella riorganizzazione degli spazi espositivi e nell'ottimizzazione del servizio durante i picchi di affluenza.</li>
+              <li><strong>Active listening &amp; empathy:</strong> Quickly identifying and addressing customer and team needs in dynamic, high-volume environments.</li>
+              <li><strong>Adaptability &amp; teamwork:</strong> Collaborating with team members on sales floor organization and maintaining service efficiency during peak rush hours.</li>
             </ul>
           </article>
         </section>
@@ -206,7 +206,7 @@
       </div>
 
 
-      <!-- Right Column (Skills, Tools, Educazione, Lingue) -->
+      <!-- Right Column (Skills, Tools, Education, Languages) -->
       <div class="cv-right-col">
 
         <!-- SKILLS -->
@@ -216,10 +216,10 @@
             <strong>UX Research &amp; Design:</strong> User Research, Quantitative &amp; Qualitative Analysis, Competitor Analysis, Usability Testing, User Personas &amp; User Journey Mapping, Information Architecture, Wireframing (Low/Mid/Hi-Fi).
           </div>
           <div class="cv-skill-group">
-            <strong>UI &amp; Visual:</strong> Design Systems, Prototipazione Interattiva (Figma), Responsive Web Design, Design Handoff.
+            <strong>UI &amp; Visual:</strong> Design Systems, Interactive Prototyping (Figma), Responsive Web Design, Design Handoff.
           </div>
           <div class="cv-skill-group">
-            <strong>Metodologie &amp; Normative:</strong> Linee guida WCAG 2.1 (A11y), Analisi Euristica (Nielsen), UX Writing, HTML5 &amp; CSS3 Semantico.
+            <strong>Methodologies &amp; Standards:</strong> WCAG 2.1 Accessibility Guidelines (A11y), Heuristic Evaluation (Nielsen), UX Writing, Semantic HTML5 &amp; CSS3.
           </div>
         </section>
 
@@ -231,7 +231,7 @@
             <strong>Design &amp; Prototyping:</strong> Figma, Adobe Creative Cloud (Illustrator, Photoshop, InDesign).
           </div>
           <div class="cv-skill-group">
-            <strong>Testing &amp; Accessibilità:</strong> UXArmy, Stark, Color Contrast Checker.
+            <strong>Testing &amp; Accessibility:</strong> UXArmy, Stark, Color Contrast Checker.
           </div>
           <div class="cv-skill-group">
             <strong>Code &amp; AI:</strong> VS Code, GitHub, HTML/CSS, Google Antigravity, Generative AI Tools (ChatGPT, Claude, Gemini).
@@ -239,41 +239,35 @@
         </section>
 
 
-        <!-- EDUCAZIONE -->
+        <!-- EDUCATION -->
         <section class="cv-block cv-block-education">
-          <h2 class="cv-section-title">EDUCAZIONE</h2>
+          <h2 class="cv-section-title">EDUCATION</h2>
           
           <div class="cv-item">
             <h3 class="cv-item-title">start2impact University</h3>
-            <div class="cv-item-subtitle">Master in UX/UI Design e Agenti AI</div>
+            <div class="cv-item-subtitle">Master in UX/UI Design &amp; AI Agents</div>
           </div>
 
           <div class="cv-item">
-            <h3 class="cv-item-title">Università degli Studi di Ferrara</h3>
-            <div class="cv-item-subtitle">LT in Scienze Economiche e Gestione Aziendale</div>
+            <h3 class="cv-item-title">Università di Ferrara</h3>
+            <div class="cv-item-subtitle">Bachelor's Degree in Business Administration and Management</div>
           </div>
         </section>
 
 
-        <!-- LINGUE -->
+        <!-- LANGUAGES -->
         <section class="cv-block">
-          <h2 class="cv-section-title">LINGUE</h2>
+          <h2 class="cv-section-title">LANGUAGES</h2>
           <ul class="cv-bullet-list">
-            <li>Italiano: Madrelingua (C2)</li>
-            <li>Tagalog: Madrelingua</li>
-            <li>Inglese: Professionale / Fluente (C1)</li>
+            <li>Italian: Native (C2)</li>
+            <li>Tagalog: Native</li>
+            <li>English: Full Professional Proficiency (C1)</li>
           </ul>
         </section>
 
       </div>
 
     </div>
-
-
-    <!-- Disclaimer Footer -->
-    <footer class="cv-disclaimer">
-      Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base all’art. 13 del D. Lgs. 196/2003 e all’art. 13 del Regolamento UE 2016/679 relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali, ai fini della ricerca e della selezione del personale.
-    </footer>
 
   </main>
 
@@ -282,26 +276,26 @@
   <footer class="footer-section">
     <div class="footer-container">
       <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
-      <span class="footer-message">Grazie per aver visitato il mio portfolio! ❤️</span>
+      <span class="footer-message">Thanks for visiting my portfolio! ❤️</span>
       <div class="footer-socials">
         <!-- LinkedIn Link -->
         <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+          <img src="../assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
         </a>
         <!-- GitHub Link -->
         <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+          <img src="../assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
         </a>
         <!-- start2impact Link -->
         <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+          <img src="../assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
         </a>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <button class="back-to-top" aria-label="Torna in alto">
+  <button class="back-to-top" aria-label="Back to top">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
