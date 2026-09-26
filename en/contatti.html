@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Diana de Jesus | Contact</title>
+
+  <!-- Bootstrap Framework (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg">
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/css/contatti.css?v=29.0">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-white">
+  <div class="container-fluid mobile-nav-container">
+    <!-- Diana Logo -->
+    <a class="navbar-brand" href="./">
+      <img src="../assets/img/navbar/logo/diana-logo.svg" alt="diana logo" class="navbar-logo-img">
+    </a>
+
+    <!-- Desktop Navigation Links (Centered) -->
+    <div id="nav-links-desktop" class="d-none d-md-flex align-items-center nav-links-center">
+      <a href="./#works" class="nav-link custom-nav-link">Works</a>
+      <a href="./#about-me" class="nav-link custom-nav-link">About me</a>
+      <a href="cv.html" class="nav-link custom-nav-link">CV</a>
+      <a href="./#testimonials" class="nav-link custom-nav-link">Testimonials</a>
+      <a href="contatti.html" class="nav-link custom-nav-link active">Contact</a>
+    </div>
+
+    <!-- Language Selector Dropdown (Right) - Pure CSS with Checkbox Hack -->
+    <div class="language-dropdown-wrapper d-none d-md-block">
+      <input type="checkbox" id="lang-menu-toggle" class="lang-toggle-checkbox">
+      <label for="lang-menu-toggle" class="lang-selector">
+        <svg class="icon-globe" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">EN</span>
+        <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </label>
+      <div class="lang-dropdown-menu">
+        <a href="../contatti.html" class="lang-item"><strong>IT</strong> <span>Italiano</span></a>
+        <a href="#" class="lang-item active"><strong>EN</strong> <span>English</span></a>
+      </div>
+    </div>
+
+    <!-- Hidden Checkbox for Mobile Menu Toggle -->
+    <input type="checkbox" id="mobile-menu-toggle" class="d-md-none" />
+
+    <!-- Hamburger & Close Icons (Visible on Mobile/Tablet) -->
+    <label for="mobile-menu-toggle" class="hamburger-menu-label d-md-none">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </label>
+
+    <!-- Overlay Menu for Mobile -->
+    <div class="mobile-overlay-menu d-md-none">
+      <div class="mobile-nav-links">
+        <a href="./#works" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Works</a>
+        <a href="./#about-me" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">About me</a>
+        <a href="cv.html" class="nav-link custom-nav-link">CV</a>
+        <a href="./#testimonials" class="nav-link custom-nav-link" onclick="document.getElementById('mobile-menu-toggle').checked = false;">Testimonials</a>
+        <a href="contatti.html" class="nav-link custom-nav-link active">Contact</a>
+      </div>
+      <div class="mobile-lang-selector">
+        <a href="../contatti.html" class="mobile-lang-btn">
+          <span class="lang-code">IT</span> <span class="lang-name">Italian</span>
+        </a>
+        <a href="#" class="mobile-lang-btn active">
+          <span class="lang-code">ENG</span> <span class="lang-name">English</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Dimmer for Overlay -->
+    <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none"></label>
+  </div>
+</nav>
+
+<!-- Main Section -->
+<section class="contact-section">
+  <!-- Left Column: Direct Info & Social -->
+  <div class="contact-info">
+    <div class="title-container">
+      <h1 class="title">Every great project starts <br class="title-break-mobile">with a good conversation.</h1>
+    </div>
+
+    <p class="paragraph">
+      If you also believe that design should create something <br class="paragraph-break-mobile">that truly works for everyone, <strong>let's connect</strong>.
+    </p>
+
+    <!-- Availability Status Badge (2 Rows) -->
+    <div class="availability-badge">
+      <div class="badge-header">
+        <span class="status-pulse"></span>
+        <span class="status-title">Available for new opportunities</span>
+      </div>
+      <div class="badge-subtitle">
+        <span>(Internships &amp; Junior UX/UI Designer Roles • </span><br class="badge-line-break"><span>On-site, hybrid, or remote in Italy &amp; Europe)</span>
+      </div>
+    </div>
+
+    <div class="contact-direct-details">
+      <!-- Direct Social / Messaging Icons (Same as Footer) -->
+      <div class="contact-social-icons">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="LinkedIn">
+          <img src="../assets/img/footer/social-icons/linkedin.png" alt="LinkedIn logo">
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub">
+          <img src="../assets/img/footer/social-icons/github.png" alt="GitHub logo">
+        </a>
+        <!-- start2impact -->
+        <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="start2impact">
+          <img src="../assets/img/footer/social-icons/S2I.png" alt="start to impact logo">
+        </a>
+      </div>
+
+      <!-- Location / Timezone / Live Clock -->
+      <div class="direct-detail-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="detail-icon">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <span>Lucca, Italy <span class="timezone-text">(CET • Local time: <strong id="local-time">--:--</strong>)</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column: Form Card -->
+  <div class="contact-form-wrapper">
+    <form class="contact-form" id="contact-form">
+      <!-- Topic Selector (Pillole opzionali) -->
+      <div class="form-group topic-group">
+        <label class="form-label">Reason for reaching out <span class="label-optional">(optional)</span></label>
+        <div class="topic-chips-container">
+          <label class="topic-chip">
+            <input type="radio" name="topic" value="Job / Internship opportunity" class="topic-radio">
+            <span class="chip-content">💼 Job / Internship opportunity</span>
+          </label>
+          <label class="topic-chip">
+            <input type="radio" name="topic" value="New project / Collaboration" class="topic-radio">
+            <span class="chip-content">🚀 New project / Collaboration</span>
+          </label>
+          <label class="topic-chip">
+            <input type="radio" name="topic" value="Chat about Design" class="topic-radio">
+            <span class="chip-content">☕ Chat about Design</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Nome -->
+      <div class="form-group">
+        <label for="nome" class="form-label">Name</label>
+        <input type="text" id="nome" name="name" placeholder="What should I call you?" required>
+      </div>
+
+      <!-- Indirizzo Email -->
+      <div class="form-group">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+      </div>
+
+      <!-- Messaggio -->
+      <div class="form-group">
+        <label for="messaggio" class="form-label">Message</label>
+        <textarea id="messaggio" name="messaggio" placeholder="Tell me about your project, your team, or just say hi..." required></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button btn-submit-v2" id="submit-btn">
+        <span class="btn-text">Send message</span>
+        <svg class="btn-icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+      <!-- Privacy & Transparency Micro-copy -->
+      <p class="form-privacy-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="privacy-lock-icon">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span class="privacy-note-text">Your information will only be used to reply to you. No spam, promised.</span>
+      </p>
+    </form>
+
+    <!-- Inline Success State Box -->
+    <div class="contact-success-box d-none" id="contact-success-box">
+      <div class="success-icon-wrapper">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h2 class="success-title">Message sent! 🎉</h2>
+      <p class="success-message">
+        Thank you so much for reaching out. I'll read your message carefully and get back to you as soon as possible (usually within 24 hours).
+      </p>
+      <button type="button" class="btn-reset-form" id="btn-reset-form">
+        Send another message
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="footer-container">
+    <span class="footer-copyright">&copy; 2025 Diana de Jesus</span>
+    <span class="footer-message">Thanks for visiting my portfolio! ❤️</span>
+    <div class="footer-socials">
+      <!-- LinkedIn Link -->
+      <a href="https://www.linkedin.com/in/diana-de-jesus/" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/img/footer/social-icons/linkedin.png" alt="linkedin logo" class="footer-social-icon">
+      </a>
+      <!-- GitHub Link -->
+      <a href="https://github.com/dianamariedjesus" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/img/footer/social-icons/github.png" alt="github logo" class="footer-social-icon">
+      </a>
+      <!-- start2impact Link -->
+      <a href="https://account.start2impact.it/profile/dianamarie-dejesus" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/img/footer/social-icons/S2I.png" alt="start to impact logo" class="footer-social-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Back to top">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<!-- EmailJS SDK Integration -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ── EmailJS Initialisation ──
+    emailjs.init({
+      publicKey: '7PY84ehlIzi_UUo99',
+    });
+
+    // ── Live Local Time Indicator ──
+    function updateLocalTime() {
+      const timeEl = document.getElementById('local-time');
+      if (!timeEl) return;
+      try {
+        const now = new Date();
+        const timeString = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Europe/Rome',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false
+        }).format(now);
+        timeEl.textContent = timeString;
+      } catch (e) {
+        timeEl.textContent = '14:10';
+      }
+    }
+    updateLocalTime();
+    setInterval(updateLocalTime, 1000);
+
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successBox = document.getElementById('contact-success-box');
+    const resetBtn = document.getElementById('btn-reset-form');
+
+    if (contactForm && submitBtn && successBox) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // HTML5 validation with browser native messages
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        // Visual feedback
+        const btnTextEl = submitBtn.querySelector('.btn-text');
+        const originalText = btnTextEl ? btnTextEl.textContent : 'Send message';
+        if (btnTextEl) btnTextEl.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        // Extract values
+        const nomeVal = document.getElementById('nome').value.trim();
+        const emailVal = document.getElementById('email').value.trim();
+        const messaggioVal = document.getElementById('messaggio').value.trim();
+        const selectedTopicEl = document.querySelector('input[name="topic"]:checked');
+        const topicVal = selectedTopicEl ? selectedTopicEl.value : '';
+
+        const fullMessage = topicVal ? `[Topic: ${topicVal}]\n\n${messaggioVal}` : messaggioVal;
+
+        const templateParams = {
+          name: nomeVal,
+          nome: nomeVal,
+          from_name: nomeVal,
+          user_name: nomeVal,
+          email: emailVal,
+          to_email: emailVal,
+          user_email: emailVal,
+          topic: topicVal || 'General',
+          messaggio: fullMessage,
+          message: fullMessage
+        };
+
+        // Send via EmailJS
+        emailjs.send('service_61lj91q', 'template_htyemlj', templateParams)
+          .then(() => {
+            contactForm.classList.add('d-none');
+            successBox.classList.remove('d-none');
+            contactForm.reset();
+            document.querySelectorAll('.topic-radio').forEach(r => r.checked = false);
+          })
+          .catch((error) => {
+            console.error('EmailJS Error:', error);
+            alert('An error occurred while sending your message. Please try again later or reach out to me directly.');
+          })
+          .finally(() => {
+            if (btnTextEl) btnTextEl.textContent = originalText;
+            submitBtn.disabled = false;
+          });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          successBox.classList.add('d-none');
+          contactForm.classList.remove('d-none');
+        });
+      }
+    }
+
+    // ── Back to Top Button Logic ──
+    const backToTopBtn = document.querySelector('.back-to-top');
+    const footer = document.querySelector('.footer-section');
+    
+    if (backToTopBtn && footer) {
+      window.addEventListener('scroll', function() {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const pageHeight = document.documentElement.scrollHeight;
+        const isMobileOrTablet = window.innerWidth < 1024;
+
+        if (isMobileOrTablet) {
+          const isAtBottom = (windowHeight + scrollPosition >= pageHeight - 140) || (footerRect.top <= windowHeight);
+          if (isAtBottom) {
+            backToTopBtn.classList.add('visible');
+            if (footerRect.top < windowHeight) {
+              const visibleFooterHeight = windowHeight - footerRect.top;
+              backToTopBtn.style.bottom = (visibleFooterHeight + 16) + 'px';
+            } else {
+              backToTopBtn.style.bottom = '20px';
+            }
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        } else {
+          if (scrollPosition > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+
+          if (footerRect.top < windowHeight) {
+            const visibleFooterHeight = windowHeight - footerRect.top;
+            backToTopBtn.style.bottom = (visibleFooterHeight + 24) + 'px';
+          } else {
+            backToTopBtn.style.bottom = '30px';
+          }
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    // Close language dropdown menu when clicking anywhere outside
+    document.addEventListener('click', function(e) {
+      const langWrapper = document.querySelector('.language-dropdown-wrapper');
+      if (langWrapper) {
+        const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');
+        if (langToggle && langToggle.checked && !langWrapper.contains(e.target)) {
+          langToggle.checked = false;
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
