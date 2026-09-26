@@ -1405,9 +1405,9 @@ strong, b, .highlight-bold {
     margin: 0 !important;
   }
   .problem-cards-grid .problem-section-body {
-    min-height: 150px !important;
-    height: 150px !important;
-    max-height: 150px !important;
+    min-height: 110px !important;
+    height: 110px !important;
+    max-height: 110px !important;
     padding: 0 14px !important;
     margin-bottom: 12px !important;
     display: flex !important;
@@ -1726,9 +1726,9 @@ strong, b, .highlight-bold {
     line-height: 1.35 !important;
   }
   .problem-cards-grid .problem-section-body {
-    min-height: 165px !important;
-    height: 165px !important;
-    max-height: 165px !important;
+    min-height: 104px !important;
+    height: 104px !important;
+    max-height: 104px !important;
     font-size: 12px !important;
     line-height: 1.4 !important;
     margin-bottom: 8px !important;
@@ -3668,9 +3668,9 @@ strong, b, .highlight-bold {
     margin: 0 !important;
   }
   .problem-cards-grid .problem-section-body {
-    min-height: 130px !important;
-    height: 130px !important;
-    max-height: 130px !important;
+    min-height: 116px !important;
+    height: 116px !important;
+    max-height: 116px !important;
     padding: 0 18px !important;
     margin-bottom: 12px !important;
     display: flex !important;
