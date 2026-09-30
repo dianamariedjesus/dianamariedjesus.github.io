@@ -34,7 +34,7 @@ html, body {
   font-weight: 600; /* SemiBold */
 }
 .custom-nav-link.active {
-  color: #FF452A !important;
+  color: #C83214 !important;
   font-weight: 600; /* SemiBold */
   background-color: transparent;
 }
@@ -829,7 +829,7 @@ body {
     color: #5A189A !important;
   }
   .custom-nav-link.active {
-    color: #FF452A !important;
+    color: #C83214 !important;
     font-weight: 600 !important;
     background-color: transparent !important;
   }
@@ -1276,7 +1276,7 @@ body {
     color: #5A189A !important;
   }
   .custom-nav-link.active {
-    color: #FF452A !important;
+    color: #C83214 !important;
     font-weight: 600 !important;
     background-color: transparent !important;
   }

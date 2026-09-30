@@ -47,7 +47,7 @@ html {
 /* Active navigation link styling */
 .custom-nav-link.active,
 .mobile-overlay-menu .custom-nav-link.active {
-  color: #FF452A !important;
+  color: #C83214 !important;
   font-weight: 600 !important;
   background-color: transparent !important;
 }
@@ -149,7 +149,7 @@ html {
 }
 
 .hero-v2-title .highlight-orange {
-  color: #FF452A;
+  color: #C83214;
 }
 
 .hero-v2-subtitle {
