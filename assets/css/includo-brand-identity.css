@@ -615,8 +615,8 @@ div[id] {
   transition: color 0.2s ease;
 }
 .work-v2-title .work-client {
-  color: #FF452A;
-  font-weight: inherit !important;
+  color: #C83214;
+  font-weight: 700;
 }
 .work-v2-desc {
   font-family: 'Poppins', sans-serif;
