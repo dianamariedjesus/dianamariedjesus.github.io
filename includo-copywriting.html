@@ -237,7 +237,9 @@
 
             <!-- Container Unico Immagine (872x479) e Didascalia -->
             <div class="cover-single-container">
-              <img src="assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Cover dell'articolo con Headline e Subheadline" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-copywriting/headline-cover.png?v=1.0', 'Cover dell\'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.')">
+              <button type="button" class="cover-img-btn" onclick="openSingleImageLightbox('assets/img/includo-copywriting/headline-cover.png?v=1.0', 'Cover dell\'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.')" aria-label="Ingrandisci immagine Cover dell'articolo con Headline e Subheadline">
+                <img src="assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Cover dell'articolo con Headline e Subheadline" class="cover-section-img">
+              </button>
               <p class="cover-caption-text">
                 Cover dell'articolo con Headline e Subheadline strutturate per comunicare la promessa di valore nei primi 5 secondi ed evitare rimbalzi.
               </p>
@@ -307,7 +309,9 @@
                   
                   <!-- Slide 1: Autorevolezza -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.1" alt="Leve di Persuasione - Autorevolezza" class="carousel-slide-img" onclick="openCialdiniLightbox(0)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(0)" aria-label="Ingrandisci immagine Leve di Persuasione - Autorevolezza">
+                      <img src="assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.1" alt="Leve di Persuasione - Autorevolezza" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Autorevolezza:</strong> Ho citato i dati ufficiali INPS sul calo delle botteghe artigiane per mostrare la gravità reale del problema.
                     </div>
@@ -315,7 +319,9 @@
 
                   <!-- Slide 2: Scarsità e Urgenza -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-scarsita.png?v=1.1" alt="Leve di Persuasione - Scarsità e Urgenza" class="carousel-slide-img" onclick="openCialdiniLightbox(1)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(1)" aria-label="Ingrandisci immagine Leve di Persuasione - Scarsità e Urgenza">
+                      <img src="assets/img/includo-copywriting/cialdini-scarsita.png?v=1.1" alt="Leve di Persuasione - Scarsità e Urgenza" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Scarsità e Urgenza:</strong> Ho inserito una data di scadenza per la candidatura ai corsi di formazione con posti limitati, incoraggiando un'azione tempestiva.
                     </div>
@@ -323,7 +329,9 @@
 
                   <!-- Slide 3: Reciprocità -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.1" alt="Leve di Persuasione - Reciprocità" class="carousel-slide-img" onclick="openCialdiniLightbox(2)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(2)" aria-label="Ingrandisci immagine Leve di Persuasione - Reciprocità">
+                      <img src="assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.1" alt="Leve di Persuasione - Reciprocità" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Reciprocità:</strong> Ho inserito un box con uno sconto del 30% sui prodotti artigianali riservato a chi si iscrive alla newsletter.
                     </div>
@@ -331,7 +339,9 @@
 
                   <!-- Slide 4: Riprova Sociale -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-copywriting/cialdini-riprova.png?v=1.1" alt="Leve di Persuasione - Riprova Sociale" class="carousel-slide-img" onclick="openCialdiniLightbox(3)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(3)" aria-label="Ingrandisci immagine Leve di Persuasione - Riprova Sociale">
+                      <img src="assets/img/includo-copywriting/cialdini-riprova.png?v=1.1" alt="Leve di Persuasione - Riprova Sociale" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Riprova Sociale:</strong> Ho mostrato il numero di interazioni e condivisioni social per rassicurare i nuovi lettori sulla qualità del contenuto.
                     </div>
@@ -346,10 +356,10 @@
 
               <!-- Indicators Dots -->
               <div class="main-carousel-indicators" id="dots-cialdini">
-                <span class="carousel-dot active" onclick="switchCarouselSlide('cialdini', 0)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 1)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 2)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 3)"></span>
+                <button type="button" class="carousel-dot active" onclick="switchCarouselSlide('cialdini', 0)" aria-label="Slide 1: Autorevolezza"></button>
+                <button type="button" class="carousel-dot" onclick="switchCarouselSlide('cialdini', 1)" aria-label="Slide 2: Scarsità e Urgenza"></button>
+                <button type="button" class="carousel-dot" onclick="switchCarouselSlide('cialdini', 2)" aria-label="Slide 3: Reciprocità"></button>
+                <button type="button" class="carousel-dot" onclick="switchCarouselSlide('cialdini', 3)" aria-label="Slide 4: Riprova Sociale"></button>
               </div>
             </div>
           </div>

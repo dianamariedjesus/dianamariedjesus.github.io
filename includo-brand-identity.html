@@ -247,7 +247,9 @@
                   
                   <!-- Slide 1: Marchio, Logotipo & Pittogramma -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img" onclick="openMarchioCarouselLightbox(0)">
+                    <button type="button" class="carousel-slide-btn" onclick="openMarchioCarouselLightbox(0)" aria-label="Ingrandisci immagine Marchio, Logotipo e Pittogramma IncluDO">
+                      <img src="assets/img/includo-brand-identity/marchio-simbolo-slide1.png?v=1.0" alt="Marchio, Logotipo e Pittogramma IncluDO" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Architettura del marchio</strong>: combinazione di logotipo, simbolo e payoff, con pittogramma autonomo ottimizzato per avatar e contesti a spazio ridotto.
                     </div>
@@ -255,7 +257,9 @@
 
                   <!-- Slide 2: Varianti Colore & Test Scalabilità -->
                   <div class="main-carousel-slide">
-                    <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img" onclick="openMarchioCarouselLightbox(1)">
+                    <button type="button" class="carousel-slide-btn" onclick="openMarchioCarouselLightbox(1)" aria-label="Ingrandisci immagine Varianti Colore e Test di Scalabilità">
+                      <img src="assets/img/includo-brand-identity/marchio-simbolo-slide2.png?v=1.0" alt="Varianti Colore e Test di Scalabilità" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Sistema di scalabilità e varianti colore</strong>: declinazioni primaria, in negativo e monocromatica (B/N) per garantire contrasto e leggibilità su ogni supporto.
                     </div>
@@ -266,8 +270,8 @@
 
               <!-- Indicatori pallini sotto il carosello -->
               <div class="main-carousel-indicators">
-                <span class="carousel-dot active" id="marchio-dot-0" onclick="goToMarchioSlide(0)"></span>
-                <span class="carousel-dot" id="marchio-dot-1" onclick="goToMarchioSlide(1)"></span>
+                <button type="button" class="carousel-dot active" id="marchio-dot-0" onclick="goToMarchioSlide(0)" aria-label="Slide 1: Marchio, Logotipo &amp; Pittogramma"></button>
+                <button type="button" class="carousel-dot" id="marchio-dot-1" onclick="goToMarchioSlide(1)" aria-label="Slide 2: Varianti Colore &amp; Test Scalabilità"></button>
               </div>
             </div>
           </div>
@@ -281,7 +285,9 @@
 
             <!-- Immagine Tipografia e Gerarchia -->
             <div class="cover-single-container">
-              <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0', '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.')">
+              <button type="button" class="cover-img-btn" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0', '<strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.')" aria-label="Ingrandisci immagine Campionario caratteri e gerarchia tipografica Raleway">
+                <img src="assets/img/includo-brand-identity/tipografia-gerarchia.png?v=1.0" alt="Campionario caratteri e gerarchia tipografica Raleway" class="cover-section-img">
+              </button>
               <p class="cover-caption-text">
                 <strong>Sistema tipografico con Raleway</strong>: gerarchia visiva scalabile tramite pesi differenziati (Black, Bold, SemiBold, Medium) per garantire leggibilità ottimale su schermi digitali e materiali cartacei.
               </p>
@@ -300,7 +306,9 @@
 
             <!-- Immagine individuale con didascalia (Stile speculare a Tipografia ed Icon Pack) -->
             <div class="cover-single-container">
-              <img src="assets/img/includo-brand-identity/palette-colori.png?v=8.0" alt="Palette Colori IncluDO" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/palette-colori.png?v=8.0', '<strong>Palette cromatica di brand</strong>: sistema di colori primari, secondari e d\'accento con specifiche cromatiche (HEX, RGB, CMYK) studiate per unire calore terroso, natura ed energia.')">
+              <button type="button" class="cover-img-btn" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/palette-colori.png?v=8.0', '<strong>Palette cromatica di brand</strong>: sistema di colori primari, secondari e d\'accento con specifiche cromatiche (HEX, RGB, CMYK) studiate per unire calore terroso, natura ed energia.')" aria-label="Ingrandisci immagine Palette Colori IncluDO">
+                <img src="assets/img/includo-brand-identity/palette-colori.png?v=8.0" alt="Palette Colori IncluDO" class="cover-section-img">
+              </button>
               <p class="cover-caption-text">
                 <strong>Palette cromatica di brand</strong>: sistema di colori primari, secondari e d'accento con specifiche cromatiche (HEX, RGB, CMYK) studiate per unire calore terroso, natura ed energia.
               </p>
@@ -316,7 +324,9 @@
 
             <!-- Immagine Icon Pack su Misura -->
             <div class="cover-single-container">
-              <img src="assets/img/includo-brand-identity/icon-pack.png?v=1.0" alt="Set di 8 icone vettoriali per gli 8 percorsi artigianali" class="cover-section-img" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/icon-pack.png?v=1.0', '<strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.')">
+              <button type="button" class="cover-img-btn" onclick="openSingleImageLightbox('assets/img/includo-brand-identity/icon-pack.png?v=1.0', '<strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.')" aria-label="Ingrandisci immagine Set di 8 icone vettoriali per gli 8 percorsi artigianali">
+                <img src="assets/img/includo-brand-identity/icon-pack.png?v=1.0" alt="Set di 8 icone vettoriali per gli 8 percorsi artigianali" class="cover-section-img">
+              </button>
               <p class="cover-caption-text">
                 <strong>Set di 8 icone vettoriali per gli 8 percorsi artigianali</strong>: stile lineare e tratti geometrici condivisi per garantire immediatezza visiva e categorizzazione intuitiva dei corsi.
               </p>
@@ -382,7 +392,9 @@
                 
                 <!-- Slide 1: Facebook — Cover & Profile Picture -->
                 <div class="main-carousel-slide">
-                  <img src="assets/img/includo-brand-identity/social-slide1-facebook.png?v=1.0" alt="Facebook — Cover &amp; Profile Picture" class="carousel-slide-img" onclick="openSocialCarouselLightbox(0)">
+                  <button type="button" class="carousel-slide-btn" onclick="openSocialCarouselLightbox(0)" aria-label="Ingrandisci immagine Facebook — Cover &amp; Profile Picture">
+                    <img src="assets/img/includo-brand-identity/social-slide1-facebook.png?v=1.0" alt="Facebook — Cover &amp; Profile Picture" class="carousel-slide-img">
+                  </button>
                   <div class="carousel-card-desc">
                     <strong>Facebook — Cover &amp; Profile Picture</strong>: Immagine di copertina desktop (851x315 px) e avatar profilo (360x360 px) con pittogramma isolato per garantire leggibilità e coerenza visiva del brand.
                   </div>
@@ -390,7 +402,9 @@
 
                 <!-- Slide 2: YouTube — Channel Header & Avatar -->
                 <div class="main-carousel-slide">
-                  <img src="assets/img/includo-brand-identity/social-slide2-youtube.png?v=1.0" alt="YouTube — Channel Header &amp; Avatar" class="carousel-slide-img" onclick="openSocialCarouselLightbox(1)">
+                  <button type="button" class="carousel-slide-btn" onclick="openSocialCarouselLightbox(1)" aria-label="Ingrandisci immagine YouTube — Channel Header &amp; Avatar">
+                    <img src="assets/img/includo-brand-identity/social-slide2-youtube.png?v=1.0" alt="YouTube — Channel Header &amp; Avatar" class="carousel-slide-img">
+                  </button>
                   <div class="carousel-card-desc">
                     <strong>YouTube — Channel Header &amp; Avatar</strong>: Banner di canale (2560x1440 px) con miniatura profilo coordinata (800x800 px).
                   </div>
@@ -398,7 +412,9 @@
 
                 <!-- Slide 3: Facebook — Set Post Promozionali -->
                 <div class="main-carousel-slide">
-                  <img src="assets/img/includo-brand-identity/social-slide3-facebook-posts.png?v=1.0" alt="Facebook — Set Post Promozionali" class="carousel-slide-img" onclick="openSocialCarouselLightbox(2)">
+                  <button type="button" class="carousel-slide-btn" onclick="openSocialCarouselLightbox(2)" aria-label="Ingrandisci immagine Facebook — Set Post Promozionali">
+                    <img src="assets/img/includo-brand-identity/social-slide3-facebook-posts.png?v=1.0" alt="Facebook — Set Post Promozionali" class="carousel-slide-img">
+                  </button>
                   <div class="carousel-card-desc">
                     <strong>Facebook — Set Post Promozionali</strong>: Post in formato verticale (1080x1350 px) per sponsorizzazioni mirate: presentazione azienda, invito all'open day e promozione dei percorsi artigianali.
                   </div>
@@ -406,7 +422,9 @@
 
                 <!-- Slide 4: Instagram — Set Post Promozionali (Mobile-First) -->
                 <div class="main-carousel-slide">
-                  <img src="assets/img/includo-brand-identity/social-slide4-instagram-posts.png?v=1.0" alt="Instagram — Set Post Promozionali (Mobile-First)" class="carousel-slide-img" onclick="openSocialCarouselLightbox(3)">
+                  <button type="button" class="carousel-slide-btn" onclick="openSocialCarouselLightbox(3)" aria-label="Ingrandisci immagine Instagram — Set Post Promozionali (Mobile-First)">
+                    <img src="assets/img/includo-brand-identity/social-slide4-instagram-posts.png?v=1.0" alt="Instagram — Set Post Promozionali (Mobile-First)" class="carousel-slide-img">
+                  </button>
                   <div class="carousel-card-desc">
                     <strong>Instagram — Set Post Promozionali (Mobile-First)</strong>: Grafiche promozionali per feed Instagram (1080x1350 px) strutturate con gerarchia visiva ad alto impatto per il lancio di corsi ed eventi sul territorio.
                   </div>
@@ -417,10 +435,10 @@
 
             <!-- Indicatori pallini sotto il carosello -->
             <div class="main-carousel-indicators">
-              <span class="carousel-dot active" id="social-dot-0" onclick="goToSocialSlide(0)"></span>
-              <span class="carousel-dot" id="social-dot-1" onclick="goToSocialSlide(1)"></span>
-              <span class="carousel-dot" id="social-dot-2" onclick="goToSocialSlide(2)"></span>
-              <span class="carousel-dot" id="social-dot-3" onclick="goToSocialSlide(3)"></span>
+              <button type="button" class="carousel-dot active" id="social-dot-0" onclick="goToSocialSlide(0)" aria-label="Slide 1: Facebook Cover &amp; Profile"></button>
+              <button type="button" class="carousel-dot" id="social-dot-1" onclick="goToSocialSlide(1)" aria-label="Slide 2: YouTube Header &amp; Avatar"></button>
+              <button type="button" class="carousel-dot" id="social-dot-2" onclick="goToSocialSlide(2)" aria-label="Slide 3: Facebook Post Promozionali"></button>
+              <button type="button" class="carousel-dot" id="social-dot-3" onclick="goToSocialSlide(3)" aria-label="Slide 4: Instagram Post Promozionali"></button>
             </div>
           </div>
         </section>

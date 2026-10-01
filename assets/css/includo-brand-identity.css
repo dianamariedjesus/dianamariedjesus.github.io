@@ -322,6 +322,25 @@ div[id] {
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
+.cover-img-btn,
+.carousel-slide-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+}
+.cover-img-btn:focus-visible,
+.carousel-slide-btn:focus-visible {
+  outline: 2px solid #0284C7;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
 .cover-section-img:hover {
   opacity: 0.95;
 }
@@ -329,7 +348,7 @@ div[id] {
   font-family: 'Poppins', sans-serif;
   font-size: 13.5px !important;
   font-weight: 400 !important;
-  color: rgba(38, 38, 38, 0.6) !important;
+  color: #525252 !important;
   line-height: 1.5 !important;
   letter-spacing: 0.01em;
   margin: 2px 0 0 0;
@@ -705,7 +724,7 @@ div[id] {
   font-family: 'Poppins', sans-serif;
   font-size: 13.5px !important;
   font-weight: 400 !important;
-  color: rgba(38, 38, 38, 0.6) !important;
+  color: #525252 !important;
   line-height: 1.5 !important;
   letter-spacing: 0.01em;
   background-color: #FFFFFF;
@@ -724,6 +743,13 @@ div[id] {
   background-color: #CBD5E1;
   cursor: pointer;
   transition: all 0.2s ease;
+  border: none;
+  padding: 0;
+  display: inline-block;
+}
+.carousel-dot:focus-visible {
+  outline: 2px solid #0284C7;
+  outline-offset: 2px;
 }
 .carousel-dot.active {
   background-color: #0284C7;

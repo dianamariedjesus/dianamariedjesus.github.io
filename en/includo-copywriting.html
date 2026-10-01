@@ -237,7 +237,9 @@
 
             <!-- Container Unico Immagine (872x479) e Didascalia -->
             <div class="cover-single-container">
-              <img src="../assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Article cover with Headline and Subheadline" class="cover-section-img" onclick="openSingleImageLightbox('../assets/img/includo-copywriting/headline-cover.png?v=1.0', 'Article cover featuring the Headline and Subheadline, crafted to communicate the core value proposition within the first 5 seconds and minimize bounce rates.')">
+              <button type="button" class="cover-img-btn" onclick="openSingleImageLightbox('../assets/img/includo-copywriting/headline-cover.png?v=1.0', 'Article cover featuring the Headline and Subheadline, crafted to communicate the core value proposition within the first 5 seconds and minimize bounce rates.')" aria-label="Enlarge image Article cover with Headline and Subheadline">
+                <img src="../assets/img/includo-copywriting/headline-cover.png?v=1.0" alt="Article cover with Headline and Subheadline" class="cover-section-img">
+              </button>
               <p class="cover-caption-text">
                 Article cover featuring the Headline and Subheadline, crafted to communicate the core value proposition within the first 5 seconds and minimize bounce rates.
               </p>
@@ -307,7 +309,9 @@
                   
                   <!-- Slide 1: Authority -->
                   <div class="main-carousel-slide">
-                    <img src="../assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.1" alt="Persuasion Principles - Authority" class="carousel-slide-img" onclick="openCialdiniLightbox(0)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(0)" aria-label="Enlarge image Persuasion Principles - Authority">
+                      <img src="../assets/img/includo-copywriting/cialdini-autorevolezza.png?v=1.1" alt="Persuasion Principles - Authority" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Authority:</strong> Cited official national labor statistics on the decline of artisanal workshops to highlight the real-world scale of the challenge.
                     </div>
@@ -315,7 +319,9 @@
 
                   <!-- Slide 2: Scarcity & Urgency -->
                   <div class="main-carousel-slide">
-                    <img src="../assets/img/includo-copywriting/cialdini-scarsita.png?v=1.1" alt="Persuasion Principles - Scarcity &amp; Urgency" class="carousel-slide-img" onclick="openCialdiniLightbox(1)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(1)" aria-label="Enlarge image Persuasion Principles - Scarcity &amp; Urgency">
+                      <img src="../assets/img/includo-copywriting/cialdini-scarsita.png?v=1.1" alt="Persuasion Principles - Scarcity &amp; Urgency" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Scarcity &amp; Urgency:</strong> Added application deadlines for training courses with limited available spots, encouraging prompt decision-making.
                     </div>
@@ -323,7 +329,9 @@
 
                   <!-- Slide 3: Reciprocity -->
                   <div class="main-carousel-slide">
-                    <img src="../assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.1" alt="Persuasion Principles - Reciprocity" class="carousel-slide-img" onclick="openCialdiniLightbox(2)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(2)" aria-label="Enlarge image Persuasion Principles - Reciprocity">
+                      <img src="../assets/img/includo-copywriting/cialdini-reciprocita.png?v=1.1" alt="Persuasion Principles - Reciprocity" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Reciprocity:</strong> Featured an exclusive 30% discount on handmade products for users who subscribe to the newsletter.
                     </div>
@@ -331,7 +339,9 @@
 
                   <!-- Slide 4: Social Proof -->
                   <div class="main-carousel-slide">
-                    <img src="../assets/img/includo-copywriting/cialdini-riprova.png?v=1.1" alt="Persuasion Principles - Social Proof" class="carousel-slide-img" onclick="openCialdiniLightbox(3)">
+                    <button type="button" class="carousel-slide-btn" onclick="openCialdiniLightbox(3)" aria-label="Enlarge image Persuasion Principles - Social Proof">
+                      <img src="../assets/img/includo-copywriting/cialdini-riprova.png?v=1.1" alt="Persuasion Principles - Social Proof" class="carousel-slide-img">
+                    </button>
                     <div class="carousel-card-desc">
                       <strong>Social Proof:</strong> Displayed real social engagement metrics and shares to reassure new readers of the content's quality and credibility.
                     </div>
@@ -346,10 +356,10 @@
 
               <!-- Indicators Dots -->
               <div class="main-carousel-indicators" id="dots-cialdini">
-                <span class="carousel-dot active" onclick="switchCarouselSlide('cialdini', 0)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 1)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 2)"></span>
-                <span class="carousel-dot" onclick="switchCarouselSlide('cialdini', 3)"></span>
+                <button type="button" class="carousel-dot active" onclick="switchCarouselSlide('cialdini', 0)" aria-label="Slide 1: Authority"></button>
+                <button type="button" class="carousel-dot" onclick="switchCarouselSlide('cialdini', 1)" aria-label="Slide 2: Scarcity &amp; Urgency"></button>
+                <button type="button" class="carousel-dot" onclick="switchCarouselSlide('cialdini', 2)" aria-label="Slide 3: Reciprocity"></button>
+                <button type="button" class="carousel-dot" onclick="switchCarouselSlide('cialdini', 3)" aria-label="Slide 4: Social Proof"></button>
               </div>
             </div>
           </div>
