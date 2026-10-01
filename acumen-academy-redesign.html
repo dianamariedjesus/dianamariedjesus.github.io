@@ -98,7 +98,7 @@
           </a>
         </div>
       </div>
-      <div id="overlay-dimmer" class="d-md-none" aria-hidden="true" onclick="document.getElementById('mobile-menu-toggle').checked = false;"></div>
+      <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none" aria-hidden="true"></label>
     </div>
   </nav>
 
@@ -272,7 +272,7 @@
             <!-- Mini-Video 1 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video id="vid1" autoplay loop muted playsinline class="video-player-media" preload="metadata">
+                <video id="vid1" autoplay loop muted playsinline class="video-player-media" preload="metadata" aria-label="Video dimostrativo: Navigazione Homepage e tooltip esplicativi" aria-describedby="vid1-caption">
                   <source src="assets/img/acumen-academy-redesign/Mini-video1.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -284,13 +284,13 @@
                   </button>
                 </div>
               </div>
-              <p class="video-caption-text">Testi alleggeriti con grassetti come ancoraggi visivi e tooltip esplicativi in hover sulle parole gergali in inglese per rassicurare l'utente sulla serietà dell'ente.</p>
+              <p class="video-caption-text" id="vid1-caption">Testi alleggeriti con grassetti come ancoraggi visivi e tooltip esplicativi in hover sulle parole gergali in inglese per rassicurare l'utente sulla serietà dell'ente.</p>
             </div>
 
             <!-- Mini-Video 2 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video id="vid2" autoplay loop muted playsinline class="video-player-media" preload="metadata">
+                <video id="vid2" autoplay loop muted playsinline class="video-player-media" preload="metadata" aria-label="Video dimostrativo: Catalogo corsi e filtri laterali" aria-describedby="vid2-caption">
                   <source src="assets/img/acumen-academy-redesign/Mini-video2.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -302,13 +302,13 @@
                   </button>
                 </div>
               </div>
-              <p class="video-caption-text">Sidebar dei filtri riprogettata con icone e card corsi ottimizzate tramite tag e durate chiare per trovare subito le risorse rilevanti.</p>
+              <p class="video-caption-text" id="vid2-caption">Sidebar dei filtri riprogettata con icone e card corsi ottimizzate tramite tag e durate chiare per trovare subito le risorse rilevanti.</p>
             </div>
 
             <!-- Mini-Video 3 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video id="vid3" autoplay loop muted playsinline class="video-player-media" preload="metadata">
+                <video id="vid3" autoplay loop muted playsinline class="video-player-media" preload="metadata" aria-label="Video dimostrativo: Social login e live chat overlay" aria-describedby="vid3-caption">
                   <source src="assets/img/acumen-academy-redesign/Mini-video3.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -320,13 +320,13 @@
                   </button>
                 </div>
               </div>
-              <p class="video-caption-text">Social Login via Gmail, menu dropdown "Get Help" accessibile anche dalla Dashboard e Live Chat centrata in overlay nata dai feedback del Pilot Test.</p>
+              <p class="video-caption-text" id="vid3-caption">Social Login via Gmail, menu dropdown "Get Help" accessibile anche dalla Dashboard e Live Chat centrata in overlay nata dai feedback del Pilot Test.</p>
             </div>
 
             <!-- Mini-Video 4 -->
             <div class="mini-video-card-placeholder">
               <div class="video-container-box">
-                <video id="vid4" autoplay loop muted playsinline class="video-player-media" preload="metadata">
+                <video id="vid4" autoplay loop muted playsinline class="video-player-media" preload="metadata" aria-label="Video dimostrativo: Fruizione didattica in piattaforma" aria-describedby="vid4-caption">
                   <source src="assets/img/acumen-academy-redesign/Mini-video4.mp4?v=1.0" type="video/mp4">
                   Il tuo browser non supporta la riproduzione video.
                 </video>
@@ -338,7 +338,7 @@
                   </button>
                 </div>
               </div>
-              <p class="video-caption-text">Salvataggio corso, passaggio in Dashboard e fruizione didattica in-platform totalmente unificata sotto l'architettura di Acumen Academy.</p>
+              <p class="video-caption-text" id="vid4-caption">Salvataggio corso, passaggio in Dashboard e fruizione didattica in-platform totalmente unificata sotto l'architettura di Acumen Academy.</p>
             </div>
 
           </div>
@@ -728,7 +728,7 @@
                           <span>Pagina Storica (As-Is)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'homepage-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/homepage-asis.png?v=2.0" alt="Homepage Storica As-Is" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -740,7 +740,7 @@
                           <span>Wireframe (Mid-Fi)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'homepage-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/homepage-wireframe.png?v=2.0" alt="Homepage Wireframe Mid-Fi" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -752,7 +752,7 @@
                           <span>UI Finale (To-Be)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'homepage-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'homepage-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/homepage-ui.png?v=5.0" alt="Homepage UI Finale To-Be" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -772,7 +772,7 @@
                           <span>Pagina Storica (As-Is)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'courses-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/courses-asis.png?v=1.0" alt="Pagina Elenco Corsi Storica As-Is" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -784,7 +784,7 @@
                           <span>Wireframe (Mid-Fi)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'courses-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/courses-wireframe.png?v=1.0" alt="Pagina Elenco Corsi Wireframe Mid-Fi" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -796,7 +796,7 @@
                           <span>UI Finale (To-Be)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'courses-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'courses-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/courses-ui.png?v=3.0" alt="Pagina Elenco Corsi UI Finale To-Be" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -816,7 +816,7 @@
                           <span>Pagina Storica (As-Is)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'course-detail-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'course-detail-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/course-detail-asis.png?v=1.0" alt="Pagina Dettaglio Corso Storica As-Is" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -828,7 +828,7 @@
                           <span>Wireframe (Mid-Fi)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'course-detail-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'course-detail-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/course-detail-wireframe.png?v=1.0" alt="Pagina Dettaglio Corso Wireframe Mid-Fi" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -840,7 +840,7 @@
                           <span>UI Finale (To-Be)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'course-detail-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'course-detail-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/course-detail-ui.png?v=2.0" alt="Pagina Dettaglio Corso UI Finale To-Be" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -860,7 +860,7 @@
                           <span>Pagina Storica (As-Is)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'dashboard-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'dashboard-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/dashboard-asis.png?v=2.0" alt="Pagina My Dashboard Storica As-Is" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -872,7 +872,7 @@
                           <span>Wireframe (Mid-Fi)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'dashboard-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'dashboard-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/dashboard-wireframe.png?v=2.0" alt="Pagina My Dashboard Wireframe Mid-Fi" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -884,7 +884,7 @@
                           <span>UI Finale (To-Be)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'dashboard-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'dashboard-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/dashboard-ui.png?v=3.0" alt="Pagina My Dashboard UI Finale To-Be" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -904,7 +904,7 @@
                           <span>Pagina Storica (As-Is)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'contact-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'contact-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/contact_us-asis.png?v=1.0" alt="Pagina Contact Us Storica As-Is" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -916,7 +916,7 @@
                           <span>Wireframe (Mid-Fi)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(1, 'contact-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'contact-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/contact_us-wireframe.png?v=1.0" alt="Pagina Contact Us Wireframe Mid-Fi" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -928,7 +928,7 @@
                           <span>UI Finale (To-Be)</span>
                           <button type="button" class="btn-card-zoom" onclick="openGalleryModal(2, 'contact-stages')" aria-label="Ingrandisci">🔍</button>
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(2, 'contact-stages')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/contact_us-ui.png?v=2.0" alt="Pagina Contact Us UI Finale To-Be" class="comparison-card-img">
                         </div>
                         <div class="comparison-card-desc">
@@ -983,12 +983,13 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #FEF2F2; color: #991B1B;">
                         <span>🔴 PRIMA (Pilot Test - Icona Flottante in basso a destra)</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'pilot-prima')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'pilot-prima')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;">
                           <img src="assets/img/acumen-academy-redesign/pilot-prima-1.png" alt="Pilot Test Prima 1 - Icona Chiusa" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'pilot-prima')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;">
                           <img src="assets/img/acumen-academy-redesign/pilot-prima-2.png" alt="Pilot Test Prima 2 - Chat Aperta" class="comparison-card-img">
                         </div>
                       </div>
@@ -1005,12 +1006,13 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F0FDF4; color: #166534;">
                         <span>🟢 DOPO (Test Ufficiale - Overlay Livechat Centrato)</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'pilot-dopo')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; background-color: #F8FAFC;">
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(0, 'pilot-dopo')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;">
                           <img src="assets/img/acumen-academy-redesign/pilot-dopo-1.png" alt="Test Ufficiale Dopo 1 - Pagina Contact Us" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;" onclick="openGalleryModal(1, 'pilot-dopo')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper" style="height: auto; max-height: none;">
                           <img src="assets/img/acumen-academy-redesign/pilot-dopo-2.png" alt="Test Ufficiale Dopo 2 - Livechat Overlay Centrato" class="comparison-card-img">
                         </div>
                       </div>
@@ -1058,11 +1060,11 @@
               <!-- Domande Finali Post-Test -->
               <div class="protocol-card protocol-questions-card">
                 <h3 class="problem-card-title">📋 DOMANDE FINALI POST-TEST</h3>
-                <div class="protocol-questions-list">
-                  <p class="problem-card-text">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</p>
-                  <p class="problem-card-text">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</p>
-                  <p class="problem-card-text">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</p>
-                </div>
+                <ol class="protocol-questions-list">
+                  <li class="problem-card-text">1. <strong>Affidabilità:</strong> “Quanto ti è sembrata affidabile questa organizzazione?"</li>
+                  <li class="problem-card-text">2. <strong>Frizioni:</strong> “Qual è stata la parte più confusa dell'esperienza?"</li>
+                  <li class="problem-card-text">3. <strong>Intenzione:</strong> “Prenderesti in considerazione Acumen Academy?"</li>
+                </ol>
               </div>
 
             </div>
@@ -1154,12 +1156,13 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Scansionabilità &amp; Tooltip — PRIMA (As-Is) vs DOPO (To-Be)</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'mod-1')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div class="mod-img-container-box">
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'mod-1')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide1-prima.png" alt="Scansionabilità e Tooltip PRIMA" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'mod-1')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide1-dopo.png" alt="Scansionabilità e Tooltip DOPO" class="comparison-card-img">
                         </div>
                       </div>
@@ -1176,12 +1179,13 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Menu Globale &amp; Voce "Get Help" — PRIMA (As-Is) vs DOPO (To-Be)</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'mod-2')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div class="mod-img-container-box">
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'mod-2')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide2-prima.png" alt="Menu Globale PRIMA" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'mod-2')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide2-dopo.png" alt="Menu Globale DOPO" class="comparison-card-img">
                         </div>
                       </div>
@@ -1198,12 +1202,13 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Card Corsi &amp; Filtri Ottimizzati — PRIMA (As-Is) vs DOPO (To-Be)</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'mod-3')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div class="mod-img-container-box">
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'mod-3')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide3-prima.png" alt="Card Corsi PRIMA" class="comparison-card-img">
                         </div>
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(1, 'mod-3')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide3-dopo.png" alt="Card Corsi DOPO" class="comparison-card-img">
                         </div>
                       </div>
@@ -1220,9 +1225,10 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Accesso Intelligente &amp; Supporto in Dashboard</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'mod-4')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div class="mod-img-container-box single-img">
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'mod-4')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide4.png" alt="Supporto in Dashboard" class="comparison-card-img" style="border-radius: 6px;">
                         </div>
                       </div>
@@ -1239,9 +1245,10 @@
                     <div class="comparison-card-item" style="border: none; border-radius: 0; box-shadow: none;">
                       <div class="comparison-card-header" style="background-color: #F8FAFC; color: #1E293B;">
                         <span>Umanizzazione del Brand &amp; Overlay Live Chat</span>
+                        <button type="button" class="btn-card-zoom" onclick="openGalleryModal(0, 'mod-5')" aria-label="Ingrandisci">🔍</button>
                       </div>
                       <div class="mod-img-container-box single-img">
-                        <div class="comparison-img-wrapper" onclick="openGalleryModal(0, 'mod-5')" title="Clicca per ingrandire">
+                        <div class="comparison-img-wrapper">
                           <img src="assets/img/acumen-academy-redesign/slide5.png" alt="Umanizzazione del Brand e Live Chat Overlay" class="comparison-card-img" style="border-radius: 6px;">
                         </div>
                       </div>
@@ -2042,6 +2049,28 @@
         const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');
         if (langToggle && langToggle.checked && !langWrapper.contains(e.target)) {
           langToggle.checked = false;
+        }
+      }
+
+      // Click delegation for comparison images
+      var wrapper = e.target.closest('.comparison-img-wrapper');
+      if (wrapper) {
+        var card = wrapper.closest('.comparison-card-item');
+        if (card) {
+          var zoomBtn = card.querySelector('.btn-card-zoom');
+          if (zoomBtn) {
+            var wrappers = Array.from(card.querySelectorAll('.comparison-img-wrapper'));
+            var index = wrappers.indexOf(wrapper);
+            if (index > 0) {
+              var btnOnClick = zoomBtn.getAttribute('onclick');
+              var match = btnOnClick ? btnOnClick.match(/openGalleryModal\(\d+,\s*['"]([^'"]+)['"]\)/) : null;
+              if (match && match[1]) {
+                openGalleryModal(index, match[1]);
+                return;
+              }
+            }
+            zoomBtn.click();
+          }
         }
       }
     });

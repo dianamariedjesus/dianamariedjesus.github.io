@@ -737,11 +737,11 @@ code,
   bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 23, 42, 0.85);
   color: #FFFFFF;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 3px 7px;
+  padding: 4px 8px;
   border-radius: 4px;
   opacity: 0;
   transition: opacity 0.2s ease;
