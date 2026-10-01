@@ -1588,8 +1588,8 @@
   </script>
 
   <!-- Modal Lightbox per Ingrandire Media (Video e Foto con Frecce di Navigazione) -->
-  <div id="mediaLightboxModal" class="video-lightbox-overlay" onclick="closeMediaModal(event)">
-    <div class="lightbox-modal-content" onclick="event.stopPropagation()">
+  <div id="mediaLightboxModal" class="video-lightbox-overlay">
+    <div class="lightbox-modal-content">
       <button type="button" class="lightbox-close-btn" onclick="closeMediaModal(event)" aria-label="Close modal">&times;</button>
       <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateLightbox(event, -1)" aria-label="Previous image">&#10094;</button>
       <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateLightbox(event, 1)" aria-label="Next image">&#10095;</button>
@@ -1603,6 +1603,15 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      var mediaModal = document.getElementById('mediaLightboxModal');
+      if (mediaModal) {
+        mediaModal.addEventListener('click', function(e) {
+          if (e.target === mediaModal) {
+            closeMediaModal(e);
+          }
+        });
+      }
+
       document.querySelectorAll('.video-container-box').forEach(function(box) {
         box.addEventListener('touchstart', function() {
           box.classList.add('active-touch');

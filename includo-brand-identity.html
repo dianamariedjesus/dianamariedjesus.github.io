@@ -503,8 +503,8 @@
   </button>
 
   <!-- Lightbox Modal per Ingrandire Immagini (con frecce di navigazione) -->
-  <div id="singleLightboxModal" class="video-lightbox-overlay" onclick="closeSingleLightbox(event)">
-    <div class="lightbox-modal-content" onclick="event.stopPropagation()">
+  <div id="singleLightboxModal" class="video-lightbox-overlay">
+    <div class="lightbox-modal-content">
       <button type="button" class="lightbox-close-btn" onclick="closeSingleLightbox(event)" aria-label="Chiudi modal">&times;</button>
       
       <!-- Frecce di navigazione Lightbox (visibili solo per i caroselli) -->
@@ -636,6 +636,15 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
+      var singleModal = document.getElementById('singleLightboxModal');
+      if (singleModal) {
+        singleModal.addEventListener('click', function(e) {
+          if (e.target === singleModal) {
+            closeSingleLightbox(e);
+          }
+        });
+      }
+
       var marchioWrap = document.querySelector('.marchio-carousel-wrapper');
       if (marchioWrap) {
         enableTouchSwipe(marchioWrap, function() {

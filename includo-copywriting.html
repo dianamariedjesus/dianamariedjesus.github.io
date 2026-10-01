@@ -719,6 +719,15 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+      var cialdiniModal = document.getElementById('cialdiniLightboxModal');
+      if (cialdiniModal) {
+        cialdiniModal.addEventListener('click', function(e) {
+          if (e.target === cialdiniModal) {
+            closeCialdiniLightbox(e);
+          }
+        });
+      }
+
       var lightboxImg = document.getElementById('lightboxImageDisplay');
       var container = document.getElementById('lightboxImageScrollContainer');
 
@@ -1002,8 +1011,8 @@
   </script>
 
   <!-- Modal Lightbox per Ingrandire Immagini Carosello Cialdini -->
-  <div id="cialdiniLightboxModal" class="video-lightbox-overlay" onclick="closeCialdiniLightbox(event)">
-    <div class="lightbox-modal-content" onclick="event.stopPropagation()">
+  <div id="cialdiniLightboxModal" class="video-lightbox-overlay">
+    <div class="lightbox-modal-content">
       <button type="button" class="lightbox-close-btn" onclick="closeCialdiniLightbox(event)" aria-label="Chiudi modal">&times;</button>
       <button type="button" id="lightboxPrevBtn" class="lightbox-nav-btn prev" onclick="navigateCialdiniLightbox(event, -1)" aria-label="Immagine precedente">&#10094;</button>
       <button type="button" id="lightboxNextBtn" class="lightbox-nav-btn next" onclick="navigateCialdiniLightbox(event, 1)" aria-label="Immagine successiva">&#10095;</button>
