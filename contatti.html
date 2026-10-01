@@ -103,7 +103,7 @@
     </div>
 
     <!-- Background Dimmer for Overlay -->
-    <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none" aria-hidden="true"></label>
+    <div id="overlay-dimmer" class="d-md-none"></div>
   </div>
 </nav>
 
@@ -454,6 +454,10 @@
 
     // Close language dropdown menu when clicking anywhere outside
     document.addEventListener('click', function(e) {
+      if (e.target && e.target.id === 'overlay-dimmer') {
+        const toggle = document.getElementById('mobile-menu-toggle');
+        if (toggle) toggle.checked = false;
+      }
       const langWrapper = document.querySelector('.language-dropdown-wrapper');
       if (langWrapper) {
         const langToggle = langWrapper.querySelector('.lang-toggle-checkbox');

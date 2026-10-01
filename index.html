@@ -105,8 +105,8 @@
       </div>
     </div>
 
-    <!-- Background Dimmer for Overlay (div with onclick to avoid multiple form labels conflict) -->
-    <label for="mobile-menu-toggle" id="overlay-dimmer" class="d-md-none" aria-hidden="true"></label>
+    <!-- Background Dimmer for Overlay -->
+    <div id="overlay-dimmer" class="d-md-none"></div>
   </div>
 </nav>
 
@@ -401,6 +401,12 @@
   document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll('.custom-nav-link');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const dimmer = document.getElementById('overlay-dimmer');
+    if (dimmer && mobileMenuToggle) {
+      dimmer.addEventListener('click', () => {
+        mobileMenuToggle.checked = false;
+      });
+    }
 
     function setActiveLinkByHref(targetHref) {
       navLinks.forEach(link => {
