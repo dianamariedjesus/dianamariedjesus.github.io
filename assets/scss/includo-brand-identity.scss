@@ -1,0 +1,1029 @@
+@import 'variables';
+
+// Reset & Base for page
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #262626;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Wrapper Case Study
+.case-study-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+// Banner Copertina
+.case-study-hero {
+  width: 100%;
+  height: 443px;
+  background-color: #FDFCFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  
+  .hero-logo {
+    width: 631px;
+    height: 188px;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+// Main Container
+.case-study-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 284px; // Cambiato a 284px
+  box-sizing: border-box;
+}
+
+// Title Section
+.case-study-title-section {
+  margin-top: 24px; // Desktop: 24px from Hero Banner
+  text-align: center;
+  
+  .main-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 800; // Poppins ExtraBold 800
+    color: #262626;
+    margin: 0;
+    line-height: 1.2;
+    
+    .client-name {
+      color: #FF452A; // Arancione Attivo
+    }
+  }
+}
+
+// Metadata Section
+.metadata-section {
+  margin-top: 88px; // Desktop: 88px from Title
+  
+  .metadata-grid {
+    display: flex;
+    justify-content: space-between; // Spazio in auto
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .metadata-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    // Per viewport desktop 1440px, larghezze specifiche per ogni colonna
+    &:nth-child(1) { width: 143px; flex-shrink: 0; }
+    &:nth-child(2) { width: 117px; flex-shrink: 0; }
+    &:nth-child(3) { width: 295px; flex-shrink: 0; } // Descrizione: 295px
+    &:nth-child(4) { width: 143px; flex-shrink: 0; } // TOOLS è ora la quarta colonna
+  }
+  
+  .metadata-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600; // Poppins SemiBold 18px
+    color: #262626; // colore 262626
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 16px 0; // Spazio tra titoli e testo di 16px
+  }
+  
+  .metadata-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400; // Poppins Regular 16px
+    color: rgba(38, 38, 38, 0.9); // colore 262626 opacity 90%
+    line-height: 1.5;
+    margin: 0;
+    
+    &.list-text {
+      margin-bottom: 6px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Content Sections
+.content-sections-wrapper {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px; // Cambiato a 56px
+  
+  &:first-of-type {
+    margin-top: 132px; // Cambiato a 132px
+  }
+}
+
+.case-study-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; // Spazio interno tra titolo e paragrafo: 8px
+  
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700; // Poppins Bold 700
+    color: rgba(38, 38, 38, 0.5); // #262626 con opacità 50%
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+  
+  .section-paragraph {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400; // Poppins Regular 400
+    color: rgba(38, 38, 38, 0.9); // #262626 con opacità 90%
+    line-height: 1.5; // line height 150%
+    letter-spacing: 0.02em; // letter spacing 2%
+    margin: 0; // Cambiato a 0 per togliere lo spazio sotto ogni frase/paragrafo da capo
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    strong {
+      font-weight: 600; // Poppins SemiBold 600
+      line-height: 1.5; // line height 150%
+      letter-spacing: 0.02em; // letter spacing 2%
+      margin-bottom: 0; // paragraph spacing 0
+    }
+    
+    em {
+      font-style: italic; // Poppins Italic
+      line-height: 1.5; // line height 150%
+      letter-spacing: 0.02em; // letter spacing 2%
+      margin-bottom: 0; // paragraph spacing 0
+    }
+  }
+  
+  // Specific list style for sections
+  .section-list {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0 0; // Cambiato a 0 per togliere lo spazio di 12px sotto il punto elencato
+    
+    li {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(38, 38, 38, 0.9);
+      line-height: 1.5; // line height 150%
+      letter-spacing: 0.02em; // letter spacing 2%
+      margin-bottom: 2px; // list spacing 2
+      padding-left: 20px;
+      position: relative;
+      
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 5px;
+        color: rgba(38, 38, 38, 0.9);
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      strong {
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Card per immagini singole con lo stesso crop del carosello
+  .section-image-card {
+    margin-top: 48px; // Spaziatura di 48px tra testo e immagine
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-self: center; // Centra nel contenitore
+    
+    @media (min-width: 992px) {
+      width: 728px; // Cambiato a 728px
+      height: 398px; // Cambiato a 398px
+    }
+    
+    @media (max-width: 991px) {
+      aspect-ratio: 728 / 398; // mantiene le proporzioni in responsive
+    }
+    
+    .section-image {
+      width: calc(100% + 8px); // Crop di 4px su ciascun lato per coprire il bordo Figma
+      height: calc(100% + 8px);
+      margin: -4px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // Didascalia per immagini singole
+  .image-caption {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(38, 38, 38, 0.5); // opacità 50%
+    text-align: center;
+    margin-top: 8px; // Spaziatura di 8px tra immagine e didascalia
+    line-height: 1.4;
+  }
+}
+
+// Layout a colonne per la sezione Palette Colori
+.palette-colori-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; // entrambe le colonne hanno la stessa altezza
+  width: 100%;
+  margin-top: 0; // allinea all'inizio della sezione
+  
+  @media (min-width: 992px) {
+    height: 307px; // Altezza identica per le due colonne
+  }
+  
+  .palette-colori-text-col {
+    @media (min-width: 992px) {
+      width: 429px; // Larghezza cambiata a 429px
+      height: 100%;
+      flex-shrink: 0;
+    }
+    
+    .section-title {
+      margin-bottom: 8px; // spazio standard sotto il titolo
+    }
+    
+    .section-paragraph {
+      margin-bottom: 4px;
+    }
+  }
+  
+  .palette-colori-img-col {
+    @media (min-width: 992px) {
+      width: 403px; // Larghezza cambiata a 403px
+      height: 307px; // Altezza cambiata a 307px
+      flex-shrink: 0;
+    }
+    
+    .palette-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // evita distorsione
+      object-position: top; // allinea l'immagine in alto al titolo
+      display: block;
+    }
+  }
+}
+
+// Carousel Section
+.carousel-section {
+  margin-top: 48px; // Spazio tra la parte testuale e carosello: 48px
+  margin-bottom: 56px; // Spazio tra carosello e la sezione successiva: 56px
+  
+  .carousel-layout-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; // Spazio di 16px tra frecce e carosello
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel-container {
+    flex-grow: 1;
+    position: relative;
+    background-color: #FFFFFF;
+    
+    // Double drop shadow & no rounded corners
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    overflow: hidden;
+    
+    @media (min-width: 992px) {
+      width: 728px; // Cambiato a 728px
+      height: 398px; // Cambiato a 398px
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width: 991px) {
+      aspect-ratio: 728 / 398;
+    }
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    overflow: hidden; // Per ritagliare il bordo Figma
+    
+    &.active {
+      display: block;
+    }
+    
+    .carousel-img {
+      width: calc(100% + 8px); // Crop 4px a sinistra e destra
+      height: auto;
+      margin-left: -4px;
+      margin-top: -4px;
+      margin-bottom: -4px; // Crop 4px in alto e in basso
+      display: block;
+    }
+  }
+  
+  .carousel-btn {
+    width: 56px;
+    height: 56px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+    
+    // Stati di Opacità specificati
+    opacity: 0.5; // Default: 50%
+    
+    &:hover:not(.disabled) {
+      opacity: 0.65; // Hover: 65%
+    }
+    
+    &:active:not(.disabled) {
+      transform: scale(0.95);
+      opacity: 0.9; // Pressed: 90%
+    }
+    
+    &.disabled {
+      opacity: 0.25; // Disabled: 25%
+      cursor: default;
+      pointer-events: none; // Impedisce interazioni e clic
+    }
+    
+    &.btn-left {
+      background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-default.png');
+      margin-right: 16px; // Cambiato a 16px
+      
+      &:hover:not(.disabled) {
+        background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-hover.png');
+      }
+      
+      &:active:not(.disabled) {
+        background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-pressed.png');
+      }
+      
+      &.disabled {
+        background-image: url('../img/i-miei-lavori/brand-identity/arrow-left-disabled.png');
+      }
+    }
+    
+    &.btn-right {
+      background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-default.png');
+      margin-left: 16px; // Cambiato a 16px
+      
+      &:hover:not(.disabled) {
+        background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-hover.png');
+      }
+      
+      &:active:not(.disabled) {
+        background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-pressed.png');
+      }
+      
+      &.disabled {
+        background-image: url('../img/i-miei-lavori/brand-identity/arrow-right-disabled.png');
+      }
+    }
+  }
+  
+  // Slide Caption
+  .carousel-caption-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400; // Poppins Regular 400
+    color: rgba(38, 38, 38, 0.5); // #262626 con opacità 50%
+    text-align: center;
+    margin-top: 16px; // Cambiato a 16px
+    line-height: 1.4;
+  }
+
+  // Dots Indicators
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; // Spaziatura tra di loro di 12px
+    margin-top: 24px; // Spaziatura tra il caption e questi elementi di 24px
+    height: 16px; // Evita salti di layout all'ingrandirsi dell'attivo
+  }
+
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #262626;
+    opacity: 0.25; // Default: 25%
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &.active {
+      width: 16px;
+      height: 16px;
+      opacity: 0.50; // Pressed/Active: 50%
+    }
+  }
+}
+
+// Linea Divisoria
+.divider-line {
+  width: 100%;
+  max-width: 1100px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.5px;
+  margin: 76px auto; /* Cambiato a 76px sopra e sotto */
+}
+
+// Altri Lavori Section
+.other-works-section {
+  width: 100%;
+  margin: 0 auto 176px auto; /* Spaziatura di 176px sotto la scheda */
+  box-sizing: border-box;
+  
+  .other-works-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px; // Stesso stile della homepage
+    font-weight: 700;
+    color: rgba(38, 38, 38, 0.5); // #262626 al 50% opacity
+    letter-spacing: 0.22em;
+    line-height: 1.2;
+    text-align: left; // Allineato a sinistra del box/griglia
+    margin-bottom: 40px; // Spaziatura tra il titolo e le card a 40px
+    text-transform: uppercase;
+  }
+  
+  .other-works-grid {
+    display: flex;
+    justify-content: center; // Centrate
+    align-items: start;
+    gap: 32px; // Spaziatura di 32px tra le due card
+    width: 100%;
+  }
+}
+
+// Sidebar Navigation
+.sidebar-nav {
+  position: fixed;
+  left: 60px; // margine a sinistra di 60px
+  top: 50%; // incentrati alla tabella meta-data (e tenuti centrati verticalmente nella pagina)
+  transform: translateY(-50%);
+  z-index: 1200;
+  width: 183px;
+  height: auto; // Cambiato ad auto per evitare spazi vuoti eccessivi
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  @media (max-width: 1023px) {
+    display: none !important; // nascondi su tablet e mobile per evitare sovrapposizioni
+  }
+}
+
+.sidebar-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; // spaziatura tra ogni linea di 16px
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-line {
+  height: 2px; // weight 2
+  background-color: rgba(0, 0, 0, 0.20); // colore 000000 opacity 20%
+  border-radius: 1px; // start e end point messi in round
+  display: block;
+  transition: background-color 0.2s ease;
+  
+  &.active {
+    background-color: rgba(0, 0, 0, 0.50); // colore 000000 opacity 50%
+  }
+  
+  // larghezze specifiche
+  &.line-1, &.line-2, &.line-9 { width: 20px; }
+  &.line-3 { width: 22px; }
+  &.line-4 { width: 25px; }
+  &.line-5, &.line-6 { width: 24px; }
+  &.line-7 { width: 23px; }
+  &.line-8 { width: 30px; }
+}
+
+.sidebar-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 183px;
+  height: auto; // Cambiato ad auto per eliminare lo spazio sotto l'ultima voce
+  background: #FFFFFF;
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.15); // dropshadow (X: 4, Y: 4, Blur: 20, colore 000000 opacity 15%)
+  padding: 12px 8px; // padding 8px per lati e 12px per sopra/sotto
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2px; // spaziatura tra i testi di 2px
+  border-radius: 12px; // corner radius di 12px
+}
+
+.overlay-link {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400; // poppins regular
+  color: rgba(0, 0, 0, 0.65); // default (colore 000000 opacity 65%)
+  border-radius: 12px; // corner radius 12 px
+  padding: 4px 8px; // padding 4px per sopra/sotto e lati (usiamo 8px orizzontale per allineamento)
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.3;
+  
+  &:hover {
+    background-color: rgba(90, 24, 154, 0.05); // hover: sfondo 5A189A opacity 5%
+    color: rgba(0, 0, 0, 0.65); // colore 000000 opacity 65%
+  }
+  
+  &:active {
+    background-color: rgba(90, 24, 154, 0.10); // pressed: sfondo 5A189A opacity 10%
+    color: rgba(0, 0, 0, 0.90); // pressed: colore 000000 opacity 90%
+  }
+  
+  &.active {
+    color: rgba(0, 0, 0, 0.90); // active: colore 000000 opacity 90%
+    background-color: transparent; // active: niente sfondo
+  }
+}
+
+// Hover trigger
+.sidebar-nav:hover {
+  .sidebar-lines {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+// Back to Top Button
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 76px; // Cambiato a 76px
+  width: 80px; // Cambiato a 80px
+  height: 80px; // Cambiato a 80px
+  z-index: 1500;
+  cursor: pointer;
+  background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-default.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-image 0.1s ease;
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-hover.png');
+  }
+  
+  &:active {
+    background-image: url('../img/i-miei-lavori/brand-identity/back-to-top-pressed.png');
+  }
+  
+  @media (max-width: 1023px) {
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+// Viewport da 1024px a 1399px (Desktop Medio)
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .case-study-container {
+    padding: 0 173px; // margini laterali a 173px
+  }
+  
+  .metadata-section {
+    .metadata-grid {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      gap: 16px !important; // Spazio tra le colonne: 16px
+      width: 100% !important;
+    }
+    
+    .metadata-column {
+      flex-shrink: 0 !important; // Mantiene le larghezze esatte
+      
+      &:nth-child(1) { width: 143px !important; }
+      &:nth-child(2) { width: 117px !important; }
+      &:nth-child(3) { width: 227px !important; } // Descrizione: 227px
+      &:nth-child(4) { width: 143px !important; }
+    }
+  }
+  
+  .sidebar-nav {
+    left: 16px !important; // Margine a sinistra di 16px
+    width: 138px !important;
+  }
+  
+  .sidebar-overlay {
+    width: 138px !important; // Larghezza overlay a 138px
+    
+    a {
+      font-size: 12px !important; // Font ridotto a 12px nell'overlay
+    }
+  }
+
+  // Carosello centrato con W_totale = 684px, W_image = 548px, gap = 12px, W_btn = 56px
+  .carousel-section {
+    .carousel-layout-wrapper {
+      width: 684px !important; // Larghezza totale del carosello con comandi
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 12px !important; // Spazio di 12px tra frecce e immagine
+    }
+    
+    .carousel-container {
+      width: 548px !important; // Larghezza esatta di 548px
+      height: 300px !important; // Altezza proporzionata
+      flex-grow: 0 !important;
+      flex-shrink: 0 !important;
+      margin: 0 !important;
+    }
+    
+    .carousel-btn {
+      width: 56px !important; // Larghezza bottone a 56px per totale 684px (56 + 12 + 548 + 12 + 56 = 684px)
+      height: 56px !important; // Mantiene proporzioni quadrate
+      margin: 0 !important;
+    }
+  }
+  
+  // Immagini individuali allineate con larghezza 548px e altezza 300px
+  .case-study-section {
+    .section-image-card {
+      width: 548px !important; // Larghezza esatta di 548px
+      height: 300px !important; // Altezza coerente con il carosello
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  // Palette Colori: immagine sotto il testo con spaziatura di 48px
+  .palette-colori-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 48px !important; // Spazio tra testo e immagine: 48px
+    height: auto !important; // Sovrascrive l'altezza fissa desktop
+    
+    .palette-colori-text-col {
+      width: 100% !important;
+      height: auto !important; // Sovrascrive l'altezza fissa desktop
+    }
+    
+    .palette-colori-img-col {
+      width: 548px !important; // Larghezza esatta di 548px
+      max-width: 548px !important;
+      height: 303px !important; // Altezza ridimensionata a 303px
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  
+  // Bottone Back to Top
+  .back-to-top {
+    width: 64px !important; // Cambiato a 64x64px
+    height: 64px !important;
+    right: 60px !important; // Margine a destra: 60px
+  }
+}
+
+// Media Queries (Tablet & Mobile)
+@media (max-width: 1023px) {
+  .case-study-hero {
+    height: 320px;
+    
+    .hero-logo {
+      width: 450px;
+      height: 134px;
+    }
+  }
+  
+  .case-study-container {
+    padding: 0 60px; // Ridotto per tablet
+  }
+  
+  .metadata-section {
+    .metadata-grid {
+      display: flex;
+      flex-direction: column; // Un'unica colonna
+      gap: 24px;
+    }
+    .metadata-column {
+      width: auto !important;
+    }
+  }
+
+  .carousel-btn {
+    display: none !important; // Rimuove le frecce su tablet e mobile, lasciando solo le palline
+  }
+
+  // Layout responsivo per Palette Colori su tablet/mobile
+  .palette-colori-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; // Spaziatura di 32px tra parte testuale ed immagine
+    
+    .palette-colori-text-col {
+      width: 100%;
+    }
+    
+    .palette-colori-img-col {
+      width: 100%;
+      max-width: 456px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-hero {
+    height: 240px;
+    
+    .hero-logo {
+      width: 279.5px;
+      height: 83.01px; // Scala 0.5x delle dimensioni Desktop
+    }
+  }
+  
+  .case-study-container {
+    padding: 0 16px; // Margine mobile standard
+  }
+  
+  .case-study-title-section {
+    margin-top: 24px; // Spaziatura superiore dall'Hero: 24px
+    
+    .main-title {
+      font-size: 26px;
+      font-weight: 800; // Poppins ExtraBold
+    }
+  }
+  
+  .metadata-section {
+    margin-top: 56px; // Spaziatura superiore: 56px
+    
+    .metadata-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .metadata-column {
+      width: auto !important;
+    }
+    .metadata-heading {
+      font-size: 16px;
+      font-weight: 600; // Poppins SemiBold
+      color: #262626;
+      margin-bottom: 8px;
+    }
+    .metadata-text {
+      font-size: 16px;
+      color: rgba(38, 38, 38, 0.90); // Poppins Regular, opacità 90%
+    }
+  }
+  
+  .content-sections-wrapper {
+    margin-top: 0;
+    gap: 48px; // Spaziatura tra le sezioni principali: 48px
+    
+    &:first-of-type {
+      margin-top: 88px; // Spaziatura tra i metadati e la sezione Contesto: 88px
+    }
+  }
+  
+  .case-study-section {
+    gap: 8px;
+    
+    .section-title {
+      font-size: 16px;
+      font-weight: 700; // Poppins Bold
+      color: rgba(38, 38, 38, 0.50); // colore #262626 opacità 50%
+      line-height: 1.398; // 139.8%
+      letter-spacing: 0.22em; // 22%
+    }
+    
+    .section-paragraph, .section-list li {
+      font-size: 16px; // Poppins Regular 16px
+      font-weight: 400;
+      line-height: 1.45; // line height 145%
+      margin-bottom: 8px; // paragraph spacing 8
+      color: rgba(38, 38, 38, 0.90); // opacità 90%
+      
+      &:last-child, &:last-of-type {
+        margin-bottom: 0 !important; // Rimuove gli 8px di spazio quando segue immagine, carosello o cambio container
+      }
+      
+      strong {
+        font-weight: 500; // Poppins Medium
+        font-size: 16px;
+        line-height: 1.45;
+        margin-bottom: 8px;
+        color: rgba(38, 38, 38, 0.90);
+      }
+      
+      em, i {
+        font-style: italic; // Poppins Italic
+        font-size: 16px;
+        line-height: 1.45;
+        margin-bottom: 8px;
+        color: rgba(38, 38, 38, 0.90);
+      }
+    }
+    
+    .section-image-card {
+      margin-top: 32px; // Margine tra testo e immagine: 32px
+      
+      .image-caption {
+        margin-top: 8px; // Spazio superiore didascalia: 8px
+      }
+    }
+  }
+  
+  .carousel-section {
+    margin-top: 32px; // Spaziatura tra la parte testuale e il carosello: 32px
+    margin-bottom: 48px;
+    
+    .carousel-layout-wrapper {
+      position: relative;
+      display: block;
+    }
+    
+    .carousel-btn {
+      display: none !important; // Rimosse le frecce su mobile
+    }
+    
+    .carousel-caption-text {
+      margin-top: 8px; // Spazio superiore didascalia: 8px
+      font-size: 14px; // Poppins Regular 14px
+      color: rgba(38, 38, 38, 0.50); // colore #262626 opacità 50%
+    }
+    
+    .carousel-dots {
+      gap: 8px; // Spaziatura tra le palline: 8px
+      margin-top: 24px; // Spaziatura tra didascalia e palline: 24px
+    }
+  }
+
+  .divider-line {
+    margin: 80px auto; // Spazio sopra e sotto la linea divisoria di 80px
+  }
+
+  .work-image-frame {
+    margin-bottom: 16px; // Spaziatura tra l'immagine della card e il titolo di 16px
+  }
+
+  .other-works-section {
+    margin-bottom: 128px; // Spazio tra l'ultima card della griglia e il footer: 128px
+    
+    .other-works-title {
+      font-size: 16px;
+      font-weight: 700; // Poppins Bold
+      color: rgba(38, 38, 38, 0.50); // colore #262626 opacità 50%
+      text-align: center; // allineato al centro
+      margin-bottom: 40px; // Spaziatura tra il titolo e la griglia: 40px
+    }
+
+    .other-works-grid {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px; // Spaziatura tra le card: 40px
+    }
+  }
+}
+
+// Lightbox Modal for Case Study Images
+.carousel-img, .section-image, .palette-img {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.015);
+    filter: brightness(0.95);
+  }
+}
+
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 2100; // Sopra a tutto, incluse navbar e pulsanti
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(26, 26, 26, 0.95); // Vetro scuro premium
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  
+  &.active .lightbox-content {
+    transform: scale(1);
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+    
+    &:hover {
+      color: #FF452A; // Arancione di brand
+      transform: scale(1.1);
+    }
+  }
+  
+  .lightbox-caption {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.5;
+  }
+}
