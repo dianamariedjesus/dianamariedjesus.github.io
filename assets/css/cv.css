@@ -143,13 +143,16 @@ body.cv-page-wrapper {
   align-items: stretch;
 }
 
-/* Right column layout: keep natural block spacing on laptop/desktop viewports */
+/* Right column layout: align top (SKILLS) and bottom (LINGUE/C1) with left column on laptop/desktop viewports */
 @media (min-width: 1024px) {
+  .cv-grid {
+    align-items: stretch;
+  }
   .cv-right-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+    height: 100%;
   }
   .cv-right-col .cv-block {
     margin-bottom: 0;
