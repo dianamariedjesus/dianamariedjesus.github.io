@@ -143,12 +143,13 @@ body.cv-page-wrapper {
   align-items: stretch;
 }
 
-/* Right column flex distribution to align bottom of LINGUE with ESPERIENZE LAVORATIVE */
+/* Right column layout: keep natural block spacing on laptop/desktop viewports */
 @media (min-width: 1024px) {
   .cv-right-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 24px;
   }
   .cv-right-col .cv-block {
     margin-bottom: 0;
