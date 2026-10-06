@@ -913,6 +913,13 @@ code,
   box-shadow: 0 2px 4px rgba(0,0,0,0.03);
 }
 
+.protocol-questions-list {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* Linea Divisoria */
 .divider-line {
   width: 100%;
